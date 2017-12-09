@@ -1,0 +1,53 @@
+<!-- Copyright (C) 2016 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">List View</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_details">Details View</string>
+
+    <!-- Vocabulary word for the number one [CHAR LIMIT=20] -->
+    <string name="number_one">one</string>
+
+    <!-- Vocabulary word for the number two [CHAR LIMIT=20] -->
+    <string name="number_two">two</string>
+
+    <!-- Vocabulary word for the number three [CHAR LIMIT=20] -->
+    <string name="number_three">three</string>
+
+    <!-- Vocabulary word for the number four [CHAR LIMIT=20] -->
+    <string name="number_four">four</string>
+
+    <!-- Vocabulary word for the number five [CHAR LIMIT=20] -->
+    <string name="number_five">five</string>
+
+    <!-- Vocabulary word for the number six [CHAR LIMIT=20] -->
+    <string name="number_six">six</string>
+
+    <!-- Vocabulary word for the number seven [CHAR LIMIT=20] -->
+    <string name="number_seven">seven</string>
+
+    <!-- Vocabulary word for the number eight [CHAR LIMIT=20] -->
+    <string name="number_eight">eight</string>
+
+    <!-- Vocabulary word for the number nine [CHAR LIMIT=20] -->
+    <string name="number_nine">nine</string>
+
+    <!-- Vocabulary word for the number ten [CHAR LIMIT=20] -->
+    <string name="number_ten">ten</string>
+
+
+</resources>
