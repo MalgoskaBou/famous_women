@@ -26,3 +26,8 @@ If someone has a problem with using Github, I recommend this link -> https://www
 *This is what the final application should look like:*
 
 ![layout_malgoskag](https://user-images.githubusercontent.com/33101796/33798695-91c53968-dd1d-11e7-93e2-8850812f039f.jpg)
+
+
+*Additionally, @Ola proposal to add a menu from which you can choose a quiz*
+
+![menu](https://user-images.githubusercontent.com/33101796/33799692-dd568874-dd30-11e7-9ab3-788f2649755f.png)
