@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-
+        // ( ͡° ͜ʖ ͡°)
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word(R.string.number_one, R.string.miwok_number_one,
