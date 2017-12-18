@@ -16,6 +16,7 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +46,20 @@ public class DetailsActivity extends AppCompatActivity {
         profession.setText(profession_string);
         TextView name = (TextView) findViewById(R.id.name_text);
         name.setText(name_string);
+
+        // TEMPORARY CODE - OPEN QUIZ
+        // Find View that opens Quiz
+        TextView quiz = (TextView) findViewById(R.id.tv_quiz);
+        if (quiz != null) {
+            // Set a click listener on that View
+            quiz.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(DetailsActivity.this, QuizActivity.class);
+                    startActivity(i);
+                }
+            });
+        }
+
     }
-
-
 }
