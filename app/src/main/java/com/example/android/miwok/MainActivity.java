@@ -18,6 +18,7 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -26,7 +27,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,14 +81,17 @@ public class MainActivity extends AppCompatActivity {
                 Word word = words.get(position);
 
                 //Get the TextView ID to transfer data to the next activity
-                TextView myTextView = (TextView) view.findViewById(R.id.default_text_view);
-                String text = myTextView.getText().toString();
+                TextView profession = (TextView) view.findViewById(R.id.profession_text_view);
+                String profession_text = profession.getText().toString();
+                TextView name = (TextView) view.findViewById(R.id.name_text_view);
+                String name_text = name.getText().toString();
 
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
                 //we get the contents of the downloaded textView to display them in the new activity
-                myIntent.putExtra("EXTRA_DATA", text );
+                myIntent.putExtra("PROFESSION", profession_text );
+                myIntent.putExtra("NAME", name_text);
 
                // Start the new activity
                startActivity(myIntent);

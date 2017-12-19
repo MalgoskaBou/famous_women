@@ -38,10 +38,13 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.details_view);
 
         //we collect the transferred data from the previous activity
-        String s = getIntent().getStringExtra("EXTRA_DATA");
+        String profession_string = getIntent().getStringExtra("PROFESSION");
+        String name_string = getIntent().getStringExtra("NAME");
         //put data to new textView
-        TextView text = (TextView) findViewById(R.id.number_text);
-        text.setText(s);
+        TextView profession = (TextView) findViewById(R.id.profession_text);
+        profession.setText(profession_string);
+        TextView name = (TextView) findViewById(R.id.name_text);
+        name.setText(name_string);
     }
 
 
