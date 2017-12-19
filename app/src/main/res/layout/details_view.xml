@@ -50,4 +50,10 @@
 
     </ScrollView>
 
+    <TextView
+        android:id="@+id/tv_quiz"
+        style="@style/CategoryStyle"
+        android:background="@color/category_numbers"
+        android:text="@string/category_quiz"/>
+
 </LinearLayout>
