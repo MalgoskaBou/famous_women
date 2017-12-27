@@ -61,14 +61,14 @@ public class WordAdapter extends ArrayAdapter<Word>  {
 
         // Find the TextView in the list_item.xml layout with the ID name_text_view.
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
-        // Get the Miwok translation from the currentWord object and set this text on
-        // the Miwok TextView.
+        // Get the name of the woman from the currentWord object and set this text on
+        // the name TextView.
         nameTextView.setText(currentWord.getProfessionId());
 
         // Find the TextView in the list_item.xml layout with the ID profession_text_view.
         TextView professionTextView = (TextView) listItemView.findViewById(R.id.profession_text_view);
         // Get the default translation from the currentWord object and set this text on
-        // the default TextView.
+        // the profession TextView.
         professionTextView.setText(currentWord.getNameId());
 
         // Find the ImageView in the list_item.xml layout with the ID image.
