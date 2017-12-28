@@ -14,11 +14,12 @@
      limitations under the License.
 -->
 <!-- Layout for a single list item -->
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/list_item_height"
+    android:orientation="horizontal"
     android:background="@color/grey_background"
     android:minHeight="@dimen/list_item_height">
 
@@ -26,54 +27,60 @@
        <com.makeramen.roundedimageview.RoundedImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/image"
-        android:layout_height="@dimen/list_item_height"
-        android:layout_width="@dimen/list_item_height"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         app:riv_corner_radius="10dip"
-        app:riv_oval="true" />
+        app:riv_oval="true"
+        android:layout_marginLeft="16dp"
+           android:layout_marginStart="16dp"
+        android:src="@drawable/dalia_grybauskaite_listimg"/>
 
     <RelativeLayout
         android:id="@+id/text_container"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/list_item_height"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/image"
-        android:orientation="vertical"
-        android:paddingLeft="16dp">
+        android:layout_weight="3"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
         <TextView
             android:id="@+id/name_text_view"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/text_color_heading"
+            android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="lutti" />
+            tools:text="@string/dalia" />
 
         <TextView
             android:id="@+id/profession_text_view"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_below="@id/name_text_view"
-            android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="14sp"
             android:textColor="@color/text_color_main"
-            tools:text="one" />
-
-
-        <ImageView
-            android:id = "@+id/flag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="16dp"
-            android:src="@drawable/number_one" />
+            android:fontFamily="@font/roboto"
+            tools:text="@string/dalia_country" />
 
     </RelativeLayout>
 
-</RelativeLayout>
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/flag"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        app:riv_corner_radius="10dip"
+        app:riv_oval="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/dalia_lithuania_flag"/>
+
+</LinearLayout>
