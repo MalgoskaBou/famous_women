@@ -19,7 +19,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/list_item_height"
-    android:background="@color/tan_background"
+    android:background="@color/grey_background"
     android:minHeight="@dimen/list_item_height">
 
 
@@ -49,7 +49,7 @@
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text_color_heading"
             android:textStyle="bold"
             tools:text="lutti" />
 
@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text_color_main"
             tools:text="one" />
 
 

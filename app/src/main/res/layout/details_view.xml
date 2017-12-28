@@ -20,6 +20,7 @@
             android:layout_marginRight="@dimen/margin_standard"
             android:gravity="center_vertical"
             android:text="Name of the woman"
+            android:textColor="@color/text_color_heading_white"
             android:textSize="@dimen/fontSize_subheading" />
 
         <TextView
@@ -32,6 +33,7 @@
             android:layout_marginLeft="@dimen/margin_standard"
             android:layout_marginRight="@dimen/margin_standard"
             android:text="@string/subheader_details_profession"
+            android:textColor="@color/text_color_heading"
             android:textSize="@dimen/fontSize_subheading" />
 
     <ScrollView
@@ -46,6 +48,7 @@
             android:layout_marginLeft="@dimen/margin_standard"
             android:layout_marginRight="@dimen/margin_standard"
             android:text="@string/body_details_description"
+        android:textColor="@color/text_color_main"
             android:textSize="@dimen/fontSize_body"/>
 
     </ScrollView>
@@ -53,7 +56,7 @@
     <TextView
         android:id="@+id/tv_quiz"
         style="@style/CategoryStyle"
-        android:background="@color/category_numbers"
+        android:background="@color/primary_color"
         android:text="@string/category_quiz"/>
 
 </LinearLayout>
