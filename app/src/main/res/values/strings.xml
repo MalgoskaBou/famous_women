@@ -14,7 +14,7 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">List View</string>
+    <string name="app_name">Famous Women</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_details">Details View</string>
@@ -23,10 +23,10 @@
     <string name="category_quiz">Quiz</string>
 
     <!-- Vocabulary word for the number one [CHAR LIMIT=20] -->
-    <string name="number_one">one</string>
+    <string name="maria">Maria Curie-Sklodowska</string>
 
     <!-- Vocabulary word for the number two [CHAR LIMIT=20] -->
-    <string name="number_two">two</string>
+    <string name="dalia">Dalia Grybauskaitė</string>
 
     <!-- Vocabulary word for the number three [CHAR LIMIT=20] -->
     <string name="number_three">three</string>

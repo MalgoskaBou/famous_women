@@ -17,10 +17,10 @@
 
 
     <!-- Miwok translation for number one -->
-    <string name="miwok_number_one">lutti</string>
+    <string name="maria_country">Poland</string>
 
     <!-- Miwok translation for number two -->
-    <string name="miwok_number_two">otiiko</string>
+    <string name="dalia_country">Lithuania</string>
 
     <!-- Miwok translation for number three -->
     <string name="miwok_number_three">tolookosu</string>
