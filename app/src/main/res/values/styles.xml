@@ -23,7 +23,7 @@
     <!-- Style for a category of vocabulary words -->
     <style name="CategoryStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:layout_height">@dimen/quiz_height</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:padding">16dp</item>
         <item name="android:textColor">@android:color/white</item>
