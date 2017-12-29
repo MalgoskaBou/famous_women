@@ -67,7 +67,7 @@
             android:textSize="14sp"
             android:textColor="@color/text_color_main"
             android:fontFamily="@font/roboto"
-            tools:text="@string/dalia_country" />
+            tools:text="@string/dalia_profession" />
 
     </RelativeLayout>
 

@@ -35,5 +35,7 @@
     <!-- Text color details and main text -->
     <color name="text_color_main">#898989</color>
 
+    <!-- Background color main text -->
+    <color name="background_color_main">#9E9E9E</color>
 
 </resources>

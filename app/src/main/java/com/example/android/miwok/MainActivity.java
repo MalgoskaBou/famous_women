@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         // ( ͡° ͜ʖ ͡°)
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word(R.string.maria_country, R.string.maria,
+        words.add(new Word(R.string.maria_profession, R.string.maria,
                 R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
-        words.add(new Word(R.string.dalia_country, R.string.dalia,
+        words.add(new Word(R.string.dalia_profession, R.string.dalia,
                 R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
         words.add(new Word(R.string.number_three, R.string.miwok_number_three,
                 R.drawable.number_three, R.drawable.number_three));
