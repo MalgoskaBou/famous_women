@@ -23,7 +23,7 @@
     <string name="category_quiz">Quiz</string>
 
     <!-- Vocabulary word for the number one [CHAR LIMIT=20] -->
-    <string name="maria">Maria Curie-Sklodowska</string>
+    <string name="maria">Maria Curie-Skłodowska</string>
 
     <!-- Vocabulary word for the number two [CHAR LIMIT=20] -->
     <string name="dalia">Dalia Grybauskaitė</string>
@@ -65,3 +65,5 @@
         During her twelve years spent in prison, she was subjected to various forms of torture: she was hung by her hair from a hook and beaten until she fainted due to broken ribs, and was also scalped, burned, and beaten with a shovel. Upon her release from prison, she had no hair and she couldn't walk, as her knees had been destroyed by the torture.
     </string>
 
+
+</resources>
