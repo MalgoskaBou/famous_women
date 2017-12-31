@@ -8,7 +8,7 @@
     android:layout_height="match_parent" >
 
     <ImageView
-       android:id="@+id/detail_image"
+       android:id="@+id/portrait_image"
        android:layout_width="match_parent"
        android:layout_height="250dp"
        android:src="@drawable/dalia_portrait"
@@ -36,7 +36,7 @@
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/detail_image"
+        android:layout_below="@id/portrait_image"
         android:layout_above="@id/tv_quiz"
         android:layout_margin="8dp">
 
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_standard"
             android:layout_marginRight="@dimen/margin_standard"
-            android:text="@string/body_details_description"
+            android:text="@string/body_details_description_dalia"
         android:textColor="@color/text_color_main"
         android:fontFamily="@font/roboto"
             android:textSize="@dimen/fontSize_body"/>
@@ -81,9 +81,9 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/flag"
-        android:layout_height="70dp"
-        android:layout_width="90dp"
+        android:id="@+id/flag_of_country"
+        android:layout_height="@dimen/flag_details_height"
+        android:layout_width="@dimen/flag_details_width"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         app:riv_corner_radius="10dip"

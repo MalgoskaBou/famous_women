@@ -16,14 +16,18 @@
 package com.example.android.miwok;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,22 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
         words.add(new Word(R.string.dalia_profession, R.string.dalia,
                 R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
-        words.add(new Word(R.string.number_three, R.string.miwok_number_three,
-                R.drawable.number_three, R.drawable.number_three));
-        words.add(new Word(R.string.number_four, R.string.miwok_number_four,
-                R.drawable.number_four, R.drawable.number_four));
-        words.add(new Word(R.string.number_five, R.string.miwok_number_five,
-                R.drawable.number_five, R.drawable.number_five));
-        words.add(new Word(R.string.number_six, R.string.miwok_number_six,
-                R.drawable.number_six, R.drawable.number_six));
-        words.add(new Word(R.string.number_seven, R.string.miwok_number_seven,
-                R.drawable.number_seven, R.drawable.number_seven));
-        words.add(new Word(R.string.number_eight, R.string.miwok_number_eight,
-                R.drawable.number_eight, R.drawable.number_eight));
-        words.add(new Word(R.string.number_nine, R.string.miwok_number_nine,
-                R.drawable.number_nine, R.drawable.number_nine));
-        words.add(new Word(R.string.number_ten, R.string.miwok_number_ten,
-                R.drawable.number_ten, R.drawable.number_ten));
+        words.add(new Word(R.string.elisabeta_proffesion, R.string.elisabeta,
+                R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
+
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
@@ -79,12 +70,14 @@ public class MainActivity extends AppCompatActivity {
 
                 // Get the {@link Word} object at the given position the user clicked on
                 Word word = words.get(position);
-
+                int indexOfListItem=position;
                 //Get the TextView ID to transfer data to the next activity
                 TextView profession = (TextView) view.findViewById(R.id.profession_text_view);
                 String profession_text = profession.getText().toString();
                 TextView name = (TextView) view.findViewById(R.id.name_text_view);
                 String name_text = name.getText().toString();
+
+
 
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
@@ -92,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 //we get the contents of the downloaded textView to display them in the new activity
                 myIntent.putExtra("PROFESSION", profession_text );
                 myIntent.putExtra("NAME", name_text);
-
+                myIntent.putExtra("POSITION", indexOfListItem);
                // Start the new activity
                startActivity(myIntent);
 
