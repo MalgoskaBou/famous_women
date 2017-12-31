@@ -77,7 +77,7 @@ public class DetailsActivity extends AppCompatActivity {
              * Romania
              */
 
-            portraitImageView.setImageResource(R.drawable.elisabeta_portrait);
+            portraitImageView.setImageResource(R.drawable.elisabeta_rizea_listimg);
             descriptionTextView.setText(R.string.body_details_description_elisabeta);
             flagImageView.setImageResource(R.drawable.elisabeta_rizea_flag);
         }
