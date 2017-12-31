@@ -1,0 +1,67 @@
+<!-- Copyright (C) 2016 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">Famous Women</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_details">Details View</string>
+
+    <!-- Category name for quiz [CHAR LIMIT=20] -->
+    <string name="category_quiz">Quiz</string>
+
+    <!-- Vocabulary word for the number one [CHAR LIMIT=20] -->
+    <string name="maria">Maria Curie-Sklodowska</string>
+
+    <!-- Vocabulary word for the number two [CHAR LIMIT=20] -->
+    <string name="dalia">Dalia Grybauskaitė</string>
+
+    <!-- Vocabulary word for the number three [CHAR LIMIT=20] -->
+    <string name="elisabeta">Elisabeta Rizea</string>
+
+    <!-- Vocabulary word for the number four [CHAR LIMIT=20] -->
+    <string name="number_four">four</string>
+
+    <!-- Vocabulary word for the number five [CHAR LIMIT=20] -->
+    <string name="number_five">five</string>
+
+    <!-- Vocabulary word for the number six [CHAR LIMIT=20] -->
+    <string name="number_six">six</string>
+
+    <!-- Vocabulary word for the number seven [CHAR LIMIT=20] -->
+    <string name="number_seven">seven</string>
+
+    <!-- Vocabulary word for the number eight [CHAR LIMIT=20] -->
+    <string name="number_eight">eight</string>
+
+    <!-- Vocabulary word for the number nine [CHAR LIMIT=20] -->
+    <string name="number_nine">nine</string>
+
+    <!-- Vocabulary word for the number ten [CHAR LIMIT=20] -->
+    <string name="number_ten">ten</string>
+
+    <!--Details page subheader -->
+    <string name="subheader_details_profession">Profession</string>
+    <string name="body_details_description">Description</string>
+
+    <!--Details page body -->
+    <string name="body_details_description_dalia">Dalia Grybauskaitė (born in Vilnius on 1 March 1956), referred to as the \"Iron Lady\" or the \"Steel Magnolia\", is the President of Lithuania, inaugurated on 12 July 2009 and re-elected in May 2014. \nShe is the country\'s first female President and the first President of Lithuania to be reelected for a second consecutive term. \nIn her declaration speech for the 2009 presidential election, Dalia Grybauskaitė said: \"I decided to return to Lithuania if the Lithuanian people decide I am needed there now. I think that we all long for the truth, transparency and responsibility for our country. We all want to live without fear, with confidence in ourselves, in each other, and in tomorrow. I can and I want to contribute with my experience, knowledge and skills to expel shadows from morality, politics, and economics to create a citizen-ruled Lithuania – a state of citizens. Therefore, I will run for the Lithuanian presidency.\" The international press was quick to dub her the \"Lithuanian Iron Lady\" for her outspoken speech and her black belt in karate. Dalia Grybauskaitė, who speaks Lithuanian, English, Russian, French and Polish, has mentioned Margaret Thatcher and Mahatma Gandhi as her political role models. \nShe was Vice-Minister of Finance (from 1999 to 2000), Vice-Minister of Foreign Affairs (from 2000-2001) and Minister of Finance (from 2001 to 2004). Lithuania joined the European Union on 1 May 2004, and Dalia Grybauskaitė was named a European Commissioner on the same day. She initially served as European Commissioner for Education, Culture, Multilingualism and Youth. She held this position until 11 November 2004, when she was named European Commissioner for Financial Programming and the Budget within the José Manuel Barroso-led Commission. In November 2005, she was elected Commissioner of the Year for her efforts to reform the EU budget. Dalia Grybauskaitė never had dreamt of becoming president, but rather pursued her career to the highest possible level, working hard at every opportunity. Her determination led her to run for presidency and seemed at the time to be the natural progression of her career. \nOn May 9, 2013 President Dalia Grybauskaitė was presented the prestigious International Charlemagne Prize. The award, also known as \"Oscar in Politics\", has been extended to President Grybauskaitė for Lithuania\'s contribution to uniting the European Union and building the economic stability of the whole Europe. \"I dedicate the Charlemagne Prize, awarded by the people of Aachen, to the Lithuanian people. It signifies the recognition of our united efforts as we fought for Lithuania\'s freedom and its place in Europe as well as to overcome the economic crisis. This award is also a commitment to assume responsibility for bringing all the nations together to shape the future of Europe,\" the President emphasized at the award ceremony. \nDalia Grybauskaitė takes 68 place in Frobes The World\'s 100 Most Powerful Women list (2017 ranking). \nToday, Dalia is a modern leader and maintains a strong connection with the Lithuanian people through social media interaction, sharing her news, schedule and ideas.</string>
+
+    <string name="body_details_description_elisabeta">Elisabeta Rizea (28 June 1912 – 6 October 2003) was a Romanian anti-communist partisan in the Făgăraş Mountains of Northern Wallachia. After the Romanian Revolution, she became the symbol of Romania\'s anti-communism resistance.
+        Rizea was born in Nucșoara, a small village in Argeş County in the Southern Carpathians, to a family of peasants who lived off plot of cultivated land. After World War II, as the Soviet Army imposed a Communist government in Romania, the peasants had to give up their land in order to implement collective farming. Out of opposition to this, Elisabeta Rizea and her husband joined an anti-Communist guerrilla group, Haiducii Muscelului, led by Colonel Gheorghe Arsenescu. Her assigned task within the group was to provide food and supplies.
+        After she was captured by the Romanian militia in 1952, she was declared "duşman al poporului" (enemy of the people) and sentenced to death because she refused to give information about the other partisans. Eventually her sentence was commuted to seven years in prison. When Arsenescu was arrested in 1961, her sentence was extended by another 25 years, but three years later, in 1964, she was freed under the terms of a general amnesty.
+        During her twelve years spent in prison, she was subjected to various forms of torture: she was hung by her hair from a hook and beaten until she fainted due to broken ribs, and was also scalped, burned, and beaten with a shovel. Upon her release from prison, she had no hair and she couldn't walk, as her knees had been destroyed by the torture.
+    </string>
+
