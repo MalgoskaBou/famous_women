@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 myIntent.putExtra("PROFESSION", profession_text );
                 myIntent.putExtra("NAME", name_text);
                 myIntent.putExtra("POSITION", indexOfListItem);
-               // Start the new activity
+                      // Start the new activity
                startActivity(myIntent);
 
 
