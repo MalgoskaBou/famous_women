@@ -60,7 +60,18 @@ public class DetailsActivity extends AppCompatActivity {
         flagImageView= (ImageView) findViewById(R.id.flag_of_country);
         int position= getIntent().getIntExtra("POSITION",0);
 
-        if(position==1)
+        if(position==0)
+        {
+            /**
+             * Poland
+             */
+
+
+            portraitImageView.setImageResource(R.drawable.maria_portrait);
+            descriptionTextView.setText(R.string.body_details_description_dalia);
+            flagImageView.setImageResource(R.drawable.maria_poland_flag);
+        }
+        else if(position==1)
         {
             /**
              * Lithuania
@@ -77,7 +88,7 @@ public class DetailsActivity extends AppCompatActivity {
              * Romania
              */
 
-            portraitImageView.setImageResource(R.drawable.elisabeta_rizea_listimg);
+            portraitImageView.setImageResource(R.drawable.elisabeta_portrait);
             descriptionTextView.setText(R.string.body_details_description_elisabeta);
             flagImageView.setImageResource(R.drawable.elisabeta_rizea_flag);
         }
