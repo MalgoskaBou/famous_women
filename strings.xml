@@ -1,0 +1,5 @@
+ <!-- Menu Item 1 -->
+    <string name="about_application_item1">About application</string>
+
+    <!-- Menu Item 2 -->
+    <string name="quiz_item2">Quiz</string>
