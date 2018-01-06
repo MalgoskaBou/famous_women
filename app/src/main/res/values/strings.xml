@@ -106,6 +106,32 @@
     <!-- Miwok translation for number two -->
     <string name="dalia_profession">President of Lithuania</string>
 
+    <string name="humanitarian">Humanitarian</string>
+    <string name="mother_theresa">Mother Theresa</string>
+    <string name="body_details_description_mother_theresa">Mother Teresa (1910–1997) was a Roman Catholic nun who devoted her life to serving
+    the poor and destitute around the world. Mother Teresa was born in 1910 in Skopje, the capital of the Republic of Macedonia.
+    Little is known about her early life, but at a young age, she felt a calling to be a nun and serve through helping the poor.
+    At the age of 18, she was given permission to join a group of nuns in Ireland. After a few months of training, with the Sisters of Loreto,
+    she was then given permission to travel to India. She took her formal religious vows in 1931 and chose to be named after St Therese of Lisieux –
+    the patron saint of missionaries.On her arrival in India, she began by working as a teacher; however, the widespread poverty of Calcutta
+    made a deep impression on her, and this led to her starting a new order called “The Missionaries of Charity”. The primary objective
+    of this mission was to look after people, who nobody else was prepared to look after.
+    In 1948, she left the convent to live full-time among the poorest of Calcutta. She chose to wear a white Indian sari,
+    with a blue border, out of respect for the traditional Indian dress. For many years, Mother Teresa and a small band of fellow nuns
+    survived on minimal income and food, often having to beg for funds. But, slowly her efforts with the poorest were noted and appreciated
+    by the local community and Indian politicians. In 1952, she opened her first home for the dying, which allowed people to die with dignity.
+    The Missionaries of Charity now has branches throughout the world including branches in the developed world where they work with the homeless
+    and people affected by AIDS. In 1965, the organisation became an International Religious Family by a decree of Pope Paul VI.
+    In the 1960s, the life of Mother Teresa was brought to a wider public attention by Malcolm Muggeridge who wrote a book
+    and produced a documentary called “Something Beautiful for God”.In 1979, she was awarded the Nobel Peace Prize “for work undertaken
+    in the struggle to overcome poverty and distress, which also constitutes a threat to peace.” She didn’t attend the ceremonial banquet
+    but asked that the $192,000 fund be given to the poor. Over the last two decades of her life, Mother Teresa suffered various health problems,
+    but nothing could dissuade her from fulfilling her mission of serving the poor and needy. Until her very last illness she was active
+    in travelling around the world to the different branches of The Missionaries of Charity.
+    Following Mother Teresa’s death, the Vatican began the process of beatification, which is the second step on the way to canonization and sainthood.
+    Mother Teresa was formally beatified in October 2003 by Pope John Paul II.</string>
+    <string name="about_application">About Application</string>
+    <string name="quiz">Quiz</string>
 
 
 </resources>
