@@ -9,8 +9,8 @@
 
     <ImageView
        android:id="@+id/portrait_image"
-       android:layout_width="match_parent"
-       android:layout_height="250dp"
+       android:layout_width="300dp"
+       android:layout_height="match_parent"
        android:src="@drawable/dalia_portrait"
         android:scaleType="centerCrop"
         android:fillViewport="true"/>
@@ -19,7 +19,6 @@
         android:id="@+id/name_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/description"
         android:layout_marginTop="@dimen/margin_standard"
         android:layout_marginBottom="@dimen/margin_standard"
         android:layout_marginLeft="24dp"
@@ -36,14 +35,15 @@
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/portrait_image"
-        android:layout_above="@id/tv_quiz"
+        android:layout_toRightOf="@id/portrait_image"
+        android:layout_toEndOf="@id/portrait_image"
         android:layout_margin="8dp">
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
         card_view:cardBackgroundColor="@color/primary_color"
         card_view:cardElevation="@dimen/halfmargin_standard">
 
@@ -84,23 +84,13 @@
         android:id="@+id/flag_of_country"
         android:layout_height="@dimen/flag_details_height"
         android:layout_width="@dimen/flag_details_width"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         app:riv_corner_radius="10dip"
         app:riv_oval="true"
-        android:layout_marginTop="215dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="263dp"
+        android:layout_marginStart="263dp"
         android:src="@drawable/dalia_lithuania_flag">
     </com.makeramen.roundedimageview.RoundedImageView>
-
-    <TextView
-        android:id="@+id/tv_quiz"
-        android:layout_alignParentBottom="true"
-        style="@style/CategoryStyle"
-        android:background="@color/primary_color"
-        android:text="@string/category_quiz"
-        android:fontFamily="@font/roboto"/>
-
 
 </RelativeLayout>

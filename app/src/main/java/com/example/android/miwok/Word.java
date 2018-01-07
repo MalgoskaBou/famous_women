@@ -23,30 +23,16 @@ package com.example.android.miwok;
 public class Word {
 
     /** String resource ID for the default translation of the word */
-    private int mDefaultTranslationId;
+    private int mNameId;
 
     /** String resource ID for the Miwok translation of the word */
-    private int mMiwokTranslationId;
+    private int mProfessionId;
 
     /** Image resource ID for the word */
-    private int mImageResourceId = NO_IMAGE_PROVIDED;
+    private int mImageResourceId;
 
-    /** Constant value that represents no image was provided for this word */
-    private static final int NO_IMAGE_PROVIDED = -1;
-
-    /**
-     * Create a new Word object.
-     *
-     * @param defaultTranslationId is the string resource ID for the word in a language that the
-     *                             user is already familiar with (such as English)
-     * @param miwokTranslationId is the string resource Id for the word in the Miwok language
-     *
-     */
-    public Word(int defaultTranslationId, int miwokTranslationId) {
-        mDefaultTranslationId = defaultTranslationId;
-        mMiwokTranslationId = miwokTranslationId;
-
-    }
+   /** Flag image ID **/
+   private int mFlagImageId;
 
     /**
      * Create a new Word object.
@@ -57,25 +43,26 @@ public class Word {
      * @param imageResourceId is the drawable resource ID for the image associated with the word
      *
      */
-    public Word(int defaultTranslationId, int miwokTranslationId, int imageResourceId) {
-        mDefaultTranslationId = defaultTranslationId;
-        mMiwokTranslationId = miwokTranslationId;
+    public Word(int defaultTranslationId, int miwokTranslationId, int imageResourceId, int flagImageId) {
+        mNameId = defaultTranslationId;
+        mProfessionId = miwokTranslationId;
         mImageResourceId = imageResourceId;
+        mFlagImageId = flagImageId;
 
     }
 
     /**
      * Get the string resource ID for the default translation of the word.
      */
-    public int getDefaultTranslationId() {
-        return mDefaultTranslationId;
+    public int getNameId() {
+        return mNameId;
     }
 
     /**
      * Get the string resource ID for the Miwok translation of the word.
      */
-    public int getMiwokTranslationId() {
-        return mMiwokTranslationId;
+    public int getProfessionId() {
+        return mProfessionId;
     }
 
     /**
@@ -85,12 +72,9 @@ public class Word {
         return mImageResourceId;
     }
 
-    /**
-     * Returns whether or not there is an image for this word.
-     */
-    public boolean hasImage() {
-        return mImageResourceId != NO_IMAGE_PROVIDED;
-    }
+    public int getmFlagImageId() {return mFlagImageId; }
+
+
 
 
 }
