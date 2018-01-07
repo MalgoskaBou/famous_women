@@ -5,7 +5,7 @@
 -  **@Greta Gr** manual, thanks to which you will understand how to add to the application information about a famous woman from your country that you chose:<br />
 https://docs.google.com/document/d/1BbmCmI4_DhGUXwf7Bd1pcSKOmLbHZjubXdvJf-FtYD0/edit<br />
 
--  Photos of work progress - thanks to **@Greta Gr, @Diana, @Melsara, @Ola**
+-  Photos of work progress - thanks to **@Greta Gr, @Diana, @Melsara, @Ola, @slimsonik** 
 
 ![progress](https://user-images.githubusercontent.com/33101796/34525384-09eea50c-f09f-11e7-8d3b-2e8fdc88d31a.png)
 ![gretagr3](https://user-images.githubusercontent.com/33101796/34525371-00b81568-f09f-11e7-91e1-b9fbb5b514e2.png)
