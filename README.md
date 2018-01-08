@@ -1,10 +1,12 @@
 # famous_women
 
-<h2>The project moved forward :)</h2>
+<h2>Instructions - how to add your own entry to the application</h2>
 
 -  **@Greta Gr** manual, thanks to which you will understand how to add to the application information about a famous woman from your country that you chose:<br />
 https://docs.google.com/document/d/1BbmCmI4_DhGUXwf7Bd1pcSKOmLbHZjubXdvJf-FtYD0/edit<br />
 ___
+
+<h2>The project moved forward :)</h2>
 
 - Thanks to the work of **@Diana** and **@Slimsonik**, we have already developed a menu. In the menu you can choose a quiz and a page with information about the application. Both options are not finished yet so I invite you to cooperate :)
 
