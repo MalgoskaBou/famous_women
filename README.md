@@ -4,10 +4,15 @@
 
 -  **@Greta Gr** manual, thanks to which you will understand how to add to the application information about a famous woman from your country that you chose:<br />
 https://docs.google.com/document/d/1BbmCmI4_DhGUXwf7Bd1pcSKOmLbHZjubXdvJf-FtYD0/edit<br />
+___
 
 - Thanks to the work of **@Diana** and **@Slimsonik**, we have already developed a menu. In the menu you can choose a quiz and a page with information about the application. Both options are not finished yet so I invite you to cooperate :)
 
 ![dianaslimsonikmenu](https://user-images.githubusercontent.com/33101796/34672455-c44e1030-f47e-11e7-833f-7f74329a2dea.JPG)
+
+- **@Greta Gr** has prepared Landscape Mode for the details view
+
+![greatlandscapemode](https://user-images.githubusercontent.com/33101796/34672897-930361e0-f480-11e7-9006-03c9ffd3984f.JPG)
 
 -  Photos of work progress - thanks to **@Greta Gr, @Diana, @Melsara, @Ola**
 
