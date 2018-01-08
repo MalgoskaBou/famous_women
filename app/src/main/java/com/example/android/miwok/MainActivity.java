@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
         words.add(new Word(R.string.humanitarian, R.string.mother_theresa,
                 R.drawable.mother_theresa, R.drawable.macedonia_flag));
+        words.add(new Word(R.string.wanda_profession, R.string.wanda,
+                R.drawable.mother_theresa, R.drawable.maria_poland_flag));
 
 
 

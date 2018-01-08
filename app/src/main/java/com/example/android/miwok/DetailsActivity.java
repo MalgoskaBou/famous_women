@@ -60,6 +60,23 @@ public class DetailsActivity extends AppCompatActivity {
         flagImageView= (ImageView) findViewById(R.id.flag_of_country);
         int position= getIntent().getIntExtra("POSITION",0);
 
+        // Array list contains IDs for: name, description on image
+        final ArrayList<Word> details = new ArrayList<Word>();
+
+        details.add(new Word(R.string.maria_profession, R.string.body_details_description_dalia,
+                R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
+        details.add(new Word(R.string.dalia_profession, R.string.body_details_description_dalia,
+                R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
+        details.add(new Word(R.string.elisabeta_proffesion, R.string.body_details_description_elisabeta,
+                R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
+        details.add(new Word(R.string.humanitarian, R.string.body_details_description_mother_theresa,
+                R.drawable.mother_theresa, R.drawable.macedonia_flag));
+        details.add(new Word(R.string.wanda_profession, R.string.body_details_description_wanda,
+                R.drawable.mother_theresa, R.drawable.maria_poland_flag));
+
+
+
+
         if(position==0)
         {
             /**
@@ -100,6 +117,15 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.mother_theresa);
             descriptionTextView.setText(R.string.body_details_description_mother_theresa);
             flagImageView.setImageResource(R.drawable.macedonia_flag);
+        }
+        else if (position==4) {
+            /**
+             * Poland
+             */
+
+            portraitImageView.setImageResource(R.drawable.mother_theresa);
+            descriptionTextView.setText(R.string.body_details_description_wanda);
+            flagImageView.setImageResource(R.drawable.maria_poland_flag);
         }
 
 

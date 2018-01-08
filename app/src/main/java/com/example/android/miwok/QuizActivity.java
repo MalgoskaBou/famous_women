@@ -27,12 +27,12 @@ public class QuizActivity extends AppCompatActivity {
 
         final ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
 
-        questions.add(new QuizQuestion("Question 1", "Answer 11", "Answer 12", "Answer 13", 1, 1));
-        questions.add(new QuizQuestion("Question 2", "Answer 21", "Answer 22", "Answer 23", 2, 1));
-        questions.add(new QuizQuestion("Question 3", "Answer 31", "Answer 32", "Answer 33", 3, 1));
-        questions.add(new QuizQuestion("Question 4", "Answer 41", "Answer 42", "Answer 43", 1, 1));
-        questions.add(new QuizQuestion("Question 5", "Answer 51", "Answer 52", "Answer 53", 1, 1));
-        questions.add(new QuizQuestion("Question 6", "Answer 61", "Answer 62", "Answer 63", 1, 1));
+        questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+        questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+        questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+        questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+        questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+        questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
 
         // Randomized questions
         Collections.shuffle(questions);
