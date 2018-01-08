@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.provider.ContactsContract;
@@ -47,7 +48,6 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_view);
 
-       
 
         //we collect the transferred data from the previous activity
         String profession_string = getIntent().getStringExtra("PROFESSION");
@@ -55,13 +55,12 @@ public class DetailsActivity extends AppCompatActivity {
         /**
          * I created a variable that retains the position of the list item that was clicked
          */
-        portraitImageView=(ImageView) findViewById(R.id.portrait_image);
-        descriptionTextView= (TextView) findViewById(R.id.description_text);
-        flagImageView= (ImageView) findViewById(R.id.flag_of_country);
-        int position= getIntent().getIntExtra("POSITION",0);
+        portraitImageView = (ImageView) findViewById(R.id.portrait_image);
+        descriptionTextView = (TextView) findViewById(R.id.description_text);
+        flagImageView = (ImageView) findViewById(R.id.flag_of_country);
+        int position = getIntent().getIntExtra("POSITION", 0);
 
-        if(position==0)
-        {
+        if (position == 0) {
             /**
              * Poland
              */
@@ -70,9 +69,7 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.maria_portrait);
             descriptionTextView.setText(R.string.body_details_description_dalia);
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
-        }
-        else if(position==1)
-        {
+        } else if (position == 1) {
             /**
              * Lithuania
              */
@@ -81,9 +78,7 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.dalia_portrait);
             descriptionTextView.setText(R.string.body_details_description_dalia);
             flagImageView.setImageResource(R.drawable.dalia_lithuania_flag);
-        }
-        else if(position==2)
-        {
+        } else if (position == 2) {
             /**
              * Romania
              */
@@ -91,8 +86,7 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.elisabeta_portrait);
             descriptionTextView.setText(R.string.body_details_description_elisabeta);
             flagImageView.setImageResource(R.drawable.elisabeta_rizea_flag);
-        }
-        else if (position==3) {
+        } else if (position == 3) {
             /**
              * Macedonia
              */
@@ -123,7 +117,5 @@ public class DetailsActivity extends AppCompatActivity {
                 }
             });
         }
-
-
     }
 }
