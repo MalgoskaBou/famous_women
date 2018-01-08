@@ -22,6 +22,9 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz); // Temporary -> use array adapt or show 5 questions by default?
 
+        // this is for the arrow in the menu bar to go back to parent activity
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         final ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
 
         questions.add(new QuizQuestion("Question 1", "Answer 11", "Answer 12", "Answer 13", 1, 1));

@@ -92,8 +92,15 @@ public class DetailsActivity extends AppCompatActivity {
             descriptionTextView.setText(R.string.body_details_description_elisabeta);
             flagImageView.setImageResource(R.drawable.elisabeta_rizea_flag);
         }
+        else if (position==3) {
+            /**
+             * Macedonia
+             */
 
-
+            portraitImageView.setImageResource(R.drawable.mother_theresa);
+            descriptionTextView.setText(R.string.body_details_description_mother_theresa);
+            flagImageView.setImageResource(R.drawable.macedonia_flag);
+        }
 
 
         //put data to new textView

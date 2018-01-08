@@ -41,7 +41,11 @@
         </activity>
         <activity
             android:name=".QuizActivity"
-            android:label="@string/category_quiz"></activity>
+            android:label="@string/category_quiz"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name="AboutApplication"
+            android:label= "About Application"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

@@ -21,6 +21,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -46,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
         words.add(new Word(R.string.elisabeta_proffesion, R.string.elisabeta,
                 R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
+        words.add(new Word(R.string.humanitarian, R.string.mother_theresa,
+                R.drawable.mother_theresa, R.drawable.macedonia_flag));
+
 
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
@@ -92,6 +98,30 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
+    // this is to create the menu bar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+    // this is to create the different parts of the menu bar
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.about_application:
+                Intent intent1 = new Intent(this, AboutApplication.class);
+                this.startActivity(intent1);
+                return true;
+            case R.id.quiz:
+                Intent intent2 = new Intent(this, QuizActivity.class);
+                this.startActivity(intent2);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
