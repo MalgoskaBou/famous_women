@@ -32,7 +32,7 @@
     <string name="elisabeta">Elisabeta Rizea</string>
 
     <!-- Vocabulary word for the number four [CHAR LIMIT=20] -->
-    <string name="number_four">four</string>
+    <string name="wanda">Wanda Rutkiewicz</string>
 
     <!-- Vocabulary word for the number five [CHAR LIMIT=20] -->
     <string name="number_five">five</string>
@@ -106,6 +106,8 @@
     <!-- Miwok translation for number two -->
     <string name="dalia_profession">President of Lithuania</string>
 
+    <string name="wanda_profession">High mountain climber</string>
+
     <string name="humanitarian">Humanitarian</string>
     <string name="mother_theresa">Mother Theresa</string>
     <string name="body_details_description_mother_theresa">Mother Teresa (1910–1997) was a Roman Catholic nun who devoted her life to serving
@@ -130,8 +132,43 @@
     in travelling around the world to the different branches of The Missionaries of Charity.
     Following Mother Teresa’s death, the Vatican began the process of beatification, which is the second step on the way to canonization and sainthood.
     Mother Teresa was formally beatified in October 2003 by Pope John Paul II.</string>
+
+    <string name="body_details_description_wanda">Wanda Rutkiewicz is one of the most recognizable high mountains female climber. She was the third woman and first European who reached Mount Everest  and the first woman ever on K2.
+        \nWanda Rutkiewicz was born on 2 February, 1943 in Plungiany, Lithuania (before II World War it was part of Poland). She graduated from Wrocław University of Technology as electronic engineer. She was working in her profession in Wrocław, then she moved to Warsaw.
+        \nWanda Rutkiewicz was always very active person: enough to mention volleyball, running,  shot put, the high jump, discus throwing and javelin throw. She had her first contact with climbing while she was on University in Wrocław. In 1965 she did climbing course in Tatra mountains. From the beginning she was adoring new activity. Two years after the course, in 1967, she started to climb in Alps. She became more and more experienced, her ambitions were also growing.
+        She started to climb in Pamir, Hindu Kush and Himalayas.
+        \nMain achievements:
+        \n-	In 1967 east face of Aiguille du Grépon with Halina Krüger-Syrokomska – it was the first women only ascent.
+    \n-	9-11 August, 1968 - East Pillar of Trollryggen in Norway with Halina Krüger-Syrokomska – it was the first women only ascent and seventh ever.
+    \n-	1970 Lenin pick (7134 m) in Pamir, it was her first  seven-thousender.
+    \n-	19-22 August 1973 the North Pillar of the Eiger (Messner route) in female team with Danuta Gellner-Wach i Stefania Egierszdorff.
+    \n-	In 1975 she was leading women expedition on Gasherbrum. She climbed Gasherbrum III (7952 m) – women ascent altitude record. During the same expedition she climbed Gasherbrum II – first women-only ascent.
+    \n•	On October 16, 1978 as the third woman and first European woman Wanda Rutkiewicz reached the top of Mount Everest, the Earth\'s highest mountain. That day Karol Wojtyła was chosen to become pope John Paul II. During his first pilgrimage to Poland he said to her \„Good God\'s will that same day we went so high\”.
+    \n-	1978 –  the North Face of the Matterhorn in winter it was the first women-only-ascent with Anna Czerwińska, Irena Kęsa i Krystyna Palmowska.
+    \n•	On July 15, 1985 with Krystyna Palmowska and Anna Czerwinska they climbed Nanga Parbat. They became the first women\'s expedition who reached this peak.
+    \n•	On June 23 1986 she did the first women ascent on K2.
+    \n•	With Ryszard Warecki she reached peak of  Shishapangma  (the true Main Summit) on September 18, 1978. They became first Polish on the top.
+    \n•	On July 12, 1989 with Rhony Lampard they climbed Gasherbrum II.
+    \n•	On July 16, 1990 with Ewa Panejko-Pankiewicz they reached Gasherbrum I (Hidden Peak).
+    \n•	On September 1991, she reached solo Cho Oyu.
+    \n•	On October 22, 1991, she climbed solo Annapurna.
+    \nHer goal was to become the first woman to summit all fourteen of the eight-thousanders, finally she reached 8 of them (marked with •). The ninth one supposed to be Kangchenjunga. She climbed with Carlos Carsolio. On 12 May 1992 they started together from  camp IV. She was last seen when she was preparing bivouac while Carlos Carsolio was going down from the top after 12 hours ascent in deep snow. She didn’t have food, no bivouac equipment.
+    It is not known if Wanda Rutkiewicz summitted Kangchenjunga, her body was not found. She probably died during night or next day, while ascending or maybe descending from the top.
+    </string>
+
+
+
+
     <string name="about_application">About Application</string>
     <string name="quiz">Quiz</string>
+
+    <!--Quiz Questions -->
+    <string name="question1">Wanda Rutkiewicz was famous...</string>
+    <string name="answer1_1">Chemist</string>
+    <string name="answer1_2">High mountain climber</string>
+    <string name="answer1_3">Mathematician</string>
+
+
 
 
 </resources>
