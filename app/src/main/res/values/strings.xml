@@ -132,13 +132,5 @@
     Mother Teresa was formally beatified in October 2003 by Pope John Paul II.</string>
     <string name="about_application">About Application</string>
     <string name="quiz">Quiz</string>
-    <string name="question1">What is Dalia Grybauskaitė famous for?</string>
-    <string name="question1_answer1_correct">She is President of the Republic of Lithuania</string>
-    <string name="question1_answer2">She is President of the Republic of Latvia</string>
-    <string name="question1_answer3">She is President of the Republic of Estonia</string>
-    <string name="question2">How is Dalia Grybauskaitė referred to?</string>
-    <string name="question2_answer1_correct">Lithuanian Iron Lady and Steel Magnolia</string>
-    <string name="question2_answer2">Black Swan and Big bird</string>
-    <string name="question2_answer3">Iron Magnolia and Steel Lady</string>
 
 </resources>
