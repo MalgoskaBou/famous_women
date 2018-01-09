@@ -1,18 +1,30 @@
 # famous_women
 
+<h2>Instructions - how to add your own entry to the application :+1:</h2>
+
+-  **Instructions prepared by @Greta Gr**, thanks to which you will understand how to add to the application information about a famous woman from your country that you chose:<br />
+https://docs.google.com/document/d/1BbmCmI4_DhGUXwf7Bd1pcSKOmLbHZjubXdvJf-FtYD0/edit<br />
+___
+
 <h2>The project moved forward :)</h2>
 
--  **@Greta Gr** manual, thanks to which you will understand how to add to the application information about a famous woman from your country that you chose:<br />
-https://docs.google.com/document/d/1BbmCmI4_DhGUXwf7Bd1pcSKOmLbHZjubXdvJf-FtYD0/edit<br />
+- Thanks to the work of **@Diana** and **@Slimsonik**, we have already developed a menu. In the menu you can choose a quiz and a page with information about the application. Both options are not finished yet so I invite you to cooperate :)
 
--  Photos of work progress - thanks to **@Greta Gr, @Diana, @Melsara, @Ola**
+![dianaslimsonikmenu](https://user-images.githubusercontent.com/33101796/34672455-c44e1030-f47e-11e7-833f-7f74329a2dea.JPG)
+
+- **@Greta Gr** has prepared Landscape Mode for the details view
+
+![greatlandscapemode](https://user-images.githubusercontent.com/33101796/34672897-930361e0-f480-11e7-9006-03c9ffd3984f.JPG)
+
+-  Photos of work progress - thanks to **@Greta Gr, @Diana, @Melsara, @Ola, @slimsonik** 
 
 ![progress](https://user-images.githubusercontent.com/33101796/34525384-09eea50c-f09f-11e7-8d3b-2e8fdc88d31a.png)
 ![gretagr3](https://user-images.githubusercontent.com/33101796/34525371-00b81568-f09f-11e7-91e1-b9fbb5b514e2.png)
 ![dianasxml](https://user-images.githubusercontent.com/33101796/34525379-044e3b58-f09f-11e7-81d7-8c5251057703.png)
 
 
-
+___
+___
 
 
 

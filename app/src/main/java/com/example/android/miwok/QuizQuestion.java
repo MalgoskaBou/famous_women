@@ -5,34 +5,45 @@ package com.example.android.miwok;
  */
 
 public class QuizQuestion {
-    /** Quiz question */
-    private String mQuestion;
+    /**
+     * Quiz question
+     */
+    private int mQuestion;
 
-    /** Quiz question answer 1 */
-    private String mAnswer1;
+    /**
+     * Quiz question answer 1
+     */
+    private int mAnswer1;
 
-    /** Quiz question answer 2 */
-    private String mAnswer2;
+    /**
+     * Quiz question answer 2
+     */
+    private int mAnswer2;
 
-    /** Quiz question answer 3 */
-    private String mAnswer3;
+    /**
+     * Quiz question answer 3
+     */
+    private int mAnswer3;
 
-    /** Quiz question correct answer */
+    /**
+     * Quiz question correct answer
+     */
     private int mCorrectAnswer;
 
-    /** Quiz question index */
+    /**
+     * Quiz question index
+     */
     private int mQuestionIndex;
 
     /**
      * Constructs a new QuizQuestion with initial values for texts.
      */
-    public QuizQuestion(String question, String answer1, String answer2, String answer3, int correctAnswer, int questionIndex){
+    public QuizQuestion(int question, int answer1, int answer2, int answer3, int correctAnswer) {
         mQuestion = question;
         mAnswer1 = answer1;
         mAnswer2 = answer2;
         mAnswer3 = answer3;
         mCorrectAnswer = correctAnswer;
-        mQuestionIndex = questionIndex;
     }
 
     /**
@@ -40,7 +51,7 @@ public class QuizQuestion {
      *
      * @return question text.
      */
-    public String getQuestion() {
+    public int getQuestion() {
         return mQuestion;
     }
 
@@ -49,7 +60,7 @@ public class QuizQuestion {
      *
      * @return answer 1 text.
      */
-    public String getAnswer1() {
+    public int getAnswer1() {
         return mAnswer1;
     }
 
@@ -58,7 +69,7 @@ public class QuizQuestion {
      *
      * @return answer 2 text.
      */
-    public String getAnswer2() {
+    public int getAnswer2() {
         return mAnswer2;
     }
 
@@ -67,7 +78,7 @@ public class QuizQuestion {
      *
      * @return answer 3 text.
      */
-    public String getAnswer3() {
+    public int getAnswer3() {
         return mAnswer3;
     }
 
@@ -78,14 +89,5 @@ public class QuizQuestion {
      */
     public int getCorrectAnswer() {
         return mCorrectAnswer;
-    }
-
-    /**
-     * Gets the question index.
-     *
-     * @return question index.
-     */
-    public int getQuestionIndex() {
-        return mQuestionIndex;
     }
 }
