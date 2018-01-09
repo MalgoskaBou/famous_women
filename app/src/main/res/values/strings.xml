@@ -19,37 +19,37 @@
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_details">Details View</string>
 
-    <!-- Category name for quiz [CHAR LIMIT=20] -->
+    <!-- Category name for quiz -->
     <string name="category_quiz">Quiz</string>
 
-    <!-- Vocabulary word for the number one [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="maria">Maria Curie-Skłodowska</string>
 
-    <!-- Vocabulary word for the number two [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="dalia">Dalia Grybauskaitė</string>
 
-    <!-- Vocabulary word for the number three [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="elisabeta">Elisabeta Rizea</string>
 
-    <!-- Vocabulary word for the number four [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="number_four">four</string>
 
-    <!-- Vocabulary word for the number five [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->>
     <string name="number_five">five</string>
 
-    <!-- Vocabulary word for the number six [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="number_six">six</string>
 
-    <!-- Vocabulary word for the number seven [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="number_seven">seven</string>
 
-    <!-- Vocabulary word for the number eight [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="number_eight">eight</string>
 
-    <!-- Vocabulary word for the number nine [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="number_nine">nine</string>
 
-    <!-- Vocabulary word for the number ten [CHAR LIMIT=20] -->
+    <!-- Persons name in the list -->
     <string name="number_ten">ten</string>
 
     <!--Details page subheader -->
@@ -106,7 +106,7 @@
     <!-- Miwok translation for number two -->
     <string name="dalia_profession">President of Lithuania</string>
 
-    <string name="humanitarian">Humanitarian</string>
+    <string name="mother_theresa_profession">Humanitarian</string>
     <string name="mother_theresa">Mother Theresa</string>
     <string name="body_details_description_mother_theresa">Mother Teresa (1910–1997) was a Roman Catholic nun who devoted her life to serving
     the poor and destitute around the world. Mother Teresa was born in 1910 in Skopje, the capital of the Republic of Macedonia.
@@ -132,6 +132,13 @@
     Mother Teresa was formally beatified in October 2003 by Pope John Paul II.</string>
     <string name="about_application">About Application</string>
     <string name="quiz">Quiz</string>
-
+    <string name="question1">What is Dalia Grybauskaitė famous for?</string>
+    <string name="question1_answer1_correct">She is President of the Republic of Lithuania</string>
+    <string name="question1_answer2">She is President of the Republic of Latvia</string>
+    <string name="question1_answer3">She is President of the Republic of Estonia</string>
+    <string name="question2">How is Dalia Grybauskaitė referred to?</string>
+    <string name="question2_answer1_correct">Lithuanian Iron Lady and Steel Magnolia</string>
+    <string name="question2_answer2">Black Swan and Big bird</string>
+    <string name="question2_answer3">Iron Magnolia and Steel Lady</string>
 
 </resources>
