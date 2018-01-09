@@ -97,9 +97,9 @@ public class DetailsActivity extends AppCompatActivity {
              * Macedonia
              */
 
-            portraitImageView.setImageResource(R.drawable.mother_theresa);
+            portraitImageView.setImageResource(R.drawable.theresa_portrait);
             descriptionTextView.setText(R.string.body_details_description_mother_theresa);
-            flagImageView.setImageResource(R.drawable.macedonia_flag);
+            flagImageView.setImageResource(R.drawable.theresa_macedonia_flag);
         }
 
 
