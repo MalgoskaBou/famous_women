@@ -16,7 +16,6 @@ import java.util.Collections;
 public class QuizActivity extends AppCompatActivity {
 
     float score = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
