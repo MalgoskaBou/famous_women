@@ -2,7 +2,10 @@
 
 <h2>Instructions - how to add your own entry to the application :+1:</h2>
 
--  **Instructions prepared by @Greta Gr**, thanks to which you will understand how to add to the application information about a famous woman from your country that you chose:<br />
+- **Instructions prepared by @Ola**, with this guide you will learn how to add your questions to the quiz in the application - questions should apply to the previously added entry about the famous woman (instruction on how to add an entry - point below): <br/>
+https://drive.google.com/file/d/0B6LRJUzVwFSeUFpPQlZmUE5JOUpjME1HNjB4OFpiNWRQRVhz/view?usp=drivesdk
+
+- **Instructions prepared by @Greta Gr**, thanks to which you will understand how to add to the application information about a famous woman from your country that you chose:<br />
 https://docs.google.com/document/d/1BbmCmI4_DhGUXwf7Bd1pcSKOmLbHZjubXdvJf-FtYD0/edit<br />
 ___
 
