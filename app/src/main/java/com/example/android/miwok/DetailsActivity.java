@@ -69,10 +69,10 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
         details.add(new Word(R.string.elisabeta_proffesion, R.string.body_details_description_elisabeta,
                 R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
-        details.add(new Word(R.string.humanitarian, R.string.body_details_description_mother_theresa,
-                R.drawable.mother_theresa, R.drawable.macedonia_flag));
+        details.add(new Word(R.string.mother_theresa_profession,R.string.body_details_description_mother_theresa,
+                R.drawable.theresa_portrait, R.drawable.theresa_macedonia_flag));
         details.add(new Word(R.string.wanda_profession, R.string.body_details_description_wanda,
-                R.drawable.mother_theresa, R.drawable.maria_poland_flag));
+                R.drawable.theresa_portrait, R.drawable.maria_poland_flag));
 
 
 
@@ -114,16 +114,16 @@ public class DetailsActivity extends AppCompatActivity {
              * Macedonia
              */
 
-            portraitImageView.setImageResource(R.drawable.mother_theresa);
+            portraitImageView.setImageResource(R.drawable.theresa_portrait);
             descriptionTextView.setText(R.string.body_details_description_mother_theresa);
-            flagImageView.setImageResource(R.drawable.macedonia_flag);
+            flagImageView.setImageResource(R.drawable.theresa_macedonia_flag);
         }
         else if (position==4) {
             /**
              * Poland
              */
 
-            portraitImageView.setImageResource(R.drawable.mother_theresa);
+            portraitImageView.setImageResource(R.drawable.theresa_portrait);
             descriptionTextView.setText(R.string.body_details_description_wanda);
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
         }
