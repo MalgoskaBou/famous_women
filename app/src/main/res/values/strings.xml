@@ -167,8 +167,13 @@
     <string name="answer1_1">Chemist</string>
     <string name="answer1_2">High mountain climber</string>
     <string name="answer1_3">Mathematician</string>
-
-
-
+    <string name="question2">What is Dalia Grybauskaitė famous for?</string>
+    <string name="answer2_1">She is President of the Republic of Lithuania</string>
+    <string name="answer2_2">She is President of the Republic of Latvia</string>
+    <string name="answer2_3">She is President of the Republic of Estonia</string>
+    <string name="question3">How is Dalia Grybauskaitė referred to?</string>
+    <string name="answer3_1">Black Swan and Big bird</string>
+    <string name="answer3_2">Lithuanian Iron Lady and Steel Magnolia</string>
+    <string name="answer3_3">Iron Magnolia and Steel Lady</string>
 
 </resources>
