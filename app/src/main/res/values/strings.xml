@@ -156,16 +156,16 @@
     <string name="answer3_3">22</string>
 
     <!--Question 4 -->
-    <string name="question3">What is Dalia Grybauskaitė famous for?</string>
-    <string name="answer3_1">She is President of the Republic of Lithuania</string>
-    <string name="answer3_2">She is President of the Republic of Latvia</string>
-    <string name="answer3_3">She is President of the Republic of Estonia</string>
+    <string name="question4">What is Dalia Grybauskaitė famous for?</string>
+    <string name="answer4_1">She is President of the Republic of Lithuania</string>
+    <string name="answer4_2">She is President of the Republic of Latvia</string>
+    <string name="answer4_3">She is President of the Republic of Estonia</string>
   
     <!--Question 5 -->
-    <string name="question4">How is Dalia Grybauskaitė referred to?</string>
-    <string name="answer4_1">Black Swan and Big bird</string>
-    <string name="answer4_2">Lithuanian Iron Lady and Steel Magnolia</string>
-    <string name="answer4_3">Iron Magnolia and Steel Lady</string>
+    <string name="question5">How is Dalia Grybauskaitė referred to?</string>
+    <string name="answer5_1">Black Swan and Big bird</string>
+    <string name="answer5_2">Lithuanian Iron Lady and Steel Magnolia</string>
+    <string name="answer5_3">Iron Magnolia and Steel Lady</string>
 
 
 </resources>
