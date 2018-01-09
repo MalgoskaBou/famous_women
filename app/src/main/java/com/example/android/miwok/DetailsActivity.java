@@ -72,7 +72,7 @@ public class DetailsActivity extends AppCompatActivity {
         details.add(new Word(R.string.mother_theresa_profession,R.string.body_details_description_mother_theresa,
                 R.drawable.theresa_portrait, R.drawable.theresa_macedonia_flag));
         details.add(new Word(R.string.wanda_profession, R.string.body_details_description_wanda,
-                R.drawable.theresa_portrait, R.drawable.maria_poland_flag));
+                R.drawable.wanda_rutkiewicz_portrait, R.drawable.maria_poland_flag));
 
 
 
@@ -123,7 +123,7 @@ public class DetailsActivity extends AppCompatActivity {
              * Poland
              */
 
-            portraitImageView.setImageResource(R.drawable.theresa_portrait);
+            portraitImageView.setImageResource(R.drawable.wanda_rutkiewicz_portrait);
             descriptionTextView.setText(R.string.body_details_description_wanda);
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
         }
