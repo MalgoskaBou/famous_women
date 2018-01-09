@@ -163,10 +163,25 @@
     <string name="quiz">Quiz</string>
 
     <!--Quiz Questions -->
-    <string name="question1">Wanda Rutkiewicz was famous...</string>
+    <string name="question1">Wanda Rutkiewicz was a famous...</string>
     <string name="answer1_1">Chemist</string>
     <string name="answer1_2">High mountain climber</string>
     <string name="answer1_3">Mathematician</string>
+
+    <string name="question2">When did Mother Theresa receive her Noble Prize?</string>
+    <string name="answer2_1">1959</string>
+    <string name="answer2_2">1969</string>
+    <string name="answer2_3">1979</string>
+
+    <string name="question3">How many years did Elisabeta Rizea spend in prison?</string>
+    <string name="answer3_1">02</string>
+    <string name="answer3_2">12</string>
+    <string name="answer3_3">22</string>
+
+
+
+
+
 
 
 
