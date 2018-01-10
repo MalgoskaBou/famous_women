@@ -73,6 +73,8 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.theresa_portrait, R.drawable.theresa_macedonia_flag));
         details.add(new Word(R.string.wanda_profession, R.string.body_details_description_wanda,
                 R.drawable.wanda_rutkiewicz_portrait, R.drawable.maria_poland_flag));
+        details.add(new Word(R.string.ameenah_profession, R.string.body_details_description_ameenah,
+                R.drawable.ameenah_portrait, R.drawable.ameenah_mauritius_flag));
 
 
 
@@ -126,6 +128,14 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.wanda_rutkiewicz_portrait);
             descriptionTextView.setText(R.string.body_details_description_wanda);
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
+        }
+        else if (position==5) {
+            /**
+             * Mauritius
+             */
+            portraitImageView.setImageResource(R.drawable.ameenah_portrait);
+            descriptionTextView.setText(R.string.body_details_description_ameenah);
+            flagImageView.setImageResource(R.drawable.ameenah_mauritius_flag);
         }
 
 
