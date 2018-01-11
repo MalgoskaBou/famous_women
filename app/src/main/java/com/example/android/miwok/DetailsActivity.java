@@ -143,9 +143,15 @@ public class DetailsActivity extends AppCompatActivity {
             /**
              * Mauritius
              */
+
+            portraitImageView.setImageResource(R.drawable.maria_telkes_portrait);
+            descriptionTextView.setText(R.string.body_details_description_maria_telkes);
+            flagImageView.setImageResource(R.drawable.maria_hungary_flag);
+
             portraitImageView.setImageResource(R.drawable.sirleaf_portrait);
             descriptionTextView.setText(R.string.body_details_description_sirleaf);
             flagImageView.setImageResource(R.drawable.sirleaf_liberia_flag);
+
         }
 
 
