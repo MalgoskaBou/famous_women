@@ -30,6 +30,7 @@
     <string name="wanda">Wanda Rutkiewicz</string>
     <string name="ameenah">Ameenah Gurib-Fakim</string>
     <string name="maria_telkes">Mária Telkes</string>
+    <string name="ellen_Sirleaf">Ellen Johnson Sirleaf</string>
     <string name="name8"> </string>
     <string name="name9"> </string>
     <string name="name10"> </string>
@@ -42,6 +43,8 @@
     <string name="mother_theresa_profession">Humanitarian</string>
     <string name="ameenah_profession">President of Mauritius</string>
     <string name="maria_telkes_profession">Biophysicist</string>
+    <string name="sirleaf_profession">President of Liberia</string>
+
     <string name="profession8"> </string>
     <string name="profession9"> </string>
     <string name="profession10"> </string>
@@ -143,11 +146,21 @@
         by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the ‘Chevalier de l’Ordre des Palmes Academiques’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).
         </string>
 
+
     <string name="body_details_description_maria_telkes">Mária Telkes (December 12, 1900 – December 2, 1995) was a Hungarian-American scientist and inventor who worked on solar energy technologies.\nTelkes worked as a biophysicist in the United States; and, from 1939 to 1953, she was involved in solar energy research at Massachusetts Institute of Technology.
         \nTelkes is known for creating the first thermoelectric power generator in 1947, designing the first solar heating system for the Dover Sun House in Dover, Massachusetts, (built entirely with solar heating, with the architect Eleanor Raymond and the first thermoelectric refrigerator in 1953 using the principles of semiconductor thermoelectricity.
         \nShe was a prolific inventor of practical thermal devices, including a miniature desalination unit for use on lifeboats, which used solar power and condensation to collect potable solar still. The still saved the lives of airmen and sailors who would have been without water when abandoned at sea.
         \nOne of her specialties were phase-change materials, including molten salts to store thermal energy. One of her materials of choice was Glauber's salt.elkes is considered one of the founders of solar thermal storage systems, earning her the nickname "the Sun Queen".
         \nShe moved to Texas in the 1970s and consulted with a variety of start-up solar companies, including Northrup Solar, which subsequently became ARCO Solar, and eventually BP Solar.</string>
+
+    <string name="body_details_description_sirleaf"> Liberian President Ellen Johnson Sirleaf is the world\'s first elected black female president and Africa\'s first elected female head of state.
+        Ellen Johnson Sirleaf was born on October 29, 1938, in Monrovia, Liberia. A graduate of the College of West Africa at Monrovia, she went on to receive her bachelor\'s degree in accounting from the Madison Business College in Madison, Wisconsin, a degree in economics from the University of Colorado at Boulder and a Master of Public Administration degree from Harvard University.
+        After returning to Liberia, Ellen Johnson Sirleaf served as assistant minister of Finance in President William Tolbert\'s administration. In 1980, Tolbert was overthrown and killed by army sergeant Samuel Doe, who represented the Krahn ethnic group. Johnson Sirleaf went into exile in Nairobi, Kenya, as well as in the United States, where she worked as an executive in the international banking community.
+        In 1985, Johnson Sirleaf returned to Liberia and ran for a seat in the Senate, but when she spoke out against Doe\'s military regime, she was sentenced to 10 years in prison. She served a partial sentence before moving to Washington, D.C. When she returned to her native country for a third time in 1997, it was as an economist, working for the World Bank and Citibank in Africa.
+        After supporting Charles Taylor's bloody rebellion against President Samuel Doe in 1990, Johnson Sirleaf ran unsuccessfully against Taylor in the 1997 presidential election. Taylor subsequently charged Johnson Sirleaf with treason. In 2005, after campaigning for the removal of President Taylor, Johnson Sirleaf took over as leader of the Unity Party.
+        That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the "Iron Lady," as she was also known, became the world's first elected black female president and Africa's first elected female head of state.
+        Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia. </string>
+
 
     <!--Menu Options -->
 
