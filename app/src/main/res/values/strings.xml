@@ -165,9 +165,9 @@
   
     <!--Question 3 -->
     <string name="question3">How many years did Elisabeta Rizea spend in prison?</string>
-    <string name="answer3_1">02</string>
-    <string name="answer3_2">12</string>
-    <string name="answer3_3">22</string>
+    <string name="answer3_1">02 years</string>
+    <string name="answer3_2">12 years</string>
+    <string name="answer3_3">22 years</string>
 
     <!--Question 4 -->
     <string name="question4">What is Dalia Grybauskaitė famous for?</string>
@@ -180,5 +180,13 @@
     <string name="answer5_1">Black Swan and Big bird</string>
     <string name="answer5_2">Lithuanian Iron Lady and Steel Magnolia</string>
     <string name="answer5_3">Iron Magnolia and Steel Lady</string>
-    
+
+    <!--Question 6 -->
+    <string name="question6">Elisabeta Rizea was a ....</string>
+    <string name="answer6_1">Romanian anti-communist partisan</string>
+    <string name="answer6_2">Romanian communist partisan</string>
+    <string name="answer6_3">Albanian anti-communist partisan</string>
+
+
+
 </resources>
