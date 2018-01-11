@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +18,8 @@ import java.util.Collections;
 public class QuizActivity extends AppCompatActivity {
 
     float score = 0;
+    final ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +28,7 @@ public class QuizActivity extends AppCompatActivity {
         // this is for the arrow in the menu bar to go back to parent activity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
+
 
         questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
         questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
@@ -126,11 +130,9 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     else {
                         int selectedRadioButtonID = rg1.indexOfChild(findViewById(rg1.getCheckedRadioButtonId()));
-                        View child = rg1.getChildAt(questions.get(0).getCorrectAnswer());
-                        child.setBackgroundColor(Color.GREEN);
+                        correctAnswerCheck(rg1,0);
                         if (questions.get(0).getCorrectAnswer() != selectedRadioButtonID){
-                            View selected = rg1.getChildAt(selectedRadioButtonID);
-                            selected.setBackgroundColor(Color.RED);
+                           incorrectAnswerCheck(rg1);
                         } else {
                             score ++;
                         }
@@ -156,11 +158,10 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     else {
                         int selectedRadioButtonID = rg2.indexOfChild(findViewById(rg2.getCheckedRadioButtonId()));
-                        View child = rg2.getChildAt(questions.get(1).getCorrectAnswer());
-                        child.setBackgroundColor(Color.GREEN);
+                        correctAnswerCheck(rg2,1);
+
                         if (questions.get(1).getCorrectAnswer() != selectedRadioButtonID){
-                            View selected = rg2.getChildAt(selectedRadioButtonID);
-                            selected.setBackgroundColor(Color.RED);
+                            incorrectAnswerCheck(rg2);
                         } else {
                             score ++;
                         }
@@ -185,11 +186,10 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     else {
                         int selectedRadioButtonID = rg3.indexOfChild(findViewById(rg3.getCheckedRadioButtonId()));
-                        View child = rg3.getChildAt(questions.get(2).getCorrectAnswer());
-                        child.setBackgroundColor(Color.GREEN);
+                        correctAnswerCheck(rg3,2);
+
                         if (questions.get(2).getCorrectAnswer() != selectedRadioButtonID){
-                            View selected = rg3.getChildAt(selectedRadioButtonID);
-                            selected.setBackgroundColor(Color.RED);
+                            incorrectAnswerCheck(rg3);
                         } else {
                             score ++;
                         }
@@ -214,11 +214,10 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     else {
                         int selectedRadioButtonID = rg4.indexOfChild(findViewById(rg4.getCheckedRadioButtonId()));
-                        View child = rg4.getChildAt(questions.get(3).getCorrectAnswer());
-                        child.setBackgroundColor(Color.GREEN);
+                        correctAnswerCheck(rg4,3);
+
                         if (questions.get(3).getCorrectAnswer() != selectedRadioButtonID){
-                            View selected = rg4.getChildAt(selectedRadioButtonID);
-                            selected.setBackgroundColor(Color.RED);
+                            incorrectAnswerCheck(rg4);
                         } else {
                             score ++;
                         }
@@ -243,11 +242,10 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     else {
                         int selectedRadioButtonID = rg5.indexOfChild(findViewById(rg5.getCheckedRadioButtonId()));
-                        View child = rg5.getChildAt(questions.get(2).getCorrectAnswer());
-                        child.setBackgroundColor(Color.GREEN);
+                        correctAnswerCheck(rg5,4);
+
                         if (questions.get(4).getCorrectAnswer() != selectedRadioButtonID){
-                            View selected = rg5.getChildAt(selectedRadioButtonID);
-                            selected.setBackgroundColor(Color.RED);
+                            incorrectAnswerCheck(rg5);
                         } else {
                             score ++;
                         }
@@ -262,4 +260,26 @@ public class QuizActivity extends AppCompatActivity {
             });
         }
     }
+
+    public void correctAnswerCheck (RadioGroup rg, int numberOfQuestion){
+        RadioButton correctAnswer = (RadioButton) findViewById(rg.getChildAt(questions.get(numberOfQuestion).getCorrectAnswer()).getId());
+        correctAnswer.setButtonDrawable(R.drawable.ic_check);
+        LinearLayout.LayoutParams params1 = (LinearLayout.LayoutParams)correctAnswer.getLayoutParams();
+        params1.setMargins(16, 0, 0, 0);
+        correctAnswer.setLayoutParams(params1);
+        correctAnswer.setPadding(16,0,0,0);
+
+    }
+
+    public void incorrectAnswerCheck(RadioGroup rg){
+
+        RadioButton selectedAnswer = (RadioButton) findViewById(rg.getCheckedRadioButtonId());
+        selectedAnswer.setButtonDrawable(R.drawable.ic_cancel);
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)selectedAnswer.getLayoutParams();
+        params.setMargins(16, 0, 0, 0);
+        selectedAnswer.setLayoutParams(params);
+        selectedAnswer.setPadding(16,0,0,0);
+
+    }
+
 }
