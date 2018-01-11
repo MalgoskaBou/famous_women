@@ -77,8 +77,8 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.ameenah_portrait, R.drawable.ameenah_mauritius_flag));
         details.add(new Word(R.string.sirleaf_profession, R.string.body_details_description_sirleaf,
                 R.drawable.sirleaf_portrait, R.drawable.sirleaf_liberia_flag));
-
-
+        details.add(new Word(R.string.maria_telkes_profession, R.string.body_details_description_maria_telkes,
+                R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
 
 
         if(position==0)
@@ -141,19 +141,20 @@ public class DetailsActivity extends AppCompatActivity {
         }
         else if (position==6) {
             /**
-             * Mauritius
+             * Liberia
              */
-
-            portraitImageView.setImageResource(R.drawable.maria_telkes_portrait);
-            descriptionTextView.setText(R.string.body_details_description_maria_telkes);
-            flagImageView.setImageResource(R.drawable.maria_hungary_flag);
-
             portraitImageView.setImageResource(R.drawable.sirleaf_portrait);
             descriptionTextView.setText(R.string.body_details_description_sirleaf);
             flagImageView.setImageResource(R.drawable.sirleaf_liberia_flag);
-
         }
-
+        else if (position==7) {
+            /**
+             * Mauritius
+             */
+            portraitImageView.setImageResource(R.drawable.maria_telkes_portrait);
+            descriptionTextView.setText(R.string.body_details_description_maria_telkes);
+            flagImageView.setImageResource(R.drawable.maria_hungary_flag);
+        }
 
         //put data to new textView
         TextView profession = (TextView) findViewById(R.id.profession_text);

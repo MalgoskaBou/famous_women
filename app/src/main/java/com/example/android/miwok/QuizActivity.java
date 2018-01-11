@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -13,7 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -29,16 +33,19 @@ public class QuizActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
         questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
         questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
         questions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
         questions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
         questions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
         questions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
-
+        questions.add(new QuizQuestion(R.string.question7, R.string.answer7_1, R.string.answer7_2, R.string.answer7_3, 2 ));
+        questions.add(new QuizQuestion(R.string.question8, R.string.answer8_1, R.string.answer8_2, R.string.answer8_3, 3));
+        questions.add(new QuizQuestion(R.string.question9, R.string.answer9_1, R.string.answer9_2, R.string.answer9_3, 3));
         // Randomized questions
         Collections.shuffle(questions);
+        int index = new Random().nextInt(questions.size());
+        QuizQuestion currQuestion = questions.remove(index);
 
         // Temporary code
         // Find views
@@ -77,6 +84,7 @@ public class QuizActivity extends AppCompatActivity {
         final TextView ans5_2 = (TextView)findViewById(R.id.rb_answer5_2);
         final TextView ans5_3 = (TextView)findViewById(R.id.rb_answer5_3);
         final TextView submit5 = (TextView) findViewById(R.id.tv_submit_5);
+
         // Result
         final TextView result = (TextView) findViewById(R.id.tv_result);
 
@@ -117,6 +125,8 @@ public class QuizActivity extends AppCompatActivity {
         ans5_2.setText(questions.get(4).getAnswer2());
         ans5_3.setText(questions.get(4).getAnswer3());
         submit5.setVisibility(View.INVISIBLE);
+
+
 
 
         // Question 1 submit
