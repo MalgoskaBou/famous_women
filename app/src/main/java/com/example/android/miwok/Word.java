@@ -16,9 +16,8 @@
 package com.example.android.miwok;
 
 /**
- * {@link Word} represents a vocabulary word that the user wants to learn.
- * It contains resource IDs for the default translation, Miwok translation, audio file, and
- * optional image file for that word.
+ * {@link Word} represents the name of the famous woman we are displaying in the app as well as a profession
+ * for the same and image as a picture file for that woman
  */
 public class Word {
 

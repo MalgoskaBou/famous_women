@@ -29,7 +29,7 @@
     <string name="mother_theresa">Mother Theresa</string>
     <string name="wanda">Wanda Rutkiewicz</string>
     <string name="ameenah">Ameenah Gurib-Fakim</string>
-    <string name="name7"> </string>
+    <string name="ellen_Sirleaf">Ellen Johnson Sirleaf</string>
     <string name="name8"> </string>
     <string name="name9"> </string>
     <string name="name10"> </string>
@@ -41,7 +41,7 @@
     <string name="wanda_profession">High mountain climber</string>
     <string name="mother_theresa_profession">Humanitarian</string>
     <string name="ameenah_profession">President of Mauritius</string>
-    <string name="profession7"> </string>
+    <string name="sirleaf_profession">President of Liberia</string>
     <string name="profession8"> </string>
     <string name="profession9"> </string>
     <string name="profession10"> </string>
@@ -142,6 +142,14 @@
         Gurib-Fakim has also been the recipient of various international awards including the L'Oréal-UNESCO Award for Women in Science (2007), Laureate for the National Economic and Social Council (2007), the CTA / NEPAD / AGRA / RUFORUM for ‘African Women in Science’ and the African Union Award for Women in Science.She was also made Commander of the Order of the Star and Key of the Indian Ocean (CSK)
         by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the ‘Chevalier de l’Ordre des Palmes Academiques’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).
         </string>
+
+    <string name="body_details_description_sirleaf"> Liberian President Ellen Johnson Sirleaf is the world\'s first elected black female president and Africa\'s first elected female head of state.
+        Ellen Johnson Sirleaf was born on October 29, 1938, in Monrovia, Liberia. A graduate of the College of West Africa at Monrovia, she went on to receive her bachelor\'s degree in accounting from the Madison Business College in Madison, Wisconsin, a degree in economics from the University of Colorado at Boulder and a Master of Public Administration degree from Harvard University.
+        After returning to Liberia, Ellen Johnson Sirleaf served as assistant minister of Finance in President William Tolbert\'s administration. In 1980, Tolbert was overthrown and killed by army sergeant Samuel Doe, who represented the Krahn ethnic group. Johnson Sirleaf went into exile in Nairobi, Kenya, as well as in the United States, where she worked as an executive in the international banking community.
+        In 1985, Johnson Sirleaf returned to Liberia and ran for a seat in the Senate, but when she spoke out against Doe\'s military regime, she was sentenced to 10 years in prison. She served a partial sentence before moving to Washington, D.C. When she returned to her native country for a third time in 1997, it was as an economist, working for the World Bank and Citibank in Africa.
+        After supporting Charles Taylor's bloody rebellion against President Samuel Doe in 1990, Johnson Sirleaf ran unsuccessfully against Taylor in the 1997 presidential election. Taylor subsequently charged Johnson Sirleaf with treason. In 2005, after campaigning for the removal of President Taylor, Johnson Sirleaf took over as leader of the Unity Party.
+        That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the "Iron Lady," as she was also known, became the world's first elected black female president and Africa's first elected female head of state.
+        Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia. </string>
 
     <!--Menu Options -->
 
