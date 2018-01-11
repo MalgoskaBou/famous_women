@@ -137,6 +137,14 @@ public class DetailsActivity extends AppCompatActivity {
             descriptionTextView.setText(R.string.body_details_description_ameenah);
             flagImageView.setImageResource(R.drawable.ameenah_mauritius_flag);
         }
+        else if (position==6) {
+            /**
+             * Mauritius
+             */
+            portraitImageView.setImageResource(R.drawable.maria_telkes_portrait);
+            descriptionTextView.setText(R.string.body_details_description_maria_telkes);
+            flagImageView.setImageResource(R.drawable.maria_hungary_flag);
+        }
 
 
         //put data to new textView
