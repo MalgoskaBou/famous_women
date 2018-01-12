@@ -44,7 +44,6 @@
     <string name="ameenah_profession">President of Mauritius</string>
     <string name="maria_telkes_profession">Biophysicist</string>
     <string name="sirleaf_profession">President of Liberia</string>
-
     <string name="profession8"> </string>
     <string name="profession9"> </string>
     <string name="profession10"> </string>
@@ -146,7 +145,6 @@
         by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the ‘Chevalier de l’Ordre des Palmes Academiques’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).
         </string>
 
-
     <string name="body_details_description_maria_telkes">Mária Telkes (December 12, 1900 – December 2, 1995) was a Hungarian-American scientist and inventor who worked on solar energy technologies.\nTelkes worked as a biophysicist in the United States; and, from 1939 to 1953, she was involved in solar energy research at Massachusetts Institute of Technology.
         \nTelkes is known for creating the first thermoelectric power generator in 1947, designing the first solar heating system for the Dover Sun House in Dover, Massachusetts, (built entirely with solar heating, with the architect Eleanor Raymond and the first thermoelectric refrigerator in 1953 using the principles of semiconductor thermoelectricity.
         \nShe was a prolific inventor of practical thermal devices, including a miniature desalination unit for use on lifeboats, which used solar power and condensation to collect potable solar still. The still saved the lives of airmen and sailors who would have been without water when abandoned at sea.
@@ -218,4 +216,9 @@
     <string name="answer8_2">The Wind Queen</string>
     <string name="answer8_3">The Sun Queen</string>
 
+    <!--Question 9-->
+    <string name="question9">In 1997, Ellen Johnson Sirleaf worked as an economist in which bank?</string>
+    <string name="answer9_1">Global Bank Liberia.</string>
+    <string name="answer9_2">International Bank (Liberia)</string>
+    <string name="answer9_3">World Bank and Citibank in Africa</string>
 </resources>
