@@ -1,10 +1,7 @@
 package com.example.android.miwok;
 
-import android.graphics.Color;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -17,8 +14,9 @@ import java.util.Collections;
 
 public class QuizActivity extends AppCompatActivity {
 
+    private final static String QUESTIONS_ARRAY_KEY = "questionsArrayKey";
     float score = 0;
-    final ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
+    ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,54 +26,57 @@ public class QuizActivity extends AppCompatActivity {
         // this is for the arrow in the menu bar to go back to parent activity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // get questions ArrayList on load if it exists
+        if (savedInstanceState != null) {
+            questions = savedInstanceState.getParcelableArrayList(QUESTIONS_ARRAY_KEY);
+        } else {
+            questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+            questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
+            questions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
+            questions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
+            questions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
+            questions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
 
-
-        questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
-        questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
-        questions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
-        questions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
-        questions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
-        questions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
-
-        // Randomized questions
-        Collections.shuffle(questions);
+            // Randomized questions
+            Collections.shuffle(questions);
+        }
 
         // Temporary code
         // Find views
         // Question 1
-        final TextView question1 = (TextView)findViewById(R.id.tv_question1);
-        final RadioGroup rg1 = (RadioGroup)findViewById(R.id.rg_question1);
-        final TextView ans1_1 = (TextView)findViewById(R.id.rb_answer1_1);
-        final TextView ans1_2 = (TextView)findViewById(R.id.rb_answer1_2);
-        final TextView ans1_3 = (TextView)findViewById(R.id.rb_answer1_3);
+        final TextView question1 = (TextView) findViewById(R.id.tv_question1);
+        final RadioGroup rg1 = (RadioGroup) findViewById(R.id.rg_question1);
+        final TextView ans1_1 = (TextView) findViewById(R.id.rb_answer1_1);
+        final TextView ans1_2 = (TextView) findViewById(R.id.rb_answer1_2);
+        final TextView ans1_3 = (TextView) findViewById(R.id.rb_answer1_3);
         final TextView submit1 = (TextView) findViewById(R.id.tv_submit_1);
         // Question 2
-        final TextView question2 = (TextView)findViewById(R.id.tv_question2);
-        final RadioGroup rg2 = (RadioGroup)findViewById(R.id.rg_question2);
-        final TextView ans2_1 = (TextView)findViewById(R.id.rb_answer2_1);
-        final TextView ans2_2 = (TextView)findViewById(R.id.rb_answer2_2);
-        final TextView ans2_3 = (TextView)findViewById(R.id.rb_answer2_3);
+        final TextView question2 = (TextView) findViewById(R.id.tv_question2);
+        final RadioGroup rg2 = (RadioGroup) findViewById(R.id.rg_question2);
+        final TextView ans2_1 = (TextView) findViewById(R.id.rb_answer2_1);
+        final TextView ans2_2 = (TextView) findViewById(R.id.rb_answer2_2);
+        final TextView ans2_3 = (TextView) findViewById(R.id.rb_answer2_3);
         final TextView submit2 = (TextView) findViewById(R.id.tv_submit_2);
         // Question 3
-        final TextView question3 = (TextView)findViewById(R.id.tv_question3);
-        final RadioGroup rg3 = (RadioGroup)findViewById(R.id.rg_question3);
-        final TextView ans3_1 = (TextView)findViewById(R.id.rb_answer3_1);
-        final TextView ans3_2 = (TextView)findViewById(R.id.rb_answer3_2);
-        final TextView ans3_3 = (TextView)findViewById(R.id.rb_answer3_3);
+        final TextView question3 = (TextView) findViewById(R.id.tv_question3);
+        final RadioGroup rg3 = (RadioGroup) findViewById(R.id.rg_question3);
+        final TextView ans3_1 = (TextView) findViewById(R.id.rb_answer3_1);
+        final TextView ans3_2 = (TextView) findViewById(R.id.rb_answer3_2);
+        final TextView ans3_3 = (TextView) findViewById(R.id.rb_answer3_3);
         final TextView submit3 = (TextView) findViewById(R.id.tv_submit_3);
         // Question 4
-        final TextView question4= (TextView)findViewById(R.id.tv_question4);
-        final RadioGroup rg4 = (RadioGroup)findViewById(R.id.rg_question4);
-        final TextView ans4_1 = (TextView)findViewById(R.id.rb_answer4_1);
-        final TextView ans4_2 = (TextView)findViewById(R.id.rb_answer4_2);
-        final TextView ans4_3 = (TextView)findViewById(R.id.rb_answer4_3);
+        final TextView question4 = (TextView) findViewById(R.id.tv_question4);
+        final RadioGroup rg4 = (RadioGroup) findViewById(R.id.rg_question4);
+        final TextView ans4_1 = (TextView) findViewById(R.id.rb_answer4_1);
+        final TextView ans4_2 = (TextView) findViewById(R.id.rb_answer4_2);
+        final TextView ans4_3 = (TextView) findViewById(R.id.rb_answer4_3);
         final TextView submit4 = (TextView) findViewById(R.id.tv_submit_4);
         // Question 5
-        final TextView question5 = (TextView)findViewById(R.id.tv_question5);
-        final RadioGroup rg5 = (RadioGroup)findViewById(R.id.rg_question5);
-        final TextView ans5_1 = (TextView)findViewById(R.id.rb_answer5_1);
-        final TextView ans5_2 = (TextView)findViewById(R.id.rb_answer5_2);
-        final TextView ans5_3 = (TextView)findViewById(R.id.rb_answer5_3);
+        final TextView question5 = (TextView) findViewById(R.id.tv_question5);
+        final RadioGroup rg5 = (RadioGroup) findViewById(R.id.rg_question5);
+        final TextView ans5_1 = (TextView) findViewById(R.id.rb_answer5_1);
+        final TextView ans5_2 = (TextView) findViewById(R.id.rb_answer5_2);
+        final TextView ans5_3 = (TextView) findViewById(R.id.rb_answer5_3);
         final TextView submit5 = (TextView) findViewById(R.id.tv_submit_5);
         // Result
         final TextView result = (TextView) findViewById(R.id.tv_result);
@@ -126,15 +127,14 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (rg1.getCheckedRadioButtonId() == -1) {
-                        Toast.makeText(getBaseContext(), "Select answer!",Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                        Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                    } else {
                         int selectedRadioButtonID = rg1.indexOfChild(findViewById(rg1.getCheckedRadioButtonId()));
-                        correctAnswerCheck(rg1,0);
-                        if (questions.get(0).getCorrectAnswer() != selectedRadioButtonID){
-                           incorrectAnswerCheck(rg1);
+                        correctAnswerCheck(rg1, 0);
+                        if (questions.get(0).getCorrectAnswer() != selectedRadioButtonID) {
+                            incorrectAnswerCheck(rg1);
                         } else {
-                            score ++;
+                            score++;
                         }
                         for (int i = 0; i < rg1.getChildCount(); i++) {
                             rg1.getChildAt(i).setEnabled(false);
@@ -154,16 +154,15 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (rg2.getCheckedRadioButtonId() == -1) {
-                        Toast.makeText(getBaseContext(), "Select answer!",Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                        Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                    } else {
                         int selectedRadioButtonID = rg2.indexOfChild(findViewById(rg2.getCheckedRadioButtonId()));
-                        correctAnswerCheck(rg2,1);
+                        correctAnswerCheck(rg2, 1);
 
-                        if (questions.get(1).getCorrectAnswer() != selectedRadioButtonID){
+                        if (questions.get(1).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg2);
                         } else {
-                            score ++;
+                            score++;
                         }
                         for (int i = 0; i < rg2.getChildCount(); i++) {
                             rg2.getChildAt(i).setEnabled(false);
@@ -182,16 +181,15 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (rg3.getCheckedRadioButtonId() == -1) {
-                        Toast.makeText(getBaseContext(), "Select answer!",Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                        Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                    } else {
                         int selectedRadioButtonID = rg3.indexOfChild(findViewById(rg3.getCheckedRadioButtonId()));
-                        correctAnswerCheck(rg3,2);
+                        correctAnswerCheck(rg3, 2);
 
-                        if (questions.get(2).getCorrectAnswer() != selectedRadioButtonID){
+                        if (questions.get(2).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg3);
                         } else {
-                            score ++;
+                            score++;
                         }
                         for (int i = 0; i < rg3.getChildCount(); i++) {
                             rg3.getChildAt(i).setEnabled(false);
@@ -210,16 +208,15 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (rg4.getCheckedRadioButtonId() == -1) {
-                        Toast.makeText(getBaseContext(), "Select answer!",Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                        Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                    } else {
                         int selectedRadioButtonID = rg4.indexOfChild(findViewById(rg4.getCheckedRadioButtonId()));
-                        correctAnswerCheck(rg4,3);
+                        correctAnswerCheck(rg4, 3);
 
-                        if (questions.get(3).getCorrectAnswer() != selectedRadioButtonID){
+                        if (questions.get(3).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg4);
                         } else {
-                            score ++;
+                            score++;
                         }
                         for (int i = 0; i < rg4.getChildCount(); i++) {
                             rg4.getChildAt(i).setEnabled(false);
@@ -238,48 +235,56 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (rg5.getCheckedRadioButtonId() == -1) {
-                        Toast.makeText(getBaseContext(), "Select answer!",Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                        Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                    } else {
                         int selectedRadioButtonID = rg5.indexOfChild(findViewById(rg5.getCheckedRadioButtonId()));
-                        correctAnswerCheck(rg5,4);
+                        correctAnswerCheck(rg5, 4);
 
-                        if (questions.get(4).getCorrectAnswer() != selectedRadioButtonID){
+                        if (questions.get(4).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg5);
                         } else {
-                            score ++;
+                            score++;
                         }
                         for (int i = 0; i < rg5.getChildCount(); i++) {
                             rg5.getChildAt(i).setEnabled(false);
                         }
 
                         score = score / 5 * 100;
-                        result.setText("Your score is: " + (int)score + "%");
+                        result.setText("Your score is: " + (int) score + "%");
                     }
                 }
             });
         }
     }
 
-    public void correctAnswerCheck (RadioGroup rg, int numberOfQuestion){
+    public void correctAnswerCheck(RadioGroup rg, int numberOfQuestion) {
         RadioButton correctAnswer = (RadioButton) findViewById(rg.getChildAt(questions.get(numberOfQuestion).getCorrectAnswer()).getId());
         correctAnswer.setButtonDrawable(R.drawable.ic_check);
-        LinearLayout.LayoutParams params1 = (LinearLayout.LayoutParams)correctAnswer.getLayoutParams();
+        LinearLayout.LayoutParams params1 = (LinearLayout.LayoutParams) correctAnswer.getLayoutParams();
         params1.setMargins(16, 0, 0, 0);
         correctAnswer.setLayoutParams(params1);
-        correctAnswer.setPadding(16,0,0,0);
+        correctAnswer.setPadding(16, 0, 0, 0);
 
     }
 
-    public void incorrectAnswerCheck(RadioGroup rg){
+    public void incorrectAnswerCheck(RadioGroup rg) {
 
         RadioButton selectedAnswer = (RadioButton) findViewById(rg.getCheckedRadioButtonId());
         selectedAnswer.setButtonDrawable(R.drawable.ic_cancel);
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)selectedAnswer.getLayoutParams();
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) selectedAnswer.getLayoutParams();
         params.setMargins(16, 0, 0, 0);
         selectedAnswer.setLayoutParams(params);
-        selectedAnswer.setPadding(16,0,0,0);
+        selectedAnswer.setPadding(16, 0, 0, 0);
 
     }
 
+    // invoked when the activity may be temporarily destroyed, save the instance state here
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        // save questions ArrayList when changing state
+        outState.putParcelableArrayList(QUESTIONS_ARRAY_KEY, questions);
+
+        // call superclass to save any view hierarchy
+        super.onSaveInstanceState(outState);
+    }
 }
