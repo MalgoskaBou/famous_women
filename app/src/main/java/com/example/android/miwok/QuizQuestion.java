@@ -1,10 +1,13 @@
 package com.example.android.miwok;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by MielcarekA on 12/18/2017.
  */
 
-public class QuizQuestion {
+public class QuizQuestion implements Parcelable {
     /**
      * Quiz question
      */
@@ -38,7 +41,7 @@ public class QuizQuestion {
     /**
      * Constructs a new QuizQuestion with initial values for texts.
      */
-    public QuizQuestion(int question, int answer1, int answer2, int answer3, int correctAnswer) {
+    QuizQuestion(int question, int answer1, int answer2, int answer3, int correctAnswer) {
         mQuestion = question;
         mAnswer1 = answer1;
         mAnswer2 = answer2;
@@ -51,7 +54,7 @@ public class QuizQuestion {
      *
      * @return question text.
      */
-    public int getQuestion() {
+    int getQuestion() {
         return mQuestion;
     }
 
@@ -60,7 +63,7 @@ public class QuizQuestion {
      *
      * @return answer 1 text.
      */
-    public int getAnswer1() {
+    int getAnswer1() {
         return mAnswer1;
     }
 
@@ -69,7 +72,7 @@ public class QuizQuestion {
      *
      * @return answer 2 text.
      */
-    public int getAnswer2() {
+    int getAnswer2() {
         return mAnswer2;
     }
 
@@ -78,7 +81,7 @@ public class QuizQuestion {
      *
      * @return answer 3 text.
      */
-    public int getAnswer3() {
+    int getAnswer3() {
         return mAnswer3;
     }
 
@@ -87,7 +90,47 @@ public class QuizQuestion {
      *
      * @return correct answer number.
      */
-    public int getCorrectAnswer() {
+    int getCorrectAnswer() {
         return mCorrectAnswer;
+    }
+
+    /*
+    * Implementation of Parcelable interface
+    */
+
+    private QuizQuestion(Parcel in) {
+        mQuestion = in.readInt();
+        mAnswer1 = in.readInt();
+        mAnswer2 = in.readInt();
+        mAnswer3 = in.readInt();
+        mCorrectAnswer = in.readInt();
+        mQuestionIndex = in.readInt();
+    }
+
+    public static final Creator<QuizQuestion> CREATOR = new Creator<QuizQuestion>() {
+        @Override
+        public QuizQuestion createFromParcel(Parcel in) {
+            return new QuizQuestion(in);
+        }
+
+        @Override
+        public QuizQuestion[] newArray(int size) {
+            return new QuizQuestion[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(mQuestion);
+        dest.writeInt(mAnswer1);
+        dest.writeInt(mAnswer2);
+        dest.writeInt(mAnswer3);
+        dest.writeInt(mCorrectAnswer);
+        dest.writeInt(mQuestionIndex);
     }
 }
