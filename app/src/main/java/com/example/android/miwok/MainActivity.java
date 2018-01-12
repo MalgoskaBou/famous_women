@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.sirleaf_listing, R.drawable.sirleaf_liberia_flag));
         words.add(new Word(R.string.maria_telkes_profession, R.string.maria_telkes,
                 R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
+        words.add(new Word(R.string.meriem_profession, R.string.Merieme_Chadid,
+                R.drawable.meriem_listing, R.drawable.meriem_morocco_flag));
 
 
 
