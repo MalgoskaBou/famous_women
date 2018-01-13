@@ -33,6 +33,33 @@ public class QuizActivity extends AppCompatActivity {
 
         // this is for the arrow in the menu bar to go back to parent activity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+        // get questions ArrayList on load if it exists
+        if (savedInstanceState != null) {
+            questions = savedInstanceState.getParcelableArrayList(QUESTIONS_ARRAY_KEY);
+        } else {
+            questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+            questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
+            questions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
+            questions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
+            questions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
+            questions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
+            questions.add(new QuizQuestion(R.string.question7, R.string.answer7_1, R.string.answer7_2, R.string.answer7_3, 2 ));
+            questions.add(new QuizQuestion(R.string.question8, R.string.answer8_1, R.string.answer8_2, R.string.answer8_3, 3));
+            questions.add(new QuizQuestion(R.string.question9, R.string.answer9_1, R.string.answer9_2, R.string.answer9_3, 3));
+            questions.add(new QuizQuestion(R.string.question10, R.string.answer10_1, R.string.answer10_2, R.string.answer10_3, 1));
+
+          // Randomized questions
+        Collections.shuffle(questions);
+        int index = new Random().nextInt(questions.size());
+        QuizQuestion currQuestion = questions.remove(index);
+        }
+
+
+        // Temporary code
+
         // Find views
         // Question 1
         final TextView question1 = (TextView) findViewById(R.id.tv_question1);
