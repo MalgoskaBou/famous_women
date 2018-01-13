@@ -61,8 +61,10 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
         words.add(new Word(R.string.meriem_profession, R.string.Merieme_Chadid,
                 R.drawable.meriem_listing, R.drawable.meriem_morocco_flag));
-        words.add(new Word(R.string.ada_profession, R.string.ada,
-                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
+        //Missing picture - temporarily commented
+        //=========================================
+//        words.add(new Word(R.string.ada_profession, R.string.ada,
+//                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
 
 
 

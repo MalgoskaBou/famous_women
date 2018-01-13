@@ -134,8 +134,15 @@ public class QuizActivity extends AppCompatActivity {
                 }
                 correctAnswerCheck(rgHmap.get(j), j);
                 if(wrongAnswers.get(j) != 0){
-                    RadioButton selectedAnswer = findViewById(wrongAnswers.get(j));
+
+                    RadioButton selectedAnswer = (RadioButton) findViewById(wrongAnswers.get(j));
                     selectedAnswer.setButtonDrawable(R.drawable.ic_cancel);
+                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) selectedAnswer.getLayoutParams();
+                    params.setMargins(16, 0, 0, 0);
+                    selectedAnswer.setLayoutParams(params);
+                    selectedAnswer.setPadding(16, 0, 0, 0);
+
+
                 }
 
             }
