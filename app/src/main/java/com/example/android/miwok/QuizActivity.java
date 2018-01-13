@@ -133,7 +133,11 @@ public class QuizActivity extends AppCompatActivity {
                     rgHmap.get(j).getChildAt(i).setEnabled(false);
                 }
                 correctAnswerCheck(rgHmap.get(j), j);
-                //if(wrongAnswers.contains(j)) incorrectAnswerCheck(rgHmap.get(j));
+                if(wrongAnswers.get(j) != 0){
+                    RadioButton selectedAnswer = findViewById(wrongAnswers.get(j));
+                    selectedAnswer.setButtonDrawable(R.drawable.ic_cancel);
+                }
+
             }
             for(int i = currentQuestion+1 ; i<5 ; i++){
                 rgHmap.get(i).setVisibility(View.INVISIBLE);
@@ -181,9 +185,10 @@ public class QuizActivity extends AppCompatActivity {
                         correctAnswerCheck(rg1, 0);
                         if (questions.get(0).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg1);
-                            wrongAnswers.add(0);
+                            wrongAnswers.add(rg1.getCheckedRadioButtonId());
                         } else {
                             score++;
+                            wrongAnswers.add(0);
                         }
                         for (int i = 0; i < rg1.getChildCount(); i++) {
                             rg1.getChildAt(i).setEnabled(false);
@@ -211,9 +216,10 @@ public class QuizActivity extends AppCompatActivity {
 
                         if (questions.get(1).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg2);
-                            wrongAnswers.add(1);
+                            wrongAnswers.add(rg2.getCheckedRadioButtonId());
                         } else {
                             score++;
+                            wrongAnswers.add(0);
                         }
                         for (int i = 0; i < rg2.getChildCount(); i++) {
                             rg2.getChildAt(i).setEnabled(false);
@@ -240,9 +246,10 @@ public class QuizActivity extends AppCompatActivity {
 
                         if (questions.get(2).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg3);
-                            wrongAnswers.add(2);
+                            wrongAnswers.add(rg3.getCheckedRadioButtonId());
                         } else {
                             score++;
+                            wrongAnswers.add(0);
                         }
                         for (int i = 0; i < rg3.getChildCount(); i++) {
                             rg3.getChildAt(i).setEnabled(false);
@@ -269,9 +276,10 @@ public class QuizActivity extends AppCompatActivity {
 
                         if (questions.get(3).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg4);
-                            wrongAnswers.add(3);
+                            wrongAnswers.add(rg4.getCheckedRadioButtonId());
                         } else {
                             score++;
+                            wrongAnswers.add(0);
                         }
                         for (int i = 0; i < rg4.getChildCount(); i++) {
                             rg4.getChildAt(i).setEnabled(false);
@@ -298,9 +306,10 @@ public class QuizActivity extends AppCompatActivity {
 
                         if (questions.get(4).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg5);
-                            wrongAnswers.add(4);
+                            wrongAnswers.add(rg5.getCheckedRadioButtonId());
                         } else {
                             score++;
+                            wrongAnswers.add(0);
                         }
                         for (int i = 0; i < rg5.getChildCount(); i++) {
                             rg5.getChildAt(i).setEnabled(false);
