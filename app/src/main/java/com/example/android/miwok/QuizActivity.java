@@ -132,13 +132,8 @@ public class QuizActivity extends AppCompatActivity {
                 for (int i = 0; i < rgHmap.get(j).getChildCount(); i++) {
                     rgHmap.get(j).getChildAt(i).setEnabled(false);
                 }
-                RadioButton correctAnswer = findViewById(rgHmap.get(j).getChildAt(questions.get(currentQuestion).getCorrectAnswer()).getId());
-                correctAnswer.setButtonDrawable(R.drawable.ic_check);
-                /*if(wrongAnswers.contains(j)){
-                    Log.v("wrong answer", "" + j);
-                    RadioButton selectedAnswer = findViewById(rgHmap.get(j).getCheckedRadioButtonId());
-                    selectedAnswer.setButtonDrawable(R.drawable.ic_cancel);
-                }*/
+                correctAnswerCheck(rgHmap.get(j), j);
+                //if(wrongAnswers.contains(j)) incorrectAnswerCheck(rgHmap.get(j));
             }
             for(int i = currentQuestion+1 ; i<5 ; i++){
                 rgHmap.get(i).setVisibility(View.INVISIBLE);
