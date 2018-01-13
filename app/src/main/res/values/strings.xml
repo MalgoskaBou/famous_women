@@ -32,6 +32,8 @@
     <string name="maria_telkes">Mária Telkes</string>
     <string name="ellen_Sirleaf">Ellen Johnson Sirleaf</string>
     <string name="Merieme_Chadid">Merieme Chadid</string>
+    <string name="ada">Ada E. Yonath</string>
+    <string name="name8"> </string>
     <string name="name9"> </string>
     <string name="name10"> </string>
 
@@ -45,6 +47,8 @@
     <string name="maria_telkes_profession">Biophysicist</string>
     <string name="sirleaf_profession">President of Liberia</string>
     <string name="meriem_profession">Astronaut</string>
+    <string name="ada_profession">Biochemist</string>
+    <string name="profession8"> </string>
     <string name="profession9"> </string>
     <string name="profession10"> </string>
 
@@ -159,6 +163,8 @@
         That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the "Iron Lady," as she was also known, became the world's first elected black female president and Africa's first elected female head of state.
         Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia. </string>
 
+
+  
     <string name="body_details_description_meriem"> In March 2005, astronomer and explorer Merieme Chadid became the first Moroccan woman to set foot on Antarctica, where she planted the flag of Morocco – the first Arab flag to be placed in this remote location. Listed by Forbes Magazine as one of the thirty most interesting workers in the world,
         Chedid was one of the astronomers involved in installing VLT telescopes in Chile\'s barren Atacama Desert, and is considered to be the world\'s first astronomer to be committed to installing the large astronomical observatory in Antarctica, where she has carried out pioneering work at Dome C of the Concordia Research Station.
         Born in Casablanca on 11 October 1969, Merieme Chadid became interested in astronomy from a young age. A book about 17th century German astronomer and mathematician Johannes Kepler further inspired her, as did a radio broadcast by fellow Moroccan and astronomy enthusiast Albert Pilot. She contacted Pilot regarding her interest
@@ -168,6 +174,14 @@
         Of all her many achievements, Merieme notes that one of her most treasured accomplishments has been her work at Dome C in Antarctica, describing it as one of the coldest, most deserted and inaccessible places in the world, and comparing the installation of an observatory there as resembling a space mission.
         With night continuing for several months of the year, researchers at the station have the advantage of being able to study the stars 24/7 if they need to. Certainly, this Moroccan astronomer has come a long way since she first studied the night skies in the country of her birth. </string>
 
+    <string name="body_details_description_ada">
+        Ada Yonath (born 22 June 1939) is an Israeli crystallographer best known for her pioneering work on the structure of the ribosome.
+        In 2009, she received the Nobel Prize in Chemistry along with Venkatraman Ramakrishnan and Thomas A. Steitz for her studies on the structure and function of the ribosome, becoming the first Israeli woman to win the Nobel Prize out of ten Israeli Nobel laureates,
+        the first woman from the Middle East to win a Nobel prize in the sciences, and the first woman in 45 years to win the Nobel Prize for Chemistry.
+        \nHowever, she said herself that there was nothing special about a woman winning the Prize.
+    </string>
+
+
     <!--Menu Options -->
 
     <string name="about_application">About Application</string>
@@ -175,19 +189,19 @@
 
     <!--Quiz Questions -->
 
-              
+
     <!--Question 1 -->
     <string name="question1">Wanda Rutkiewicz was a famous...</string>
     <string name="answer1_1">Chemist</string>
     <string name="answer1_2">High mountain climber</string>
     <string name="answer1_3">Mathematician</string>
-  
+
     <!--Question 2 -->
     <string name="question2">When did Mother Theresa receive her Noble Prize?</string>
     <string name="answer2_1">1959</string>
     <string name="answer2_2">1969</string>
     <string name="answer2_3">1979</string>
-  
+
     <!--Question 3 -->
     <string name="question3">How many years did Elisabeta Rizea spend in prison?</string>
     <string name="answer3_1">02 years</string>
@@ -199,7 +213,7 @@
     <string name="answer4_1">She is President of the Republic of Lithuania</string>
     <string name="answer4_2">She is President of the Republic of Latvia</string>
     <string name="answer4_3">She is President of the Republic of Estonia</string>
-  
+
     <!--Question 5 -->
     <string name="question5">How is Dalia Grybauskaitė referred to?</string>
     <string name="answer5_1">Black Swan and Big bird</string>
@@ -229,4 +243,10 @@
     <string name="answer9_1">Global Bank Liberia.</string>
     <string name="answer9_2">International Bank (Liberia)</string>
     <string name="answer9_3">World Bank and Citibank in Africa</string>
+
+    <!--Question 10-->
+    <string name="question10">Which Nobel Prize was Ada Yonath awarded?</string>
+    <string name="answer10_1">Nobel Prize in Chemistry</string>
+    <string name="answer10_2">Nobel Prize in Literature</string>
+    <string name="answer10_3">Nobel Prize in Physics</string>
 </resources>

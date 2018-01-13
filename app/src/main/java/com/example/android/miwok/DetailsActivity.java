@@ -81,6 +81,9 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
         details.add(new Word(R.string.meriem_profession, R.string.body_details_description_meriem,
                 R.drawable.meriem_portrait, R.drawable.meriem_morocco_flag));
+        details.add(new Word(R.string.ada_profession, R.string.body_details_description_ada,
+                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
+
 
 
         if(position==0)
@@ -164,6 +167,15 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.meriem_portrait);
             descriptionTextView.setText(R.string.body_details_description_meriem);
             flagImageView.setImageResource(R.drawable.meriem_morocco_flag);
+        }
+       else if (position==9) {
+
+              /*
+             * Israel
+             */
+            portraitImageView.setImageResource(R.drawable.ada_yonath_portrait);
+            descriptionTextView.setText(R.string.body_details_description_ada);
+            flagImageView.setImageResource(R.drawable.israel_flag);
 
         }
 
