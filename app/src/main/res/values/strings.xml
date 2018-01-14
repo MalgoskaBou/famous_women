@@ -33,7 +33,7 @@
     <string name="ellen_Sirleaf">Ellen Johnson Sirleaf</string>
     <string name="Merieme_Chadid">Merieme Chadid</string>
     <string name="ada">Ada E. Yonath</string>
-    <string name="name8"> </string>
+    <string name="irena">Irena Sendler</string>
     <string name="name9"> </string>
     <string name="name10"> </string>
 
@@ -48,7 +48,7 @@
     <string name="sirleaf_profession">President of Liberia</string>
     <string name="meriem_profession">Astronaut</string>
     <string name="ada_profession">Biochemist</string>
-    <string name="profession8"> </string>
+    <string name="irena_profession">Social Worker</string>
     <string name="profession9"> </string>
     <string name="profession10"> </string>
 
@@ -181,6 +181,32 @@
         \nHowever, she said herself that there was nothing special about a woman winning the Prize.
     </string>
 
+    <string name="body_details_description_irena">Irena Sendler was a 29-year-old social worker, employed by the Warsaw Welfare Department, when
+        World War II broke out. She took advantage of her job in order to help the Jews, by offering them food and shelter.
+    \nIn November 1940, when the Warsaw Ghetto was sealed off, it became practically impossible to help isolated Jews. The Ghetto was a small area
+    with 400,000 Jewish people forced into it. The poor hygienic conditions in the crowded ghetto, the lack of food and medical supplies resulted
+    in epidemics and high death rates. Sendler managed to obtain a permit from the municipality that enabled her to enter the ghetto to inspect
+    the sanitary conditions. Assisted by a group of co-workers, she devised means to help the Jews.
+    \nThis work was done at huge risk, as giving any kind of assistance to Jews in German-occupied Poland was punishable by death.
+    \nWith the help of Council for Aid to Jews (Żegota), Sendler smuggled approximately 2,500 Jewish children out of the Warsaw Ghetto and then
+    provided them with false identity documents and helped set up hiding places for them (Polish Christian families or orphanages). Irena and
+    others who went with her into the ghetto, used different methods to smuggle children out: in ambulances and trams (hiding them in packages
+    and suitcases), by secret underground passages, and many other ways.
+    \nSendler was determined to prevent the children from losing their Jewish identities, she made sure that each person hiding a child realised
+    the child must be returned to Jewish relatives after the war, she also kept careful documentation listing the children\'s fake Christian names,
+    their given names, and their current location.
+    \nThe German occupiers eventually discovered her activities, and she was arrested in 1943. She was tortured during the questioning - she had
+    her legs and feet fractured. Despite this, she refused to betray any of her comrades or the children they rescued, and was sentenced to death.
+    Żegota saved her life by bribing the guards on the way to her execution. After her escape, she hid from the Germans, but returned to Warsaw
+    under a fake name and continued her involvement with the Żegota until the end of the war.
+    \nAfter the war, she and her co-workers gathered all of the children\'s records with the names and locations of the hidden Jewish children and
+    gave them to their Żegota colleague and his staff at the Central Committee of Polish Jews.
+    \nAlmost all of the children\'s parents had been killed at the Treblinka extermination camp or had gone missing.
+    \n\nIn 1965, Sendler was recognised by Yad Vashem as one of the Righteous among the Nations. Late in life, she was awarded the Order of the
+    White Eagle, Poland\'s highest honour, for her wartime humanitarian efforts. She was nominated for the Nobel Peace Price twice.
+    \nWith the exception of diplomats who issued visas to help Jews flee Nazi-occupied Europe, Sendler saved more Jews than any other individual
+    during the Holocaust.</string>
+
 
     <!--Menu Options -->
 
@@ -204,7 +230,7 @@
 
     <!--Question 3 -->
     <string name="question3">How many years did Elisabeta Rizea spend in prison?</string>
-    <string name="answer3_1">02 years</string>
+    <string name="answer3_1">2 years</string>
     <string name="answer3_2">12 years</string>
     <string name="answer3_3">22 years</string>
 
@@ -249,4 +275,17 @@
     <string name="answer10_1">Nobel Prize in Chemistry</string>
     <string name="answer10_2">Nobel Prize in Literature</string>
     <string name="answer10_3">Nobel Prize in Physics</string>
+
+    <!--Question 11-->
+    <string name="question11">How many Jewish children saved Irena Sendler?</string>
+    <string name="answer11_1">17</string>
+    <string name="answer11_2">about 400</string>
+    <string name="answer11_3">about 2,500</string>
+
+    <!--Question 12-->
+    <string name="question12">Irena Sendler:</string>
+    <string name="answer12_1">founded Polish Underground State during II World War</string>
+    <string name="answer12_2">is one of the Righteous among the Nations</string>
+    <string name="answer12_3">received the Nobel Prize in Literature</string>
+
 </resources>
