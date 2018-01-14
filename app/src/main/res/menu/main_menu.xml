@@ -5,13 +5,12 @@
     <item
         android:id="@+id/about_application"
         android:title="@string/about_application"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/quiz"
         android:title="@string/quiz"
-        app:showAsAction="never"/>
-
+        app:showAsAction="never" />
 
 
 </menu>
