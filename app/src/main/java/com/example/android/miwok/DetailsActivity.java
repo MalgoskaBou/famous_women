@@ -94,18 +94,18 @@ public class DetailsActivity extends AppCompatActivity {
 
         if(position==0)
         {
-            /**
+            /*
              * Poland
              */
 
 
             portraitImageView.setImageResource(R.drawable.maria_portrait);
-            descriptionTextView.setText(R.string.body_details_description_dalia);
+            descriptionTextView.setText(R.string.body_details_sescriprion_maria_sklodowska);
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
         }
         else if(position==1)
         {
-            /**
+            /*
              * Lithuania
              */
 
@@ -116,7 +116,7 @@ public class DetailsActivity extends AppCompatActivity {
         }
         else if(position==2)
         {
-            /**
+            /*
              * Romania
              */
 
@@ -125,7 +125,7 @@ public class DetailsActivity extends AppCompatActivity {
             flagImageView.setImageResource(R.drawable.elisabeta_rizea_flag);
         }
         else if (position==3) {
-            /**
+            /*
              * Macedonia
              */
 
@@ -134,7 +134,7 @@ public class DetailsActivity extends AppCompatActivity {
             flagImageView.setImageResource(R.drawable.theresa_macedonia_flag);
         }
         else if (position==4) {
-            /**
+            /*
              * Poland
              */
 
@@ -143,7 +143,7 @@ public class DetailsActivity extends AppCompatActivity {
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
         }
         else if (position==5) {
-            /**
+            /*
              * Mauritius
              */
             portraitImageView.setImageResource(R.drawable.ameenah_portrait);
@@ -151,7 +151,7 @@ public class DetailsActivity extends AppCompatActivity {
             flagImageView.setImageResource(R.drawable.ameenah_mauritius_flag);
         }
         else if (position==6) {
-            /**
+            /*
              * Liberia
              */
             portraitImageView.setImageResource(R.drawable.sirleaf_portrait);
@@ -159,7 +159,7 @@ public class DetailsActivity extends AppCompatActivity {
             flagImageView.setImageResource(R.drawable.sirleaf_liberia_flag);
         }
         else if (position==7) {
-            /**
+            /*
              * Mauritius
              */
             portraitImageView.setImageResource(R.drawable.maria_telkes_portrait);
@@ -167,7 +167,7 @@ public class DetailsActivity extends AppCompatActivity {
             flagImageView.setImageResource(R.drawable.maria_hungary_flag);
         }
         else if (position==8) {
-            /**
+            /*
              * Morocco
              */
             portraitImageView.setImageResource(R.drawable.meriem_portrait);
@@ -179,15 +179,12 @@ public class DetailsActivity extends AppCompatActivity {
         else if(position==9)
 
         {
-            /**
+            /*
              * Poland
              */
 
-
             portraitImageView.setImageResource(R.drawable.irena_portrait);
-
             descriptionTextView.setText(R.string.body_details_description_irena);
-
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
 
         }
@@ -195,7 +192,7 @@ public class DetailsActivity extends AppCompatActivity {
 
        else if (position==10) {
 
-            /**
+            /*
              * Israel
              */
             portraitImageView.setImageResource(R.drawable.ada_yonath_portrait);
@@ -205,7 +202,7 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
         else if (position==11) {
-            /**
+            /*
              * USA
              */
             portraitImageView.setImageResource(R.drawable.ilhan_portrait);
