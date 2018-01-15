@@ -33,7 +33,8 @@
     <string name="ellen_Sirleaf">Ellen Johnson Sirleaf</string>
     <string name="Merieme_Chadid">Merieme Chadid</string>
     <string name="ada">Ada E. Yonath</string>
-    <string name="name8"> </string>
+    <string name="irena">Irena Sendler</string>
+    <string name="ilhan">Ilhan Omar</string>
     <string name="name9"> </string>
     <string name="name10"> </string>
 
@@ -48,7 +49,8 @@
     <string name="sirleaf_profession">President of Liberia</string>
     <string name="meriem_profession">Astronaut</string>
     <string name="ada_profession">Biochemist</string>
-    <string name="profession8"> </string>
+    <string name="irena_profession">Social Worker</string>
+    <string name="ilhan_profession">Politician</string>
     <string name="profession9"> </string>
     <string name="profession10"> </string>
 
@@ -145,41 +147,104 @@
     <string name="body_details_description_ameenah"> born 17 October 1959  is a Mauritian biodiversity scientist and politician serving as President of Mauritius since 2015. In December 2014, she was selected to be the presidential candidate of the Alliance Lepep. After Kailash Purryag resigned on 29 May 2015, both Prime Minister Sir Anerood Jugnauth and Leader of the Opposition Paul Berenger positively welcomed her nomination,
         which was unanimously approved in a vote in the National Assembly. Gurib-Fakim is the first woman elected President of the country and is the third woman to serve as Head of State. She worked as Managing Director of CIDP Research and Innovation (formerly Cephyr, Centre for Phytotherapy Research), where she devoted her time to researching the medical and nutritive implications of indigenous plants of Mauritius.
         Previously, she was a Professor with a personal chair in Organic Chemistry at the University of Mauritius (2001) and where she served successively as Dean of the Faculty of Science and Pro–Vice Chancellor (2004–2010). She also worked at the Mauritius Research Council as Manager for Research (1995–1997). She served as the Chairperson the International Council for Scientific Union – Regional Office for Africa (2011–2014).
-        Gurib-Fakim has also been the recipient of various international awards including the L'Oréal-UNESCO Award for Women in Science (2007), Laureate for the National Economic and Social Council (2007), the CTA / NEPAD / AGRA / RUFORUM for ‘African Women in Science’ and the African Union Award for Women in Science.She was also made Commander of the Order of the Star and Key of the Indian Ocean (CSK)
-        by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the ‘Chevalier de l’Ordre des Palmes Academiques’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).
+        Gurib-Fakim has also been the recipient of various international awards including the L\'Oréal-UNESCO Award for Women in Science (2007), Laureate for the National Economic and Social Council (2007), the CTA / NEPAD / AGRA / RUFORUM for \‘African Women in Science\’ and the African Union Award for Women in Science.She was also made Commander of the Order of the Star and Key of the Indian Ocean (CSK)
+        by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the \‘Chevalier de l\’Ordre des Palmes Academiques\’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).
         </string>
 
     <string name="body_details_description_maria_telkes">Mária Telkes (December 12, 1900 – December 2, 1995) was a Hungarian-American scientist and inventor who worked on solar energy technologies.\nTelkes worked as a biophysicist in the United States; and, from 1939 to 1953, she was involved in solar energy research at Massachusetts Institute of Technology.
         \nTelkes is known for creating the first thermoelectric power generator in 1947, designing the first solar heating system for the Dover Sun House in Dover, Massachusetts, (built entirely with solar heating, with the architect Eleanor Raymond and the first thermoelectric refrigerator in 1953 using the principles of semiconductor thermoelectricity.
         \nShe was a prolific inventor of practical thermal devices, including a miniature desalination unit for use on lifeboats, which used solar power and condensation to collect potable solar still. The still saved the lives of airmen and sailors who would have been without water when abandoned at sea.
-        \nOne of her specialties were phase-change materials, including molten salts to store thermal energy. One of her materials of choice was Glauber's salt.elkes is considered one of the founders of solar thermal storage systems, earning her the nickname "the Sun Queen".
+        \nOne of her specialties were phase-change materials, including molten salts to store thermal energy. One of her materials of choice was Glauber\'s salt.elkes is considered one of the founders of solar thermal storage systems, earning her the nickname "the Sun Queen".
         \nShe moved to Texas in the 1970s and consulted with a variety of start-up solar companies, including Northrup Solar, which subsequently became ARCO Solar, and eventually BP Solar.</string>
 
     <string name="body_details_description_sirleaf"> Liberian President Ellen Johnson Sirleaf is the world\'s first elected black female president and Africa\'s first elected female head of state.
         Ellen Johnson Sirleaf was born on October 29, 1938, in Monrovia, Liberia. A graduate of the College of West Africa at Monrovia, she went on to receive her bachelor\'s degree in accounting from the Madison Business College in Madison, Wisconsin, a degree in economics from the University of Colorado at Boulder and a Master of Public Administration degree from Harvard University.
         After returning to Liberia, Ellen Johnson Sirleaf served as assistant minister of Finance in President William Tolbert\'s administration. In 1980, Tolbert was overthrown and killed by army sergeant Samuel Doe, who represented the Krahn ethnic group. Johnson Sirleaf went into exile in Nairobi, Kenya, as well as in the United States, where she worked as an executive in the international banking community.
         In 1985, Johnson Sirleaf returned to Liberia and ran for a seat in the Senate, but when she spoke out against Doe\'s military regime, she was sentenced to 10 years in prison. She served a partial sentence before moving to Washington, D.C. When she returned to her native country for a third time in 1997, it was as an economist, working for the World Bank and Citibank in Africa.
-        After supporting Charles Taylor's bloody rebellion against President Samuel Doe in 1990, Johnson Sirleaf ran unsuccessfully against Taylor in the 1997 presidential election. Taylor subsequently charged Johnson Sirleaf with treason. In 2005, after campaigning for the removal of President Taylor, Johnson Sirleaf took over as leader of the Unity Party.
-        That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the "Iron Lady," as she was also known, became the world's first elected black female president and Africa's first elected female head of state.
+        After supporting Charles Taylor\'s bloody rebellion against President Samuel Doe in 1990, Johnson Sirleaf ran unsuccessfully against Taylor in the 1997 presidential election. Taylor subsequently charged Johnson Sirleaf with treason. In 2005, after campaigning for the removal of President Taylor, Johnson Sirleaf took over as leader of the Unity Party.
+        That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the \"Iron Lady\", as she was also known, became the world\'s first elected black female president and Africa\'s first elected female head of state.
         Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia. </string>
 
 
   
-    <string name="body_details_description_meriem"> In March 2005, astronomer and explorer Merieme Chadid became the first Moroccan woman to set foot on Antarctica, where she planted the flag of Morocco – the first Arab flag to be placed in this remote location. Listed by Forbes Magazine as one of the thirty most interesting workers in the world,
-        Chedid was one of the astronomers involved in installing VLT telescopes in Chile\'s barren Atacama Desert, and is considered to be the world\'s first astronomer to be committed to installing the large astronomical observatory in Antarctica, where she has carried out pioneering work at Dome C of the Concordia Research Station.
-        Born in Casablanca on 11 October 1969, Merieme Chadid became interested in astronomy from a young age. A book about 17th century German astronomer and mathematician Johannes Kepler further inspired her, as did a radio broadcast by fellow Moroccan and astronomy enthusiast Albert Pilot. She contacted Pilot regarding her interest
+    <string name="body_details_description_meriem"> In March 2005, astronomer and explorer Merieme Chadid became the first Moroccan woman to set
+        foot on Antarctica, where she planted the flag of Morocco – the first Arab flag to be placed in this remote location. Listed by Forbes
+        Magazine as one of the thirty most interesting workers in the world,
+        Chedid was one of the astronomers involved in installing VLT telescopes in Chile\'s barren Atacama Desert, and is considered to be the
+        world\'s first astronomer to be committed to installing the large astronomical observatory in Antarctica, where she has carried out
+        pioneering work at Dome C of the Concordia Research Station.
+        Born in Casablanca on 11 October 1969, Merieme Chadid became interested in astronomy from a young age. A book about 17th century German
+        astronomer and mathematician Johannes Kepler further inspired her, as did a radio broadcast by fellow Moroccan and astronomy enthusiast
+        Albert Pilot. She contacted Pilot regarding her interest
         in the field and he encouraged her to pursue her passion for astronomy, which she continues to do.
-        After earning an MA in physics at the University of Casablanca, Chadid moved to Nice where she studied imaging science, before continuing her education at the Observatoire de Haute-Provence, obtaining a PhD for her study entitled Stellar Pulsation and Evolution. Her career continued as an engineer astrophysicist at
-        the National Center for Scientific Research located in Montpellier, France. It was while working in this capacity that Merieme Chadid was selected by the European Southern Observatory to work on the installation of the VLT – Very Large Telescope – in the Atacama Desert.
-        Of all her many achievements, Merieme notes that one of her most treasured accomplishments has been her work at Dome C in Antarctica, describing it as one of the coldest, most deserted and inaccessible places in the world, and comparing the installation of an observatory there as resembling a space mission.
-        With night continuing for several months of the year, researchers at the station have the advantage of being able to study the stars 24/7 if they need to. Certainly, this Moroccan astronomer has come a long way since she first studied the night skies in the country of her birth. </string>
+        After earning an MA in physics at the University of Casablanca, Chadid moved to Nice where she studied imaging science, before continuing
+        her education at the Observatoire de Haute-Provence, obtaining a PhD for her study entitled Stellar Pulsation and Evolution. Her career
+        continued as an engineer astrophysicist at
+        the National Center for Scientific Research located in Montpellier, France. It was while working in this capacity that Merieme Chadid was
+        selected by the European Southern Observatory to work on the installation of the VLT – Very Large Telescope – in the Atacama Desert.
+        Of all her many achievements, Merieme notes that one of her most treasured accomplishments has been her work at Dome C in Antarctica,
+        describing it as one of the coldest, most deserted and inaccessible places in the world, and comparing the installation of an observatory
+        there as resembling a space mission.
+        With night continuing for several months of the year, researchers at the station have the advantage of being able to study the stars 24/7
+        if they need to. Certainly, this Moroccan astronomer has come a long way since she first studied the night skies in the country of her
+        birth. </string>
 
     <string name="body_details_description_ada">
         Ada Yonath (born 22 June 1939) is an Israeli crystallographer best known for her pioneering work on the structure of the ribosome.
-        In 2009, she received the Nobel Prize in Chemistry along with Venkatraman Ramakrishnan and Thomas A. Steitz for her studies on the structure and function of the ribosome, becoming the first Israeli woman to win the Nobel Prize out of ten Israeli Nobel laureates,
-        the first woman from the Middle East to win a Nobel prize in the sciences, and the first woman in 45 years to win the Nobel Prize for Chemistry.
+        In 2009, she received the Nobel Prize in Chemistry along with Venkatraman Ramakrishnan and Thomas A. Steitz for her studies on the
+        structure and function of the ribosome, becoming the first Israeli woman to win the Nobel Prize out of ten Israeli Nobel laureates,
+        the first woman from the Middle East to win a Nobel Prize in the science, and the first woman in 45 years to win the Nobel Prize
+        for Chemistry.
         \nHowever, she said herself that there was nothing special about a woman winning the Prize.
     </string>
+
+    <string name="body_details_description_irena">Irena Sendler was a 29-year-old social worker, employed by the Warsaw Welfare Department, when
+        World War II broke out. She took advantage of her job in order to help the Jews, by offering them food and shelter.
+    \nIn November 1940, when the Warsaw Ghetto was sealed off, it became practically impossible to help isolated Jews. The Ghetto was a small area
+    with 400,000 Jewish people forced into it. The poor hygienic conditions in the crowded ghetto, the lack of food and medical supplies resulted
+    in epidemics and high death rates. Sendler managed to obtain a permit from the municipality that enabled her to enter the ghetto to inspect
+    the sanitary conditions. Assisted by a group of co-workers, she devised means to help the Jews.
+    \nThis work was done at huge risk, as giving any kind of assistance to Jews in German-occupied Poland was punishable by death.
+    \nWith the help of Council for Aid to Jews (Żegota), Sendler smuggled approximately 2,500 Jewish children out of the Warsaw Ghetto and then
+    provided them with false identity documents and helped set up hiding places for them (Polish Christian families or orphanages). Irena and
+    others who went with her into the ghetto, used different methods to smuggle children out: in ambulances and trams (hiding them in packages
+    and suitcases), by secret underground passages, and many other ways.
+    \nSendler was determined to prevent the children from losing their Jewish identities, she made sure that each person hiding a child realised
+    the child must be returned to Jewish relatives after the war, she also kept careful documentation listing the children\'s fake Christian names,
+    their given names, and their current location.
+    \nThe German occupiers eventually discovered her activities, and she was arrested in 1943. She was tortured during the questioning - she had
+    her legs and feet fractured. Despite this, she refused to betray any of her comrades or the children they rescued, and was sentenced to death.
+    Żegota saved her life by bribing the guards on the way to her execution. After her escape, she hid from the Germans, but returned to Warsaw
+    under a fake name and continued her involvement with the Żegota until the end of the war.
+    \nAfter the war, she and her co-workers gathered all of the children\'s records with the names and locations of the hidden Jewish children and
+    gave them to their Żegota colleague and his staff at the Central Committee of Polish Jews.
+    \nAlmost all of the children\'s parents had been killed at the Treblinka extermination camp or had gone missing.
+    \n\nIn 1965, Sendler was recognised by Yad Vashem as one of the Righteous among the Nations. Late in life, she was awarded the Order of the
+    White Eagle, Poland\'s highest honour, for her wartime humanitarian efforts. She was nominated for the Nobel Peace Price twice.
+    \nWith the exception of diplomats who issued visas to help Jews flee Nazi-occupied Europe, Sendler saved more Jews than any other individual
+    during the Holocaust.</string>
+
+    <string name="body_details_sescriprion_maria_sklodowska">Was a Polish and naturalized-French physicist and chemist who conducted pioneering
+        research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win twice, the only person to win
+        a Nobel Prize in two different sciences, and was part of the Curie family legacy of five Nobel Prizes. She was also the first woman to become a
+        professor at the University of Paris, and in 1995 became the first woman to be entombed on her own merits in the Panthéon in Paris.
+        She was born in Warsaw, in what was then the Kingdom of Poland, part of the Russian Empire. She studied at Warsaw's clandestine Flying University
+        and began her practical scientific training in Warsaw. In 1891, aged 24, she followed her older sister Bronisława to study in Paris, where she
+        earned her higher degrees and conducted her subsequent scientific work. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie
+        and with physicist Henri Becquerel. She won the 1911 Nobel Prize in Chemistry.</string>
+
+    <string name="body_details_description_ilhan">
+
+        Ilhan Omar was born 1982 in Mogadishu and was raised in Baydhabo, Somalia is a Somali-American politician from Minnesota. In 2016,
+    she was elected a Democratic–Farmer–Labour Party member of the Minnesota House of Representatives,making her the first Somali-American Muslim legislator elected to office in the United States. She is the Director of Policy and Initiatives of the Women Organizing Women Network.
+    She was the youngest of seven siblings, and grew up in an upper-middle-class household. Ilhan\'s father, Nur Omar Mohamed, is Somali, and worked as a teacher trainer.
+    Her mother was Yemeni, and died when she was a child. She was thereafter raised by her father and grandfather.Ilhan\'s grandfather, Abukar, was the director of Somalia\'s National Marine Transport,with her uncles and aunts also working as civil servants and educators. After the start of the civil war in 1991, she and her family fled the country and spent four years in a refugee camp in Kenya.
+    In 1995, Omar and her family immigrated to the United States, initially settling in Arlington, Virginia. In 1995, they moved to Minneapolis, where Ilhan quickly learned English in only three months.
+    Her father and grandfather inculcated in her the importance of democracy. She also began to accompany her grandfather to caucus meetings at the age of 14 years, serving as his interpreter.
+    Omar attended Edison High School, and volunteered there as a student organizer. After high school, she attended North Dakota State University, where she participated in the Muslim Student Association.
+    She graduated with bachelor's degrees in political science and international studies.
+
+</string>
 
 
     <!--Menu Options -->
@@ -204,7 +269,7 @@
 
     <!--Question 3 -->
     <string name="question3">How many years did Elisabeta Rizea spend in prison?</string>
-    <string name="answer3_1">02 years</string>
+    <string name="answer3_1">2 years</string>
     <string name="answer3_2">12 years</string>
     <string name="answer3_3">22 years</string>
 
@@ -249,4 +314,23 @@
     <string name="answer10_1">Nobel Prize in Chemistry</string>
     <string name="answer10_2">Nobel Prize in Literature</string>
     <string name="answer10_3">Nobel Prize in Physics</string>
+
+    <!--Question 11-->
+    <string name="question11">How many Jewish children saved Irena Sendler?</string>
+    <string name="answer11_1">17</string>
+    <string name="answer11_2">about 400</string>
+    <string name="answer11_3">about 2,500</string>
+
+    <!--Question 12-->
+    <string name="question12">Irena Sendler:</string>
+    <string name="answer12_1">founded Polish Underground State during II World War</string>
+    <string name="answer12_2">is one of the Righteous among the Nations</string>
+    <string name="answer12_3">received the Nobel Prize in Literature</string>
+
+    <!--Question 13-->
+    <string name="question13">When Ilhan Omar was elected?</string>
+    <string name="answer13_1">1991</string>
+    <string name="answer13_2">2016</string>
+    <string name="answer13_3">2013</string>
+
 </resources>

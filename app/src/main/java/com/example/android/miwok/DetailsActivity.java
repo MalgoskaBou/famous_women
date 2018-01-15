@@ -81,8 +81,14 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
         details.add(new Word(R.string.meriem_profession, R.string.body_details_description_meriem,
                 R.drawable.meriem_portrait, R.drawable.meriem_morocco_flag));
-        //details.add(new Word(R.string.ada_profession, R.string.body_details_description_ada,
-                //R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
+        details.add(new Word(R.string.ada_profession, R.string.body_details_description_ada,
+                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
+        details.add(new Word(R.string.irena_profession, R.string.body_details_description_irena,
+                R.drawable.irena_portrait, R.drawable.maria_poland_flag));
+        details.add(new Word(R.string.ada_profession, R.string.body_details_description_ada,
+                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
+        details.add(new Word(R.string.ilhan_profession, R.string.body_details_description_ilhan,
+                R.drawable.ilhan_listing, R.drawable.ilhan_flag));
 
 
 
@@ -167,16 +173,44 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.meriem_portrait);
             descriptionTextView.setText(R.string.body_details_description_meriem);
             flagImageView.setImageResource(R.drawable.meriem_morocco_flag);
-        }
-       else if (position==9) {
 
-              /*
+        }
+
+        else if(position==9)
+
+        {
+            /**
+             * Poland
+             */
+
+
+            portraitImageView.setImageResource(R.drawable.irena_portrait);
+
+            descriptionTextView.setText(R.string.body_details_description_irena);
+
+            flagImageView.setImageResource(R.drawable.maria_poland_flag);
+
+        }
+
+
+       else if (position==10) {
+
+            /**
              * Israel
              */
-            //portraitImageView.setImageResource(R.drawable.ada_yonath_portrait);
-            //descriptionTextView.setText(R.string.body_details_description_ada);
-            //flagImageView.setImageResource(R.drawable.israel_flag);
+            portraitImageView.setImageResource(R.drawable.ada_yonath_portrait);
+            descriptionTextView.setText(R.string.body_details_description_ada);
+            flagImageView.setImageResource(R.drawable.israel_flag);
 
+        }
+
+        else if (position==11) {
+            /**
+             * USA
+             */
+            portraitImageView.setImageResource(R.drawable.ilhan_portrait);
+            descriptionTextView.setText(R.string.body_details_description_ilhan);
+            flagImageView.setImageResource(R.drawable.ilhan_flag);
         }
 
         //put data to new textView
