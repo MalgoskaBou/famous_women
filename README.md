@@ -15,7 +15,7 @@ Updated **08.01.2018**
 
 **@Ami** and **@Oya Canli** solved the problem with the quiz - after the screen rotation the questions were not visible  - they used very interesting solutions (Parcelable interface and HashMap) - now everything works perfectly 😄
 
-**@Jula**, **@Saida** and **@kafr007** worked on a list of famous women lately - they added their entries to the list and improved other descriptions in string.xml.
+**@Jula**, **@Saida** and **@kafr007** worked on a list of famous women lately - they added their entries and questions to the lists and improved other descriptions.
 
 Joined us also **@Kami**, today she got acquainted with the project and just starts playing with the code! 😊
 
@@ -28,6 +28,12 @@ Everyone is constantly tracking the code and correcting mistakes.
 
 ![slimsonik](https://user-images.githubusercontent.com/33101796/34960773-a145fa94-fa3c-11e7-9eee-591f9e9413a4.png)
 *@Slimsonik entry*
+
+<br />
+<br />
+
+**Questions in the quiz are random - each time you turn on the quiz, you'll get a set of 5 different questions 😊 Isn't that great?**<br />
+<br />
 
 ![quizduringwork](https://user-images.githubusercontent.com/33101796/34960774-a1e7f0b0-fa3c-11e7-889b-41df101e3c4b.png)
 ![quizready](https://user-images.githubusercontent.com/33101796/34960775-a227a0f2-fa3c-11e7-971c-73aacecedd78.png)
