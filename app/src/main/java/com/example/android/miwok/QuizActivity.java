@@ -140,11 +140,11 @@ import java.util.HashMap;
                 option3.setText(questions.get(j).getAnswer3());
             }
             // Set a click listeners on submit buttons
-            if (submit1 != null) submit1.setOnClickListener(this);
-            if (submit2 != null) submit2.setOnClickListener(this);
-            if (submit3 != null) submit3.setOnClickListener(this);
-            if (submit4 != null) submit4.setOnClickListener(this);
-            if (submit5 != null) submit5.setOnClickListener(this);
+            submit1.setOnClickListener(this);
+            submit2.setOnClickListener(this);
+            submit3.setOnClickListener(this);
+            submit4.setOnClickListener(this);
+            submit5.setOnClickListener(this);
         }
 
         @Override
