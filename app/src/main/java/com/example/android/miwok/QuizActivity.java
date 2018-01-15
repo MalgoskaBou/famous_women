@@ -87,6 +87,7 @@ public class QuizActivity extends AppCompatActivity {
         allQuestions.add(new QuizQuestion(R.string.question10, R.string.answer10_1, R.string.answer10_2, R.string.answer10_3, 1));
         allQuestions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
         allQuestions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
+        allQuestions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
 
 
 
@@ -295,7 +296,8 @@ public class QuizActivity extends AppCompatActivity {
                             wrongAnswers.add(0);
                         }
                         for (int i = 0; i < rg4.getChildCount(); i++) {
-                            rg4.getChildAt(i).setEnabled(false);
+                           rg4.getChildAt(i).setEnabled(false);
+                            Log.v("zmienna rg4", rg5.getChildAt(i).toString());
                         }
                         question5.setVisibility(View.VISIBLE);
                         rg5.setVisibility(View.VISIBLE);
@@ -317,6 +319,7 @@ public class QuizActivity extends AppCompatActivity {
                         int selectedRadioButtonID = rg5.indexOfChild(findViewById(rg5.getCheckedRadioButtonId()));
                         correctAnswerCheck(rg5, 4);
 
+
                         if (questions.get(4).getCorrectAnswer() != selectedRadioButtonID) {
                             incorrectAnswerCheck(rg5);
                             wrongAnswers.add(rg5.getCheckedRadioButtonId());
@@ -326,12 +329,16 @@ public class QuizActivity extends AppCompatActivity {
                         }
                         for (int i = 0; i < rg5.getChildCount(); i++) {
                             rg5.getChildAt(i).setEnabled(false);
+                            Log.v("zmienna rg5", rg5.getChildAt(i).toString());
                         }
 
                         score = score / 5 * 100;
                         result.setText("Your score is: " + (int) score + "%");
+                        currentQuestion = 5;
+
                     }
                 }
+
             });
         }
     }

@@ -85,6 +85,8 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.irena_portrait, R.drawable.maria_poland_flag));
         details.add(new Word(R.string.ada_profession, R.string.body_details_description_ada,
                 R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
+        details.add(new Word(R.string.ilhan_profession, R.string.body_details_description_ilhan,
+                R.drawable.ilhan_listing, R.drawable.ilhan_flag));
 
 
         if(position==0)
@@ -197,6 +199,15 @@ public class DetailsActivity extends AppCompatActivity {
             descriptionTextView.setText(R.string.body_details_description_ada);
             flagImageView.setImageResource(R.drawable.israel_flag);
 
+        }
+
+        else if (position==11) {
+            /**
+             * USA
+             */
+            portraitImageView.setImageResource(R.drawable.ilhan_portrait);
+            descriptionTextView.setText(R.string.body_details_description_ilhan);
+            flagImageView.setImageResource(R.drawable.ilhan_flag);
         }
 
         //put data to new textView
