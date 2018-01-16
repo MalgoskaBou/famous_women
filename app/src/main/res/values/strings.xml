@@ -34,6 +34,7 @@
     <string name="Merieme_Chadid">Merieme Chadid</string>
     <string name="ada">Ada E. Yonath</string>
     <string name="irena">Irena Sendler</string>
+    <string name="ilhan">Ilhan Omar</string>
     <string name="name9"> </string>
     <string name="name10"> </string>
 
@@ -49,6 +50,7 @@
     <string name="meriem_profession">Astronaut</string>
     <string name="ada_profession">Biochemist</string>
     <string name="irena_profession">Social Worker</string>
+    <string name="ilhan_profession">Politician</string>
     <string name="profession9"> </string>
     <string name="profession10"> </string>
 
@@ -222,6 +224,28 @@
     \nWith the exception of diplomats who issued visas to help Jews flee Nazi-occupied Europe, Sendler saved more Jews than any other individual
     during the Holocaust.</string>
 
+    <string name="body_details_sescriprion_maria_sklodowska">Was a Polish and naturalized-French physicist and chemist who conducted pioneering
+        research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win twice, the only person to win
+        a Nobel Prize in two different sciences, and was part of the Curie family legacy of five Nobel Prizes. She was also the first woman to become a
+        professor at the University of Paris, and in 1995 became the first woman to be entombed on her own merits in the Panthéon in Paris.
+        She was born in Warsaw, in what was then the Kingdom of Poland, part of the Russian Empire. She studied at Warsaw's clandestine Flying University
+        and began her practical scientific training in Warsaw. In 1891, aged 24, she followed her older sister Bronisława to study in Paris, where she
+        earned her higher degrees and conducted her subsequent scientific work. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie
+        and with physicist Henri Becquerel. She won the 1911 Nobel Prize in Chemistry.</string>
+
+    <string name="body_details_description_ilhan">
+
+        Ilhan Omar was born 1982 in Mogadishu and was raised in Baydhabo, Somalia is a Somali-American politician from Minnesota. In 2016,
+    she was elected a Democratic–Farmer–Labour Party member of the Minnesota House of Representatives,making her the first Somali-American Muslim legislator elected to office in the United States. She is the Director of Policy and Initiatives of the Women Organizing Women Network.
+    She was the youngest of seven siblings, and grew up in an upper-middle-class household. Ilhan\'s father, Nur Omar Mohamed, is Somali, and worked as a teacher trainer.
+    Her mother was Yemeni, and died when she was a child. She was thereafter raised by her father and grandfather.Ilhan\'s grandfather, Abukar, was the director of Somalia\'s National Marine Transport,with her uncles and aunts also working as civil servants and educators. After the start of the civil war in 1991, she and her family fled the country and spent four years in a refugee camp in Kenya.
+    In 1995, Omar and her family immigrated to the United States, initially settling in Arlington, Virginia. In 1995, they moved to Minneapolis, where Ilhan quickly learned English in only three months.
+    Her father and grandfather inculcated in her the importance of democracy. She also began to accompany her grandfather to caucus meetings at the age of 14 years, serving as his interpreter.
+    Omar attended Edison High School, and volunteered there as a student organizer. After high school, she attended North Dakota State University, where she participated in the Muslim Student Association.
+    She graduated with bachelor's degrees in political science and international studies.
+
+</string>
+
 
     <!--Menu Options -->
 
@@ -302,5 +326,11 @@
     <string name="answer12_1">founded Polish Underground State during II World War</string>
     <string name="answer12_2">is one of the Righteous among the Nations</string>
     <string name="answer12_3">received the Nobel Prize in Literature</string>
+
+    <!--Question 13-->
+    <string name="question13">When Ilhan Omar was elected?</string>
+    <string name="answer13_1">1991</string>
+    <string name="answer13_2">2016</string>
+    <string name="answer13_3">2013</string>
 
 </resources>
