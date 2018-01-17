@@ -1,7 +1,5 @@
 package com.example.android.miwok;
 
-
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,8 +23,7 @@ import java.util.HashMap;
         private final static String IS_RESULT_SHOWN = "isResultShown";
         float score;
         int currentQuestion;
-        ArrayList<QuizQuestion> allQuestions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
-        ArrayList<QuizQuestion> questions;
+        ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();
         ArrayList<Integer> wrongAnswers = new ArrayList<Integer>();
         HashMap<Integer, RadioGroup> rgHmap;
         HashMap<Integer, TextView> questionHmap;
@@ -64,6 +61,8 @@ import java.util.HashMap;
             // Result
             result = findViewById(R.id.tv_result);
 
+            //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
+            // The aim is to be able to put them in a loop, so that we need significantly less lines of code.
             rgHmap = new HashMap<Integer, RadioGroup>();
             rgHmap.put(0, rg1);
             rgHmap.put(1, rg2);
@@ -85,25 +84,25 @@ import java.util.HashMap;
             submitHmap.put(3,submit4);
             submitHmap.put(4,submit5);
 
+            //If the activity is opened for the first time, adds all the questions to the arrayList, shuffles them and then make a sublist with the first 5 questions.
+            //The questions after the first one are made invisible.
             if (savedInstanceState == null) {
-                allQuestions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
-                allQuestions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
-                allQuestions.add(new QuizQuestion(R.string.question7, R.string.answer7_1, R.string.answer7_2, R.string.answer7_3, 2 ));
-                allQuestions.add(new QuizQuestion(R.string.question8, R.string.answer8_1, R.string.answer8_2, R.string.answer8_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question9, R.string.answer9_1, R.string.answer9_2, R.string.answer9_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question10, R.string.answer10_1, R.string.answer10_2, R.string.answer10_3, 1));
-                allQuestions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
-              
-              
+                questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+                questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
+                questions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
+                questions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
+                questions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
+                questions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
+                questions.add(new QuizQuestion(R.string.question7, R.string.answer7_1, R.string.answer7_2, R.string.answer7_3, 2 ));
+                questions.add(new QuizQuestion(R.string.question8, R.string.answer8_1, R.string.answer8_2, R.string.answer8_3, 3));
+                questions.add(new QuizQuestion(R.string.question9, R.string.answer9_1, R.string.answer9_2, R.string.answer9_3, 3));
+                questions.add(new QuizQuestion(R.string.question10, R.string.answer10_1, R.string.answer10_2, R.string.answer10_3, 1));
+                questions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
+                questions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
+                questions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
                 // Randomized questions
-                Collections.shuffle(allQuestions);
-                questions = new ArrayList<QuizQuestion>(allQuestions.subList(0,5));
+                Collections.shuffle(questions);
+                questions = new ArrayList<QuizQuestion>(questions.subList(0,5));
                 currentQuestion = 0;
                 score = 0;
                 isResultShown = false;
@@ -112,6 +111,8 @@ import java.util.HashMap;
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
+                //After rotation, retrieve the list of chosen questions, number of the current question, score and wrong answers up to then
+                //Redraw the current state of the views before rotation (visibilities, disabled buttons, right and wrong answer checks etc..)
             } else {
                 questions = savedInstanceState.getParcelableArrayList(QUESTIONS_ARRAY_KEY);
                 currentQuestion = savedInstanceState.getInt(CURRENT_QUESTION);
@@ -159,6 +160,7 @@ import java.util.HashMap;
             submit5.setOnClickListener(this);
         }
 
+        //Assign commands to each buttons with a switch statement
         @Override
         public void onClick(View v){
             switch(v.getId()){
@@ -176,23 +178,30 @@ import java.util.HashMap;
             }
         }
 
+        //Common submit method for all questions
         public void submit(int numberOfQuestion) {
+            //Warn if no answer is selected
             if (rgHmap.get(numberOfQuestion).getCheckedRadioButtonId() == -1) {
                 Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
             } else {
+                //Correct option is checked whether user gives the right answer or not
                 int selectedRadioButtonID = rgHmap.get(numberOfQuestion).indexOfChild(findViewById(rgHmap.get(numberOfQuestion).getCheckedRadioButtonId()));
                 correctAnswerCheck(rgHmap.get(numberOfQuestion), numberOfQuestion);
+                //if the answer was wrong put a wrong symbol to the option chosen.
                 if (questions.get(numberOfQuestion).getCorrectAnswer() != selectedRadioButtonID) {
                     incorrectAnswerCheck(rgHmap.get(numberOfQuestion));
+                    //Keep track of wrong answers for rotation
                     wrongAnswers.add(rgHmap.get(numberOfQuestion).getCheckedRadioButtonId());
                 } else {
                     score++;
                     wrongAnswers.add(0);
                 }
+                //Disable the previous question once it is submited
                 for (int i = 0; i < rgHmap.get(numberOfQuestion).getChildCount(); i++) {
                     rgHmap.get(numberOfQuestion).getChildAt(i).setEnabled(false);
                 }
                 submitHmap.get(numberOfQuestion).setEnabled(false);
+                //Make the next question visible
                 numberOfQuestion++;
                 if(numberOfQuestion<questions.size()){
                     questionHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
@@ -235,5 +244,4 @@ import java.util.HashMap;
             super.onSaveInstanceState(outState);
         }
     }
-
 
