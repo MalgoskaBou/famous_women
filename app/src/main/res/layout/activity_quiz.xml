@@ -44,7 +44,7 @@
 
         </RadioGroup>
 
-        <TextView
+        <Button
             android:id="@+id/tv_submit_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
 
         </RadioGroup>
 
-        <TextView
+        <Button
             android:id="@+id/tv_submit_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
 
         </RadioGroup>
 
-        <TextView
+        <Button
             android:id="@+id/tv_submit_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -173,7 +173,7 @@
 
         </RadioGroup>
 
-        <TextView
+        <Button
             android:id="@+id/tv_submit_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
 
         </RadioGroup>
 
-        <TextView
+        <Button
             android:id="@+id/tv_submit_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
