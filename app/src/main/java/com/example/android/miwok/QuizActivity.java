@@ -165,9 +165,7 @@ import java.util.HashMap;
             submit3.setOnClickListener(this);
             submit4.setOnClickListener(this);
             submit5.setOnClickListener(this);
-            // Set a click listener on restart button
-
-        }
+            }
 
         //Assign commands to each buttons with a switch statement
         @Override
