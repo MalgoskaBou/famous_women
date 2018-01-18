@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,8 @@ import java.util.HashMap;
         HashMap<Integer, Button> submitHmap;
         TextView result;
         boolean isResultShown;
+        Button restart;
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +63,9 @@ import java.util.HashMap;
             final Button submit5 = findViewById(R.id.tv_submit_5);
             // Result
             result = findViewById(R.id.tv_result);
+            //button Restart
+            restart = findViewById(R.id.restart);
+            restart.setVisibility(View.GONE);
 
             //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
             // The aim is to be able to put them in a loop, so that we need significantly less lines of code.
@@ -140,6 +146,7 @@ import java.util.HashMap;
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
                 if(isResultShown) result.setText("Your score is: " + (int) score + "%");
+
             }
 
             // Display questions and answers
@@ -158,6 +165,8 @@ import java.util.HashMap;
             submit3.setOnClickListener(this);
             submit4.setOnClickListener(this);
             submit5.setOnClickListener(this);
+            // Set a click listener on restart button
+
         }
 
         //Assign commands to each buttons with a switch statement
@@ -173,6 +182,7 @@ import java.util.HashMap;
                     score = score / 5 * 100;
                     result.setText("Your score is: " + (int) score + "%");
                     isResultShown = true;
+                    restart.setVisibility(View.VISIBLE);
                     break;
                 }
             }
@@ -242,6 +252,12 @@ import java.util.HashMap;
             outState.putBoolean(IS_RESULT_SHOWN, isResultShown);
             // call superclass to save any view hierarchy
             super.onSaveInstanceState(outState);
+        }
+
+        public void restartactivity (View v){
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
     }
 
