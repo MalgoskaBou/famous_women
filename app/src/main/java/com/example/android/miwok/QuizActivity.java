@@ -146,6 +146,7 @@ import java.util.HashMap;
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
                 if(isResultShown) result.setText("Your score is: " + (int) score + "%");
+                if(isResultShown) restart.setVisibility(View.VISIBLE);
 
             }
 
@@ -179,8 +180,8 @@ import java.util.HashMap;
                     submit(currentQuestion);
                     score = score / 5 * 100;
                     result.setText("Your score is: " + (int) score + "%");
-                    isResultShown = true;
                     restart.setVisibility(View.VISIBLE);
+                    isResultShown = true;
                     break;
                 }
             }
@@ -191,6 +192,7 @@ import java.util.HashMap;
             //Warn if no answer is selected
             if (rgHmap.get(numberOfQuestion).getCheckedRadioButtonId() == -1) {
                 Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                return;
             } else {
                 //Correct option is checked whether user gives the right answer or not
                 int selectedRadioButtonID = rgHmap.get(numberOfQuestion).indexOfChild(findViewById(rgHmap.get(numberOfQuestion).getCheckedRadioButtonId()));
