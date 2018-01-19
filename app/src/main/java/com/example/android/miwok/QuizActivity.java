@@ -1,10 +1,12 @@
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -34,7 +36,11 @@ import java.util.HashMap;
         TextView tvResult;
         TextView tvCorrect;
         TextView tvIncorrect;
+        ImageView imgCorrect;
+        ImageView imgIncorrect;
         boolean isResultShown;
+        Button restart;
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +73,15 @@ import java.util.HashMap;
             tvResult = findViewById(R.id.tv_result);
             tvCorrect = findViewById(R.id.tv_correct);
             tvIncorrect = findViewById(R.id.tv_wrong);
+            imgCorrect = findViewById(R.id.img_correct);
+            imgIncorrect = findViewById(R.id.img_wrong);
 
+            imgCorrect.setVisibility(View.GONE);
+            imgIncorrect.setVisibility(View.GONE);
+
+            //button Restart
+            restart = findViewById(R.id.restart);
+            restart.setVisibility(View.GONE);
 
 
             //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
@@ -149,9 +163,10 @@ import java.util.HashMap;
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
                 if(isResultShown){
-                    //tvResult.setText("Your score is: " + (int) score + "%");
                     displayResult(score, correctAnsNmb, incorrectAnsNmb);
                 }
+                if(isResultShown) restart.setVisibility(View.VISIBLE);
+
             }
 
             // Display questions and answers
@@ -170,7 +185,7 @@ import java.util.HashMap;
             submit3.setOnClickListener(this);
             submit4.setOnClickListener(this);
             submit5.setOnClickListener(this);
-        }
+            }
 
         //Assign commands to each buttons with a switch statement
         @Override
@@ -183,12 +198,11 @@ import java.util.HashMap;
                 case R.id.tv_submit_5: {
                     submit(currentQuestion);
                     score = score / 5 * 100;
+
                     correctAnsNmb = correctAnswersNmb();
                     incorrectAnsNmb = questions.size() - correctAnsNmb;
-                    Log.e("Correct answers ", String.valueOf(correctAnsNmb));
-                    Log.e("Incorrect answers ", String.valueOf(incorrectAnsNmb));
                     displayResult(score, correctAnsNmb, incorrectAnsNmb);
-
+                    restart.setVisibility(View.VISIBLE);
                     isResultShown = true;
                     break;
                 }
@@ -200,6 +214,7 @@ import java.util.HashMap;
             //Warn if no answer is selected
             if (rgHmap.get(numberOfQuestion).getCheckedRadioButtonId() == -1) {
                 Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                return;
             } else {
                 //Correct option is checked whether user gives the right answer or not
                 int selectedRadioButtonID = rgHmap.get(numberOfQuestion).indexOfChild(findViewById(rgHmap.get(numberOfQuestion).getCheckedRadioButtonId()));
@@ -224,7 +239,7 @@ import java.util.HashMap;
                 for (int i = 0; i < rgHmap.get(numberOfQuestion).getChildCount(); i++) {
                     rgHmap.get(numberOfQuestion).getChildAt(i).setEnabled(false);
                 }
-                submitHmap.get(numberOfQuestion).setEnabled(false);
+                submitHmap.get(numberOfQuestion).setVisibility(View.GONE);
                 //Make the next question visible
                 numberOfQuestion++;
                 if(numberOfQuestion<questions.size()){
@@ -277,7 +292,8 @@ import java.util.HashMap;
         }
 
         public void displayResult(float score, int correctAns, int incorrectAns){
-
+            imgCorrect.setVisibility(View.VISIBLE);
+            imgIncorrect.setVisibility(View.VISIBLE);
             tvResult.setText(getString(R.string.quizResult) + (int) score + "%");
             tvCorrect.setText(getString(R.string.quizCorrect) + correctAns);
             tvIncorrect.setText(getString(R.string.quizIncorrect) + incorrectAns);
@@ -295,6 +311,12 @@ import java.util.HashMap;
             outState.putBoolean(IS_RESULT_SHOWN, isResultShown);
             // call superclass to save any view hierarchy
             super.onSaveInstanceState(outState);
+        }
+
+        public void restartactivity (View v){
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
     }
 
