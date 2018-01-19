@@ -70,6 +70,7 @@ import java.util.HashMap;
             final RadioGroup rg5 = findViewById(R.id.rg_question5);
             final Button submit5 = findViewById(R.id.tv_submit_5);
             // Result
+
             tvResult = findViewById(R.id.tv_result);
             tvCorrect = findViewById(R.id.tv_correct);
             tvIncorrect = findViewById(R.id.tv_wrong);
@@ -82,6 +83,7 @@ import java.util.HashMap;
             //button Restart
             restart = findViewById(R.id.restart);
             restart.setVisibility(View.GONE);
+
 
 
             //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
@@ -162,9 +164,11 @@ import java.util.HashMap;
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
+
                 if(isResultShown){
                     displayResult(score, correctAnsNmb, incorrectAnsNmb);
                 }
+
                 if(isResultShown) restart.setVisibility(View.VISIBLE);
 
             }
@@ -199,9 +203,11 @@ import java.util.HashMap;
                     submit(currentQuestion);
                     score = score / 5 * 100;
 
+
                     correctAnsNmb = correctAnswersNmb();
                     incorrectAnsNmb = questions.size() - correctAnsNmb;
                     displayResult(score, correctAnsNmb, incorrectAnsNmb);
+
                     restart.setVisibility(View.VISIBLE);
                     isResultShown = true;
                     break;
