@@ -3,8 +3,10 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,12 +26,18 @@ import java.util.HashMap;
         private final static String IS_RESULT_SHOWN = "isResultShown";
         float score;
         int currentQuestion;
+        int correctAnsNmb;
+        int incorrectAnsNmb;
         ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();
         ArrayList<Integer> wrongAnswers = new ArrayList<Integer>();
         HashMap<Integer, RadioGroup> rgHmap;
         HashMap<Integer, TextView> questionHmap;
         HashMap<Integer, Button> submitHmap;
-        TextView result;
+        TextView tvResult;
+        TextView tvCorrect;
+        TextView tvIncorrect;
+        ImageView imgCorrect;
+        ImageView imgIncorrect;
         boolean isResultShown;
         Button restart;
 
@@ -62,10 +70,21 @@ import java.util.HashMap;
             final RadioGroup rg5 = findViewById(R.id.rg_question5);
             final Button submit5 = findViewById(R.id.tv_submit_5);
             // Result
-            result = findViewById(R.id.tv_result);
+
+            tvResult = findViewById(R.id.tv_result);
+            tvCorrect = findViewById(R.id.tv_correct);
+            tvIncorrect = findViewById(R.id.tv_wrong);
+            imgCorrect = findViewById(R.id.img_correct);
+            imgIncorrect = findViewById(R.id.img_wrong);
+
+            imgCorrect.setVisibility(View.GONE);
+            imgIncorrect.setVisibility(View.GONE);
+
             //button Restart
             restart = findViewById(R.id.restart);
             restart.setVisibility(View.GONE);
+
+
 
             //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
             // The aim is to be able to put them in a loop, so that we need significantly less lines of code.
@@ -145,7 +164,11 @@ import java.util.HashMap;
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
-                if(isResultShown) result.setText("Your score is: " + (int) score + "%");
+
+                if(isResultShown){
+                    displayResult(score, correctAnsNmb, incorrectAnsNmb);
+                }
+
                 if(isResultShown) restart.setVisibility(View.VISIBLE);
 
             }
@@ -179,7 +202,12 @@ import java.util.HashMap;
                 case R.id.tv_submit_5: {
                     submit(currentQuestion);
                     score = score / 5 * 100;
-                    result.setText("Your score is: " + (int) score + "%");
+
+
+                    correctAnsNmb = correctAnswersNmb();
+                    incorrectAnsNmb = questions.size() - correctAnsNmb;
+                    displayResult(score, correctAnsNmb, incorrectAnsNmb);
+
                     restart.setVisibility(View.VISIBLE);
                     isResultShown = true;
                     break;
@@ -206,11 +234,18 @@ import java.util.HashMap;
                     score++;
                     wrongAnswers.add(0);
                 }
+                // For non-checked radio button show ic_notchecked
+                for (int i = 1; i < rgHmap.get(numberOfQuestion).getChildCount(); i++){
+                    if (i != selectedRadioButtonID && i != questions.get(numberOfQuestion).getCorrectAnswer()){
+                        notCheck(rgHmap.get(numberOfQuestion), i);
+                    }
+                }
+
                 //Disable the previous question once it is submited
                 for (int i = 0; i < rgHmap.get(numberOfQuestion).getChildCount(); i++) {
                     rgHmap.get(numberOfQuestion).getChildAt(i).setEnabled(false);
                 }
-                submitHmap.get(numberOfQuestion).setEnabled(false);
+                submitHmap.get(numberOfQuestion).setVisibility(View.GONE);
                 //Make the next question visible
                 numberOfQuestion++;
                 if(numberOfQuestion<questions.size()){
@@ -239,6 +274,36 @@ import java.util.HashMap;
             params.setMargins(16, 0, 0, 0);
             selectedAnswer.setLayoutParams(params);
             selectedAnswer.setPadding(16, 0, 0, 0);
+        }
+
+        public void notCheck(RadioGroup rg, int index) {
+
+            RadioButton rb = (RadioButton) rg.getChildAt(index);
+            rb.setButtonDrawable(R.drawable.ic_notchecked);
+            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) rb.getLayoutParams();
+            params.setMargins(20, 0, 0, 0);
+            rb.setLayoutParams(params);
+            rb.setPadding(16, 4, 4, 4);
+        }
+
+        public int correctAnswersNmb() {
+            int correctNmb = 0;
+            for (int i = 0; i < questions.size(); i++){
+                int selectedRadioButtonID = rgHmap.get(i).indexOfChild(findViewById(rgHmap.get(i).getCheckedRadioButtonId()));
+                if (selectedRadioButtonID == questions.get(i).getCorrectAnswer()){
+                    correctNmb ++;
+                }
+            }
+            return correctNmb;
+        }
+
+        public void displayResult(float score, int correctAns, int incorrectAns){
+            imgCorrect.setVisibility(View.VISIBLE);
+            imgIncorrect.setVisibility(View.VISIBLE);
+            tvResult.setText(getString(R.string.quizResult) + (int) score + "%");
+            tvCorrect.setText(getString(R.string.quizCorrect) + correctAns);
+            tvIncorrect.setText(getString(R.string.quizIncorrect) + incorrectAns);
+
         }
 
         // invoked when the activity may be temporarily destroyed, save the instance state here

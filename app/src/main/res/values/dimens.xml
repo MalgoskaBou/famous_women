@@ -7,6 +7,7 @@
     <dimen name="fontSize_subheading">16sp</dimen>
     <dimen name="margin_standard">16dp</dimen>
     <dimen name="halfmargin_standard">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
     <dimen name="flag_and_image_height">60dp</dimen>
     <dimen name="flag_details_width">75dp</dimen>
     <dimen name="flag_details_height">75dp</dimen>

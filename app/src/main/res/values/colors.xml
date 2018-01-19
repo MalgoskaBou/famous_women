@@ -38,4 +38,7 @@
     <!-- Background color main text -->
     <color name="background_color_main">#9E9E9E</color>
 
+    <!-- Radio buttons colors -->
+    <color name="colorRadioGray">@android:color/darker_gray</color>
+
 </resources>

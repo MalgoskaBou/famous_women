@@ -258,6 +258,10 @@
 
     <!--Quiz Questions -->
 
+    <string name="quizResult">Your result is: \u0000</string>
+    <string name="quizCorrect">Number of correct answers: \u0000</string>
+    <string name="quizIncorrect">Number of wrong answers: \u0000</string>
+
 
     <!--Question 1 -->
     <string name="question1">Wanda Rutkiewicz was a famous...</string>
