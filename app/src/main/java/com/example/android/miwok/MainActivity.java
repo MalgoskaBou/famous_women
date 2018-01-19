@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         words.add(new Word(R.string.maria_telkes_profession, R.string.maria_telkes,
                 R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
         words.add(new Word(R.string.meriem_profession, R.string.Merieme_Chadid,
-                R.drawable.meriem_listing, R.drawable.meriem_morocco_flag));
+                R.drawable.meriem_listimg, R.drawable.meriem_morocco_flag));
         words.add(new Word(R.string.irena_profession, R.string.irena,
                 R.drawable.irena_sendler_listimg, R.drawable.maria_poland_flag));
         words.add(new Word(R.string.ada_profession, R.string.ada,

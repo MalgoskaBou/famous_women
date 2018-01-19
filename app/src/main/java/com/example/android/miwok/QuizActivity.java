@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,8 @@ import java.util.HashMap;
         HashMap<Integer, Button> submitHmap;
         TextView result;
         boolean isResultShown;
+        Button restart;
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +63,9 @@ import java.util.HashMap;
             final Button submit5 = findViewById(R.id.tv_submit_5);
             // Result
             result = findViewById(R.id.tv_result);
+            //button Restart
+            restart = findViewById(R.id.restart);
+            restart.setVisibility(View.GONE);
 
             //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
             // The aim is to be able to put them in a loop, so that we need significantly less lines of code.
@@ -140,6 +146,8 @@ import java.util.HashMap;
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
                 if(isResultShown) result.setText("Your score is: " + (int) score + "%");
+                if(isResultShown) restart.setVisibility(View.VISIBLE);
+
             }
 
             // Display questions and answers
@@ -158,7 +166,7 @@ import java.util.HashMap;
             submit3.setOnClickListener(this);
             submit4.setOnClickListener(this);
             submit5.setOnClickListener(this);
-        }
+            }
 
         //Assign commands to each buttons with a switch statement
         @Override
@@ -172,6 +180,7 @@ import java.util.HashMap;
                     submit(currentQuestion);
                     score = score / 5 * 100;
                     result.setText("Your score is: " + (int) score + "%");
+                    restart.setVisibility(View.VISIBLE);
                     isResultShown = true;
                     break;
                 }
@@ -183,6 +192,7 @@ import java.util.HashMap;
             //Warn if no answer is selected
             if (rgHmap.get(numberOfQuestion).getCheckedRadioButtonId() == -1) {
                 Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                return;
             } else {
                 //Correct option is checked whether user gives the right answer or not
                 int selectedRadioButtonID = rgHmap.get(numberOfQuestion).indexOfChild(findViewById(rgHmap.get(numberOfQuestion).getCheckedRadioButtonId()));
@@ -242,6 +252,12 @@ import java.util.HashMap;
             outState.putBoolean(IS_RESULT_SHOWN, isResultShown);
             // call superclass to save any view hierarchy
             super.onSaveInstanceState(outState);
+        }
+
+        public void restartactivity (View v){
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
     }
 

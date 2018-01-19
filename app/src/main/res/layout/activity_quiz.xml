@@ -234,6 +234,17 @@
             android:textAlignment="center"
             android:textAllCaps="true"
          />
-
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:padding="@dimen/margin_standard"
+            android:text="Restart"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:onClick="restartactivity"
+            />
     </LinearLayout>
 </ScrollView>
