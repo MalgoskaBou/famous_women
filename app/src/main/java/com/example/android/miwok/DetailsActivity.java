@@ -37,7 +37,6 @@ import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity {
 
-
     private ImageView portraitImageView;
     private TextView descriptionTextView;
     private ImageView flagImageView;
@@ -46,8 +45,6 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_view);
-
-       
 
         //we collect the transferred data from the previous activity
         String profession_string = getIntent().getStringExtra("PROFESSION");
@@ -63,7 +60,7 @@ public class DetailsActivity extends AppCompatActivity {
         // Array list contains IDs for: name, description on image
         final ArrayList<Word> details = new ArrayList<Word>();
 
-        details.add(new Word(R.string.maria_profession, R.string.body_details_description_dalia,
+        details.add(new Word(R.string.maria_profession, R.string.body_details_descriprion_maria_sklodowska,
                 R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
         details.add(new Word(R.string.dalia_profession, R.string.body_details_description_dalia,
                 R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
@@ -81,16 +78,14 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
         details.add(new Word(R.string.meriem_profession, R.string.body_details_description_meriem,
                 R.drawable.meriem_portrait, R.drawable.meriem_morocco_flag));
-        details.add(new Word(R.string.ada_profession, R.string.body_details_description_ada,
-                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
         details.add(new Word(R.string.irena_profession, R.string.body_details_description_irena,
                 R.drawable.irena_portrait, R.drawable.maria_poland_flag));
         details.add(new Word(R.string.ada_profession, R.string.body_details_description_ada,
                 R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
         details.add(new Word(R.string.ilhan_profession, R.string.body_details_description_ilhan,
                 R.drawable.ilhan_listing, R.drawable.ilhan_flag));
-
-
+        details.add(new Word(R.string.valentina_profession, R.string.body_details_description_valentina,
+                R.drawable.valentina_portrait, R.drawable.russia_flag));
 
         if(position==0)
         {
@@ -100,7 +95,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 
             portraitImageView.setImageResource(R.drawable.maria_portrait);
-            descriptionTextView.setText(R.string.body_details_sescriprion_maria_sklodowska);
+            descriptionTextView.setText(R.string.body_details_descriprion_maria_sklodowska);
             flagImageView.setImageResource(R.drawable.maria_poland_flag);
         }
         else if(position==1)
@@ -208,6 +203,15 @@ public class DetailsActivity extends AppCompatActivity {
             portraitImageView.setImageResource(R.drawable.ilhan_portrait);
             descriptionTextView.setText(R.string.body_details_description_ilhan);
             flagImageView.setImageResource(R.drawable.ilhan_flag);
+        }
+
+        else if (position==12){
+            /*
+             * Russia
+             */
+            portraitImageView.setImageResource(details.get(position).getImageResourceId());
+            descriptionTextView.setText(details.get(position).getProfessionId());
+            flagImageView.setImageResource(details.get(position).getmFlagImageId());
         }
 
         //put data to new textView

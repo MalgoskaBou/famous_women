@@ -106,6 +106,7 @@ import java.util.HashMap;
                 questions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
                 questions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
                 questions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
+                questions.add(new QuizQuestion(R.string.question14, R.string.answer14_1, R.string.answer14_2, R.string.answer14_3, 2));
                 // Randomized questions
                 Collections.shuffle(questions);
                 questions = new ArrayList<QuizQuestion>(questions.subList(0,5));
