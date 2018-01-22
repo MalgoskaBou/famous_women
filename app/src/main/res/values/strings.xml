@@ -127,21 +127,21 @@
         She started to climb in Pamir, Hindu Kush and Himalayas.
         \nMain achievements:
         \n-	In 1967 east face of Aiguille du Grépon with Halina Krüger-Syrokomska – it was the first women only ascent.
-    \n-	9-11 August, 1968 - East Pillar of Trollryggen in Norway with Halina Krüger-Syrokomska – it was the first women only ascent and seventh ever.
-    \n-	1970 Lenin pick (7134 m) in Pamir, it was her first  seven-thousender.
-    \n-	19-22 August 1973 the North Pillar of the Eiger (Messner route) in female team with Danuta Gellner-Wach i Stefania Egierszdorff.
-    \n-	In 1975 she was leading women expedition on Gasherbrum. She climbed Gasherbrum III (7952 m) – women ascent altitude record. During the same expedition she climbed Gasherbrum II – first women-only ascent.
-    \n•	On October 16, 1978 as the third woman and first European woman Wanda Rutkiewicz reached the top of Mount Everest, the Earth\'s highest mountain. That day Karol Wojtyła was chosen to become pope John Paul II. During his first pilgrimage to Poland he said to her \„Good God\'s will that same day we went so high\”.
-    \n-	1978 –  the North Face of the Matterhorn in winter it was the first women-only-ascent with Anna Czerwińska, Irena Kęsa i Krystyna Palmowska.
-    \n•	On July 15, 1985 with Krystyna Palmowska and Anna Czerwinska they climbed Nanga Parbat. They became the first women\'s expedition who reached this peak.
-    \n•	On June 23 1986 she did the first women ascent on K2.
-    \n•	With Ryszard Warecki she reached peak of  Shishapangma  (the true Main Summit) on September 18, 1978. They became first Polish on the top.
-    \n•	On July 12, 1989 with Rhony Lampard they climbed Gasherbrum II.
-    \n•	On July 16, 1990 with Ewa Panejko-Pankiewicz they reached Gasherbrum I (Hidden Peak).
-    \n•	On September 1991, she reached solo Cho Oyu.
-    \n•	On October 22, 1991, she climbed solo Annapurna.
-    \nHer goal was to become the first woman to summit all fourteen of the eight-thousanders, finally she reached 8 of them (marked with •). The ninth one supposed to be Kangchenjunga. She climbed with Carlos Carsolio. On 12 May 1992 they started together from  camp IV. She was last seen when she was preparing bivouac while Carlos Carsolio was going down from the top after 12 hours ascent in deep snow. She didn’t have food, no bivouac equipment.
-    It is not known if Wanda Rutkiewicz summitted Kangchenjunga, her body was not found. She probably died during night or next day, while ascending or maybe descending from the top.
+        \n-	9-11 August, 1968 - East Pillar of Trollryggen in Norway with Halina Krüger-Syrokomska – it was the first women only ascent and seventh ever.
+        \n-	1970 Lenin pick (7134 m) in Pamir, it was her first  seven-thousender.
+        \n-	19-22 August 1973 the North Pillar of the Eiger (Messner route) in female team with Danuta Gellner-Wach i Stefania Egierszdorff.
+        \n-	In 1975 she was leading women expedition on Gasherbrum. She climbed Gasherbrum III (7952 m) – women ascent altitude record. During the same expedition she climbed Gasherbrum II – first women-only ascent.
+        \n•	On October 16, 1978 as the third woman and first European woman Wanda Rutkiewicz reached the top of Mount Everest, the Earth\'s highest mountain. That day Karol Wojtyła was chosen to become pope John Paul II. During his first pilgrimage to Poland he said to her \„Good God\'s will that same day we went so high\”.
+        \n-	1978 –  the North Face of the Matterhorn in winter it was the first women-only-ascent with Anna Czerwińska, Irena Kęsa i Krystyna Palmowska.
+        \n•	On July 15, 1985 with Krystyna Palmowska and Anna Czerwinska they climbed Nanga Parbat. They became the first women\'s expedition who reached this peak.
+        \n•	On June 23 1986 she did the first women ascent on K2.
+        \n•	With Ryszard Warecki she reached peak of  Shishapangma  (the true Main Summit) on September 18, 1978. They became first Polish on the top.
+        \n•	On July 12, 1989 with Rhony Lampard they climbed Gasherbrum II.
+        \n•	On July 16, 1990 with Ewa Panejko-Pankiewicz they reached Gasherbrum I (Hidden Peak).
+        \n•	On September 1991, she reached solo Cho Oyu.
+        \n•	On October 22, 1991, she climbed solo Annapurna.
+        \nHer goal was to become the first woman to summit all fourteen of the eight-thousanders, finally she reached 8 of them (marked with •). The ninth one supposed to be Kangchenjunga. She climbed with Carlos Carsolio. On 12 May 1992 they started together from  camp IV. She was last seen when she was preparing bivouac while Carlos Carsolio was going down from the top after 12 hours ascent in deep snow. She didn’t have food, no bivouac equipment.
+        It is not known if Wanda Rutkiewicz summitted Kangchenjunga, her body was not found. She probably died during night or next day, while ascending or maybe descending from the top.
     </string>
 
     <string name="body_details_description_ameenah">Born 17 October 1959 is a Mauritian biodiversity scientist and politician serving as President of Mauritius since 2015. In December 2014, she was selected to be the presidential candidate of the Alliance Lepep. After Kailash Purryag resigned on 29 May 2015, both Prime Minister Sir Anerood Jugnauth and Leader of the Opposition Paul Berenger positively welcomed her nomination,
@@ -276,6 +276,10 @@
 
     <!--Quiz Questions -->
 
+    <string name="quizResult">Your result is: \u0000</string>
+    <string name="quizCorrect">Number of correct answers: \u0000</string>
+    <string name="quizIncorrect">Number of wrong answers: \u0000</string>
+
 
     <!--Question 1 -->
     <string name="question1">Wanda Rutkiewicz was a famous...</string>
@@ -360,5 +364,6 @@
     <string name="answer14_1">16</string>
     <string name="answer14_2">48</string>
     <string name="answer14_3">63</string>
+
 
 </resources>
