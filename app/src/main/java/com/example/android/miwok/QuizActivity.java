@@ -159,7 +159,7 @@ import java.util.HashMap;
                         rgHmap.get(j).getChildAt(i).setEnabled(false);
                     }
                     correctAnswerCheck(rgHmap.get(j), j);
-                    submitHmap.get(j).setEnabled(false);
+                    submitHmap.get(j).setVisibility(View.GONE);
                     if(wrongAnswers.get(j) != 0){
                         RadioButton selectedAnswer = findViewById(wrongAnswers.get(j));
                         selectedAnswer.setButtonDrawable(R.drawable.ic_cancel);
@@ -211,24 +211,6 @@ import java.util.HashMap;
                     submit(currentQuestion);
                     break;
                 }
-                /*
-                // Move to submit method - was possible to click last submit without choosing answer
-                case R.id.tv_submit_5: {
-                    submit(currentQuestion);
-
-                    score = score / 5 * 100;
-
-
-                    correctAnsNmb = correctAnswersNmb();
-                    incorrectAnsNmb = questions.size() - correctAnsNmb;
-                    displayResult(score, correctAnsNmb, incorrectAnsNmb);
-
-                    restart.setVisibility(View.VISIBLE);
-                    isResultShown = true;
-
-                    break;
-                }
-                */
             }
         }
 
