@@ -67,18 +67,11 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
         words.add(new Word(R. string.ilhan_profession , R.string.ilhan,
                 R.drawable.ilhan_listing, R.drawable.ilhan_flag));
-
-
-
-
-
-
-
+        words.add(new Word(R.string.valentina_profession, R.string.valentina,
+                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag));
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
-
-
         WordAdapter adapter = new WordAdapter(this, words, R.color.category_numbers);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
@@ -104,8 +97,6 @@ public class MainActivity extends AppCompatActivity {
                 TextView name = (TextView) view.findViewById(R.id.name_text_view);
                 String name_text = name.getText().toString();
 
-
-
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
@@ -115,11 +106,8 @@ public class MainActivity extends AppCompatActivity {
                 myIntent.putExtra("POSITION", indexOfListItem);
                       // Start the new activity
                startActivity(myIntent);
-
-
             }
         });
-
     }
 
     // this is to create the menu bar
@@ -129,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main_menu, menu);
         return true;
     }
+
     // this is to create the different parts of the menu bar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
