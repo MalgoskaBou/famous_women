@@ -3,7 +3,6 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -33,6 +32,7 @@ import java.util.HashMap;
         HashMap<Integer, RadioGroup> rgHmap;
         HashMap<Integer, TextView> questionHmap;
         HashMap<Integer, Button> submitHmap;
+        LinearLayout layResult;
         TextView tvResult;
         TextView tvCorrect;
         TextView tvIncorrect;
@@ -69,21 +69,19 @@ import java.util.HashMap;
             final TextView question5 = findViewById(R.id.tv_question5);
             final RadioGroup rg5 = findViewById(R.id.rg_question5);
             final Button submit5 = findViewById(R.id.tv_submit_5);
-            // Result
 
+            // Result
+            layResult = findViewById(R.id.layout_result);
             tvResult = findViewById(R.id.tv_result);
             tvCorrect = findViewById(R.id.tv_correct);
             tvIncorrect = findViewById(R.id.tv_wrong);
             imgCorrect = findViewById(R.id.img_correct);
             imgIncorrect = findViewById(R.id.img_wrong);
 
-            imgCorrect.setVisibility(View.GONE);
-            imgIncorrect.setVisibility(View.GONE);
-
             //button Restart
             restart = findViewById(R.id.restart);
-            restart.setVisibility(View.GONE);
-
+            // Hide result views
+            layResult.setVisibility(View.GONE);
 
 
             //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
@@ -164,13 +162,9 @@ import java.util.HashMap;
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
-
-                if(isResultShown){
+                // Display result
+                if(isResultShown)
                     displayResult(score, correctAnsNmb, incorrectAnsNmb);
-                }
-
-                if(isResultShown) restart.setVisibility(View.VISIBLE);
-
             }
 
             // Display questions and answers
@@ -195,12 +189,19 @@ import java.util.HashMap;
         @Override
         public void onClick(View v){
             switch(v.getId()){
-                case R.id.tv_submit_1: case R.id.tv_submit_2: case R.id.tv_submit_3: case R.id.tv_submit_4:{
+                case R.id.tv_submit_1:
+                case R.id.tv_submit_2:
+                case R.id.tv_submit_3:
+                case R.id.tv_submit_4:
+                case R.id.tv_submit_5: {
                     submit(currentQuestion);
                     break;
                 }
+                /*
+                // Move to submit method - was possible to click last submit without choosing answer
                 case R.id.tv_submit_5: {
                     submit(currentQuestion);
+
                     score = score / 5 * 100;
 
 
@@ -210,8 +211,10 @@ import java.util.HashMap;
 
                     restart.setVisibility(View.VISIBLE);
                     isResultShown = true;
+
                     break;
                 }
+                */
             }
         }
 
@@ -241,7 +244,7 @@ import java.util.HashMap;
                     }
                 }
 
-                //Disable the previous question once it is submited
+                //Disable the previous question once it is submitted
                 for (int i = 0; i < rgHmap.get(numberOfQuestion).getChildCount(); i++) {
                     rgHmap.get(numberOfQuestion).getChildAt(i).setEnabled(false);
                 }
@@ -252,6 +255,17 @@ import java.util.HashMap;
                     questionHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
                     rgHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
                     submitHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
+                }
+                // Automatically scroll to next question's submit button
+                if (numberOfQuestion < submitHmap.size())
+                    submitHmap.get(numberOfQuestion).getParent().requestChildFocus(submitHmap.get(numberOfQuestion), submitHmap.get(numberOfQuestion));
+                // Last question - display result
+                if (numberOfQuestion == submitHmap.size()){
+                    score = score / 5 * 100;
+                    correctAnsNmb = correctAnswersNmb();
+                    incorrectAnsNmb = questions.size() - correctAnsNmb;
+                    displayResult(score, correctAnsNmb, incorrectAnsNmb);
+                    isResultShown = true;
                 }
             }
             currentQuestion++;
@@ -298,12 +312,15 @@ import java.util.HashMap;
         }
 
         public void displayResult(float score, int correctAns, int incorrectAns){
-            imgCorrect.setVisibility(View.VISIBLE);
-            imgIncorrect.setVisibility(View.VISIBLE);
+            // Make views visible
+            layResult.setVisibility(View.VISIBLE);
+            // Automatically scroll reset button
+            restart.getParent().requestChildFocus(restart, restart);
+            //imgCorrect.setVisibility(View.VISIBLE);
+            //imgIncorrect.setVisibility(View.VISIBLE);
             tvResult.setText(getString(R.string.quizResult) + (int) score + "%");
             tvCorrect.setText(getString(R.string.quizCorrect) + correctAns);
             tvIncorrect.setText(getString(R.string.quizIncorrect) + incorrectAns);
-
         }
 
         // invoked when the activity may be temporarily destroyed, save the instance state here

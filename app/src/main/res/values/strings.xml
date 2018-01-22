@@ -35,7 +35,7 @@
     <string name="ada">Ada E. Yonath</string>
     <string name="irena">Irena Sendler</string>
     <string name="ilhan">Ilhan Omar</string>
-    <string name="name9"> </string>
+    <string name="valentina">Valentina Tereshkova</string>
     <string name="name10"> </string>
 
     <!--Persons proffesion -->
@@ -51,7 +51,7 @@
     <string name="ada_profession">Biochemist</string>
     <string name="irena_profession">Social Worker</string>
     <string name="ilhan_profession">Politician</string>
-    <string name="profession9"> </string>
+    <string name="valentina_profession">Cosmonaut</string>
     <string name="profession10"> </string>
 
     <!--Details page subheader -->
@@ -127,21 +127,21 @@
         She started to climb in Pamir, Hindu Kush and Himalayas.
         \nMain achievements:
         \n-	In 1967 east face of Aiguille du Grépon with Halina Krüger-Syrokomska – it was the first women only ascent.
-    \n-	9-11 August, 1968 - East Pillar of Trollryggen in Norway with Halina Krüger-Syrokomska – it was the first women only ascent and seventh ever.
-    \n-	1970 Lenin pick (7134 m) in Pamir, it was her first  seven-thousender.
-    \n-	19-22 August 1973 the North Pillar of the Eiger (Messner route) in female team with Danuta Gellner-Wach i Stefania Egierszdorff.
-    \n-	In 1975 she was leading women expedition on Gasherbrum. She climbed Gasherbrum III (7952 m) – women ascent altitude record. During the same expedition she climbed Gasherbrum II – first women-only ascent.
-    \n•	On October 16, 1978 as the third woman and first European woman Wanda Rutkiewicz reached the top of Mount Everest, the Earth\'s highest mountain. That day Karol Wojtyła was chosen to become pope John Paul II. During his first pilgrimage to Poland he said to her \„Good God\'s will that same day we went so high\”.
-    \n-	1978 –  the North Face of the Matterhorn in winter it was the first women-only-ascent with Anna Czerwińska, Irena Kęsa i Krystyna Palmowska.
-    \n•	On July 15, 1985 with Krystyna Palmowska and Anna Czerwinska they climbed Nanga Parbat. They became the first women\'s expedition who reached this peak.
-    \n•	On June 23 1986 she did the first women ascent on K2.
-    \n•	With Ryszard Warecki she reached peak of  Shishapangma  (the true Main Summit) on September 18, 1978. They became first Polish on the top.
-    \n•	On July 12, 1989 with Rhony Lampard they climbed Gasherbrum II.
-    \n•	On July 16, 1990 with Ewa Panejko-Pankiewicz they reached Gasherbrum I (Hidden Peak).
-    \n•	On September 1991, she reached solo Cho Oyu.
-    \n•	On October 22, 1991, she climbed solo Annapurna.
-    \nHer goal was to become the first woman to summit all fourteen of the eight-thousanders, finally she reached 8 of them (marked with •). The ninth one supposed to be Kangchenjunga. She climbed with Carlos Carsolio. On 12 May 1992 they started together from  camp IV. She was last seen when she was preparing bivouac while Carlos Carsolio was going down from the top after 12 hours ascent in deep snow. She didn’t have food, no bivouac equipment.
-    It is not known if Wanda Rutkiewicz summitted Kangchenjunga, her body was not found. She probably died during night or next day, while ascending or maybe descending from the top.
+        \n-	9-11 August, 1968 - East Pillar of Trollryggen in Norway with Halina Krüger-Syrokomska – it was the first women only ascent and seventh ever.
+        \n-	1970 Lenin pick (7134 m) in Pamir, it was her first  seven-thousender.
+        \n-	19-22 August 1973 the North Pillar of the Eiger (Messner route) in female team with Danuta Gellner-Wach i Stefania Egierszdorff.
+        \n-	In 1975 she was leading women expedition on Gasherbrum. She climbed Gasherbrum III (7952 m) – women ascent altitude record. During the same expedition she climbed Gasherbrum II – first women-only ascent.
+        \n•	On October 16, 1978 as the third woman and first European woman Wanda Rutkiewicz reached the top of Mount Everest, the Earth\'s highest mountain. That day Karol Wojtyła was chosen to become pope John Paul II. During his first pilgrimage to Poland he said to her \„Good God\'s will that same day we went so high\”.
+        \n-	1978 –  the North Face of the Matterhorn in winter it was the first women-only-ascent with Anna Czerwińska, Irena Kęsa i Krystyna Palmowska.
+        \n•	On July 15, 1985 with Krystyna Palmowska and Anna Czerwinska they climbed Nanga Parbat. They became the first women\'s expedition who reached this peak.
+        \n•	On June 23 1986 she did the first women ascent on K2.
+        \n•	With Ryszard Warecki she reached peak of  Shishapangma  (the true Main Summit) on September 18, 1978. They became first Polish on the top.
+        \n•	On July 12, 1989 with Rhony Lampard they climbed Gasherbrum II.
+        \n•	On July 16, 1990 with Ewa Panejko-Pankiewicz they reached Gasherbrum I (Hidden Peak).
+        \n•	On September 1991, she reached solo Cho Oyu.
+        \n•	On October 22, 1991, she climbed solo Annapurna.
+        \nHer goal was to become the first woman to summit all fourteen of the eight-thousanders, finally she reached 8 of them (marked with •). The ninth one supposed to be Kangchenjunga. She climbed with Carlos Carsolio. On 12 May 1992 they started together from  camp IV. She was last seen when she was preparing bivouac while Carlos Carsolio was going down from the top after 12 hours ascent in deep snow. She didn’t have food, no bivouac equipment.
+        It is not known if Wanda Rutkiewicz summitted Kangchenjunga, her body was not found. She probably died during night or next day, while ascending or maybe descending from the top.
     </string>
 
     <string name="body_details_description_ameenah"> born 17 October 1959  is a Mauritian biodiversity scientist and politician serving as President of Mauritius since 2015. In December 2014, she was selected to be the presidential candidate of the Alliance Lepep. After Kailash Purryag resigned on 29 May 2015, both Prime Minister Sir Anerood Jugnauth and Leader of the Opposition Paul Berenger positively welcomed her nomination,
@@ -250,6 +250,25 @@
         where she participated in the Muslim Student Association.
         She graduated with bachelor\'s degrees in political science and international studies.</string>
 
+    <string name="body_details_description_valentina">
+        Soviet cosmonaut Valentina Tereshkova was born in the Yaroslavl Region of Russia on March 6, 1937. She was the second born of three children.
+        Her father was a tractor driver and her mother worked in a textile plant. Valentina began school in 1945 at the age of eight.
+        In 1953, she left school and began working. She continued her education by correspondence courses.
+        \nValentina became interested in parachute jumping at an early age. It was her expertise in parachute jumping that led to her selection as a cosmonaut.
+        Tereshkova was a textile-factory assembly worker and an amateur parachutist when she was recruited into the cosmonaut program.
+        Under the direction of Soviet premier Nikita Khrushchev, four women were selected to be trained for a special woman-in-space program.
+        Of the four women selected, only Valentina Tereshkova completed a space mission.
+        \nTereshkova was launched aboard Vostok 6 on June 16, 1963 and became the first woman to fly in space.
+        During the 70.8 hour flight, Vostok 6 made 48 orbits of Earth.
+        Upon completion of her mission, Tereshkova was honored with the title Hero of the Soviet Union.
+        She never flew again, but she did become a spokesperson for the Soviet Union.
+        While fulfilling this role, she received the United Nations Gold Medal of Peace.
+        \nOn November 3, 1963, Tereshkova married astronaut Andrian Nikolayev.
+        Their first child, a daughter named Elena, was a subject of medical interest because she was the first child born to parents who had both been exposed to space.
+        Elena later went on to become a medical doctor. Tereshkova and Nikolayev divorced in 1980.
+    </string>
+
+
 
     <!--Menu Options -->
 
@@ -340,5 +359,12 @@
     <string name="answer13_1">1991</string>
     <string name="answer13_2">2016</string>
     <string name="answer13_3">2013</string>
+
+    <!--Question 14-->
+    <string name="question14">How many turns around the Earth did the Vostok 6 made?</string>
+    <string name="answer14_1">16</string>
+    <string name="answer14_2">48</string>
+    <string name="answer14_3">63</string>
+
 
 </resources>
