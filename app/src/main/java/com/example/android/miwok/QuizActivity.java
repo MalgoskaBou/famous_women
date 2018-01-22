@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,8 @@ import java.util.HashMap;
         private final static String WRONG_ANSWERS = "wrongQuestions";
         private final static String SCORE = "score";
         private final static String IS_RESULT_SHOWN = "isResultShown";
+        private final static String SCROLL_X = "scrollX";
+        private final static String SCROLL_Y = "scrollY";
         float score;
         int currentQuestion;
         int correctAnsNmb;
@@ -40,7 +43,7 @@ import java.util.HashMap;
         ImageView imgIncorrect;
         boolean isResultShown;
         Button restart;
-
+        ScrollView scrollView;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ import java.util.HashMap;
             // this is for the arrow in the menu bar to go back to parent activity
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             // Find views
+            scrollView = findViewById(R.id.scrollView);
             // Question 1
             final TextView question1 = findViewById(R.id.tv_question1);
             final RadioGroup rg1 = findViewById(R.id.rg_question1);
@@ -123,7 +127,7 @@ import java.util.HashMap;
                 questions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
                 questions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
                 questions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
-                questions.add(new QuizQuestion(R.string.question14, R.string.answer14_1, R.string.answer14_2, R.string.answer14_3, 2));
+                //questions.add(new QuizQuestion(R.string.question14, R.string.answer14_1, R.string.answer14_2, R.string.answer14_3, 2));
                 // Randomized questions
                 Collections.shuffle(questions);
                 questions = new ArrayList<QuizQuestion>(questions.subList(0,5));
@@ -143,6 +147,13 @@ import java.util.HashMap;
                 wrongAnswers = (ArrayList<Integer>)savedInstanceState.getSerializable(WRONG_ANSWERS);
                 score = savedInstanceState.getFloat(SCORE);
                 isResultShown = savedInstanceState.getBoolean(IS_RESULT_SHOWN);
+                final int x = savedInstanceState.getInt(SCROLL_X);
+                final int y = savedInstanceState.getInt(SCROLL_Y);
+                scrollView.post(new Runnable(){
+                    public void run(){
+                        scrollView.scrollTo(x, y);
+                    }
+                });
                 for(int j = 0; j < currentQuestion ; j++){
                     for (int i = 0; i < rgHmap.get(j).getChildCount(); i++) {
                         rgHmap.get(j).getChildAt(i).setEnabled(false);
@@ -163,9 +174,11 @@ import java.util.HashMap;
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
+
                 // Display result
                 if(isResultShown)
                     displayResult(score, correctAnsNmb, incorrectAnsNmb);
+
             }
 
             // Display questions and answers
@@ -333,6 +346,8 @@ import java.util.HashMap;
             outState.putSerializable(WRONG_ANSWERS, wrongAnswers);
             outState.putFloat(SCORE, score);
             outState.putBoolean(IS_RESULT_SHOWN, isResultShown);
+            outState.putInt(SCROLL_X, scrollView.getScrollX());
+            outState.putInt(SCROLL_Y, scrollView.getScrollY());
             // call superclass to save any view hierarchy
             super.onSaveInstanceState(outState);
         }
