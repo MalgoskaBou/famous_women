@@ -38,7 +38,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    final static ArrayList<Word> words = new ArrayList<Word>();
+    private final ArrayList<Word> words = new ArrayList<Word>();
     public static final String POSITION = "position";
 
     @Override
