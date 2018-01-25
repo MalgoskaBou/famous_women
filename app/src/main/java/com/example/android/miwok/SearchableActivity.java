@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.text.Collator;
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 /**
@@ -65,6 +67,13 @@ public class SearchableActivity extends AppCompatActivity{
         final ArrayList<Integer> positions = new ArrayList<Integer>();
         for(int i = 0; i< women.size(); i++){
             String name = getResources().getString(women.get(i).getNameId());
+            //final Collator instance = Collator.getInstance();
+            //instance.setStrength(Collator.NO_DECOMPOSITION);
+            //
+            name = Normalizer.normalize(name, Normalizer.Form.NFD);
+            name = name.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+            input = Normalizer.normalize(input, Normalizer.Form.NFD);
+            input = input.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
             if(name.toLowerCase().contains(input.toLowerCase())){
                 searchResults.add(name);
                 positions.add(i);
