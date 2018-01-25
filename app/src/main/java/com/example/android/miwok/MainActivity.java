@@ -15,11 +15,14 @@
  */
 package com.example.android.miwok;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -35,6 +38,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final ArrayList<Word> words = new ArrayList<Word>();
+    public static final String POSITION = "position";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         // ( ͡° ͜ʖ ͡°)
         // Create a list of words
-        final ArrayList<Word> words = new ArrayList<Word>();
+
+
         words.add(new Word(R.string.maria_profession, R.string.maria,
                 R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
         words.add(new Word(R.string.dalia_profession, R.string.dalia,
@@ -88,22 +95,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                // Get the {@link Word} object at the given position the user clicked on
-                Word word = words.get(position);
-                int indexOfListItem=position;
-                //Get the TextView ID to transfer data to the next activity
-                TextView profession = (TextView) view.findViewById(R.id.profession_text_view);
-                String profession_text = profession.getText().toString();
-                TextView name = (TextView) view.findViewById(R.id.name_text_view);
-                String name_text = name.getText().toString();
-
+                //We need to pass only the position. We can retrieve the rest from the list on the next page.
+                // Others were redundant I erased them(Oya)
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
-
-                //we get the contents of the downloaded textView to display them in the new activity
-                myIntent.putExtra("PROFESSION", profession_text );
-                myIntent.putExtra("NAME", name_text);
-                myIntent.putExtra("POSITION", indexOfListItem);
+                myIntent.putExtra(POSITION, position);
                       // Start the new activity
                startActivity(myIntent);
             }
@@ -115,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
+        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
         return true;
     }
 

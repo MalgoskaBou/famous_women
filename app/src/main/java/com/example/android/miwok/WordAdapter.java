@@ -63,13 +63,13 @@ public class WordAdapter extends ArrayAdapter<Word>  {
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
         // Get the name of the woman from the currentWord object and set this text on
         // the name TextView.
-        nameTextView.setText(currentWord.getProfessionId());
+        nameTextView.setText(currentWord.getNameId());
 
         // Find the TextView in the list_item.xml layout with the ID profession_text_view.
         TextView professionTextView = (TextView) listItemView.findViewById(R.id.profession_text_view);
         // Get the default translation from the currentWord object and set this text on
         // the profession TextView.
-        professionTextView.setText(currentWord.getNameId());
+        professionTextView.setText(currentWord.getProfessionId());
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
@@ -79,7 +79,7 @@ public class WordAdapter extends ArrayAdapter<Word>  {
         //Find the ImageViev for flag
         ImageView flagImage = (ImageView) listItemView.findViewById(R.id.flag);
 
-        flagImage.setImageResource(currentWord.getmFlagImageId());
+        flagImage.setImageResource(currentWord.getFlagImageId());
 
 
 
