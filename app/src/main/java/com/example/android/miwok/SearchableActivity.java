@@ -36,47 +36,35 @@ public class SearchableActivity extends AppCompatActivity{
     }
 
     public void doMySearch(String input){
-        ArrayList<Word> women = new ArrayList<Word>();
-        women.add(new Word(R.string.maria_profession, R.string.maria,
-                R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
-        women.add(new Word(R.string.dalia_profession, R.string.dalia,
-                R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
-        women.add(new Word(R.string.elisabeta_proffesion, R.string.elisabeta,
-                R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
-        women.add(new Word(R.string.mother_theresa_profession, R.string.mother_theresa,
-                R.drawable.mother_theresa_listimg, R.drawable.theresa_macedonia_flag));
-        women.add(new Word(R.string.wanda_profession, R.string.wanda,
-                R.drawable.wanda_rutkiewicz_listimg, R.drawable.maria_poland_flag));
-        women.add(new Word(R.string.ameenah_profession, R.string.ameenah,
-                R.drawable.ameenah_listing, R.drawable.ameenah_mauritius_flag));
-        women.add(new Word(R.string.sirleaf_profession, R.string.ellen_Sirleaf,
-                R.drawable.sirleaf_listing, R.drawable.sirleaf_liberia_flag));
-        women.add(new Word(R.string.maria_telkes_profession, R.string.maria_telkes,
-                R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
-        women.add(new Word(R.string.meriem_profession, R.string.Merieme_Chadid,
-                R.drawable.meriem_listimg, R.drawable.meriem_morocco_flag));
-        women.add(new Word(R.string.irena_profession, R.string.irena,
-                R.drawable.irena_sendler_listimg, R.drawable.maria_poland_flag));
-        women.add(new Word(R.string.ada_profession, R.string.ada,
-                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
-        women.add(new Word(R. string.ilhan_profession , R.string.ilhan,
-                R.drawable.ilhan_listing, R.drawable.ilhan_flag));
-        women.add(new Word(R.string.valentina_profession, R.string.valentina,
-                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag));
+        //create an arraylist of all names of women(in parallel to list words
+        ArrayList<String> women = new ArrayList<String>();
+        women.add(getString(R.string.maria));
+        women.add(getString(R.string.dalia));
+        women.add(getString(R.string.elisabeta));
+        women.add(getString(R.string.mother_theresa));
+        women.add(getString(R.string.wanda));
+        women.add(getString(R.string.ameenah));
+        women.add(getString(R.string.ellen_Sirleaf));
+        women.add(getString(R.string.maria_telkes));
+        women.add(getString(R.string.Merieme_Chadid));
+        women.add(getString(R.string.irena));
+        women.add(getString(R.string.ada));
+        women.add(getString(R.string.ilhan));
+        women.add(getString(R.string.valentina));
+
         final ArrayList<String> searchResults = new ArrayList<String>();
         final ArrayList<Integer> positions = new ArrayList<Integer>();
         for(int i = 0; i< women.size(); i++){
-            String name = getResources().getString(women.get(i).getNameId());
-            //final Collator instance = Collator.getInstance();
-            //instance.setStrength(Collator.NO_DECOMPOSITION);
-            //
-           String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
+            String name = women.get(i);
+            //strip accents
+            String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
             withoutAccents = withoutAccents.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
             input = Normalizer.normalize(input, Normalizer.Form.NFD);
             input = input.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+            //turn all to lower case before search
             if(withoutAccents.toLowerCase().contains(input.toLowerCase())){
                 searchResults.add(name);
-                positions.add(i);
+                positions.add(i);//keep track of positions of the results
             }
             Log.v("search results", "size " + searchResults.size());
         }
@@ -93,7 +81,7 @@ public class SearchableActivity extends AppCompatActivity{
 
                 int indexOfWoman = positions.get(position);
 
-                //we use INTENT to turn on new ones activity
+                //we use INTENT to turn on new ones activity and send position info to details activity
                 Intent myIntent = new Intent(SearchableActivity.this, DetailsActivity.class);
                 myIntent.putExtra(POSITION, indexOfWoman);
                 // Start the new activity
