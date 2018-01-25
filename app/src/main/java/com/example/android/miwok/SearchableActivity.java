@@ -70,11 +70,11 @@ public class SearchableActivity extends AppCompatActivity{
             //final Collator instance = Collator.getInstance();
             //instance.setStrength(Collator.NO_DECOMPOSITION);
             //
-            name = Normalizer.normalize(name, Normalizer.Form.NFD);
-            name = name.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+           String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
+            withoutAccents = withoutAccents.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
             input = Normalizer.normalize(input, Normalizer.Form.NFD);
             input = input.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
-            if(name.toLowerCase().contains(input.toLowerCase())){
+            if(withoutAccents.toLowerCase().contains(input.toLowerCase())){
                 searchResults.add(name);
                 positions.add(i);
             }
