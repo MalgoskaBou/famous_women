@@ -33,21 +33,24 @@ public class Word {
    /** Flag image ID **/
    private int mFlagImageId;
 
-    /**
-     * Create a new Word object.
-     *
-     * @param defaultTranslationId is the string resource ID for the word in a language that the
-     *                             user is already familiar with (such as English)
-     * @param miwokTranslationId is the string resource Id for the word in the Miwok language
-     * @param imageResourceId is the drawable resource ID for the image associated with the word
-     *
-     */
-    public Word(int defaultTranslationId, int miwokTranslationId, int imageResourceId, int flagImageId) {
-        mNameId = defaultTranslationId;
-        mProfessionId = miwokTranslationId;
+   private int mDescriptionId;
+
+
+    public Word(int professionId, int nameId, int imageResourceId, int flagImageId) {
+
+        mProfessionId = professionId;
+        mNameId = nameId;
         mImageResourceId = imageResourceId;
         mFlagImageId = flagImageId;
+    }
 
+    public Word(int professionId, int descriptionId, int imageResourceId, int flagImageId, int nameId) {
+
+        mProfessionId = professionId;
+        mDescriptionId = descriptionId;
+        mImageResourceId = imageResourceId;
+        mFlagImageId = flagImageId;
+        mNameId = nameId;
     }
 
     /**
@@ -71,7 +74,11 @@ public class Word {
         return mImageResourceId;
     }
 
-    public int getmFlagImageId() {return mFlagImageId; }
+    public int getFlagImageId() {return mFlagImageId; }
+
+    public int getDescriptionId(){
+        return mDescriptionId;
+    }
 
 
 
