@@ -1,83 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".DetailsActivity"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    <ImageView
-       android:id="@+id/portrait_image"
-       android:layout_width="300dp"
-       android:layout_height="match_parent"
-       android:src="@drawable/dalia_portrait"
-        android:scaleType="centerCrop"
-        android:fillViewport="true"/>
-
-    <TextView
-        android:id="@+id/name_text"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_standard"
-        android:layout_marginBottom="@dimen/margin_standard"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:text="Name of the woman"
-        android:textColor="@color/text_color_heading_white"
-        android:fontFamily="@font/roboto"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textSize="@dimen/fontSize_subheading" />
+        android:layout_height="@dimen/detail_backdrop_height"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
 
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@style/LabelStyleEx"
+            app:expandedTitleMarginStart="32dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:collapsedTitleTextAppearance="@style/LabelStyleCo"
+            app:collapsedTitleGravity="left">
 
-    <ScrollView
-        android:id="@+id/description"
+            <ImageView
+                android:id="@+id/portrait_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/portrait_image"
-        android:layout_toEndOf="@id/portrait_image"
-        android:layout_margin="8dp">
-
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        card_view:cardBackgroundColor="@color/primary_color"
-        card_view:cardElevation="@dimen/halfmargin_standard">
+        android:background="@color/grey_background"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/text_color_heading_white"
-            android:orientation="vertical">
-        <TextView
-            android:id="@+id/profession_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_margin="@dimen/margin_standard"
-            android:text="@string/subheader_details_profession"
-            android:textColor="@color/text_color_heading"
-            android:fontFamily="@font/roboto"
-            android:textStyle="bold"
-            android:textSize="@dimen/fontSize_subheading" />
+            android:layout_height="match_parent" >
 
-       <TextView
-            android:id="@+id/description_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_standard"
-            android:layout_marginRight="@dimen/margin_standard"
-            android:text="@string/body_details_description_dalia"
-        android:textColor="@color/text_color_main"
-        android:fontFamily="@font/roboto"
-            android:textSize="@dimen/fontSize_body"/>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@color/primary_color"
+                card_view:cardElevation="@dimen/halfmargin_standard"
+                android:layout_margin="@dimen/margin_standard">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_color_heading_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/profession_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_margin="@dimen/margin_standard"
+                        android:text="@string/subheader_details_profession"
+                        android:textColor="@color/text_color_heading"
+                        android:fontFamily="@font/roboto"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/fontSize_subheading" />
+
+                    <TextView
+                        android:id="@+id/description_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_standard"
+                        android:text="@string/body_details_description_dalia"
+                        android:textColor="@color/text_color_main"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="@dimen/fontSize_body"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_quiz"
+                style="@style/CategoryStyle"
+                android:background="@color/primary_color"
+                android:text="@string/category_quiz"
+                android:fontFamily="@font/roboto"/>
+
         </LinearLayout>
-</android.support.v7.widget.CardView>
-
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
     <com.makeramen.roundedimageview.RoundedImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -86,11 +113,10 @@
         android:layout_width="@dimen/flag_details_width"
         app:riv_corner_radius="10dip"
         app:riv_oval="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
-        android:layout_marginLeft="263dp"
-        android:layout_marginStart="263dp"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
         android:src="@drawable/dalia_lithuania_flag">
     </com.makeramen.roundedimageview.RoundedImageView>
-
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
