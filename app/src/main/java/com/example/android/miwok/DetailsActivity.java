@@ -86,7 +86,7 @@ public class DetailsActivity extends AppCompatActivity {
                 }
             }
         });
-        
+
         // TEMPORARY CODE - OPEN QUIZ
         // Find View that opens Quiz
         TextView quiz = findViewById(R.id.tv_quiz);

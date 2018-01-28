@@ -32,14 +32,13 @@
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
-    <style name="LabelStyleEx" parent="@android:style/TextAppearance">
+    <style name="LabelStyleEx" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColor">@color/text_color_heading_white</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/fontSize_heading</item>
     </style>
-    <style name="LabelStyleCo" parent="@android:style/TextAppearance">
+
+    <style name="LabelStyleCo" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColor">@color/text_color_heading_white</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/fontSize_subheading</item>
+        <item name="android:textSize">@dimen/fontSize_label</item>
     </style>
 </resources>
