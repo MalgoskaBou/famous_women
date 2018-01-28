@@ -3,6 +3,7 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -50,7 +51,8 @@ import java.util.HashMap;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_quiz); // Temporary -> use array adapt or show 5 questions by default?
             // this is for the arrow in the menu bar to go back to parent activity
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
             // Find views
             scrollView = findViewById(R.id.scrollView);
             // Question 1

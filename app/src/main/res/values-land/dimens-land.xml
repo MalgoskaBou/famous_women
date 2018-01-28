@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fontSize_body">16sp</dimen>
+    <dimen name="fontSize_subheading">18sp</dimen>
+    <dimen name="fontSize_heading">30sp</dimen>
+    <dimen name="detail_backdrop_height">300dp</dimen>
+</resources>
