@@ -15,21 +15,36 @@
  */
 package com.example.android.miwok;
 
+import android.app.SearchManager;
 import android.content.Intent;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity {
 
     private ImageView portraitImageView;
-    private TextView name, profession, descriptionTextView;
+    private TextView profession, descriptionTextView;
+    CollapsingToolbarLayout name;
     private ImageView flagImageView;
     public static final String POSITION = "position";
+    AppBarLayout appBarLayout;
 
     // Array list contains IDs for: name, description on image
     private ArrayList<Word> details = new ArrayList<Word>();
@@ -38,18 +53,39 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_view);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
 
         //we collect the transferred data from the previous activity
         int position= getIntent().getIntExtra(POSITION,0);
 
-        name = findViewById(R.id.name_text);
+        name = findViewById(R.id.collapsing_toolbar);
         profession =  findViewById(R.id.profession_text);
         portraitImageView= findViewById(R.id.portrait_image);
         descriptionTextView=  findViewById(R.id.description_text);
         flagImageView= findViewById(R.id.flag_of_country);
+        appBarLayout= findViewById(R.id.appbar);
 
         this.initDetailsArray();
         this.displaySelectedWomanInfo(position);
+
+
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+
+                if (Math.abs(verticalOffset)-appBarLayout.getTotalScrollRange() == 0)
+                {flagImageView.setVisibility(View.INVISIBLE);
+                    //  Collapsed
+                }
+                else
+                {flagImageView.setVisibility(View.VISIBLE);
+                    //Expanded
+                }
+            }
+        });
 
         // TEMPORARY CODE - OPEN QUIZ
         // Find View that opens Quiz
@@ -99,12 +135,35 @@ public class DetailsActivity extends AppCompatActivity {
 
     // set selected woman info
     private void displaySelectedWomanInfo(int position){
+        setTitle(details.get(position).getNameId());
         profession.setText(details.get(position).getProfessionId());
-        name.setText(details.get(position).getNameId());
         portraitImageView.setImageResource(details.get(position).getImageResourceId());
         // this line is actually set body_details_description. Caused by wrong usage of Word class constructor
         // ToDo: should be changed after fixing bug in initDetailsArray() method
         descriptionTextView.setText(details.get(position).getDescriptionId());
         flagImageView.setImageResource(details.get(position).getFlagImageId());
+    }
+
+    // this is to create the menu bar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu_no_search, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.about_application:
+                Intent intent1 = new Intent(this, AboutApplication.class);
+                this.startActivity(intent1);
+                return true;
+            case R.id.quiz:
+                Intent intent2 = new Intent(this, QuizActivity.class);
+                this.startActivity(intent2);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
