@@ -28,7 +28,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.default_searchable"
+                android:value=".SearchableActivity" />
         </activity>
+
         <activity
             android:name=".DetailsActivity"
             android:label="@string/category_details"
@@ -39,13 +42,25 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
         <activity
             android:name=".QuizActivity"
             android:label="@string/category_quiz"
             android:parentActivityName=".MainActivity"/>
+
         <activity android:name="AboutApplication"
             android:label= "About Application"
             android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".SearchableActivity"
+            android:label= "Search Results"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
     </application>
 
 </manifest>
