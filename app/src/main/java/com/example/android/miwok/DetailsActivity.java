@@ -17,6 +17,7 @@ package com.example.android.miwok;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -36,6 +37,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -131,7 +133,21 @@ public class DetailsActivity extends AppCompatActivity {
                 R.drawable.ilhan_portrait, R.drawable.ilhan_flag, R.string.ilhan));
         details.add(new Word(R.string.valentina_profession, R.string.body_details_description_valentina,
                 R.drawable.valentina_portrait, R.drawable.russia_flag, R.string.valentina));
+
+        // sort list by name
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            details.sort(new Comparator<Word>() {
+                @Override
+                public int compare(Word o1, Word o2) {
+                    String name1 = getString(o1.getNameId());
+                    String name2 = getString(o2.getNameId());
+                    return name1.compareTo(name2);
+                }
+            });
+        }
     }
+
+
 
     // set selected woman info
     private void displaySelectedWomanInfo(int position){
