@@ -80,7 +80,10 @@ public class Word {
         return mDescriptionId;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mNameId=" + mNameId +
+                '}';
+    }
 }

@@ -19,6 +19,7 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
@@ -26,6 +27,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -37,6 +39,7 @@ import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -82,6 +85,18 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.ilhan_listing, R.drawable.ilhan_flag));
         words.add(new Word(R.string.valentina_profession, R.string.valentina,
                 R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag));
+
+        // sort list by name
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            words.sort(new Comparator<Word>() {
+                @Override
+                public int compare(Word o1, Word o2) {
+                    String name1 = getString(o1.getNameId());
+                    String name2 = getString(o2.getNameId());
+                    return name1.compareTo(name2);
+                }
+            });
+        }
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
