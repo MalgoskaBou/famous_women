@@ -41,7 +41,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private final ArrayList<Word> words = new ArrayList<Word>();
-    public static final String POSITION = "position";
+    public static final String CHOSEN_WOMAN = "chosen_woman";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,32 +56,32 @@ public class MainActivity extends AppCompatActivity {
         // Create a list of words
 
 
-        words.add(new Word(R.string.maria_profession, R.string.maria,
-                R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
-        words.add(new Word(R.string.dalia_profession, R.string.dalia,
-                R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
-        words.add(new Word(R.string.elisabeta_proffesion, R.string.elisabeta,
-                R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
-        words.add(new Word(R.string.mother_theresa_profession, R.string.mother_theresa,
-                R.drawable.mother_theresa_listimg, R.drawable.theresa_macedonia_flag));
-        words.add(new Word(R.string.wanda_profession, R.string.wanda,
-                R.drawable.wanda_rutkiewicz_listimg, R.drawable.maria_poland_flag));
-        words.add(new Word(R.string.ameenah_profession, R.string.ameenah,
-                R.drawable.ameenah_listing, R.drawable.ameenah_mauritius_flag));
-        words.add(new Word(R.string.sirleaf_profession, R.string.ellen_Sirleaf,
-                R.drawable.sirleaf_listing, R.drawable.sirleaf_liberia_flag));
-        words.add(new Word(R.string.maria_telkes_profession, R.string.maria_telkes,
-                R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
-        words.add(new Word(R.string.meriem_profession, R.string.Merieme_Chadid,
-                R.drawable.meriem_listimg, R.drawable.meriem_morocco_flag));
-        words.add(new Word(R.string.irena_profession, R.string.irena,
-                R.drawable.irena_sendler_listimg, R.drawable.maria_poland_flag));
-        words.add(new Word(R.string.ada_profession, R.string.ada,
-                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
-        words.add(new Word(R. string.ilhan_profession , R.string.ilhan,
-                R.drawable.ilhan_listing, R.drawable.ilhan_flag));
-        words.add(new Word(R.string.valentina_profession, R.string.valentina,
-                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag));
+        words.add(new Word(R.string.maria, R.string.maria_profession, R.string.body_details_descriprion_maria_sklodowska,
+                R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag, R.drawable.maria_portrait));
+        words.add(new Word(R.string.dalia, R.string.dalia_profession, R.string.body_details_description_dalia,
+                R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag, R.drawable.dalia_portrait));
+        words.add(new Word(R.string.elisabeta, R.string.elisabeta_proffesion, R.string.body_details_description_elisabeta,
+                R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag, R.drawable.elisabeta_portrait));
+        words.add(new Word(R.string.mother_theresa, R.string.mother_theresa_profession, R.string.body_details_description_mother_theresa,
+                R.drawable.mother_theresa_listimg, R.drawable.theresa_macedonia_flag, R.drawable.theresa_portrait));
+        words.add(new Word(R.string.wanda, R.string.wanda_profession, R.string.body_details_description_wanda,
+                R.drawable.wanda_rutkiewicz_listimg, R.drawable.maria_poland_flag, R.drawable.wanda_rutkiewicz_portrait));
+        words.add(new Word(R.string.ameenah, R.string.ameenah_profession, R.string.body_details_description_ameenah,
+                R.drawable.ameenah_listing, R.drawable.ameenah_mauritius_flag, R.drawable.ameenah_portrait));
+        words.add(new Word(R.string.ellen_Sirleaf, R.string.sirleaf_profession, R.string.body_details_description_sirleaf,
+                R.drawable.sirleaf_listing, R.drawable.sirleaf_liberia_flag, R.drawable.sirleaf_portrait));
+        words.add(new Word(R.string.maria_telkes, R.string.maria_telkes_profession, R.string.body_details_description_maria_telkes,
+                R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag, R.drawable.maria_telkes_portrait));
+        words.add(new Word(R.string.Merieme_Chadid, R.string.meriem_profession, R.string.body_details_description_meriem,
+                R.drawable.meriem_listimg, R.drawable.meriem_morocco_flag, R.drawable.meriem_portrait));
+        words.add(new Word(R.string.irena, R.string.irena_profession, R.string.body_details_description_irena,
+                R.drawable.irena_sendler_listimg, R.drawable.maria_poland_flag, R.drawable.irena_portrait));
+        words.add(new Word(R.string.ada, R.string.ada_profession, R.string.body_details_description_irena,
+                R.drawable.ada_yonath_listimg, R.drawable.israel_flag, R.drawable.irena_portrait));
+        words.add(new Word(R.string.ilhan, R.string.ilhan_profession, R.string.body_details_description_ilhan,
+                R.drawable.ilhan_listing, R.drawable.ilhan_flag, R.drawable.ilhan_portrait));
+        words.add(new Word(R.string.valentina, R.string.valentina_profession, R.string.body_details_description_valentina,
+                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag, R.drawable.valentina_portrait));
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 // Others were redundant I erased them(Oya)
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
-                myIntent.putExtra(POSITION, position);
+                myIntent.putExtra(CHOSEN_WOMAN, words.get(position));
                       // Start the new activity
                startActivity(myIntent);
             }

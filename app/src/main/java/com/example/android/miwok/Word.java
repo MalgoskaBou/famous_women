@@ -15,69 +15,109 @@
  */
 package com.example.android.miwok;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.bumptech.glide.load.engine.Resource;
+
+import java.math.BigDecimal;
+
 /**
  * {@link Word} represents the name of the famous woman we are displaying in the app as well as a profession
  * for the same and image as a picture file for that woman
  */
-public class Word {
+public class Word implements Parcelable{
 
-    /** String resource ID for the default translation of the word */
+    // String resource id for name
     private int mNameId;
 
-    /** String resource ID for the Miwok translation of the word */
+    // String resource id for profession
     private int mProfessionId;
 
-    /** Image resource ID for the word */
-    private int mImageResourceId;
+    // String resource id for the body text content used in details activity
+    private int mDescriptionId;
 
-   /** Flag image ID **/
+    // Resource ID for the image used in list view
+    private int mListImageId;
+
+    // Resource ID for the flag image
    private int mFlagImageId;
 
-   private int mDescriptionId;
+    // Resource ID for the portait image used in details activity
+   private int mPortraitImageId;
 
 
-    public Word(int professionId, int nameId, int imageResourceId, int flagImageId) {
 
-        mProfessionId = professionId;
+    public Word(int nameId, int professionId, int descriptionId, int listImageId, int flagImageId, int portraitImageId) {
+
         mNameId = nameId;
-        mImageResourceId = imageResourceId;
-        mFlagImageId = flagImageId;
-    }
-
-    public Word(int professionId, int descriptionId, int imageResourceId, int flagImageId, int nameId) {
-
         mProfessionId = professionId;
         mDescriptionId = descriptionId;
-        mImageResourceId = imageResourceId;
+        mListImageId = listImageId;
         mFlagImageId = flagImageId;
-        mNameId = nameId;
+        mPortraitImageId = portraitImageId;
     }
 
-    /**
-     * Get the string resource ID for the default translation of the word.
-     */
+    //Get the string resource ID for the name
     public int getNameId() {
         return mNameId;
     }
 
-    /**
-     * Get the string resource ID for the Miwok translation of the word.
-     */
+    //Get the string resource ID for the profession
     public int getProfessionId() {
         return mProfessionId;
     }
 
-    /**
-     * Return the image resource ID of the word.
-     */
-    public int getImageResourceId() {
-        return mImageResourceId;
-    }
-
-    public int getFlagImageId() {return mFlagImageId; }
-
+    //Get the string resource ID for the profession
     public int getDescriptionId(){
         return mDescriptionId;
+    }
+
+    //Return the image resource ID of the image used in list view
+    public int getListImageId() {
+        return mListImageId;
+    }
+
+    //Return the image resource ID of the flag image
+    public int getFlagImageId() {return mFlagImageId; }
+
+    //Return the image resource ID of the portrait image used in details activity
+    public int getPortraitImageId(){
+        return mPortraitImageId;
+    }
+
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+        public Word createFromParcel(Parcel in) {
+            return new Word(in);
+        }
+
+        public Word[] newArray(int size) {
+            return new Word[size];
+        }
+    };
+
+    public Word(Parcel in){
+        mNameId = in.readInt();
+        mProfessionId = in.readInt();
+        mDescriptionId = in.readInt();
+        mListImageId = in.readInt();
+        mFlagImageId = in.readInt();
+        mPortraitImageId = in.readInt();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(mNameId);
+        dest.writeInt(mProfessionId);
+        dest.writeInt(mDescriptionId);
+        dest.writeInt(mListImageId);
+        dest.writeInt(mFlagImageId);
+        dest.writeInt(mPortraitImageId);
     }
 
 
