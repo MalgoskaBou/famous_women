@@ -17,22 +17,12 @@ package com.example.android.miwok;
 
 import android.app.SearchManager;
 import android.content.Intent;
-<<<<<<< HEAD
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-=======
->>>>>>> develop
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-<<<<<<< HEAD
-import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
-=======
->>>>>>> develop
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -58,43 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // ( ͡° ͜ʖ ͡°)
-<<<<<<< HEAD
-        // Create a list of words
 
-
-        words.add(new Word(R.string.maria_profession, R.string.maria,
-                R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag));
-        words.add(new Word(R.string.dalia_profession, R.string.dalia,
-                R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag));
-        words.add(new Word(R.string.elisabeta_proffesion, R.string.elisabeta,
-                R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag));
-        words.add(new Word(R.string.mother_theresa_profession, R.string.mother_theresa,
-                R.drawable.mother_theresa_listimg, R.drawable.theresa_macedonia_flag));
-        words.add(new Word(R.string.wanda_profession, R.string.wanda,
-                R.drawable.wanda_rutkiewicz_listimg, R.drawable.maria_poland_flag));
-        words.add(new Word(R.string.ameenah_profession, R.string.ameenah,
-                R.drawable.ameenah_listing, R.drawable.ameenah_mauritius_flag));
-        words.add(new Word(R.string.sirleaf_profession, R.string.ellen_Sirleaf,
-                R.drawable.sirleaf_listing, R.drawable.sirleaf_liberia_flag));
-        words.add(new Word(R.string.maria_telkes_profession, R.string.maria_telkes,
-                R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag));
-        words.add(new Word(R.string.meriem_profession, R.string.Merieme_Chadid,
-                R.drawable.meriem_listimg, R.drawable.meriem_morocco_flag));
-        words.add(new Word(R.string.irena_profession, R.string.irena,
-                R.drawable.irena_sendler_listimg, R.drawable.maria_poland_flag));
-        words.add(new Word(R.string.ada_profession, R.string.ada,
-                R.drawable.ada_yonath_listimg, R.drawable.israel_flag));
-        words.add(new Word(R. string.ilhan_profession , R.string.ilhan,
-                R.drawable.ilhan_listing, R.drawable.ilhan_flag));
-        words.add(new Word(R.string.valentina_profession, R.string.valentina,
-                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag));
-
-        // sort list by name
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            words.sort(new Comparator<Word>() {
-                @Override
-                public int compare(Word o1, Word o2) {
-=======
         // Create a list of women
 
 
@@ -130,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             women.sort(new Comparator<Woman>() {
                 @Override
                 public int compare(Woman o1, Woman o2) {
->>>>>>> develop
+
                     String name1 = getString(o1.getNameId());
                     String name2 = getString(o2.getNameId());
                     return name1.compareTo(name2);
@@ -138,11 +92,9 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-<<<<<<< HEAD
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
-=======
+
         // Create an {@link WomanAdapter}, whose data source is a list of {@link Woman}s. The
->>>>>>> develop
+
         // adapter knows how to create list items for each item in the list.
         WomanAdapter adapter = new WomanAdapter(this, women, R.color.category_numbers);
 
