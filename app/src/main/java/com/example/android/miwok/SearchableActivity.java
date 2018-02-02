@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.text.Collator;
 import java.text.Normalizer;
 import java.util.ArrayList;
 
@@ -20,7 +19,9 @@ import java.util.ArrayList;
 
 public class SearchableActivity extends AppCompatActivity{
 
-    public static final String POSITION = "position";
+    public static final String CHOSEN_WOMAN = "chosen_woman";
+    public static final String WOMEN_LIST = "women_list";
+    private ArrayList<Woman> women;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class SearchableActivity extends AppCompatActivity{
         Intent intent = getIntent();
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
+            women = intent.getParcelableArrayListExtra(WOMEN_LIST);
             doMySearch(query);
         }
 
@@ -36,26 +38,10 @@ public class SearchableActivity extends AppCompatActivity{
     }
 
     public void doMySearch(String input){
-        //create an arraylist of all names of women(in parallel to list words
-        ArrayList<String> women = new ArrayList<String>();
-        women.add(getString(R.string.maria));
-        women.add(getString(R.string.dalia));
-        women.add(getString(R.string.elisabeta));
-        women.add(getString(R.string.mother_theresa));
-        women.add(getString(R.string.wanda));
-        women.add(getString(R.string.ameenah));
-        women.add(getString(R.string.ellen_Sirleaf));
-        women.add(getString(R.string.maria_telkes));
-        women.add(getString(R.string.Merieme_Chadid));
-        women.add(getString(R.string.irena));
-        women.add(getString(R.string.ada));
-        women.add(getString(R.string.ilhan));
-        women.add(getString(R.string.valentina));
-
         final ArrayList<String> searchResults = new ArrayList<String>();
         final ArrayList<Integer> positions = new ArrayList<Integer>();
         for(int i = 0; i< women.size(); i++){
-            String name = women.get(i);
+            String name = getString(women.get(i).getNameId());
             //strip accents
             String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
             withoutAccents = withoutAccents.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
@@ -78,13 +64,11 @@ public class SearchableActivity extends AppCompatActivity{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
+                //we need the position of the chosen woman in the women list(not the position in the searchresults list)
                 int indexOfWoman = positions.get(position);
-
-                //we use INTENT to turn on new ones activity and send position info to details activity
+                //send the chosen woman to details activity as an object
                 Intent myIntent = new Intent(SearchableActivity.this, DetailsActivity.class);
-                myIntent.putExtra(POSITION, indexOfWoman);
-                // Start the new activity
+                myIntent.putExtra(CHOSEN_WOMAN, women.get(indexOfWoman));
                 startActivity(myIntent);
             }
         });

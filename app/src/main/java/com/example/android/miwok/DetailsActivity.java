@@ -15,41 +15,39 @@
  */
 package com.example.android.miwok;
 
-import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+<<<<<<< HEAD
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 
+=======
+>>>>>>> develop
 public class DetailsActivity extends AppCompatActivity {
 
     private ImageView portraitImageView;
     private TextView profession, descriptionTextView;
     CollapsingToolbarLayout name;
     private ImageView flagImageView;
-    public static final String POSITION = "position";
+    public static final String CHOSEN_WOMAN = "chosen_woman";
     AppBarLayout appBarLayout;
 
     // Array list contains IDs for: name, description on image
-    private ArrayList<Word> details = new ArrayList<Word>();
+    private Woman chosenWoman;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +56,11 @@ public class DetailsActivity extends AppCompatActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
         //we collect the transferred data from the previous activity
-        int position= getIntent().getIntExtra(POSITION,0);
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            chosenWoman = bundle.getParcelable(CHOSEN_WOMAN);
+        }
 
         name = findViewById(R.id.collapsing_toolbar);
         profession =  findViewById(R.id.profession_text);
@@ -69,11 +68,6 @@ public class DetailsActivity extends AppCompatActivity {
         descriptionTextView=  findViewById(R.id.description_text);
         flagImageView= findViewById(R.id.flag_of_country);
         appBarLayout= findViewById(R.id.appbar);
-
-        this.initDetailsArray();
-        this.displaySelectedWomanInfo(position);
-
-
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -88,6 +82,13 @@ public class DetailsActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Display the information and images of the chosen woman
+        setTitle(chosenWoman.getNameId());
+        profession.setText(chosenWoman.getProfessionId());
+        portraitImageView.setImageResource(chosenWoman.getPortraitImageId());
+        descriptionTextView.setText(chosenWoman.getDescriptionId());
+        flagImageView.setImageResource(chosenWoman.getFlagImageId());
 
         // TEMPORARY CODE - OPEN QUIZ
         // Find View that opens Quiz
@@ -104,6 +105,7 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
     // Initialize details array
     private void initDetailsArray(){
         // ToDo: Fix wrong Word constructor usage
@@ -160,6 +162,8 @@ public class DetailsActivity extends AppCompatActivity {
         flagImageView.setImageResource(details.get(position).getFlagImageId());
     }
 
+=======
+>>>>>>> develop
     // this is to create the menu bar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
