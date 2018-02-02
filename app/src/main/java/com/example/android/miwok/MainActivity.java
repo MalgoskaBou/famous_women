@@ -17,6 +17,7 @@ package com.example.android.miwok;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +31,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,6 +77,18 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.ilhan_listing, R.drawable.ilhan_flag, R.drawable.ilhan_portrait));
         women.add(new Woman(R.string.valentina, R.string.valentina_profession, R.string.body_details_description_valentina,
                 R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag, R.drawable.valentina_portrait));
+
+        // sort list by name
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            women.sort(new Comparator<Woman>() {
+                @Override
+                public int compare(Woman o1, Woman o2) {
+                    String name1 = getString(o1.getNameId());
+                    String name2 = getString(o2.getNameId());
+                    return name1.compareTo(name2);
+                }
+            });
+        }
 
         // Create an {@link WomanAdapter}, whose data source is a list of {@link Woman}s. The
         // adapter knows how to create list items for each item in the list.
