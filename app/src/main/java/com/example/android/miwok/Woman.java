@@ -18,15 +18,11 @@ package com.example.android.miwok;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.bumptech.glide.load.engine.Resource;
-
-import java.math.BigDecimal;
-
 /**
- * {@link Word} represents the name of the famous woman we are displaying in the app as well as a profession
+ * {@link Woman} represents the name of the famous woman we are displaying in the app as well as a profession
  * for the same and image as a picture file for that woman
  */
-public class Word implements Parcelable{
+public class Woman implements Parcelable{
 
     // String resource id for name
     private int mNameId;
@@ -48,7 +44,7 @@ public class Word implements Parcelable{
 
 
 
-    public Word(int nameId, int professionId, int descriptionId, int listImageId, int flagImageId, int portraitImageId) {
+    public Woman(int nameId, int professionId, int descriptionId, int listImageId, int flagImageId, int portraitImageId) {
 
         mNameId = nameId;
         mProfessionId = professionId;
@@ -87,16 +83,16 @@ public class Word implements Parcelable{
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
-        public Word createFromParcel(Parcel in) {
-            return new Word(in);
+        public Woman createFromParcel(Parcel in) {
+            return new Woman(in);
         }
 
-        public Word[] newArray(int size) {
-            return new Word[size];
+        public Woman[] newArray(int size) {
+            return new Woman[size];
         }
     };
 
-    public Word(Parcel in){
+    public Woman(Parcel in){
         mNameId = in.readInt();
         mProfessionId = in.readInt();
         mDescriptionId = in.readInt();

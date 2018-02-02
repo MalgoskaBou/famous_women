@@ -54,7 +54,8 @@
 
         <activity android:name=".SearchableActivity"
             android:label= "Search Results"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>

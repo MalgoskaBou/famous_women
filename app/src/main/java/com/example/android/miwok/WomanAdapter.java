@@ -27,23 +27,23 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * {@link WordAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
- * based on a data source, which is a list of {@link Word} objects.
+ * {@link WomanAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
+ * based on a data source, which is a list of {@link Woman} objects.
  */
-public class WordAdapter extends ArrayAdapter<Word>  {
+public class WomanAdapter extends ArrayAdapter<Woman>  {
 
     /** Resource ID for the background color for this list of words */
     private int mColorResourceId;
 
     /**
-     * Create a new {@link WordAdapter} object.
+     * Create a new {@link WomanAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
-     * @param words is the list of {@link Word}s to be displayed.
-     * @param colorResourceId is the resource ID for the background color for this list of words
+     * @param women is the list of {@link Woman}s to be displayed.
+     * @param colorResourceId is the resource ID for the background color for this list of women
      */
-    public WordAdapter(Context context, ArrayList<Word> words, int colorResourceId) {
-        super(context, 0, words);
+    public WomanAdapter(Context context, ArrayList<Woman> women, int colorResourceId) {
+        super(context, 0, women);
         mColorResourceId = colorResourceId;
     }
 
@@ -56,30 +56,30 @@ public class WordAdapter extends ArrayAdapter<Word>  {
                     R.layout.list_item, parent, false);
         }
 
-        // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
+        // Get the {@link Woman} object located at this position in the list
+        Woman currentWoman = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID name_text_view.
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
-        // Get the name of the woman from the currentWord object and set this text on
+        // Get the name of the woman from the currentWoman object and set this text on
         // the name TextView.
-        nameTextView.setText(currentWord.getNameId());
+        nameTextView.setText(currentWoman.getNameId());
 
         // Find the TextView in the list_item.xml layout with the ID profession_text_view.
         TextView professionTextView = (TextView) listItemView.findViewById(R.id.profession_text_view);
-        // Get the default translation from the currentWord object and set this text on
+        // Get the default translation from the currentWoman object and set this text on
         // the profession TextView.
-        professionTextView.setText(currentWord.getProfessionId());
+        professionTextView.setText(currentWoman.getProfessionId());
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
 
-        imageView.setImageResource(currentWord.getListImageId());//currentWord.getImageResourceId());//
+        imageView.setImageResource(currentWoman.getListImageId());//currentWoman.getImageResourceId());//
 
         //Find the ImageViev for flag
         ImageView flagImage = (ImageView) listItemView.findViewById(R.id.flag);
 
-        flagImage.setImageResource(currentWord.getFlagImageId());
+        flagImage.setImageResource(currentWoman.getFlagImageId());
 
 
 
