@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         women.add(new Woman(R.string.irena, R.string.irena_profession, R.string.body_details_description_irena,
                 R.drawable.irena_sendler_listimg, R.drawable.maria_poland_flag, R.drawable.irena_portrait));
         women.add(new Woman(R.string.ada, R.string.ada_profession, R.string.body_details_description_irena,
-                R.drawable.ada_yonath_listimg, R.drawable.israel_flag, R.drawable.irena_portrait));
+                R.drawable.ada_yonath_listimg, R.drawable.israel_flag, R.drawable.ada_yonath_portrait));
         women.add(new Woman(R.string.ilhan, R.string.ilhan_profession, R.string.body_details_description_ilhan,
                 R.drawable.ilhan_listing, R.drawable.ilhan_flag, R.drawable.ilhan_portrait));
         women.add(new Woman(R.string.valentina, R.string.valentina_profession, R.string.body_details_description_valentina,
