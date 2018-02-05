@@ -40,5 +40,6 @@
 
     <!-- Radio buttons colors -->
     <color name="colorRadioGray">@android:color/darker_gray</color>
+  <color name="dark_grey">#80000000</color>
 
 </resources>
