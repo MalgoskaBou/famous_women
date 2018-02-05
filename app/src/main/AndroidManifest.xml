@@ -34,7 +34,8 @@
         <activity
             android:name=".DetailsActivity"
             android:label="@string/category_details"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            >
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -53,7 +54,8 @@
 
         <activity android:name=".SearchableActivity"
             android:label= "Search Results"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
