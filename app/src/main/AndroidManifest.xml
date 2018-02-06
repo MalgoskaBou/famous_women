@@ -25,27 +25,43 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.default_searchable"
+                android:value=".SearchableActivity" />
         </activity>
+
         <activity
             android:name=".DetailsActivity"
             android:label="@string/category_details"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            >
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
         <activity
             android:name=".QuizActivity"
             android:label="@string/category_quiz"
             android:parentActivityName=".MainActivity"/>
+
         <activity android:name="AboutApplication"
             android:label= "About Application"
             android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".SearchableActivity"
+            android:label= "Search Results"
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
     </application>
 
 </manifest>

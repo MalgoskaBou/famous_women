@@ -2,6 +2,7 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 public class AboutApplication extends AppCompatActivity{
 
@@ -11,7 +12,8 @@ public class AboutApplication extends AppCompatActivity{
         setContentView(R.layout.about_application);
 
         // this is for the arrow in the menu bar to go back to parent activity
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
     }
 }

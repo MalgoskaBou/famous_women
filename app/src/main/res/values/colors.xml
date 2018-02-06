@@ -18,7 +18,7 @@
     <color name="primary_color">#70CF97</color>
 
     <!-- Primary dark color of the app (shown in the status bar) -->
-    <color name="primary_dark_color">#60B282</color>
+    <color name="primary_dark_color">#60b282</color>
 
     <!-- Background color for app -->
     <color name="grey_background">#F5F5F5</color>
@@ -37,5 +37,9 @@
 
     <!-- Background color main text -->
     <color name="background_color_main">#9E9E9E</color>
+
+    <!-- Radio buttons colors -->
+    <color name="colorRadioGray">@android:color/darker_gray</color>
+  <color name="dark_grey">#80000000</color>
 
 </resources>

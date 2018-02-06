@@ -1,14 +1,16 @@
 package com.example.android.miwok;
 
-
-
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,24 +25,36 @@ import java.util.HashMap;
         private final static String WRONG_ANSWERS = "wrongQuestions";
         private final static String SCORE = "score";
         private final static String IS_RESULT_SHOWN = "isResultShown";
+        private final static String SCROLL_X = "scrollX";
+        private final static String SCROLL_Y = "scrollY";
         float score;
         int currentQuestion;
-        ArrayList<QuizQuestion> allQuestions = new ArrayList<QuizQuestion>();    // ArrayList of all quiz questions
-        ArrayList<QuizQuestion> questions;
+        int correctAnsNmb;
+        int incorrectAnsNmb;
+        ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();
         ArrayList<Integer> wrongAnswers = new ArrayList<Integer>();
         HashMap<Integer, RadioGroup> rgHmap;
         HashMap<Integer, TextView> questionHmap;
         HashMap<Integer, Button> submitHmap;
-        TextView result;
+        LinearLayout layResult;
+        TextView tvResult;
+        TextView tvCorrect;
+        TextView tvIncorrect;
+        ImageView imgCorrect;
+        ImageView imgIncorrect;
         boolean isResultShown;
+        Button restart;
+        ScrollView scrollView;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_quiz); // Temporary -> use array adapt or show 5 questions by default?
             // this is for the arrow in the menu bar to go back to parent activity
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
             // Find views
+            scrollView = findViewById(R.id.scrollView);
             // Question 1
             final TextView question1 = findViewById(R.id.tv_question1);
             final RadioGroup rg1 = findViewById(R.id.rg_question1);
@@ -61,9 +75,23 @@ import java.util.HashMap;
             final TextView question5 = findViewById(R.id.tv_question5);
             final RadioGroup rg5 = findViewById(R.id.rg_question5);
             final Button submit5 = findViewById(R.id.tv_submit_5);
-            // Result
-            result = findViewById(R.id.tv_result);
 
+            // Result
+            layResult = findViewById(R.id.layout_result);
+            tvResult = findViewById(R.id.tv_result);
+            tvCorrect = findViewById(R.id.tv_correct);
+            tvIncorrect = findViewById(R.id.tv_wrong);
+            imgCorrect = findViewById(R.id.img_correct);
+            imgIncorrect = findViewById(R.id.img_wrong);
+
+            //button Restart
+            restart = findViewById(R.id.restart);
+            // Hide result views
+            layResult.setVisibility(View.GONE);
+
+
+            //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
+            // The aim is to be able to put them in a loop, so that we need significantly less lines of code.
             rgHmap = new HashMap<Integer, RadioGroup>();
             rgHmap.put(0, rg1);
             rgHmap.put(1, rg2);
@@ -85,25 +113,26 @@ import java.util.HashMap;
             submitHmap.put(3,submit4);
             submitHmap.put(4,submit5);
 
+            //If the activity is opened for the first time, adds all the questions to the arrayList, shuffles them and then make a sublist with the first 5 questions.
+            //The questions after the first one are made invisible.
             if (savedInstanceState == null) {
-                allQuestions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
-                allQuestions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
-                allQuestions.add(new QuizQuestion(R.string.question7, R.string.answer7_1, R.string.answer7_2, R.string.answer7_3, 2 ));
-                allQuestions.add(new QuizQuestion(R.string.question8, R.string.answer8_1, R.string.answer8_2, R.string.answer8_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question9, R.string.answer9_1, R.string.answer9_2, R.string.answer9_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question10, R.string.answer10_1, R.string.answer10_2, R.string.answer10_3, 1));
-                allQuestions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
-                allQuestions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
-                allQuestions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
-              
-              
+                questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
+                questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
+                questions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
+                questions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
+                questions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
+                questions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
+                questions.add(new QuizQuestion(R.string.question7, R.string.answer7_1, R.string.answer7_2, R.string.answer7_3, 2 ));
+                questions.add(new QuizQuestion(R.string.question8, R.string.answer8_1, R.string.answer8_2, R.string.answer8_3, 3));
+                questions.add(new QuizQuestion(R.string.question9, R.string.answer9_1, R.string.answer9_2, R.string.answer9_3, 3));
+                questions.add(new QuizQuestion(R.string.question10, R.string.answer10_1, R.string.answer10_2, R.string.answer10_3, 1));
+                questions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
+                questions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
+                questions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
+                //questions.add(new QuizQuestion(R.string.question14, R.string.answer14_1, R.string.answer14_2, R.string.answer14_3, 2));
                 // Randomized questions
-                Collections.shuffle(allQuestions);
-                questions = new ArrayList<QuizQuestion>(allQuestions.subList(0,5));
+                Collections.shuffle(questions);
+                questions = new ArrayList<QuizQuestion>(questions.subList(0,5));
                 currentQuestion = 0;
                 score = 0;
                 isResultShown = false;
@@ -112,18 +141,27 @@ import java.util.HashMap;
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
+                //After rotation, retrieve the list of chosen questions, number of the current question, score and wrong answers up to then
+                //Redraw the current state of the views before rotation (visibilities, disabled buttons, right and wrong answer checks etc..)
             } else {
                 questions = savedInstanceState.getParcelableArrayList(QUESTIONS_ARRAY_KEY);
                 currentQuestion = savedInstanceState.getInt(CURRENT_QUESTION);
                 wrongAnswers = (ArrayList<Integer>)savedInstanceState.getSerializable(WRONG_ANSWERS);
                 score = savedInstanceState.getFloat(SCORE);
                 isResultShown = savedInstanceState.getBoolean(IS_RESULT_SHOWN);
+                final int x = savedInstanceState.getInt(SCROLL_X);
+                final int y = savedInstanceState.getInt(SCROLL_Y);
+                scrollView.post(new Runnable(){
+                    public void run(){
+                        scrollView.scrollTo(x, y);
+                    }
+                });
                 for(int j = 0; j < currentQuestion ; j++){
                     for (int i = 0; i < rgHmap.get(j).getChildCount(); i++) {
                         rgHmap.get(j).getChildAt(i).setEnabled(false);
                     }
                     correctAnswerCheck(rgHmap.get(j), j);
-                    submitHmap.get(j).setEnabled(false);
+                    submitHmap.get(j).setVisibility(View.GONE);
                     if(wrongAnswers.get(j) != 0){
                         RadioButton selectedAnswer = findViewById(wrongAnswers.get(j));
                         selectedAnswer.setButtonDrawable(R.drawable.ic_cancel);
@@ -138,7 +176,11 @@ import java.util.HashMap;
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
                 }
-                if(isResultShown) result.setText("Your score is: " + (int) score + "%");
+
+                // Display result
+                if(isResultShown)
+                    displayResult(score, correctAnsNmb, incorrectAnsNmb);
+
             }
 
             // Display questions and answers
@@ -157,47 +199,71 @@ import java.util.HashMap;
             submit3.setOnClickListener(this);
             submit4.setOnClickListener(this);
             submit5.setOnClickListener(this);
-        }
+            }
 
+        //Assign commands to each buttons with a switch statement
         @Override
         public void onClick(View v){
             switch(v.getId()){
-                case R.id.tv_submit_1: case R.id.tv_submit_2: case R.id.tv_submit_3: case R.id.tv_submit_4:{
-                    submit(currentQuestion);
-                    break;
-                }
+                case R.id.tv_submit_1:
+                case R.id.tv_submit_2:
+                case R.id.tv_submit_3:
+                case R.id.tv_submit_4:
                 case R.id.tv_submit_5: {
                     submit(currentQuestion);
-                    score = score / 5 * 100;
-                    result.setText("Your score is: " + (int) score + "%");
-                    isResultShown = true;
                     break;
                 }
             }
         }
 
+        //Common submit method for all questions
         public void submit(int numberOfQuestion) {
+            //Warn if no answer is selected
             if (rgHmap.get(numberOfQuestion).getCheckedRadioButtonId() == -1) {
                 Toast.makeText(getBaseContext(), "Select answer!", Toast.LENGTH_SHORT).show();
+                return;
             } else {
+                //Correct option is checked whether user gives the right answer or not
                 int selectedRadioButtonID = rgHmap.get(numberOfQuestion).indexOfChild(findViewById(rgHmap.get(numberOfQuestion).getCheckedRadioButtonId()));
                 correctAnswerCheck(rgHmap.get(numberOfQuestion), numberOfQuestion);
+                //if the answer was wrong put a wrong symbol to the option chosen.
                 if (questions.get(numberOfQuestion).getCorrectAnswer() != selectedRadioButtonID) {
                     incorrectAnswerCheck(rgHmap.get(numberOfQuestion));
+                    //Keep track of wrong answers for rotation
                     wrongAnswers.add(rgHmap.get(numberOfQuestion).getCheckedRadioButtonId());
                 } else {
                     score++;
                     wrongAnswers.add(0);
                 }
+                // For non-checked radio button show ic_notchecked
+                for (int i = 1; i < rgHmap.get(numberOfQuestion).getChildCount(); i++){
+                    if (i != selectedRadioButtonID && i != questions.get(numberOfQuestion).getCorrectAnswer()){
+                        notCheck(rgHmap.get(numberOfQuestion), i);
+                    }
+                }
+
+                //Disable the previous question once it is submitted
                 for (int i = 0; i < rgHmap.get(numberOfQuestion).getChildCount(); i++) {
                     rgHmap.get(numberOfQuestion).getChildAt(i).setEnabled(false);
                 }
-                submitHmap.get(numberOfQuestion).setEnabled(false);
+                submitHmap.get(numberOfQuestion).setVisibility(View.GONE);
+                //Make the next question visible
                 numberOfQuestion++;
                 if(numberOfQuestion<questions.size()){
                     questionHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
                     rgHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
                     submitHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
+                }
+                // Automatically scroll to next question's submit button
+                if (numberOfQuestion < submitHmap.size())
+                    submitHmap.get(numberOfQuestion).getParent().requestChildFocus(submitHmap.get(numberOfQuestion), submitHmap.get(numberOfQuestion));
+                // Last question - display result
+                if (numberOfQuestion == submitHmap.size()){
+                    score = score / 5 * 100;
+                    correctAnsNmb = correctAnswersNmb();
+                    incorrectAnsNmb = questions.size() - correctAnsNmb;
+                    displayResult(score, correctAnsNmb, incorrectAnsNmb);
+                    isResultShown = true;
                 }
             }
             currentQuestion++;
@@ -222,6 +288,39 @@ import java.util.HashMap;
             selectedAnswer.setPadding(16, 0, 0, 0);
         }
 
+        public void notCheck(RadioGroup rg, int index) {
+
+            RadioButton rb = (RadioButton) rg.getChildAt(index);
+            rb.setButtonDrawable(R.drawable.ic_notchecked);
+            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) rb.getLayoutParams();
+            params.setMargins(20, 0, 0, 0);
+            rb.setLayoutParams(params);
+            rb.setPadding(16, 4, 4, 4);
+        }
+
+        public int correctAnswersNmb() {
+            int correctNmb = 0;
+            for (int i = 0; i < questions.size(); i++){
+                int selectedRadioButtonID = rgHmap.get(i).indexOfChild(findViewById(rgHmap.get(i).getCheckedRadioButtonId()));
+                if (selectedRadioButtonID == questions.get(i).getCorrectAnswer()){
+                    correctNmb ++;
+                }
+            }
+            return correctNmb;
+        }
+
+        public void displayResult(float score, int correctAns, int incorrectAns){
+            // Make views visible
+            layResult.setVisibility(View.VISIBLE);
+            // Automatically scroll reset button
+            restart.getParent().requestChildFocus(restart, restart);
+            //imgCorrect.setVisibility(View.VISIBLE);
+            //imgIncorrect.setVisibility(View.VISIBLE);
+            tvResult.setText(getString(R.string.quizResult) + (int) score + "%");
+            tvCorrect.setText(getString(R.string.quizCorrect) + correctAns);
+            tvIncorrect.setText(getString(R.string.quizIncorrect) + incorrectAns);
+        }
+
         // invoked when the activity may be temporarily destroyed, save the instance state here
         @Override
         public void onSaveInstanceState(Bundle outState) {
@@ -231,9 +330,16 @@ import java.util.HashMap;
             outState.putSerializable(WRONG_ANSWERS, wrongAnswers);
             outState.putFloat(SCORE, score);
             outState.putBoolean(IS_RESULT_SHOWN, isResultShown);
+            outState.putInt(SCROLL_X, scrollView.getScrollX());
+            outState.putInt(SCROLL_Y, scrollView.getScrollY());
             // call superclass to save any view hierarchy
             super.onSaveInstanceState(outState);
         }
-    }
 
+        public void restartactivity (View v){
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+    }
 
