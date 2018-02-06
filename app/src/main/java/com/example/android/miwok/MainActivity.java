@@ -16,19 +16,25 @@
 package com.example.android.miwok;
 
 import android.app.SearchManager;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -154,10 +160,36 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void startActivity(Intent intent){
-        //if it is a search intent
+        //if it is a search intent by text typing
         if(Intent.ACTION_SEARCH.equals(intent.getAction())){
             intent.putExtra(WOMEN_LIST, women);
+            super.startActivity(intent);
         }
-        super.startActivity(intent);
+
+        //if it is a search intent by voice
+        else if(RecognizerIntent.ACTION_RECOGNIZE_SPEECH.equals(intent.getAction())){
+            Intent intentVoice = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+            startActivityForResult(intentVoice,200);
+
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 200){
+            if(resultCode == RESULT_OK && data != null){
+                ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                Toast.makeText(getApplicationContext(),result.get(0), Toast.LENGTH_SHORT).show();
+
+
+               Intent myIntent = new Intent(MainActivity.this, SearchableActivity.class);
+               myIntent.putParcelableArrayListExtra(WOMEN_LIST, women);
+               myIntent.putExtra("Word", result.get(0));
+              super.startActivity(myIntent);
+
+            }
+        }
     }
 }
