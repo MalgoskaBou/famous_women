@@ -26,15 +26,16 @@ public class SearchableActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        // Get a list of women
+        women = WomenArrayList.getWomen();
+
         // Get the intent, verify the action and get the query
         Intent intent = getIntent();
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
-            women = intent.getParcelableArrayListExtra(WOMEN_LIST);
             doMySearch(query);
         }
-
-
     }
 
     public void doMySearch(String input){
