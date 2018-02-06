@@ -26,37 +26,34 @@ public class SearchableActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        // Get a list of women
+        women = WomenArrayList.getWomen();
+
         // Get the intent, verify the action and get the query
         Intent intent = getIntent();
-
-        if (Intent.ACTION_SEARCH.equals(intent.getAction()))
-        {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
-            women = intent.getParcelableArrayListExtra(WOMEN_LIST);
             doMySearch(query);
         }
-
     }
 
     public void doMySearch(String input){
         final ArrayList<String> searchResults = new ArrayList<String>();
         final ArrayList<Integer> positions = new ArrayList<Integer>();
-
-        if(women != null) {
-            for (int i = 0; i < women.size(); i++) {
-                String name = getString(women.get(i).getNameId());
-                //strip accents
-                String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
-                withoutAccents = withoutAccents.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
-                input = Normalizer.normalize(input, Normalizer.Form.NFD);
-                input = input.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
-                //turn all to lower case before search
-                if (withoutAccents.toLowerCase().contains(input.toLowerCase())) {
-                    searchResults.add(name);
-                    positions.add(i);//keep track of positions of the results
-                }
-                Log.v("search results", "size " + searchResults.size());
+        for(int i = 0; i< women.size(); i++){
+            String name = getString(women.get(i).getNameId());
+            //strip accents
+            String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
+            withoutAccents = withoutAccents.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+            input = Normalizer.normalize(input, Normalizer.Form.NFD);
+            input = input.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+            //turn all to lower case before search
+            if(withoutAccents.toLowerCase().contains(input.toLowerCase())){
+                searchResults.add(name);
+                positions.add(i);//keep track of positions of the results
             }
+            Log.v("search results", "size " + searchResults.size());
         }
         if(searchResults.isEmpty()){
             searchResults.add("No results found");
