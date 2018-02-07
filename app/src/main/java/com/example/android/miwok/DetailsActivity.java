@@ -44,8 +44,15 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_view);
+
+
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        //return our back arrow
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         //we collect the transferred data from the previous activity
         Bundle bundle = getIntent().getExtras();
