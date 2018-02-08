@@ -26,6 +26,12 @@
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height" />
+    <ImageView
+        android:id="@+id/dora_akunyili_listimage"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:src="@drawable/dora_akunyili_listimg"/>
+
 
     <RelativeLayout
         android:id="@+id/text_container"
@@ -39,27 +45,35 @@
         android:paddingLeft="16dp">
 
         <TextView
-            android:id="@+id/name_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:id="@+id/dora_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/background_dark"
             android:textStyle="bold"
-            tools:text="lutti" />
+            tools:text="Dora Nkem Akunyili" />
 
         <TextView
             android:id="@+id/profession_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_below="@id/name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dora_text_view"
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
-            tools:text="one" />
+            android:textColor="@android:color/black"
+            tools:text="Pharmacist" />
 
+
+        <ImageView
+            android:id="@+id/dora_nigeria_flag_image"
+            android:layout_width="@dimen/list_item_height"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/dora_nigeria_flag" />
 
     </RelativeLayout>
+
 </RelativeLayout>
