@@ -30,7 +30,7 @@
         android:id="@+id/dora_akunyili_listimage"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height"
-        android:src="@drawable/dora_akunyili_listimg"/>
+        />
 
 
     <RelativeLayout
@@ -71,8 +71,7 @@
             android:id="@+id/dora_nigeria_flag_image"
             android:layout_width="@dimen/list_item_height"
             android:layout_height="@dimen/list_item_height"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/dora_nigeria_flag" />
+            android:layout_alignParentRight="true" />
 
     </RelativeLayout>
 
