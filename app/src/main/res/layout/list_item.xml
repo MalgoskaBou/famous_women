@@ -35,7 +35,7 @@
         app:riv_oval="true"
         android:layout_marginLeft="16dp"
            android:layout_marginStart="16dp"
-        android:src="@drawable/dalia_grybauskaite_listimg"/>
+        android:src="@drawable/list_1"/>
 
     <RelativeLayout
         android:id="@+id/text_container"
@@ -56,7 +56,7 @@
             android:textColor="@color/text_color_heading"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="@string/dalia" />
+            tools:text="Dalia G" />
 
         <TextView
             android:id="@+id/profession_text_view"
@@ -68,7 +68,7 @@
             android:textSize="14sp"
             android:textColor="@color/text_color_main"
             android:fontFamily="@font/roboto"
-            tools:text="@string/dalia_profession" />
+            tools:text="President of Lithuania" />
 
     </RelativeLayout>
 
@@ -83,6 +83,6 @@
         app:riv_oval="true"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/dalia_lithuania_flag"/>
+        android:src="@drawable/flag_1"/>
 
 </LinearLayout>

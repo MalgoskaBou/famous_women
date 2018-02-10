@@ -1,19 +1,40 @@
 package com.example.android.miwok;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+
 import java.util.ArrayList;
 
 public class WomenArrayList {
     private static ArrayList<Woman> women = new ArrayList<Woman>();
 
-    public static ArrayList<Woman> getWomen() {
+    public static ArrayList<Woman> getWomen(Context context) {
         if (women.size() == 0)
-            InitData();
+            InitData(context);
         return women;
     }
 
     // Create a list of women
-    private static void InitData() {
-        women.add(new Woman(R.string.maria, R.string.maria_profession, R.string.body_details_descriprion_maria_sklodowska,
+    private static void InitData(Context context) {
+        Resources resources = context.getResources();
+        TypedArray typedArray = resources.obtainTypedArray(R.array.women_info);
+        int length = typedArray.length();
+        for (int i = 0; i < length; ++i) {
+            int id = typedArray.getResourceId(i, 0);
+            String [] women_info = resources.getStringArray(id);
+            String list_image_name = "list_" + i;
+            String flag_image_name = "flag_" + i;
+            String portrait_image_name = "portrait_" + i;
+            int[] imageIds = new int[3];
+            imageIds[0] = resources.getIdentifier(list_image_name, "drawable", context.getPackageName());
+            imageIds[1] = resources.getIdentifier(flag_image_name, "drawable", context.getPackageName());
+            imageIds[2] = resources.getIdentifier(portrait_image_name, "drawable", context.getPackageName());
+            women.add(new Woman(women_info, imageIds));
+        }
+        typedArray.recycle();
+
+        /*women.add(new Woman(R.string.maria, R.string.maria_profession, R.string.body_details_descriprion_maria_sklodowska,
                 R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag, R.drawable.maria_portrait));
         women.add(new Woman(R.string.dalia, R.string.dalia_profession, R.string.body_details_description_dalia,
                 R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag, R.drawable.dalia_portrait));
@@ -38,7 +59,7 @@ public class WomenArrayList {
         women.add(new Woman(R.string.ilhan, R.string.ilhan_profession, R.string.body_details_description_ilhan,
                 R.drawable.ilhan_listing, R.drawable.ilhan_flag, R.drawable.ilhan_portrait));
         women.add(new Woman(R.string.valentina, R.string.valentina_profession, R.string.body_details_description_valentina,
-                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag, R.drawable.valentina_portrait));
+                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag, R.drawable.valentina_portrait));*/
     }
 }
 
