@@ -39,6 +39,8 @@ public class WomenArrayList {
                 R.drawable.ilhan_listing, R.drawable.ilhan_flag, R.drawable.ilhan_portrait));
         women.add(new Woman(R.string.valentina, R.string.valentina_profession, R.string.body_details_description_valentina,
                 R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag, R.drawable.valentina_portrait));
+        women.add(new Woman(R.string.prof_dora, R.string.prof_dora_profession, R.string.body_details_descriprion_prof_dora,
+                R.drawable.dora_akunyili_listimg, R.drawable.dora_nigeria_flag, R.drawable.dora_portrait));
     }
 }
 
