@@ -367,7 +367,7 @@
     <string name="search_hint">Name of Women</string>
 
     <!--About screen-->
-    <string name="about_description">The Famous Women app contains interesting info and little quiz about different Famous Woman on the Earth.\n\nThis application was created as part of the UDACITY course - Google Developer Challenge Scholarship - Only by Ladies.\n\nApp was created on the initiative of MalgoskaG  https://github.com/MalgoskaG</string>
+    <string name="about_description">The Famous Women app contains interesting info and little quiz about different Famous Woman on the Earth.\n\nThis application was created as part of the UDACITY course - Google Developer Challenge Scholarship - Only by Ladies.\n\nApp was created on the coordinated by of MalgoskaG  https://github.com/MalgoskaG</string>
     <string name="about_contributions">All Contributors: https://github.com/MalgoskaG/famous_women/graphs/contributors</string>
     <string name="about_version">Version: 1.0</string>
 
