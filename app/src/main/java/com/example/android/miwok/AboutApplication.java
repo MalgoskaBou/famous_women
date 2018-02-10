@@ -14,6 +14,6 @@ public class AboutApplication extends AppCompatActivity{
         // this is for the arrow in the menu bar to go back to parent activity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

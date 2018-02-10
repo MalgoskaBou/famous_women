@@ -53,6 +53,7 @@ import java.util.HashMap;
             // this is for the arrow in the menu bar to go back to parent activity
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             // Find views
             scrollView = findViewById(R.id.scrollView);
             // Question 1
