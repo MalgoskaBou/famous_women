@@ -36,6 +36,7 @@
     <string name="irena">Irena Sendler</string>
     <string name="ilhan">Ilhan Omar</string>
     <string name="valentina">Valentina Tereshkova</string>
+    <string name="prof_dora">Professor Dora Nkem Akunyili</string>
     <string name="name10"> </string>
 
     <!--Persons proffesion -->
@@ -52,6 +53,7 @@
     <string name="irena_profession">Social Worker</string>
     <string name="ilhan_profession">Politician</string>
     <string name="valentina_profession">Cosmonaut</string>
+    <string name="prof_dora_profession">Pharmacist</string>
     <string name="profession10"> </string>
 
     <!--Details page subheader -->
@@ -268,6 +270,14 @@
         Elena later went on to become a medical doctor. Tereshkova and Nikolayev divorced in 1980.
     </string>
 
+    <string name="body_details_descriprion_prof_dora"> Professor Dora Nkem Akunyili (14 July 1954 – 7 June 2014) was the Director General of National Agency for Food and Drug Administration and Control (NAFDAC)
+        \nof Nigeria and Nigerian Minister of Information and Communications from 2008 to 2010. She was a pharmacist and governmental administrator who gained international recognition and won several
+        \nawards for her work in pharmacology, public health and human rights. Following her appointment as the Director General of NAFDAC in April 2001, Akunyili established as a top priority the
+        \neradication of counterfeit drugs and unsafe food. Before her assumption of office in NAFDAC, fake and substandard foods and drugs were sold in Nigeria without any form of regulation.
+        \nShe was disheartened that so many of her countrymen and women were fighting killer diseases like malaria and tuberculosis with little more than sugar syrup and chalk tablets,
+        \ncynically packaged to look like the real drugs." Although Akunyili faced considerable risk to her personal safety in her fight to combat the issue of fake drugs, she was persistent and things turned around for the better.
+        \n(Sources: https://en.wikipedia.org/wiki/Dora_Akunyili; https://web.archive.org/web/20060507083714/http://www.kwenu.com/moesmemo/moe2004/dora_danger.htm) </string>
+
 
     <!--Menu Options -->
 
@@ -365,6 +375,19 @@
     <string name="answer14_2">48</string>
     <string name="answer14_3">63</string>
     <string name="search_hint">Name of Women</string>
+
+    <!--Question 15-->
+    <string name="question15">What is the country of origin of Professor Dora Nkem Akunyili?</string>
+    <string name="answer15_1">Nigeria</string>
+    <string name="answer15_2">Togo</string>
+    <string name="answer15_3">South Africa</string>
+
+    <!--Question 16-->
+    <string name="question16">What was the year of birth of Professor Dora Nkem Akunyili?</string>
+    <string name="answer16_1">1987</string>
+    <string name="answer16_2">1954</string>
+    <string name="answer16_3">1960</string>
+
 
     <!--About screen-->
     <string name="about_description">The Famous Women app contains interesting info and little quiz about different Famous Woman on the Earth.\n\nThis application was created as part of the UDACITY course - Google Developer Challenge Scholarship - Only by Ladies.\n\nApp was created on the coordinated by of MalgoskaG  https://github.com/MalgoskaG</string>
