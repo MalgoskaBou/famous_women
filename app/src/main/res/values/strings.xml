@@ -22,42 +22,46 @@
     <!-- Category name for quiz [CHAR LIMIT=20] -->
     <string name="category_quiz">Quiz</string>
 
+    <!-- Persons name in the famous woman list -->
+    <string name="maria">Maria Skłodowska-Curie</string>
+    <string name="dalia">Dalia Grybauskaitė</string>
+    <string name="elisabeta">Elisabeta Rizea</string>
+    <string name="mother_theresa">Mother Theresa</string>
+    <string name="wanda">Wanda Rutkiewicz</string>
+    <string name="ameenah">Ameenah Gurib-Fakim</string>
+    <string name="maria_telkes">Mária Telkes</string>
+    <string name="ellen_Sirleaf">Ellen Johnson Sirleaf</string>
+    <string name="Merieme_Chadid">Merieme Chadid</string>
+    <string name="ada">Ada Yonath</string>
+    <string name="irena">Irena Sendler</string>
+    <string name="ilhan">Ilhan Omar</string>
+    <string name="valentina">Valentina Tereshkova</string>
+    <string name="prof_dora">Professor Dora Nkem Akunyili</string>
+    <string name="name10"> </string>
 
-    <array name="women_info">
-        <item>@array/MariaC</item>
-        <item>@array/DaliaG</item>
-        <item>@array/ElisabetaR</item>
-        <item>@array/Theresa</item>
-        <item>@array/WandaR</item>
-        <item>@array/AmeenahGF</item>
-        <item>@array/EllenS</item>
-        <item>@array/MariaT</item>
-        <item>@array/MeriemeC</item>
-        <item>@array/IrenaS</item>
-        <item>@array/AdaY</item>
-        <item>@array/IlhanO</item>
-        <item>@array/ValentinaT</item>
-        <item>@array/ProfDora</item>
-    </array>
+    <!--Persons proffesion -->
+    <string name="elisabeta_proffesion">Anti-Communist Partisant</string>
+    <string name="maria_profession">Physicist and chemist</string>
+    <string name="dalia_profession">President of Lithuania</string>
+    <string name="wanda_profession">High mountain climber</string>
+    <string name="mother_theresa_profession">Humanitarian</string>
+    <string name="ameenah_profession">President of Mauritius</string>
+    <string name="maria_telkes_profession">Biophysicist</string>
+    <string name="sirleaf_profession">President of Liberia</string>
+    <string name="meriem_profession">Astronaut</string>
+    <string name="ada_profession">Biochemist</string>
+    <string name="irena_profession">Social Worker</string>
+    <string name="ilhan_profession">Politician</string>
+    <string name="valentina_profession">Cosmonaut</string>
+    <string name="prof_dora_profession">Pharmacist</string>
+    <string name="profession10"> </string>
 
-    <string-array name="MariaC">
-        <item>Maria Skłodowska-Curie</item>
-        <item>Physicist and chemist</item>
-        <item>Was a Polish and naturalized-French physicist and chemist who conducted pioneering
-        research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win twice, the only person to win
-        a Nobel Prize in two different sciences, and was part of the Curie family legacy of five Nobel Prizes. She was also the first woman to become a
-        professor at the University of Paris, and in 1995 became the first woman to be entombed on her own merits in the Panthéon in Paris.
-        She was born in Warsaw, in what was then the Kingdom of Poland, part of the Russian Empire. She studied at Warsaw\'s clandestine Flying University
-        and began her practical scientific training in Warsaw. In 1891, aged 24, she followed her older sister Bronisława to study in Paris, where she
-        earned her higher degrees and conducted her subsequent scientific work. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie
-        and with physicist Henri Becquerel. She won the 1911 Nobel Prize in Chemistry.</item>
-    </string-array>
+    <!--Details page subheader -->
+    <string name="subheader_details_profession">Profession</string>
+    <string name="body_details_description">Description</string>
 
-
-    <string-array name="DaliaG">
-        <item>Dalia Grybauskaitė</item>
-        <item>President of Lithuania</item>
-        <item>Dalia Grybauskaitė (born in Vilnius on 1 March 1956), referred to as the \"Iron Lady\" or the
+    <!--Details page body -->
+    <string name="body_details_description_dalia">Dalia Grybauskaitė (born in Vilnius on 1 March 1956), referred to as the \"Iron Lady\" or the
         \"Steel Magnolia\", is the President of Lithuania, inaugurated on 12 July 2009 and re-elected in May 2014. \nShe is the country\'s first
         female President and the first President of Lithuania to be reelected for a second consecutive term. \nIn her declaration speech for the 2009
         presidential election, Dalia Grybauskaitė said: \"I decided to return to Lithuania if the Lithuanian people decide I am needed there now.
@@ -80,13 +84,9 @@
         This award is also a commitment to assume responsibility for bringing all the nations together to shape the future of Europe,\" the President
         emphasized at the award ceremony. \nDalia Grybauskaitė takes 68 place in Frobes The World\'s 100 Most Powerful Women list (2017 ranking).
         \nToday, Dalia is a modern leader and maintains a strong connection with the Lithuanian people through social media interaction,
-        sharing her news, schedule and ideas.</item>
-    </string-array>
+        sharing her news, schedule and ideas.</string>
 
-    <string-array name="ElisabetaR">
-        <item>Elisabeta Rizea</item>
-        <item>Anti-Communist Partisant</item>
-        <item>Elisabeta Rizea (28 June 1912 – 6 October 2003) was a Romanian anti-communist partisan in the
+    <string name="body_details_description_elisabeta">Elisabeta Rizea (28 June 1912 – 6 October 2003) was a Romanian anti-communist partisan in the
         Făgăraş Mountains of Northern Wallachia. After the Romanian Revolution, she became the symbol of Romania\'s anti-communism resistance.
         Rizea was born in Nucșoara, a small village in Argeş County in the Southern Carpathians, to a family of peasants who lived off plot of
         cultivated land. After World War II, as the Soviet Army imposed a Communist government in Romania, the peasants had to give up their
@@ -98,13 +98,9 @@
         the terms of a general amnesty.
         During her twelve years spent in prison, she was subjected to various forms of torture: she was hung by her hair from a hook and beaten
         until she fainted due to broken ribs, and was also scalped, burned, and beaten with a shovel. Upon her release from prison, she had no hair
-        and she couldn\'t walk, as her knees had been destroyed by the torture.</item>
-    </string-array>
+        and she couldn\'t walk, as her knees had been destroyed by the torture.</string>
 
-    <string-array name="Theresa">
-        <item>Mother Theresa</item>
-        <item>Humanitarian</item>
-        <item>Mother Teresa (1910–1997) was a Roman Catholic nun who devoted her life to serving
+    <string name="body_details_description_mother_theresa">Mother Teresa (1910–1997) was a Roman Catholic nun who devoted her life to serving
     the poor and destitute around the world. Mother Teresa was born in 1910 in Skopje, the capital of the Republic of Macedonia.
     Little is known about her early life, but at a young age, she felt a calling to be a nun and serve through helping the poor.
     At the age of 18, she was given permission to join a group of nuns in Ireland. After a few months of training, with the Sisters of Loreto,
@@ -125,13 +121,9 @@
     but nothing could dissuade her from fulfilling her mission of serving the poor and needy. Until her very last illness she was active
     in travelling around the world to the different branches of The Missionaries of Charity.
     Following Mother Teresa’s death, the Vatican began the process of beatification, which is the second step on the way to canonization and sainthood.
-    Mother Teresa was formally beatified in October 2003 by Pope John Paul II.</item>
-    </string-array>
+    Mother Teresa was formally beatified in October 2003 by Pope John Paul II.</string>
 
-    <string-array name="WandaR">
-        <item>Wanda Rutkiewicz</item>
-        <item>High mountain climber</item>
-        <item>Wanda Rutkiewicz is one of the most recognizable high mountains female climber. She was the third woman and first European who reached Mount Everest  and the first woman ever on K2.
+    <string name="body_details_description_wanda">Wanda Rutkiewicz is one of the most recognizable high mountains female climber. She was the third woman and first European who reached Mount Everest  and the first woman ever on K2.
         \nWanda Rutkiewicz was born on 2 February, 1943 in Plungiany, Lithuania (before II World War it was part of Poland). She graduated from Wrocław University of Technology as electronic engineer. She was working in her profession in Wrocław, then she moved to Warsaw.
         \nWanda Rutkiewicz was always very active person: enough to mention volleyball, running,  shot put, the high jump, discus throwing and javelin throw. She had her first contact with climbing while she was on University in Wrocław. In 1965 she did climbing course in Tatra mountains. From the beginning she was adoring new activity. Two years after the course, in 1967, she started to climb in Alps. She became more and more experienced, her ambitions were also growing.
         She started to climb in Pamir, Hindu Kush and Himalayas.
@@ -152,45 +144,32 @@
         \n•	On October 22, 1991, she climbed solo Annapurna.
         \nHer goal was to become the first woman to summit all fourteen of the eight-thousanders, finally she reached 8 of them (marked with •). The ninth one supposed to be Kangchenjunga. She climbed with Carlos Carsolio. On 12 May 1992 they started together from  camp IV. She was last seen when she was preparing bivouac while Carlos Carsolio was going down from the top after 12 hours ascent in deep snow. She didn’t have food, no bivouac equipment.
         It is not known if Wanda Rutkiewicz summitted Kangchenjunga, her body was not found. She probably died during night or next day, while ascending or maybe descending from the top.
-        </item>
-    </string-array>
+    </string>
 
-    <string-array name="AmeenahGF">
-        <item>Ameenah Gurib-Fakim</item>
-        <item>President of Mauritius</item>
-        <item>Born 17 October 1959 is a Mauritian biodiversity scientist and politician serving as President of Mauritius since 2015. In December 2014, she was selected to be the presidential candidate of the Alliance Lepep. After Kailash Purryag resigned on 29 May 2015, both Prime Minister Sir Anerood Jugnauth and Leader of the Opposition Paul Berenger positively welcomed her nomination,
+    <string name="body_details_description_ameenah">Born 17 October 1959 is a Mauritian biodiversity scientist and politician serving as President of Mauritius since 2015. In December 2014, she was selected to be the presidential candidate of the Alliance Lepep. After Kailash Purryag resigned on 29 May 2015, both Prime Minister Sir Anerood Jugnauth and Leader of the Opposition Paul Berenger positively welcomed her nomination,
         which was unanimously approved in a vote in the National Assembly. Gurib-Fakim is the first woman elected President of the country and is the third woman to serve as Head of State. She worked as Managing Director of CIDP Research and Innovation (formerly Cephyr, Centre for Phytotherapy Research), where she devoted her time to researching the medical and nutritive implications of indigenous plants of Mauritius.
         Previously, she was a Professor with a personal chair in Organic Chemistry at the University of Mauritius (2001) and where she served successively as Dean of the Faculty of Science and Pro–Vice Chancellor (2004–2010). She also worked at the Mauritius Research Council as Manager for Research (1995–1997). She served as the Chairperson the International Council for Scientific Union – Regional Office for Africa (2011–2014).
         Gurib-Fakim has also been the recipient of various international awards including the L\'Oréal-UNESCO Award for Women in Science (2007), Laureate for the National Economic and Social Council (2007), the CTA / NEPAD / AGRA / RUFORUM for \‘African Women in Science\’ and the African Union Award for Women in Science.She was also made Commander of the Order of the Star and Key of the Indian Ocean (CSK)
-        by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the \‘Chevalier de l\’Ordre des Palmes Academiques\’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).</item>
-    </string-array>
+        by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the \‘Chevalier de l\’Ordre des Palmes Academiques\’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).
+        </string>
 
-    <string-array name="EllenS">
-        <item>Ellen Johnson Sirleaf</item>
-        <item>President of Liberia</item>
-        <item>Liberian President Ellen Johnson Sirleaf is the world\'s first elected black female president and Africa\'s first elected female head of state.
+    <string name="body_details_description_maria_telkes">Mária Telkes (December 12, 1900 – December 2, 1995) was a Hungarian-American scientist and inventor who worked on solar energy technologies.\nTelkes worked as a biophysicist in the United States; and, from 1939 to 1953, she was involved in solar energy research at Massachusetts Institute of Technology.
+        \nTelkes is known for creating the first thermoelectric power generator in 1947, designing the first solar heating system for the Dover Sun House in Dover, Massachusetts, (built entirely with solar heating, with the architect Eleanor Raymond and the first thermoelectric refrigerator in 1953 using the principles of semiconductor thermoelectricity.
+        \nShe was a prolific inventor of practical thermal devices, including a miniature desalination unit for use on lifeboats, which used solar power and condensation to collect potable solar still. The still saved the lives of airmen and sailors who would have been without water when abandoned at sea.
+        \nOne of her specialties were phase-change materials, including molten salts to store thermal energy. One of her materials of choice was Glauber\'s salt.elkes is considered one of the founders of solar thermal storage systems, earning her the nickname "the Sun Queen".
+        \nShe moved to Texas in the 1970s and consulted with a variety of start-up solar companies, including Northrup Solar, which subsequently became ARCO Solar, and eventually BP Solar.</string>
+
+    <string name="body_details_description_sirleaf"> Liberian President Ellen Johnson Sirleaf is the world\'s first elected black female president and Africa\'s first elected female head of state.
         Ellen Johnson Sirleaf was born on October 29, 1938, in Monrovia, Liberia. A graduate of the College of West Africa at Monrovia, she went on to receive her bachelor\'s degree in accounting from the Madison Business College in Madison, Wisconsin, a degree in economics from the University of Colorado at Boulder and a Master of Public Administration degree from Harvard University.
         After returning to Liberia, Ellen Johnson Sirleaf served as assistant minister of Finance in President William Tolbert\'s administration. In 1980, Tolbert was overthrown and killed by army sergeant Samuel Doe, who represented the Krahn ethnic group. Johnson Sirleaf went into exile in Nairobi, Kenya, as well as in the United States, where she worked as an executive in the international banking community.
         In 1985, Johnson Sirleaf returned to Liberia and ran for a seat in the Senate, but when she spoke out against Doe\'s military regime, she was sentenced to 10 years in prison. She served a partial sentence before moving to Washington, D.C. When she returned to her native country for a third time in 1997, it was as an economist, working for the World Bank and Citibank in Africa.
         After supporting Charles Taylor\'s bloody rebellion against President Samuel Doe in 1990, Johnson Sirleaf ran unsuccessfully against Taylor in the 1997 presidential election. Taylor subsequently charged Johnson Sirleaf with treason. In 2005, after campaigning for the removal of President Taylor, Johnson Sirleaf took over as leader of the Unity Party.
         That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the \"Iron Lady\", as she was also known, became the world\'s first elected black female president and Africa\'s first elected female head of state.
-        Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia.</item>
-    </string-array>
+        Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia. </string>
 
-    <string-array name="MariaT">
-        <item>Mária Telkes</item>
-        <item>Biophysicist</item>
-        <item>Mária Telkes (December 12, 1900 – December 2, 1995) was a Hungarian-American scientist and inventor who worked on solar energy technologies.\nTelkes worked as a biophysicist in the United States; and, from 1939 to 1953, she was involved in solar energy research at Massachusetts Institute of Technology.
-        \nTelkes is known for creating the first thermoelectric power generator in 1947, designing the first solar heating system for the Dover Sun House in Dover, Massachusetts, (built entirely with solar heating, with the architect Eleanor Raymond and the first thermoelectric refrigerator in 1953 using the principles of semiconductor thermoelectricity.
-        \nShe was a prolific inventor of practical thermal devices, including a miniature desalination unit for use on lifeboats, which used solar power and condensation to collect potable solar still. The still saved the lives of airmen and sailors who would have been without water when abandoned at sea.
-        \nOne of her specialties were phase-change materials, including molten salts to store thermal energy. One of her materials of choice was Glauber\'s salt.elkes is considered one of the founders of solar thermal storage systems, earning her the nickname "the Sun Queen".
-        \nShe moved to Texas in the 1970s and consulted with a variety of start-up solar companies, including Northrup Solar, which subsequently became ARCO Solar, and eventually BP Solar.</item>
-    </string-array>
 
-    <string-array name="MeriemeC">
-        <item>Merieme Chadid</item>
-        <item>Astronaut</item>
-        <item>In March 2005, astronomer and explorer Merieme Chadid became the first Moroccan woman to set
+  
+    <string name="body_details_description_meriem"> In March 2005, astronomer and explorer Merieme Chadid became the first Moroccan woman to set
         foot on Antarctica, where she planted the flag of Morocco – the first Arab flag to be placed in this remote location. Listed by Forbes
         Magazine as one of the thirty most interesting workers in the world,
         Chedid was one of the astronomers involved in installing VLT telescopes in Chile\'s barren Atacama Desert, and is considered to be the
@@ -210,13 +189,18 @@
         there as resembling a space mission.
         With night continuing for several months of the year, researchers at the station have the advantage of being able to study the stars 24/7
         if they need to. Certainly, this Moroccan astronomer has come a long way since she first studied the night skies in the country of her
-        birth.</item>
-    </string-array>
-    
-    <string-array name="IrenaS">
-        <item>Irena Sendler</item>
-        <item>Social Worker</item>
-        <item>Irena Sendler was a 29-year-old social worker, employed by the Warsaw Welfare Department, when
+        birth. </string>
+
+    <string name="body_details_description_ada">
+        Ada Yonath (born 1939) is an Israeli crystallographer best known for her pioneering work on the structure of the ribosome.
+        In 2009, she received the Nobel Prize in Chemistry along with Venkatraman Ramakrishnan and Thomas A. Steitz for her studies on the
+        structure and function of the ribosome, becoming the first Israeli woman to win the Nobel Prize out of ten Israeli Nobel laureates,
+        the first woman from the Middle East to win a Nobel Prize in the science, and the first woman in 45 years to win the Nobel Prize
+        for Chemistry.
+        \nHowever, she said herself that there was nothing special about a woman winning the Prize.
+    </string>
+
+    <string name="body_details_description_irena">Irena Sendler was a 29-year-old social worker, employed by the Warsaw Welfare Department, when
         World War II broke out. She took advantage of her job in order to help the Jews, by offering them food and shelter.
     \nIn November 1940, when the Warsaw Ghetto was sealed off, it became practically impossible to help isolated Jews. The Ghetto was a small area
     with 400,000 Jewish people forced into it. The poor hygienic conditions in the crowded ghetto, the lack of food and medical supplies resulted
@@ -240,24 +224,19 @@
     \n\nIn 1965, Sendler was recognised by Yad Vashem as one of the Righteous among the Nations. Late in life, she was awarded the Order of the
     White Eagle, Poland\'s highest honour, for her wartime humanitarian efforts. She was nominated for the Nobel Peace Price twice.
     \nWith the exception of diplomats who issued visas to help Jews flee Nazi-occupied Europe, Sendler saved more Jews than any other individual
-    during the Holocaust.</item>
-    </string-array>
+    during the Holocaust.</string>
 
-    <string-array name="AdaY">
-        <item>Ada Yonath</item>
-        <item>Biochemist</item>
-        <item> Ada Yonath (born 1939) is an Israeli crystallographer best known for her pioneering work on the structure of the ribosome.
-        In 2009, she received the Nobel Prize in Chemistry along with Venkatraman Ramakrishnan and Thomas A. Steitz for her studies on the
-        structure and function of the ribosome, becoming the first Israeli woman to win the Nobel Prize out of ten Israeli Nobel laureates,
-        the first woman from the Middle East to win a Nobel Prize in the science, and the first woman in 45 years to win the Nobel Prize
-        for Chemistry.
-        \nHowever, she said herself that there was nothing special about a woman winning the Prize.</item>
-    </string-array>
+    <string name="body_details_descriprion_maria_sklodowska">Was a Polish and naturalized-French physicist and chemist who conducted pioneering
+        research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win twice, the only person to win
+        a Nobel Prize in two different sciences, and was part of the Curie family legacy of five Nobel Prizes. She was also the first woman to become a
+        professor at the University of Paris, and in 1995 became the first woman to be entombed on her own merits in the Panthéon in Paris.
+        She was born in Warsaw, in what was then the Kingdom of Poland, part of the Russian Empire. She studied at Warsaw\'s clandestine Flying University
+        and began her practical scientific training in Warsaw. In 1891, aged 24, she followed her older sister Bronisława to study in Paris, where she
+        earned her higher degrees and conducted her subsequent scientific work. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie
+        and with physicist Henri Becquerel. She won the 1911 Nobel Prize in Chemistry.</string>
 
-    <string-array name="IlhanO">
-        <item>Ilhan Omar</item>
-        <item>Politician</item>
-        <item>Ilhan Omar was born 1982 in Mogadishu and was raised in Baydhabo, Somalia. In 2016, she was elected a Democratic–Farmer–Labour Party member of
+    <string name="body_details_description_ilhan">
+        Ilhan Omar was born 1982 in Mogadishu and was raised in Baydhabo, Somalia. In 2016, she was elected a Democratic–Farmer–Labour Party member of
         the Minnesota House of Representatives, making her the first Somali-American Muslim legislator elected to office in the United States. She is
         the Director of Policy and Initiatives of the Women Organizing Women Network.
         She was the youngest of seven siblings, and grew up in an upper-middle-class household. Ilhan\'s father, Nur Omar Mohamed, is Somali, and worked
@@ -271,13 +250,10 @@
         age of 14 years, serving as his interpreter.
         Omar attended Edison High School, and volunteered there as a student organizer. After high school, she attended North Dakota State University,
         where she participated in the Muslim Student Association.
-        She graduated with bachelor\'s degrees in political science and international studies.</item>
-    </string-array>
+        She graduated with bachelor\'s degrees in political science and international studies.</string>
 
-    <string-array name="ValentinaT">
-        <item>Valentina Tereshkova</item>
-        <item>Cosmonaut</item>
-        <item>Soviet cosmonaut Valentina Tereshkova was born in the Yaroslavl Region of Russia on March 6, 1937. She was the second born of three children.
+    <string name="body_details_description_valentina">
+        Soviet cosmonaut Valentina Tereshkova was born in the Yaroslavl Region of Russia on March 6, 1937. She was the second born of three children.
         Her father was a tractor driver and her mother worked in a textile plant. Valentina began school in 1945 at the age of eight.
         In 1953, she left school and began working. She continued her education by correspondence courses.
         \nValentina became interested in parachute jumping at an early age. It was her expertise in parachute jumping that led to her selection as a cosmonaut.
@@ -291,24 +267,17 @@
         While fulfilling this role, she received the United Nations Gold Medal of Peace.
         \nOn November 3, 1963, Tereshkova married astronaut Andrian Nikolayev.
         Their first child, a daughter named Elena, was a subject of medical interest because she was the first child born to parents who had both been exposed to space.
-        Elena later went on to become a medical doctor. Tereshkova and Nikolayev divorced in 1980.</item>
-    </string-array>
-    
-    <string-array name="ProfDora">
-        <item>Professor Dora Nkem Akunyili</item>
-        <item>Pharmacist</item>
-        <item>Professor Dora Nkem Akunyili (14 July 1954 – 7 June 2014) was the Director General of National Agency for Food and Drug Administration and Control (NAFDAC)
+        Elena later went on to become a medical doctor. Tereshkova and Nikolayev divorced in 1980.
+    </string>
+
+    <string name="body_details_descriprion_prof_dora"> Professor Dora Nkem Akunyili (14 July 1954 – 7 June 2014) was the Director General of National Agency for Food and Drug Administration and Control (NAFDAC)
         \nof Nigeria and Nigerian Minister of Information and Communications from 2008 to 2010. She was a pharmacist and governmental administrator who gained international recognition and won several
         \nawards for her work in pharmacology, public health and human rights. Following her appointment as the Director General of NAFDAC in April 2001, Akunyili established as a top priority the
         \neradication of counterfeit drugs and unsafe food. Before her assumption of office in NAFDAC, fake and substandard foods and drugs were sold in Nigeria without any form of regulation.
         \nShe was disheartened that so many of her countrymen and women were fighting killer diseases like malaria and tuberculosis with little more than sugar syrup and chalk tablets,
         \ncynically packaged to look like the real drugs." Although Akunyili faced considerable risk to her personal safety in her fight to combat the issue of fake drugs, she was persistent and things turned around for the better.
-        \n(Sources: https://en.wikipedia.org/wiki/Dora_Akunyili; https://web.archive.org/web/20060507083714/http://www.kwenu.com/moesmemo/moe2004/dora_danger.htm)</item>
-    </string-array>
+        \n(Sources: https://en.wikipedia.org/wiki/Dora_Akunyili; https://web.archive.org/web/20060507083714/http://www.kwenu.com/moesmemo/moe2004/dora_danger.htm) </string>
 
-    <!--Details page subheader -->
-    <string name="subheader_details_profession">Profession</string>
-    <string name="body_details_description">Description</string>
 
 
     <!--Menu Options -->
@@ -322,152 +291,91 @@
     <string name="quizCorrect">Number of correct answers: \u0000</string>
     <string name="quizIncorrect">Number of wrong answers: \u0000</string>
 
-    <array name="quiz_questions">
-        <item>@array/question1</item>
-        <item>@array/question2</item>
-        <item>@array/question3</item>
-        <item>@array/question4</item>
-        <item>@array/question5</item>
-        <item>@array/question6</item>
-        <item>@array/question7</item>
-        <item>@array/question8</item>
-        <item>@array/question9</item>
-        <item>@array/question10</item>
-        <item>@array/question11</item>
-        <item>@array/question12</item>
-        <item>@array/question13</item>
-        <item>@array/question14</item>
-        <item>@array/question15</item>
-        <item>@array/question16</item>
-    </array>
 
-    <string-array name="question1">
-        <item>Wanda Rutkiewicz was a famous...</item>
-        <item>Chemist</item>
-        <item>High mountain climber</item>
-        <item>Mathematician</item>
-        <item>2</item>
-    </string-array>
+    <!--Question 1 -->
+    <string name="question1">Wanda Rutkiewicz was a famous...</string>
+    <string name="answer1_1">Chemist</string>
+    <string name="answer1_2">High mountain climber</string>
+    <string name="answer1_3">Mathematician</string>
 
-    <string-array name="question2">
-        <item>When did Mother Theresa receive her Noble Prize?</item>
-        <item>1959</item>
-        <item>1969</item>
-        <item>1979</item>
-        <item>3</item>
-    </string-array>
+    <!--Question 2 -->
+    <string name="question2">When did Mother Theresa receive her Noble Prize?</string>
+    <string name="answer2_1">1959</string>
+    <string name="answer2_2">1969</string>
+    <string name="answer2_3">1979</string>
 
-    <string-array name="question3">
-        <item>How many years did Elisabeta Rizea spend in prison?</item>
-        <item>2 years</item>
-        <item>12 years</item>
-        <item>22 years</item>
-        <item>2</item>
-    </string-array>
+    <!--Question 3 -->
+    <string name="question3">How many years did Elisabeta Rizea spend in prison?</string>
+    <string name="answer3_1">2 years</string>
+    <string name="answer3_2">12 years</string>
+    <string name="answer3_3">22 years</string>
 
-    <string-array name="question4">
-        <item>What is Dalia Grybauskaitė famous for?</item>
-        <item>She is President of the Republic of Lithuania</item>
-        <item>She is President of the Republic of Latvia</item>
-        <item>She is President of the Republic of Estonia</item>
-        <item>1</item>
-    </string-array>
+    <!--Question 4 -->
+    <string name="question4">What is Dalia Grybauskaitė famous for?</string>
+    <string name="answer4_1">She is President of the Republic of Lithuania</string>
+    <string name="answer4_2">She is President of the Republic of Latvia</string>
+    <string name="answer4_3">She is President of the Republic of Estonia</string>
 
-    <string-array name="question5">
-        <item>How is Dalia Grybauskaitė referred to?</item>
-        <item>Black Swan and Big bird</item>
-        <item>Lithuanian Iron Lady and Steel Magnolia</item>
-        <item>Iron Magnolia and Steel Lady</item>
-        <item>2</item>
-    </string-array>
+    <!--Question 5 -->
+    <string name="question5">How is Dalia Grybauskaitė referred to?</string>
+    <string name="answer5_1">Black Swan and Big bird</string>
+    <string name="answer5_2">Lithuanian Iron Lady and Steel Magnolia</string>
+    <string name="answer5_3">Iron Magnolia and Steel Lady</string>
 
-    <string-array name="question6">
-        <item>Elisabeta Rizea was a ....</item>
-        <item>Romanian anti-communist partisan</item>
-        <item>Romanian communist partisan</item>
-        <item>Albanian anti-communist partisan</item>
-        <item>1</item>
-    </string-array>
+    <!--Question 6 -->
+    <string name="question6">Elisabeta Rizea was a ....</string>
+    <string name="answer6_1">Romanian anti-communist partisan</string>
+    <string name="answer6_2">Romanian communist partisan</string>
+    <string name="answer6_3">Albanian anti-communist partisan</string>
 
-    <string-array name="question7">
-        <item>What did Mária Telkes design 1940\'s?</item>
-        <item>First biomass heating system in a house</item>
-        <item>First solar heating system in a house</item>
-        <item>First electric heating system in a house</item>
-        <item>1</item>
-    </string-array>
+    <!--Question 7 -->
+    <string name="question7">What did Mária Telkes design 1940\'s?</string>
+    <string name="answer7_1">First biomass heating system in a house</string>
+    <string name="answer7_2">First solar heating system in a house</string>
+    <string name="answer7_3">First electric heating system in a house</string>
 
-    <string-array name="question8">
-        <item>What was Mária Telkes nickname?</item>
-        <item>The Water Queen</item>
-        <item>The Wind Queen</item>
-        <item>The Sun Queen</item>
-        <item>3</item>
-    </string-array>
+    <!--Question 8-->
+    <string name="question8">What was Mária Telkes nickname?</string>
+    <string name="answer8_1">The Water Queen</string>
+    <string name="answer8_2">The Wind Queen</string>
+    <string name="answer8_3">The Sun Queen</string>
 
-    <string-array name="question9">
-    <item>In 1997, Ellen Johnson Sirleaf worked as an economist in which bank?</item>
-    <item>Global Bank Liberia.</item>
-    <item>International Bank (Liberia)</item>
-    <item>World Bank and Citibank in Africa</item>
-    <item>3</item>
-    </string-array>
+    <!--Question 9-->
+    <string name="question9">In 1997, Ellen Johnson Sirleaf worked as an economist in which bank?</string>
+    <string name="answer9_1">Global Bank Liberia.</string>
+    <string name="answer9_2">International Bank (Liberia)</string>
+    <string name="answer9_3">World Bank and Citibank in Africa</string>
 
-    <string-array name="question10">
-        <item>Which Nobel Prize was Ada Yonath awarded?</item>
-        <item>Nobel Prize in Chemistry</item>
-        <item>Nobel Prize in Literature</item>
-        <item>Nobel Prize in Physics</item>
-        <item>1</item>
-    </string-array>
+    <!--Question 10-->
+    <string name="question10">Which Nobel Prize was Ada Yonath awarded?</string>
+    <string name="answer10_1">Nobel Prize in Chemistry</string>
+    <string name="answer10_2">Nobel Prize in Literature</string>
+    <string name="answer10_3">Nobel Prize in Physics</string>
 
-    <string-array name="question11">
-        <item>How many Jewish children saved Irena Sendler?</item>
-        <item>17</item>
-        <item>about 400</item>
-        <item>about 2,500</item>
-        <item>3</item>
-    </string-array>
+    <!--Question 11-->
+    <string name="question11">How many Jewish children saved Irena Sendler?</string>
+    <string name="answer11_1">17</string>
+    <string name="answer11_2">about 400</string>
+    <string name="answer11_3">about 2,500</string>
 
-    <string-array name="question12">
-        <item>Irena Sendler:</item>
-        <item>founded Polish Underground State during II World War</item>
-        <item>is one of the Righteous among the Nations</item>
-        <item>received the Nobel Prize in Literature</item>
-        <item>2</item>
-    </string-array>
+    <!--Question 12-->
+    <string name="question12">Irena Sendler:</string>
+    <string name="answer12_1">founded Polish Underground State during II World War</string>
+    <string name="answer12_2">is one of the Righteous among the Nations</string>
+    <string name="answer12_3">received the Nobel Prize in Literature</string>
 
-    <string-array name="question13">
-        <item>When Ilhan Omar was elected?</item>
-        <item>1991</item>
-        <item>2016</item>
-        <item>2013</item>
-        <item>2</item>
-    </string-array>
+    <!--Question 13-->
+    <string name="question13">When Ilhan Omar was elected?</string>
+    <string name="answer13_1">1991</string>
+    <string name="answer13_2">2016</string>
+    <string name="answer13_3">2013</string>
 
-    <string-array name="question14">
-        <item>How many turns around the Earth Valentina Tereshkova made on the Vostok 6?</item>
-        <item>16</item>
-        <item>48</item>
-        <item>63</item>
-        <item>2</item>
-    </string-array>
-
-    <string-array name="question15">
-        <item>What is the country of origin of Professor Dora Nkem Akunyili?</item>
-        <item>Nigeria</item>
-        <item>Togo</item>
-        <item>South Africa</item>
-        <item>1</item>
-    </string-array>
-
-    <string-array name="question16">
-        <item>What was the year of birth of Professor Dora Nkem Akunyili?</item>
-        <item>1987</item>
-        <item>1954</item>
-        <item>1960</item>
-        <item>2</item>
-    </string-array>
+    <!--Question 14-->
+    <string name="question14">How many turns around the Earth Valentina Tereshkova made on the Vostok 6?</string>
+    <string name="answer14_1">16</string>
+    <string name="answer14_2">48</string>
+    <string name="answer14_3">63</string>
+    <string name="search_hint">Name of Women</string>
 
     <!--Question 15-->
     <string name="question15">What is the country of origin of Professor Dora Nkem Akunyili?</string>
@@ -485,7 +393,6 @@
     <string name="about_description">The Famous Women app contains interesting info and little quiz about different Famous Woman on the Earth.\n\nThis application was created as part of the UDACITY course - Google Developer Challenge Scholarship - Only by Ladies.\n\nApp was created on the coordinated by of MalgoskaG  https://github.com/MalgoskaG</string>
     <string name="about_contributions">All Contributors: https://github.com/MalgoskaG/famous_women/graphs/contributors</string>
     <string name="about_version">Version: 1.0</string>
-    <string name="search_hint">Name of woman</string>
 
 
 </resources>

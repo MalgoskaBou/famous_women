@@ -25,13 +25,13 @@ import android.os.Parcelable;
 public class Woman implements Parcelable{
 
     // String resource id for name
-    private String mName;
+    private int mNameId;
 
     // String resource id for profession
-    private String mProfession;
+    private int mProfessionId;
 
     // String resource id for the body text content used in details activity
-    private String mDescription;
+    private int mDescriptionId;
 
     // Resource ID for the image used in list view
     private int mListImageId;
@@ -44,29 +44,29 @@ public class Woman implements Parcelable{
 
 
 
-    public Woman(String[] womenInfo, int[] imageIds) {
+    public Woman(int nameId, int professionId, int descriptionId, int listImageId, int flagImageId, int portraitImageId) {
 
-        mName = womenInfo[0];
-        mProfession = womenInfo[1];
-        mDescription = womenInfo[2];
-        mListImageId = imageIds[0];
-        mFlagImageId = imageIds[1];
-        mPortraitImageId = imageIds[2];
+        mNameId = nameId;
+        mProfessionId = professionId;
+        mDescriptionId = descriptionId;
+        mListImageId = listImageId;
+        mFlagImageId = flagImageId;
+        mPortraitImageId = portraitImageId;
     }
 
     //Get the string resource ID for the name
-    public String getName() {
-        return mName;
+    public int getNameId() {
+        return mNameId;
     }
 
     //Get the string resource ID for the profession
-    public String getProfession() {
-        return mProfession;
+    public int getProfessionId() {
+        return mProfessionId;
     }
 
     //Get the string resource ID for the profession
-    public String getDescription(){
-        return mDescription;
+    public int getDescriptionId(){
+        return mDescriptionId;
     }
 
     //Return the image resource ID of the image used in list view
@@ -93,9 +93,9 @@ public class Woman implements Parcelable{
     };
 
     public Woman(Parcel in){
-        mName = in.readString();
-        mProfession = in.readString();
-        mDescription = in.readString();
+        mNameId = in.readInt();
+        mProfessionId = in.readInt();
+        mDescriptionId = in.readInt();
         mListImageId = in.readInt();
         mFlagImageId = in.readInt();
         mPortraitImageId = in.readInt();
@@ -108,9 +108,9 @@ public class Woman implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(mName);
-        dest.writeString(mProfession);
-        dest.writeString(mDescription);
+        dest.writeInt(mNameId);
+        dest.writeInt(mProfessionId);
+        dest.writeInt(mDescriptionId);
         dest.writeInt(mListImageId);
         dest.writeInt(mFlagImageId);
         dest.writeInt(mPortraitImageId);

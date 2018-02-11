@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         // ( ͡° ͜ʖ ͡°)
 
         // Get a list of women
-        women = WomenArrayList.getWomen(this);
+        women = WomenArrayList.getWomen();
 
         // sort list by name
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public int compare(Woman o1, Woman o2) {
 
-                    String name1 = o1.getName();
-                    String name2 = o2.getName();
+                    String name1 = getString(o1.getNameId());
+                    String name2 = getString(o2.getNameId());
                     return name1.compareTo(name2);
                 }
             });
