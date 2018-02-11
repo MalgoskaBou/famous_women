@@ -482,7 +482,11 @@
     <string name="answer16_3">1960</string>
 
     <!--About screen-->
-    <string name="about_description">The Famous Women app contains interesting info and little quiz about different Famous Woman on the Earth.\n\nThis application was created as part of the UDACITY course - Google Developer Challenge Scholarship - Only by Ladies.\n\nApp was created on the coordinated by of MalgoskaG  https://github.com/MalgoskaG</string>
+    <string name="about_description">The Famous Woman presents you some of the many strong and inspirational
+        women of the world. It also contains a quiz to encourage you to learn more about them and have fun!
+        \n\nThis application was made during the Udacity\'s Google Developer Challenge Scholarship: Android Basics program, edition 2017/2018.
+        \n\nThe app was created on the initiative of the Women_Tech_Makers group.
+        \n\nCoordinated by MalgoskaG  https://github.com/MalgoskaG/famous_women</string>
     <string name="about_contributions">All Contributors: https://github.com/MalgoskaG/famous_women/graphs/contributors</string>
     <string name="about_version">Version: 1.0</string>
     <string name="search_hint">Name of woman</string>
