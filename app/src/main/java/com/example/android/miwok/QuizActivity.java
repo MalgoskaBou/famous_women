@@ -1,6 +1,8 @@
 package com.example.android.miwok;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -27,21 +29,19 @@ import java.util.HashMap;
         private final static String IS_RESULT_SHOWN = "isResultShown";
         private final static String SCROLL_X = "scrollX";
         private final static String SCROLL_Y = "scrollY";
+        private final static String CORRECT_COUNT = "number of correct answers";
+        private final static String WRONG_COUNT = "number of wrong answers";
+
         float score;
-        int currentQuestion;
-        int correctAnsNmb;
-        int incorrectAnsNmb;
+        int currentQuestion, correctAnsNmb, incorrectAnsNmb;
         ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();
         ArrayList<Integer> wrongAnswers = new ArrayList<Integer>();
         HashMap<Integer, RadioGroup> rgHmap;
         HashMap<Integer, TextView> questionHmap;
         HashMap<Integer, Button> submitHmap;
         LinearLayout layResult;
-        TextView tvResult;
-        TextView tvCorrect;
-        TextView tvIncorrect;
-        ImageView imgCorrect;
-        ImageView imgIncorrect;
+        TextView tvResult, tvCorrect, tvIncorrect;
+        ImageView imgCorrect, imgIncorrect;
         boolean isResultShown;
         Button restart;
         ScrollView scrollView;
@@ -117,22 +117,17 @@ import java.util.HashMap;
             //If the activity is opened for the first time, adds all the questions to the arrayList, shuffles them and then make a sublist with the first 5 questions.
             //The questions after the first one are made invisible.
             if (savedInstanceState == null) {
-                questions.add(new QuizQuestion(R.string.question1, R.string.answer1_1, R.string.answer1_2, R.string.answer1_3, 2));
-                questions.add(new QuizQuestion(R.string.question2, R.string.answer2_1, R.string.answer2_2, R.string.answer2_3, 3));
-                questions.add(new QuizQuestion(R.string.question3, R.string.answer3_1, R.string.answer3_2, R.string.answer3_3, 2));
-                questions.add(new QuizQuestion(R.string.question4, R.string.answer4_1, R.string.answer4_2, R.string.answer4_3, 1));
-                questions.add(new QuizQuestion(R.string.question5, R.string.answer5_1, R.string.answer5_2, R.string.answer5_3, 2));
-                questions.add(new QuizQuestion(R.string.question6, R.string.answer6_1, R.string.answer6_2, R.string.answer6_3, 1));
-                questions.add(new QuizQuestion(R.string.question7, R.string.answer7_1, R.string.answer7_2, R.string.answer7_3, 2 ));
-                questions.add(new QuizQuestion(R.string.question8, R.string.answer8_1, R.string.answer8_2, R.string.answer8_3, 3));
-                questions.add(new QuizQuestion(R.string.question9, R.string.answer9_1, R.string.answer9_2, R.string.answer9_3, 3));
-                questions.add(new QuizQuestion(R.string.question10, R.string.answer10_1, R.string.answer10_2, R.string.answer10_3, 1));
-                questions.add(new QuizQuestion(R.string.question11, R.string.answer11_1, R.string.answer11_2, R.string.answer11_3, 3));
-                questions.add(new QuizQuestion(R.string.question12, R.string.answer12_1, R.string.answer12_2, R.string.answer12_3, 2));
-                questions.add(new QuizQuestion(R.string.question13, R.string.answer13_1, R.string.answer13_2, R.string.answer13_3, 2));
-                questions.add(new QuizQuestion(R.string.question15, R.string.answer15_1, R.string.answer15_2, R.string.answer15_3, 1));
-                questions.add(new QuizQuestion(R.string.question16, R.string.answer16_1, R.string.answer16_2, R.string.answer16_3, 2));
-                //questions.add(new QuizQuestion(R.string.question14, R.string.answer14_1, R.string.answer14_2, R.string.answer14_3, 2));
+
+                Resources resources = getResources();
+                TypedArray typedArray = resources.obtainTypedArray(R.array.quiz_questions);
+                int length = typedArray.length();
+                for (int i = 0; i < length; ++i) {
+                    int id = typedArray.getResourceId(i, 0);
+                    String[] question = resources.getStringArray(id);
+                    questions.add(new QuizQuestion(question));
+                }
+                typedArray.recycle();
+
                 // Randomized questions
                 Collections.shuffle(questions);
                 questions = new ArrayList<QuizQuestion>(questions.subList(0,5));
@@ -152,6 +147,8 @@ import java.util.HashMap;
                 wrongAnswers = (ArrayList<Integer>)savedInstanceState.getSerializable(WRONG_ANSWERS);
                 score = savedInstanceState.getFloat(SCORE);
                 isResultShown = savedInstanceState.getBoolean(IS_RESULT_SHOWN);
+                correctAnsNmb = savedInstanceState.getInt(CORRECT_COUNT);
+                incorrectAnsNmb = savedInstanceState.getInt(WRONG_COUNT);
                 final int x = savedInstanceState.getInt(SCROLL_X);
                 final int y = savedInstanceState.getInt(SCROLL_Y);
                 scrollView.post(new Runnable(){
@@ -333,6 +330,8 @@ import java.util.HashMap;
             outState.putSerializable(WRONG_ANSWERS, wrongAnswers);
             outState.putFloat(SCORE, score);
             outState.putBoolean(IS_RESULT_SHOWN, isResultShown);
+            outState.putInt(CORRECT_COUNT, correctAnsNmb);
+            outState.putInt(WRONG_COUNT, incorrectAnsNmb);
             outState.putInt(SCROLL_X, scrollView.getScrollX());
             outState.putInt(SCROLL_Y, scrollView.getScrollY());
             // call superclass to save any view hierarchy
