@@ -11,22 +11,22 @@ public class QuizQuestion implements Parcelable {
     /**
      * Quiz question
      */
-    private int mQuestion;
+    private String mQuestion;
 
     /**
      * Quiz question answer 1
      */
-    private int mAnswer1;
+    private String mAnswer1;
 
     /**
      * Quiz question answer 2
      */
-    private int mAnswer2;
+    private String mAnswer2;
 
     /**
      * Quiz question answer 3
      */
-    private int mAnswer3;
+    private String mAnswer3;
 
     /**
      * Quiz question correct answer
@@ -41,12 +41,12 @@ public class QuizQuestion implements Parcelable {
     /**
      * Constructs a new QuizQuestion with initial values for texts.
      */
-    QuizQuestion(int question, int answer1, int answer2, int answer3, int correctAnswer) {
-        mQuestion = question;
-        mAnswer1 = answer1;
-        mAnswer2 = answer2;
-        mAnswer3 = answer3;
-        mCorrectAnswer = correctAnswer;
+    QuizQuestion(String[] question_array) {
+        mQuestion = question_array[0];
+        mAnswer1 = question_array[1];
+        mAnswer2 = question_array[2];
+        mAnswer3 = question_array[3];
+        mCorrectAnswer = Integer.valueOf(question_array[4]);
     }
 
     /**
@@ -54,7 +54,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return question text.
      */
-    int getQuestion() {
+    String getQuestion() {
         return mQuestion;
     }
 
@@ -63,7 +63,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 1 text.
      */
-    int getAnswer1() {
+    String getAnswer1() {
         return mAnswer1;
     }
 
@@ -72,7 +72,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 2 text.
      */
-    int getAnswer2() {
+    String getAnswer2() {
         return mAnswer2;
     }
 
@@ -81,7 +81,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 3 text.
      */
-    int getAnswer3() {
+    String getAnswer3() {
         return mAnswer3;
     }
 
@@ -99,10 +99,10 @@ public class QuizQuestion implements Parcelable {
     */
 
     private QuizQuestion(Parcel in) {
-        mQuestion = in.readInt();
-        mAnswer1 = in.readInt();
-        mAnswer2 = in.readInt();
-        mAnswer3 = in.readInt();
+        mQuestion = in.readString();
+        mAnswer1 = in.readString();
+        mAnswer2 = in.readString();
+        mAnswer3 = in.readString();
         mCorrectAnswer = in.readInt();
         mQuestionIndex = in.readInt();
     }
@@ -126,10 +126,10 @@ public class QuizQuestion implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(mQuestion);
-        dest.writeInt(mAnswer1);
-        dest.writeInt(mAnswer2);
-        dest.writeInt(mAnswer3);
+        dest.writeString(mQuestion);
+        dest.writeString(mAnswer1);
+        dest.writeString(mAnswer2);
+        dest.writeString(mAnswer3);
         dest.writeInt(mCorrectAnswer);
         dest.writeInt(mQuestionIndex);
     }

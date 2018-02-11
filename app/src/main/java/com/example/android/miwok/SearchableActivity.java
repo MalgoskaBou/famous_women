@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,15 +21,21 @@ import java.util.ArrayList;
 public class SearchableActivity extends AppCompatActivity{
 
     public static final String CHOSEN_WOMAN = "chosen_woman";
-    public static final String WOMEN_LIST = "women_list";
     private ArrayList<Woman> women;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+        //return our back arrow
+       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Get a list of women
-        women = WomenArrayList.getWomen();
+        women = WomenArrayList.getWomen(this);
 
         // Get the intent, verify the action and get the query
         Intent intent = getIntent();
@@ -38,11 +45,13 @@ public class SearchableActivity extends AppCompatActivity{
         }
     }
 
+
+
     public void doMySearch(String input){
         final ArrayList<String> searchResults = new ArrayList<String>();
         final ArrayList<Integer> positions = new ArrayList<Integer>();
         for(int i = 0; i< women.size(); i++){
-            String name = getString(women.get(i).getNameId());
+            String name = women.get(i).getName();
             //strip accents
             String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
             withoutAccents = withoutAccents.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
@@ -73,5 +82,13 @@ public class SearchableActivity extends AppCompatActivity{
                 startActivity(myIntent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this , MainActivity.class);
+        startActivity(intent);
+
     }
 }
