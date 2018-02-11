@@ -328,7 +328,7 @@ import java.util.HashMap;
             outState.putFloat(SCORE, score);
             outState.putBoolean(IS_RESULT_SHOWN, isResultShown);
             outState.putInt(CORRECT_COUNT, correctAnsNmb);
-            outState.putInt(WRONG_ANSWERS, incorrectAnsNmb);
+            outState.putInt(WRONG_COUNT, incorrectAnsNmb);
             outState.putInt(SCROLL_X, scrollView.getScrollX());
             outState.putInt(SCROLL_Y, scrollView.getScrollY());
             // call superclass to save any view hierarchy
