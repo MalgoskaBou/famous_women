@@ -63,13 +63,13 @@ public class WomanAdapter extends ArrayAdapter<Woman>  {
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
         // Get the name of the woman from the currentWoman object and set this text on
         // the name TextView.
-        nameTextView.setText(currentWoman.getName());
+        nameTextView.setText(currentWoman.getNameId());
 
         // Find the TextView in the list_item.xml layout with the ID profession_text_view.
         TextView professionTextView = (TextView) listItemView.findViewById(R.id.profession_text_view);
         // Get the default translation from the currentWoman object and set this text on
         // the profession TextView.
-        professionTextView.setText(currentWoman.getProfession());
+        professionTextView.setText(currentWoman.getProfessionId());
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);

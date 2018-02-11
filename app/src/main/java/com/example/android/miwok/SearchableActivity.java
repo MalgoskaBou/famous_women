@@ -21,6 +21,7 @@ import java.util.ArrayList;
 public class SearchableActivity extends AppCompatActivity{
 
     public static final String CHOSEN_WOMAN = "chosen_woman";
+    public static final String WOMEN_LIST = "women_list";
     private ArrayList<Woman> women;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class SearchableActivity extends AppCompatActivity{
        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Get a list of women
-        women = WomenArrayList.getWomen(this);
+        women = WomenArrayList.getWomen();
 
         // Get the intent, verify the action and get the query
         Intent intent = getIntent();
@@ -49,7 +50,7 @@ public class SearchableActivity extends AppCompatActivity{
         final ArrayList<String> searchResults = new ArrayList<String>();
         final ArrayList<Integer> positions = new ArrayList<Integer>();
         for(int i = 0; i< women.size(); i++){
-            String name = women.get(i).getName();
+            String name = getString(women.get(i).getNameId());
             //strip accents
             String withoutAccents = Normalizer.normalize(name, Normalizer.Form.NFD);
             withoutAccents = withoutAccents.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
