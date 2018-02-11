@@ -53,6 +53,7 @@ import java.util.HashMap;
             // this is for the arrow in the menu bar to go back to parent activity
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             // Find views
             scrollView = findViewById(R.id.scrollView);
             // Question 1
@@ -116,6 +117,7 @@ import java.util.HashMap;
             //If the activity is opened for the first time, adds all the questions to the arrayList, shuffles them and then make a sublist with the first 5 questions.
             //The questions after the first one are made invisible.
             if (savedInstanceState == null) {
+
                 Resources resources = getResources();
                 TypedArray typedArray = resources.obtainTypedArray(R.array.quiz_questions);
                 int length = typedArray.length();
@@ -125,6 +127,7 @@ import java.util.HashMap;
                     questions.add(new QuizQuestion(question));
                 }
                 typedArray.recycle();
+
                 // Randomized questions
                 Collections.shuffle(questions);
                 questions = new ArrayList<QuizQuestion>(questions.subList(0,5));

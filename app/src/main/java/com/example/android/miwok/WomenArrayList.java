@@ -16,6 +16,7 @@ public class WomenArrayList {
     }
 
     // Create a list of women
+
     private static void InitData(Context context) {
         Resources resources = context.getResources();
         TypedArray typedArray = resources.obtainTypedArray(R.array.women_info);
@@ -33,6 +34,7 @@ public class WomenArrayList {
             women.add(new Woman(women_info, imageIds));
         }
         typedArray.recycle();
+
     }
 }
 

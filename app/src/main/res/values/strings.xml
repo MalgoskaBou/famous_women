@@ -22,6 +22,7 @@
     <!-- Category name for quiz [CHAR LIMIT=20] -->
     <string name="category_quiz">Quiz</string>
 
+
     <array name="women_info">
         <item>@array/MariaC</item>
         <item>@array/DaliaG</item>
@@ -51,6 +52,7 @@
         earned her higher degrees and conducted her subsequent scientific work. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie
         and with physicist Henri Becquerel. She won the 1911 Nobel Prize in Chemistry.</item>
     </string-array>
+
 
     <string-array name="DaliaG">
         <item>Dalia Grybauskaitė</item>
@@ -308,6 +310,7 @@
     <string name="subheader_details_profession">Profession</string>
     <string name="body_details_description">Description</string>
 
+
     <!--Menu Options -->
 
     <string name="about_application">About Application</string>
@@ -466,8 +469,20 @@
         <item>2</item>
     </string-array>
 
+    <!--Question 15-->
+    <string name="question15">What is the country of origin of Professor Dora Nkem Akunyili?</string>
+    <string name="answer15_1">Nigeria</string>
+    <string name="answer15_2">Togo</string>
+    <string name="answer15_3">South Africa</string>
+
+    <!--Question 16-->
+    <string name="question16">What was the year of birth of Professor Dora Nkem Akunyili?</string>
+    <string name="answer16_1">1987</string>
+    <string name="answer16_2">1954</string>
+    <string name="answer16_3">1960</string>
+
     <!--About screen-->
-    <string name="about_description">The Famous Women app contains interesting info and little quiz about different Famous Woman on the Earth.\n\nThis application was created as part of the UDACITY course - Google Developer Challenge Scholarship - Only by Ladies.\n\nApp was created on the initiative of MalgoskaG  https://github.com/MalgoskaG</string>
+    <string name="about_description">The Famous Women app contains interesting info and little quiz about different Famous Woman on the Earth.\n\nThis application was created as part of the UDACITY course - Google Developer Challenge Scholarship - Only by Ladies.\n\nApp was created on the coordinated by of MalgoskaG  https://github.com/MalgoskaG</string>
     <string name="about_contributions">All Contributors: https://github.com/MalgoskaG/famous_women/graphs/contributors</string>
     <string name="about_version">Version: 1.0</string>
     <string name="search_hint">Name of woman</string>
