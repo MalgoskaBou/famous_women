@@ -122,13 +122,4 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    @Override
-    public void startActivity(Intent intent){
-        //if it is a search intent
-        if(Intent.ACTION_SEARCH.equals(intent.getAction())){
-            intent.putExtra(WOMEN_LIST, women);
-        }
-        super.startActivity(intent);
-    }
 }
