@@ -55,10 +55,9 @@ public class Woman implements Parcelable{
         String country = womenInfo[3];
         Resources resources = context.getResources();
         mFlagImageId = resources.getIdentifier(country, "drawable", context.getPackageName());
-        String name_root = womenInfo[4];
-        String list_image_name = name_root + "_listimg";
+        String list_image_name = womenInfo[4];
         mListImageId = resources.getIdentifier(list_image_name, "drawable", context.getPackageName());
-        String portrait_image_name = name_root + "_portrait";
+        String portrait_image_name = list_image_name + "_portrait";
         mPortraitImageId = resources.getIdentifier(portrait_image_name, "drawable", context.getPackageName());
     }
 
