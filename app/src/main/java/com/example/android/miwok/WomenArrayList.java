@@ -24,12 +24,7 @@ public class WomenArrayList {
         for (int i = 0; i < length; ++i) {
             int id = typedArray.getResourceId(i, 0);
             String [] women_info = resources.getStringArray(id);
-            String list_image_name = "list_" + i;
-            String portrait_image_name = "portrait_" + i;
-            int[] imageIds = new int[2];
-            imageIds[0] = resources.getIdentifier(list_image_name, "drawable", context.getPackageName());
-            imageIds[1] = resources.getIdentifier(portrait_image_name, "drawable", context.getPackageName());
-            women.add(new Woman(context, women_info, imageIds));
+            women.add(new Woman(context, women_info));
         }
         typedArray.recycle();
 
