@@ -37,7 +37,7 @@
         <item>@array/AdaY</item>
         <item>@array/IlhanO</item>
         <item>@array/ValentinaT</item>
-        <item>@array/ProfDora</item>
+        <item>@array/DoraA</item>
     </array>
 
     <string-array name="MariaC">
@@ -52,6 +52,7 @@
         earned her higher degrees and conducted her subsequent scientific work. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie
         and with physicist Henri Becquerel. She won the 1911 Nobel Prize in Chemistry.</item>
         <item>poland</item>
+        <item>maria_sklodowska</item>
     </string-array>
 
 
@@ -83,6 +84,7 @@
         \nToday, Dalia is a modern leader and maintains a strong connection with the Lithuanian people through social media interaction,
         sharing her news, schedule and ideas.</item>
         <item>lithuania</item>
+        <item>dalia_grybauskaite</item>
     </string-array>
 
     <string-array name="ElisabetaR">
@@ -102,6 +104,7 @@
         until she fainted due to broken ribs, and was also scalped, burned, and beaten with a shovel. Upon her release from prison, she had no hair
         and she couldn\'t walk, as her knees had been destroyed by the torture.</item>
         <item>romania</item>
+        <item>elisabeta_rizea</item>
     </string-array>
 
     <string-array name="Theresa">
@@ -130,6 +133,7 @@
     Following Mother Teresa’s death, the Vatican began the process of beatification, which is the second step on the way to canonization and sainthood.
     Mother Teresa was formally beatified in October 2003 by Pope John Paul II.</item>
         <item>macedonia</item>
+        <item>mother_theresa</item>
     </string-array>
 
     <string-array name="WandaR">
@@ -158,6 +162,7 @@
         It is not known if Wanda Rutkiewicz summitted Kangchenjunga, her body was not found. She probably died during night or next day, while ascending or maybe descending from the top.
         </item>
         <item>poland</item>
+        <item>wanda_rutkiewicz</item>
     </string-array>
 
     <string-array name="AmeenahGF">
@@ -169,6 +174,7 @@
         Gurib-Fakim has also been the recipient of various international awards including the L\'Oréal-UNESCO Award for Women in Science (2007), Laureate for the National Economic and Social Council (2007), the CTA / NEPAD / AGRA / RUFORUM for \‘African Women in Science\’ and the African Union Award for Women in Science.She was also made Commander of the Order of the Star and Key of the Indian Ocean (CSK)
         by President Anerood Jugnauth in 2008 for her contribution in the education and the scientific sector. She was awarded the Order of the \‘Chevalier de l\’Ordre des Palmes Academiques\’ by the Government of France in 2009. Upon becoming President, she was automatically elevated to the highest civilian award of Grand Commander of the Star and Key of the Indian Ocean (GSCK).</item>
         <item>mauritius</item>
+        <item>ameenah_gurib_fakim</item>
     </string-array>
 
     <string-array name="EllenS">
@@ -181,6 +187,7 @@
         After supporting Charles Taylor\'s bloody rebellion against President Samuel Doe in 1990, Johnson Sirleaf ran unsuccessfully against Taylor in the 1997 presidential election. Taylor subsequently charged Johnson Sirleaf with treason. In 2005, after campaigning for the removal of President Taylor, Johnson Sirleaf took over as leader of the Unity Party.
         That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the \"Iron Lady\", as she was also known, became the world\'s first elected black female president and Africa\'s first elected female head of state.Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia.</item>
         <item>liberia</item>
+        <item>ellen_sirleaf</item>
     </string-array>
 
     <string-array name="MariaT">
@@ -192,6 +199,7 @@
         \nOne of her specialties were phase-change materials, including molten salts to store thermal energy. One of her materials of choice was Glauber\'s salt.elkes is considered one of the founders of solar thermal storage systems, earning her the nickname "the Sun Queen".
         \nShe moved to Texas in the 1970s and consulted with a variety of start-up solar companies, including Northrup Solar, which subsequently became ARCO Solar, and eventually BP Solar.</item>
         <item>hungary</item>
+        <item>maria_telkes</item>
     </string-array>
 
     <string-array name="MeriemeC">
@@ -219,6 +227,7 @@
         if they need to. Certainly, this Moroccan astronomer has come a long way since she first studied the night skies in the country of her
         birth.</item>
         <item>morocco</item>
+        <item>meriem_chadid</item>
     </string-array>
     
     <string-array name="IrenaS">
@@ -250,6 +259,7 @@
     \nWith the exception of diplomats who issued visas to help Jews flee Nazi-occupied Europe, Sendler saved more Jews than any other individual
     during the Holocaust.</item>
         <item>poland</item>
+        <item>irena_sendler</item>
     </string-array>
 
     <string-array name="AdaY">
@@ -262,6 +272,7 @@
         for Chemistry.
         \nHowever, she said herself that there was nothing special about a woman winning the Prize.</item>
         <item>israel</item>
+        <item>ada_yonath</item>
     </string-array>
 
     <string-array name="IlhanO">
@@ -283,6 +294,7 @@
         where she participated in the Muslim Student Association.
         She graduated with bachelor\'s degrees in political science and international studies.</item>
         <item>united_states_of_america</item>
+        <item>ilhan_omar</item>
     </string-array>
 
     <string-array name="ValentinaT">
@@ -304,10 +316,11 @@
         Their first child, a daughter named Elena, was a subject of medical interest because she was the first child born to parents who had both been exposed to space.
         Elena later went on to become a medical doctor. Tereshkova and Nikolayev divorced in 1980.</item>
         <item>russia</item>
+        <item>valentina_tereshkova</item>
     </string-array>
     
-    <string-array name="ProfDora">
-        <item>Professor Dora Nkem Akunyili</item>
+    <string-array name="DoraA">
+        <item>Dora Nkem Akunyili</item>
         <item>Pharmacist</item>
         <item>Professor Dora Nkem Akunyili (14 July 1954 – 7 June 2014) was the Director General of National Agency for Food and Drug Administration and Control (NAFDAC)
         \nof Nigeria and Nigerian Minister of Information and Communications from 2008 to 2010. She was a pharmacist and governmental administrator who gained international recognition and won several
@@ -317,6 +330,7 @@
         \ncynically packaged to look like the real drugs." Although Akunyili faced considerable risk to her personal safety in her fight to combat the issue of fake drugs, she was persistent and things turned around for the better.
         \n(Sources: https://en.wikipedia.org/wiki/Dora_Akunyili; https://web.archive.org/web/20060507083714/http://www.kwenu.com/moesmemo/moe2004/dora_danger.htm)</item>
         <item>nigeria</item>
+        <item>dora_akunyili</item>
     </string-array>
 
     <!--Details page subheader -->

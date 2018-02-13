@@ -35,7 +35,7 @@
         app:riv_oval="true"
         android:layout_marginLeft="16dp"
            android:layout_marginStart="16dp"
-        android:src="@drawable/list_1"/>
+        android:src="@drawable/dalia_grybauskaite_listimg"/>
 
     <RelativeLayout
         android:id="@+id/text_container"
@@ -83,6 +83,6 @@
         app:riv_oval="true"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/flag_1"/>
+        android:src="@drawable/dalia_grybauskaite_listimg"/>
 
 </LinearLayout>
