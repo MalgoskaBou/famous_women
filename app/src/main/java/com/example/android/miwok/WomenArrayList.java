@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class WomenArrayList {
     private static ArrayList<Woman> women = new ArrayList<Woman>();
-
     public static ArrayList<Woman> getWomen(Context context) {
         if (women.size() == 0)
             InitData(context);
