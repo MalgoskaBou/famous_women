@@ -11,6 +11,26 @@ ___
 
 <h2>The project moved forward :)</h2>
 
+Updated **14.02.2018**
+
+The application takes shape and looks better and better. We would love to let more people know about our work. We are developing very fast and we are programming better and better 💪
+
+New update of our application 😄 :
+
+**@Oya Canli** - added search options in the list, and she's still working on improving the code. The code is becoming more and more modern and it's really much easier to work with it now.
+
+**@Greta Gr** - has implemented a beautiful collapsing toolbar animation in the detail screen - now it looks really cool and dynamic. She also came up with a great idea of using vector icons flag - so we have fewer images to add.
+
+**JuliaR** - refactorized the code, now everything is very clear, and thanks to **@Alexandra**'s great idea we have now added a voice search function. Keep going ;)
+
+**@Ami** - add an option to sort the list - now regardless of the order in the table - our entries are displayed in alphabetical order.
+
+**@SvCat** - designed and added a screen about the application 😄 the last missing part in our work.
+
+![image](https://user-images.githubusercontent.com/33101796/36207715-24bf7988-1197-11e8-8c12-bc89dc8d191a.png)
+*the ability to search in the list*
+___
+
 Updated **08.01.2018**
 
 **@Ami** and **@Oya Canli** solved the problem with the quiz - after the screen rotation the questions were not visible  - they used very interesting solutions (Parcelable interface and HashMap) - now everything works perfectly 😄
