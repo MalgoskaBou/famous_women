@@ -7,6 +7,7 @@ package com.example.android.miwok;
 //import android.graphics.Movie;
 import android.widget.Filter;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class CustomFilter extends Filter {
@@ -24,33 +25,29 @@ public class CustomFilter extends Filter {
     protected FilterResults performFiltering(CharSequence constraint) {
 
         //RESULTS
-        FilterResults results=new FilterResults();
+        FilterResults results = new FilterResults();
 
         //VALIDATION
-        if(constraint != null && constraint.length()>0)
-        {
+        if (constraint != null && constraint.length() > 0) {
 
             //CHANGE TO UPPER FOR CONSISTENCY
-            constraint=constraint.toString().toUpperCase();
+            constraint = constraint.toString().toUpperCase();
 
-            ArrayList<Woman> filteredWoman=new ArrayList<Woman>();
+            ArrayList<Woman> filteredWoman = new ArrayList<Woman>();
 
             //LOOP THRU FILTER LIST
-            for(int i=0;i<filterList.size();i++)
-            {
+            for (int i = 0; i < filterList.size(); i++) {
                 //FILTER
-                if(filterList.get(i).getName().toUpperCase().contains(constraint))
-                {
+                if (filterList.get(i).getName().toUpperCase().contains(constraint)) {
                     filteredWoman.add(filterList.get(i));
                 }
             }
 
-            results.count=filteredWoman.size();
-            results.values=filteredWoman;
-        }else
-        {
-            results.count=filterList.size();
-            results.values=filterList;
+            results.count = filteredWoman.size();
+            results.values = filteredWoman;
+        } else {
+            results.count = filterList.size();
+            results.values = filterList;
         }
 
         return results;
@@ -60,9 +57,12 @@ public class CustomFilter extends Filter {
 
     @Override
     protected void publishResults(CharSequence constraint, FilterResults results) {
+        adapter.setFilteredData((List<Woman>) results.values);
 
-        adapter.women= (ArrayList<Woman>) results.values;
-        adapter.notifyDataSetChanged();
+//        adapter.women= (ArrayList<Woman>) results.values;
+//        adapter.notifyDataSetChanged();
 
     }
 }
+
+

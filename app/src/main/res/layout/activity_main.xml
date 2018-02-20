@@ -20,6 +20,7 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
+
         <include layout="@layout/word_list"/>
 
     </android.support.design.widget.AppBarLayout>

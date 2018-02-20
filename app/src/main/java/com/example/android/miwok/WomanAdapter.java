@@ -16,6 +16,7 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Filter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * {@link WomanAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
@@ -35,7 +37,8 @@ public class WomanAdapter extends ArrayAdapter<Woman> {
 
     //=========NEW CODE
     ArrayList<Woman> women;
-    ArrayList<Woman> filterList;
+    ArrayList<Woman> filterList = new ArrayList<>();
+    ArrayList<Woman> wholeList;
     CustomFilter filter;
     //=========NEW CODE-
 
@@ -43,18 +46,29 @@ public class WomanAdapter extends ArrayAdapter<Woman> {
      * Create a new {@link WomanAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
-     * @param women is the list of {@link Woman}s to be displayed.
+     * @param women   is the list of {@link Woman}s to be displayed.
      */
     public WomanAdapter(Context context, ArrayList<Woman> women) {
         super(context, 0, women);
 
-
-       //===========NEW CODE
+        //===========NEW CODE
         this.women = women;
-        this.filterList = women;
-
+        this.wholeList = women;
+        setFilteredData(wholeList);
     }
 
+    public void setFilteredData(List<Woman> newData) {
+        if (filterList != null) {
+            filterList.clear();
+        }
+        filterList.addAll(newData);
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public int getCount() {
+        return filterList.size();
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -69,7 +83,7 @@ public class WomanAdapter extends ArrayAdapter<Woman> {
 
 
         // Get the {@link Woman} object located at this position in the list
-        Woman currentWoman = getItem(position);
+        Woman currentWoman = filterList.get(position);
 
         // Find the TextView in the list_item.xml layout with the ID name_text_view.
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
@@ -99,16 +113,11 @@ public class WomanAdapter extends ArrayAdapter<Woman> {
         return listItemView;
     }
 
+
     //=======NEW CODE
     @Override
     public Filter getFilter() {
-
-        if(filter==null)
-        {
-            filter=new CustomFilter(filterList,this);
-        }
-        return filter;
-
+        return new CustomFilter(wholeList, this);
     }
-    //=======NEW CODE -
 }
+//=======NEW CODE -}

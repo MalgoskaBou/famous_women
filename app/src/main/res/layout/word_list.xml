@@ -20,13 +20,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:drawSelectorOnTop="true"
-    android:background="@color/grey_background"
+    android:background="@color/text_color_heading_white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     />
 </android.support.design.widget.CoordinatorLayout>
