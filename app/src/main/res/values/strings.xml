@@ -321,6 +321,8 @@
         <item>@array/question14</item>
         <item>@array/question15</item>
         <item>@array/question16</item>
+		<item>@array/question17</item>
+		<item>@array/question18</item>
     </array>
 
     <string-array name="question1">
@@ -449,6 +451,22 @@
         <item>1954</item>
         <item>1960</item>
         <item>2</item>
+    </string-array>
+	
+	 <string-array name="question17">
+        <item>What nationality Maria Skłodowska-Curie was?</item>
+        <item>French</item>
+        <item>Polish</item>
+        <item>American</item>
+        <item>2</item>
+    </string-array>
+	
+	<string-array name="question18">
+        <item>Where did Wanda Rutkiewicz die?</item>
+        <item>On Kangchenjunga mountain</item>
+        <item>On Mount Everest mountain</item>
+        <item>In hospital due to cancer</item>
+        <item>1</item>
     </string-array>
 
     <!--About screen-->
