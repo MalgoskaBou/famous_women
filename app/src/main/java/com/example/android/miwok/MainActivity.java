@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -36,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Woman> women = new ArrayList<>();
     public static final String CHOSEN_WOMAN = "chosen_woman";
-    public static final String WOMEN_LIST = "women_list";
+    //public static final String WOMEN_LIST = "women_list";
+    SearchView searchView;
+    WomanAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
         // ( ͡° ͜ʖ ͡°)
 
         // Get a list of women
-        women = WomenArrayList.getWomen(this);
+       women = WomenArrayList.getWomen(this);
+
+
+
 
         // sort list by name
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -67,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         // Create an {@link WomanAdapter}, whose data source is a list of {@link Woman}s. The
 
         // adapter knows how to create list items for each item in the list.
-        WomanAdapter adapter = new WomanAdapter(this, women, R.color.category_numbers);
+       adapter = new WomanAdapter(this, women);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -77,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         // Make the {@link ListView} use the {@link WomanAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Woman} in the list.
         listView.setAdapter(adapter);
+
 
         // Set a click listener to play the audio when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -92,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                startActivity(myIntent);
             }
         });
+
     }
 
     // this is to create the menu bar
@@ -99,9 +108,27 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
-        final SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+
+
+        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
         SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+        //added filter to list (dynamic change)
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+                adapter.getFilter().filter(query);
+                Log.v("what I write search f ", query);
+                Log.v("size of table changing ", adapter.women.size()+"");
+                return false;
+            }
+        });
 
         return true;
     }

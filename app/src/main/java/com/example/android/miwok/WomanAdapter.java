@@ -16,13 +16,13 @@
 package com.example.android.miwok;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Filter;
 
 import java.util.ArrayList;
 
@@ -30,31 +30,43 @@ import java.util.ArrayList;
  * {@link WomanAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
  * based on a data source, which is a list of {@link Woman} objects.
  */
-public class WomanAdapter extends ArrayAdapter<Woman>  {
+public class WomanAdapter extends ArrayAdapter<Woman> {
 
-    /** Resource ID for the background color for this list of words */
-    private int mColorResourceId;
+
+    //=========NEW CODE
+    ArrayList<Woman> women;
+    ArrayList<Woman> filterList;
+    CustomFilter filter;
+    //=========NEW CODE-
 
     /**
      * Create a new {@link WomanAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param women is the list of {@link Woman}s to be displayed.
-     * @param colorResourceId is the resource ID for the background color for this list of women
      */
-    public WomanAdapter(Context context, ArrayList<Woman> women, int colorResourceId) {
+    public WomanAdapter(Context context, ArrayList<Woman> women) {
         super(context, 0, women);
-        mColorResourceId = colorResourceId;
+
+
+       //===========NEW CODE
+        this.women = women;
+        this.filterList = women;
+
     }
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+
         // Check if an existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
+
 
         // Get the {@link Woman} object located at this position in the list
         Woman currentWoman = getItem(position);
@@ -82,16 +94,21 @@ public class WomanAdapter extends ArrayAdapter<Woman>  {
         flagImage.setImageResource(currentWoman.getFlagImageId());
 
 
-
-        // Set the theme color for the list item
-        View textContainer = listItemView.findViewById(R.id.text_container);
-        // Find the color that the resource ID maps to
-        int color = ContextCompat.getColor(getContext(), mColorResourceId);
-        // Set the background color of the text container View
-        textContainer.setBackgroundColor(color);
-
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView
         return listItemView;
     }
+
+    //=======NEW CODE
+    @Override
+    public Filter getFilter() {
+
+        if(filter==null)
+        {
+            filter=new CustomFilter(filterList,this);
+        }
+        return filter;
+
+    }
+    //=======NEW CODE -
 }
