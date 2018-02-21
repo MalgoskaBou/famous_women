@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Woman> women = new ArrayList<>();
     public static final String CHOSEN_WOMAN = "chosen_woman";
-    //public static final String WOMEN_LIST = "women_list";
+    public static final String WOMEN_LIST = "women_list";
     SearchView searchView;
     WomanAdapter adapter;
 
@@ -52,29 +52,25 @@ public class MainActivity extends AppCompatActivity {
 
         // ( ͡° ͜ʖ ͡°)
 
-        // Get a list of women
-       women = WomenArrayList.getWomen(this);
-
-
-
-
-        // sort list by name
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            women.sort(new Comparator<Woman>() {
-                @Override
-                public int compare(Woman o1, Woman o2) {
-
-                    String name1 = o1.getName();
-                    String name2 = o2.getName();
-                    return name1.compareTo(name2);
-                }
-            });
+        if(savedInstanceState == null){
+            // Get the list of all women
+            women = WomenArrayList.getWomen(this);
+        } else {
+            //Get the list of all or filtered women
+            women = (ArrayList<Woman>)savedInstanceState.getSerializable(WOMEN_LIST);
+            //searchView.onActionViewExpanded();
         }
 
         // Create an {@link WomanAdapter}, whose data source is a list of {@link Woman}s. The
 
         // adapter knows how to create list items for each item in the list.
-       adapter = new WomanAdapter(this, women);
+        adapter = new WomanAdapter(this, women);
+        women = adapter.filterList;
+        Intent intent = getIntent();
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            adapter.getFilter().filter(query);
+        }
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -91,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                //We need to pass only the position. We can retrieve the rest from the list on the next page.
-                // Others were redundant I erased them(Oya)
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
                 myIntent.putExtra(CHOSEN_WOMAN, women.get(position));
@@ -108,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
-
-
         searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
         SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
@@ -148,5 +140,18 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putSerializable(WOMEN_LIST, women);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this , MainActivity.class);
+        startActivity(intent);
     }
 }

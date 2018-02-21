@@ -3,8 +3,11 @@ package com.example.android.miwok;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.os.Build;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class WomenArrayList {
     private static ArrayList<Woman> women = new ArrayList<Woman>();
@@ -31,6 +34,20 @@ public class WomenArrayList {
         women.add(new Woman(context, R.array.DoraA, R.drawable.dora_akunyili, R.drawable.dora_akunyili_portrait, R.drawable.nigeria));
         women.add(new Woman(context, R.array.ValentinaT, R.drawable.valentina_tereshkova, R.drawable.valentina_tereshkova_portrait, R.drawable.russia));
         women.add(new Woman(context, R.array.WandaR, R.drawable.wanda_rutkiewicz, R.drawable.wanda_rutkiewicz_portrait, R.drawable.poland));
+
+        // sort list by name
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            women.sort(new Comparator<Woman>() {
+                @Override
+                public int compare(Woman o1, Woman o2) {
+                    String name1 = Normalizer.normalize(o1.getName(), Normalizer.Form.NFD);
+                    name1 = name1.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+                    String name2 = Normalizer.normalize(o2.getName(), Normalizer.Form.NFD);
+                    name2 = name2.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+                    return name1.compareTo(name2);
+                }
+            });
+        }
     }
 }
 
