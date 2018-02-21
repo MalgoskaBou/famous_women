@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Woman> women = new ArrayList<>();
     public static final String CHOSEN_WOMAN = "chosen_woman";
     public static final String WOMEN_LIST = "women_list";
+    public static final String SEARCH_CLICKED = "search_clicked";
     SearchView searchView;
     WomanAdapter adapter;
+    //boolean searchClicked;
 
 
     @Override
@@ -52,14 +54,15 @@ public class MainActivity extends AppCompatActivity {
 
         // ( ͡° ͜ʖ ͡°)
 
-        if(savedInstanceState == null){
+        women = WomenArrayList.getWomen(this);
+        /*if(savedInstanceState == null){
             // Get the list of all women
             women = WomenArrayList.getWomen(this);
         } else {
             //Get the list of all or filtered women
             women = (ArrayList<Woman>)savedInstanceState.getSerializable(WOMEN_LIST);
-            //searchView.onActionViewExpanded();
-        }
+            searchClicked = savedInstanceState.getBoolean(SEARCH_CLICKED);
+        }*/
 
         // Create an {@link WomanAdapter}, whose data source is a list of {@link Woman}s. The
 
@@ -102,7 +105,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
+        Log.d("onCreateOptionsMenu", "");
         searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        /*if(searchClicked){
+            menu.getItem(2).expandActionView();
+            searchView.onActionViewExpanded();
+            Log.d("search clicked?", "" + searchClicked);
+        }*/
         SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
@@ -116,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String query) {
                 adapter.getFilter().filter(query);
+                //searchClicked = true;
                 Log.v("what I write search f ", query);
                 Log.v("size of table changing ", adapter.women.size()+"");
                 return false;
@@ -142,11 +152,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
+    /*@Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putSerializable(WOMEN_LIST, women);
+        outState.putBoolean(SEARCH_CLICKED, searchClicked);
         super.onSaveInstanceState(outState);
-    }
+    }*/
 
     @Override
     public void onBackPressed() {
