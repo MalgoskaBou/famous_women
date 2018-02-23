@@ -16,7 +16,6 @@
 package com.example.android.miwok;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +38,6 @@ public class WomanAdapter extends ArrayAdapter<Woman> {
     ArrayList<Woman> women;
     ArrayList<Woman> filterList = new ArrayList<>();
     ArrayList<Woman> wholeList;
-    CustomFilter filter;
     //=========NEW CODE-
 
     /**
