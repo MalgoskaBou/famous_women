@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         Intent intent = new Intent(this , MainActivity.class);
+        finish();
         startActivity(intent);
     }
 }

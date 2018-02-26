@@ -462,6 +462,7 @@
     <string name="search_hint">Name of woman</string>
     <string name="credits_flags"> Flag icons made by <a href="https://www.freepik.com/">Freepik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a>.</string>
     <string name="search">Search</string>
+    <string name="submit_answer">Submit answer</string>
 
 
 </resources>
