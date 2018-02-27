@@ -115,10 +115,12 @@ public class DetailsActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.about_application:
                 Intent intent1 = new Intent(this, AboutApplication.class);
+                finish();
                 this.startActivity(intent1);
                 return true;
             case R.id.quiz:
                 Intent intent2 = new Intent(this, QuizActivity.class);
+                finish();
                 this.startActivity(intent2);
                 return true;
             default:
