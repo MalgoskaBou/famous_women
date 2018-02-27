@@ -50,15 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         // ( ͡° ͜ʖ ͡°)
 
-        if(savedInstanceState == null){
-            // Get the list of all women
-            women = WomenArrayList.getWomen(this);
-        } else {
-            //Get the list of all or filtered women
-            women = (ArrayList<Woman>)savedInstanceState.getSerializable(WOMEN_LIST);
-        }
-
-
+        women = WomenArrayList.getWomen(this);
 
         // Find the {@link RecyclerView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link RecyclerView} with the view ID called list, which is declared in the
@@ -74,8 +66,11 @@ public class MainActivity extends AppCompatActivity {
         // {@link RecyclerView} will display list items for each {@link Woman} in the list.
         recyclerView.setAdapter(adapter);
 
-
-
+        Intent intent = getIntent();
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            adapter.getFilter().filter(query);
+        }
     }
 
     // this is to create the menu
@@ -130,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(this , MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         finish();
         startActivity(intent);
     }

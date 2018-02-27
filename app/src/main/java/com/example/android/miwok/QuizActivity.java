@@ -36,7 +36,7 @@ import java.util.HashMap;
         private final static String WRONG_COUNT = "number of wrong answers";
 
         float score;
-        int currentQuestion, correctAnsNmb, incorrectAnsNmb;
+        int currentQuestion, correctAnsNmb, incorrectAnsNmb, arrayLength;
         ArrayList<QuizQuestion> questions = new ArrayList<QuizQuestion>();
         ArrayList<Integer> wrongAnswers = new ArrayList<Integer>();
         HashMap<Integer, RadioGroup> rgHmap;
@@ -49,14 +49,11 @@ import java.util.HashMap;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             binding = DataBindingUtil.setContentView(this, R.layout.activity_quiz);
-
             // this is for the arrow in the menu bar to go back to parent activity
             setSupportActionBar(binding.toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
             // Hide result views
             binding.layoutResult.setVisibility(View.GONE);
-
             //HashMaps pair the question numbers with the corresponding questions, answers, and submit buttons.
             // The aim is to be able to put them in a loop, so that we need significantly less lines of code.
             rgHmap = new HashMap<Integer, RadioGroup>();
@@ -83,24 +80,12 @@ import java.util.HashMap;
             //If the activity is opened for the first time, adds all the questions to the arrayList, shuffles them and then make a sublist with the first 5 questions.
             //The questions after the first one are made invisible.
             if (savedInstanceState == null) {
-
-                Resources resources = getResources();
-                TypedArray typedArray = resources.obtainTypedArray(R.array.quiz_questions);
-                int length = typedArray.length();
-                for (int i = 0; i < length; ++i) {
-                    int id = typedArray.getResourceId(i, 0);
-                    String[] question = resources.getStringArray(id);
-                    questions.add(new QuizQuestion(question));
-                }
-                typedArray.recycle();
-
-                // Randomized questions
-                Collections.shuffle(questions);
-                questions = new ArrayList<QuizQuestion>(questions.subList(0,5));
+                questions = extractQuestions();
                 currentQuestion = 0;
                 score = 0;
                 isResultShown = false;
-                for(int i = 1 ; i<questions.size() ; i++){
+                arrayLength = questions.size();
+                for(int i = 1 ; i<arrayLength ; i++){
                     rgHmap.get(i).setVisibility(View.INVISIBLE);
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
@@ -137,7 +122,8 @@ import java.util.HashMap;
                         selectedAnswer.setPadding(16, 0, 0, 0);
                     }
                 }
-                for(int i = currentQuestion+1 ; i<questions.size() ; i++){
+                arrayLength = questions.size();
+                for(int i = currentQuestion+1 ; i<arrayLength ; i++){
                     rgHmap.get(i).setVisibility(View.INVISIBLE);
                     questionHmap.get(i).setVisibility(View.INVISIBLE);
                     submitHmap.get(i).setVisibility(View.INVISIBLE);
@@ -150,7 +136,7 @@ import java.util.HashMap;
             }
 
             // Display questions and answers
-            for(int j = 0; j< questions.size(); j++){
+            for(int j = 0; j< arrayLength; j++){
                 questionHmap.get(j).setText(questions.get(j).getQuestion());
                 RadioButton option1 = (RadioButton) rgHmap.get(j).getChildAt(1);
                 RadioButton option2 = (RadioButton) rgHmap.get(j).getChildAt(2);
@@ -180,6 +166,23 @@ import java.util.HashMap;
                     break;
                 }
             }
+        }
+
+        public ArrayList<QuizQuestion> extractQuestions(){
+            Resources resources = getResources();
+            TypedArray typedArray = resources.obtainTypedArray(R.array.quiz_questions);
+            int length = typedArray.length();
+            for (int i = 0; i < length; ++i) {
+                int id = typedArray.getResourceId(i, 0);
+                String[] question = resources.getStringArray(id);
+                questions.add(new QuizQuestion(question));
+            }
+            typedArray.recycle();
+
+            // Randomized questions
+            Collections.shuffle(questions);
+            questions = new ArrayList<QuizQuestion>(questions.subList(0,5));
+            return questions;
         }
 
         //Common submit method for all questions
@@ -215,19 +218,19 @@ import java.util.HashMap;
                 submitHmap.get(numberOfQuestion).setVisibility(View.GONE);
                 //Make the next question visible
                 numberOfQuestion++;
-                if(numberOfQuestion<questions.size()){
+                if(numberOfQuestion<arrayLength){
                     questionHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
                     rgHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
                     submitHmap.get(numberOfQuestion).setVisibility(View.VISIBLE);
                 }
                 // Automatically scroll to next question's submit button
-                if (numberOfQuestion < submitHmap.size())
+                if (numberOfQuestion < arrayLength)
                     submitHmap.get(numberOfQuestion).getParent().requestChildFocus(submitHmap.get(numberOfQuestion), submitHmap.get(numberOfQuestion));
                 // Last question - display result
-                if (numberOfQuestion == submitHmap.size()){
+                if (numberOfQuestion == arrayLength){
                     score = score / 5 * 100;
                     correctAnsNmb = correctAnswersNmb();
-                    incorrectAnsNmb = questions.size() - correctAnsNmb;
+                    incorrectAnsNmb = arrayLength - correctAnsNmb;
                     displayResult(score, correctAnsNmb, incorrectAnsNmb);
                     isResultShown = true;
                 }
@@ -266,7 +269,7 @@ import java.util.HashMap;
 
         public int correctAnswersNmb() {
             int correctNmb = 0;
-            for (int i = 0; i < questions.size(); i++){
+            for (int i = 0; i < arrayLength; i++){
                 int selectedRadioButtonID = rgHmap.get(i).indexOfChild(findViewById(rgHmap.get(i).getCheckedRadioButtonId()));
                 if (selectedRadioButtonID == questions.get(i).getCorrectAnswer()){
                     correctNmb ++;

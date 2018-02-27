@@ -7,6 +7,7 @@ package com.example.android.miwok;
 //import android.graphics.Movie;
 import android.widget.Filter;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 
@@ -33,13 +34,18 @@ public class CustomFilter extends Filter {
             //STORE OUR FILTERED PLAYERS
             ArrayList<Woman> filteredPlayers=new ArrayList<>();
 
-            for (int i=0;i<filterList.size();i++)
+            for (Woman row: filterList)
             {
+                String query = constraint.toString().toUpperCase();
+                query = Normalizer.normalize(query, Normalizer.Form.NFD);
+                query = query.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+                String name = Normalizer.normalize(row.getName(), Normalizer.Form.NFD);
+                name = name.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
                 //CHECK
-                if(filterList.get(i).getName().toUpperCase().contains(constraint))
+                if (name.toUpperCase().contains(query))
                 {
                     //ADD PLAYER TO FILTERED PLAYERS
-                    filteredPlayers.add(filterList.get(i));
+                    filteredPlayers.add(row);
                 }
             }
 
