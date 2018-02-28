@@ -141,6 +141,6 @@
         app:layout_anchorGravity="bottom|right|end"
         android:layout_marginRight="@dimen/margin_standard"
         android:layout_marginEnd="@dimen/margin_standard"
-        android:src="@drawable/flag_1">
+        android:src="@drawable/lithuania">
     </com.makeramen.roundedimageview.RoundedImageView>
 </android.support.design.widget.CoordinatorLayout>

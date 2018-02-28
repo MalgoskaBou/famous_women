@@ -15,6 +15,8 @@
  */
 package com.example.android.miwok;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -44,14 +46,15 @@ public class Woman implements Parcelable{
 
 
 
-    public Woman(String[] womenInfo, int[] imageIds) {
-
+    public Woman(Context context, int womenArrayId, int listImageId, int portraitImageId, int flagImageId) {
+        Resources resources = context.getResources();
+        String[] womenInfo = resources.getStringArray(womenArrayId);
         mName = womenInfo[0];
         mProfession = womenInfo[1];
         mDescription = womenInfo[2];
-        mListImageId = imageIds[0];
-        mFlagImageId = imageIds[1];
-        mPortraitImageId = imageIds[2];
+        mListImageId = listImageId;
+        mPortraitImageId = portraitImageId;
+        mFlagImageId = flagImageId;
     }
 
     //Get the string resource ID for the name

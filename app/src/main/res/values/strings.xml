@@ -23,23 +23,6 @@
     <string name="category_quiz">Quiz</string>
 
 
-    <array name="women_info">
-        <item>@array/MariaC</item>
-        <item>@array/DaliaG</item>
-        <item>@array/ElisabetaR</item>
-        <item>@array/Theresa</item>
-        <item>@array/WandaR</item>
-        <item>@array/AmeenahGF</item>
-        <item>@array/EllenS</item>
-        <item>@array/MariaT</item>
-        <item>@array/MeriemeC</item>
-        <item>@array/IrenaS</item>
-        <item>@array/AdaY</item>
-        <item>@array/IlhanO</item>
-        <item>@array/ValentinaT</item>
-        <item>@array/ProfDora</item>
-    </array>
-
     <string-array name="MariaC">
         <item>Maria Skłodowska-Curie</item>
         <item>Physicist and chemist</item>
@@ -173,8 +156,7 @@
         After returning to Liberia, Ellen Johnson Sirleaf served as assistant minister of Finance in President William Tolbert\'s administration. In 1980, Tolbert was overthrown and killed by army sergeant Samuel Doe, who represented the Krahn ethnic group. Johnson Sirleaf went into exile in Nairobi, Kenya, as well as in the United States, where she worked as an executive in the international banking community.
         In 1985, Johnson Sirleaf returned to Liberia and ran for a seat in the Senate, but when she spoke out against Doe\'s military regime, she was sentenced to 10 years in prison. She served a partial sentence before moving to Washington, D.C. When she returned to her native country for a third time in 1997, it was as an economist, working for the World Bank and Citibank in Africa.
         After supporting Charles Taylor\'s bloody rebellion against President Samuel Doe in 1990, Johnson Sirleaf ran unsuccessfully against Taylor in the 1997 presidential election. Taylor subsequently charged Johnson Sirleaf with treason. In 2005, after campaigning for the removal of President Taylor, Johnson Sirleaf took over as leader of the Unity Party.
-        That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the \"Iron Lady\", as she was also known, became the world\'s first elected black female president and Africa\'s first elected female head of state.
-        Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia.</item>
+        That year, promising economic development and an end to corruption and civil war, she was elected to the Liberian presidency. When she was inaugurated in 2006, Johnson Sirleaf, or the \"Iron Lady\", as she was also known, became the world\'s first elected black female president and Africa\'s first elected female head of state.Ellen Johnson Sirleaf has four sons and six grandchildren, some of whom live in Atlanta, Georgia.</item>
     </string-array>
 
     <string-array name="MariaT">
@@ -294,8 +276,8 @@
         Elena later went on to become a medical doctor. Tereshkova and Nikolayev divorced in 1980.</item>
     </string-array>
     
-    <string-array name="ProfDora">
-        <item>Professor Dora Nkem Akunyili</item>
+    <string-array name="DoraA">
+        <item>Dora Nkem Akunyili</item>
         <item>Pharmacist</item>
         <item>Professor Dora Nkem Akunyili (14 July 1954 – 7 June 2014) was the Director General of National Agency for Food and Drug Administration and Control (NAFDAC)
         \nof Nigeria and Nigerian Minister of Information and Communications from 2008 to 2010. She was a pharmacist and governmental administrator who gained international recognition and won several
@@ -339,6 +321,8 @@
         <item>@array/question14</item>
         <item>@array/question15</item>
         <item>@array/question16</item>
+		<item>@array/question17</item>
+		<item>@array/question18</item>
     </array>
 
     <string-array name="question1">
@@ -468,18 +452,22 @@
         <item>1960</item>
         <item>2</item>
     </string-array>
-
-    <!--Question 15-->
-    <string name="question15">What is the country of origin of Professor Dora Nkem Akunyili?</string>
-    <string name="answer15_1">Nigeria</string>
-    <string name="answer15_2">Togo</string>
-    <string name="answer15_3">South Africa</string>
-
-    <!--Question 16-->
-    <string name="question16">What was the year of birth of Professor Dora Nkem Akunyili?</string>
-    <string name="answer16_1">1987</string>
-    <string name="answer16_2">1954</string>
-    <string name="answer16_3">1960</string>
+	
+	 <string-array name="question17">
+        <item>What nationality Maria Skłodowska-Curie was?</item>
+        <item>French</item>
+        <item>Polish</item>
+        <item>American</item>
+        <item>2</item>
+    </string-array>
+	
+	<string-array name="question18">
+        <item>Where did Wanda Rutkiewicz die?</item>
+        <item>On Kangchenjunga mountain</item>
+        <item>On Mount Everest mountain</item>
+        <item>In hospital due to cancer</item>
+        <item>1</item>
+    </string-array>
 
     <!--About screen-->
     <string name="about_description">The Famous Woman presents you some of the many strong and inspirational
@@ -490,6 +478,7 @@
     <string name="about_contributions">All Contributors: https://github.com/MalgoskaG/famous_women/graphs/contributors</string>
     <string name="about_version">Version: 1.0</string>
     <string name="search_hint">Name of woman</string>
+    <string name="credits_flags"> Flag icons made by <a href="https://www.freepik.com/">Freepik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a>.</string>
 
 
 </resources>
