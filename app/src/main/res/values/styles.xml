@@ -42,5 +42,28 @@
         <item name="android:textSize">@dimen/fontSize_label</item>
     </style>
 
+    <style name="radiobutton_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">@dimen/margin_standard</item>
+        <item name="android:textColor">@color/text_color_heading</item>
+    </style>
+
+    <style name="submit_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:padding">@dimen/margin_standard</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="radiogroup_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/margin_standard</item>
+    </style>
+
 
 </resources>
