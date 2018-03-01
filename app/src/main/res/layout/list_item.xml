@@ -24,15 +24,13 @@
     android:minHeight="@dimen/list_item_height">
 
 
-       <com.makeramen.roundedimageview.RoundedImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/image"
            android:layout_height="@dimen/flag_and_image_height"
            android:layout_gravity="center"
         android:layout_width="0dp"
         android:layout_weight="1"
-        app:riv_corner_radius="10dip"
-        app:riv_oval="true"
         android:layout_marginLeft="16dp"
            android:layout_marginStart="16dp"
         android:src="@drawable/dalia_grybauskaite"/>
@@ -72,15 +70,13 @@
 
     </RelativeLayout>
 
-    <com.makeramen.roundedimageview.RoundedImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/flag"
         android:layout_height="@dimen/flag_and_image_height"
         android:layout_gravity="center"
         android:layout_width="0dp"
         android:layout_weight="1"
-        app:riv_corner_radius="10dip"
-        app:riv_oval="true"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/dalia_grybauskaite"/>

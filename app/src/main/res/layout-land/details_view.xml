@@ -130,17 +130,14 @@
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <com.makeramen.roundedimageview.RoundedImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/flag_of_country"
         android:layout_height="@dimen/flag_details_height"
         android:layout_width="@dimen/flag_details_width"
-        app:riv_corner_radius="10dip"
-        app:riv_oval="true"
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="bottom|right|end"
         android:layout_marginRight="@dimen/margin_standard"
         android:layout_marginEnd="@dimen/margin_standard"
-        android:src="@drawable/lithuania">
-    </com.makeramen.roundedimageview.RoundedImageView>
+        android:src="@drawable/lithuania"/>
 </android.support.design.widget.CoordinatorLayout>

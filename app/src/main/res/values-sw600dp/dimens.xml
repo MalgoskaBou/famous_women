@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!-- Height of each list item -->
+    <dimen name="list_item_height">88dp</dimen>
+    <dimen name="quiz_height">60dp</dimen>
+    <dimen name="fontSize_body">16sp</dimen>
+    <dimen name="fontSize_subheading">16sp</dimen>
+    <dimen name="fontSize_heading">22sp</dimen>
+    <dimen name="fontSize_label">20sp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="halfmargin_standard">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="flag_and_image_height">60dp</dimen>
+    <dimen name="flag_details_width">75dp</dimen>
+    <dimen name="flag_details_height">75dp</dimen>
+    <dimen name="detail_backdrop_height">400dp</dimen>
+</resources>
