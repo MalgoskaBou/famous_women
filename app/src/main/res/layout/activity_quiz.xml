@@ -44,7 +44,8 @@
 
                     <RadioButton
                         android:id="@+id/rb_answer1_1"
-                        style="@style/radiobutton_style" />
+                        style="@style/radiobutton_style"
+                        android:checked="false" />
 
                     <RadioButton
                         android:id="@+id/rb_answer1_2"
@@ -263,7 +264,7 @@
 
                     <Button
                         android:id="@+id/restart"
-                        android:text="Restart"
+                        android:text="@string/restart"
                         android:textAllCaps="true"
                         android:onClick="restartactivity"
                         style="@style/submit_button" />

@@ -61,7 +61,7 @@
         of the whole Europe. \"I dedicate the Charlemagne Prize, awarded by the people of Aachen, to the Lithuanian people. It signifies the
         recognition of our united efforts as we fought for Lithuania\'s freedom and its place in Europe as well as to overcome the economic crisis.
         This award is also a commitment to assume responsibility for bringing all the nations together to shape the future of Europe,\" the President
-        emphasized at the award ceremony. \nDalia Grybauskaitė takes 68 place in Frobes The World\'s 100 Most Powerful Women list (2017 ranking).
+        emphasized at the award ceremony. \nDalia Grybauskaitė takes 68 place in Forbes The World\'s 100 Most Powerful Women list (2017 ranking).
         \nToday, Dalia is a modern leader and maintains a strong connection with the Lithuanian people through social media interaction,
         sharing her news, schedule and ideas.</item>
     </string-array>
@@ -470,7 +470,7 @@
     </string-array>
 
     <!--About screen-->
-    <string name="about_description">The Famous Woman presents you some of the many strong and inspirational
+    <string name="about_description">The Famous Women presents you some of the many strong and inspirational
         women of the world. It also contains a quiz to encourage you to learn more about them and have fun!
         \n\nThis application was made during the Udacity\'s Google Developer Challenge Scholarship: Android Basics program, edition 2017/2018.
         \n\nThe app was created on the initiative of the Women_Tech_Makers group.
@@ -481,6 +481,8 @@
     <string name="credits_flags"> Flag icons made by <a href="https://www.freepik.com/">Freepik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a>.</string>
     <string name="search">Search</string>
     <string name="submit_answer">Submit answer</string>
+    <string name="restart">Restart</string>
+    <string name="famous_women">Famous Women</string>
 
 
 </resources>
