@@ -37,7 +37,7 @@ public class WomenAdapterRecycle extends RecyclerView.Adapter<WomenHolder> imple
     @Override
     public WomenHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         WomenHolder holder=new WomenHolder(view);
         return holder;
     }
