@@ -2,5 +2,6 @@
 <searchable xmlns:android="http://schemas.android.com/apk/res/android"
     android:label="@string/app_name"
     android:hint="@string/search_hint"
-    android:voiceSearchMode = "showVoiceSearchButton|launchRecognizer">
-</searchable>
+    android:iconifiedByDefault="false"
+    android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"
+    android:freezesText="true" />
