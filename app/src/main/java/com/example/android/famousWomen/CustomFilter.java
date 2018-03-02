@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.famousWomen;
 
 /**
  * Created by narcy on 19.02.2018.

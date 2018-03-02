@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.famousWomen;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

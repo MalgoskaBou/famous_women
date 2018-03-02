@@ -1,8 +1,6 @@
-package com.example.android.miwok;
+package com.example.android.famousWomen;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.os.Build;
 
 import java.text.Normalizer;

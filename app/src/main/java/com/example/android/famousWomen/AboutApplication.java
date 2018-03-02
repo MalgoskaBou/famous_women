@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.famousWomen;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

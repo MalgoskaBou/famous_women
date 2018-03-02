@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.famousWomen;
 
 import android.os.Parcel;
 import android.os.Parcelable;

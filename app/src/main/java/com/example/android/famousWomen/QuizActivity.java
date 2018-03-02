@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.famousWomen;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -15,7 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.miwok.databinding.ActivityQuizBinding;
+import com.example.android.famousWomen.databinding.ActivityQuizBinding;
 
 import java.util.ArrayList;
 import java.util.Collections;

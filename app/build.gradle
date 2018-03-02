@@ -8,7 +8,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.android.miwok"
+        applicationId "com.example.android.famousWomen"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
