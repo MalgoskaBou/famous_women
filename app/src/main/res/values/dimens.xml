@@ -14,4 +14,9 @@
     <dimen name="flag_details_width">75dp</dimen>
     <dimen name="flag_details_height">75dp</dimen>
     <dimen name="detail_backdrop_height">300dp</dimen>
+    <dimen name="main_name_textSize">16sp</dimen>
+    <dimen name="main_profession_textSize">14sp</dimen>
+    <dimen name="padding_standard">16dp</dimen>
+    <dimen name="half_padding">8dp</dimen>
+    <dimen name="margin_list_item">0dp</dimen>
 </resources>

@@ -148,6 +148,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             binding.tvSubmit3.setOnClickListener(this);
             binding.tvSubmit4.setOnClickListener(this);
             binding.tvSubmit5.setOnClickListener(this);
+            binding.restart.setOnClickListener(this);
             }
 
         //Assign commands to each buttons with a switch statement
@@ -160,6 +161,10 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.tv_submit_4:
                 case R.id.tv_submit_5: {
                     submit(currentQuestion);
+                    break;
+                }
+                case R.id.restart: {
+                    restartactivity();
                     break;
                 }
             }
@@ -304,7 +309,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             super.onSaveInstanceState(outState);
         }
 
-        public void restartactivity (View v){
+        public void restartactivity (){
             Intent intent = getIntent();
             finish();
             startActivity(intent);
