@@ -122,9 +122,4 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
-    
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
 }

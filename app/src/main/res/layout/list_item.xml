@@ -21,7 +21,8 @@
     android:layout_height="@dimen/list_item_height"
     android:orientation="horizontal"
     android:background="@color/grey_background"
-    android:minHeight="@dimen/list_item_height">
+    android:minHeight="@dimen/list_item_height"
+    android:layout_margin="@dimen/margin_list_item">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -31,8 +32,8 @@
            android:layout_gravity="center"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_marginLeft="16dp"
-           android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/margin_standard"
+           android:layout_marginStart="@dimen/margin_standard"
         android:src="@drawable/dalia_grybauskaite"/>
 
     <RelativeLayout
@@ -40,9 +41,10 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/list_item_height"
         android:layout_weight="3"
-        android:paddingLeft="8dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp">
+        android:paddingLeft="@dimen/half_padding"
+        android:paddingStart="@dimen/half_padding"
+        android:paddingEnd="@dimen/half_padding"
+        android:paddingRight="@dimen/half_padding">
 
         <TextView
             android:id="@+id/name_text_view"
@@ -51,8 +53,8 @@
             android:fontFamily="@font/roboto"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="@dimen/main_name_textSize"
             android:textColor="@color/text_color_heading"
-            android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Dalia G" />
 
@@ -63,7 +65,7 @@
             android:layout_below="@id/name_text_view"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="14sp"
+            android:textSize="@dimen/main_profession_textSize"
             android:textColor="@color/text_color_main"
             android:fontFamily="@font/roboto"
             tools:text="President of Lithuania" />

@@ -39,8 +39,7 @@
 
                     <TextView
                         android:id="@+id/tv_question1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer1_1"
@@ -68,8 +67,7 @@
 
                     <TextView
                         android:id="@+id/tv_question2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer2_1"
@@ -88,7 +86,6 @@
                 <Button
                     android:id="@+id/tv_submit_2"
                     android:text="@string/submit_answer"
-                    android:textAllCaps="true"
                     style="@style/submit_button" />
 
                 <RadioGroup
@@ -97,8 +94,7 @@
 
                     <TextView
                         android:id="@+id/tv_question3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer3_1"
@@ -117,7 +113,6 @@
                 <Button
                     android:id="@+id/tv_submit_3"
                     android:text="@string/submit_answer"
-                    android:textAllCaps="true"
                     style="@style/submit_button" />
 
                 <RadioGroup
@@ -126,8 +121,7 @@
 
                     <TextView
                         android:id="@+id/tv_question4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style"/>
 
                     <RadioButton
                         android:id="@+id/rb_answer4_1"
@@ -146,7 +140,6 @@
                 <Button
                     android:id="@+id/tv_submit_4"
                     android:text="@string/submit_answer"
-                    android:textAllCaps="true"
                     style="@style/submit_button" />
 
                 <RadioGroup
@@ -155,8 +148,7 @@
 
                     <TextView
                         android:id="@+id/tv_question5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style"/>
 
                     <RadioButton
                         android:id="@+id/rb_answer5_1"
@@ -175,7 +167,6 @@
                 <Button
                     android:id="@+id/tv_submit_5"
                     android:text="@string/submit_answer"
-                    android:textAllCaps="true"
                     style="@style/submit_button" />
 
                 <LinearLayout
@@ -195,6 +186,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_standard"
+                        android:layout_marginStart="@dimen/margin_standard"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -203,15 +195,18 @@
                             android:layout_height="28dp"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"/>
 
                         <TextView
                             android:id="@+id/tv_result"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontSize_body"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_standard"
-                            android:paddingLeft="@dimen/margin_small" />
+                            android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -226,6 +221,7 @@
                             android:layout_height="wrap_content"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"
                             android:src="@drawable/ic_check"/>
 
@@ -233,8 +229,10 @@
                             android:id="@+id/tv_correct"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontSize_body"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"/>
                     </LinearLayout>
 
@@ -250,6 +248,7 @@
                             android:layout_height="wrap_content"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"
                             android:src="@drawable/ic_cancel"/>
 
@@ -257,16 +256,16 @@
                             android:id="@+id/tv_wrong"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontSize_body"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"/>
                     </LinearLayout>
 
                     <Button
                         android:id="@+id/restart"
                         android:text="@string/restart"
-                        android:textAllCaps="true"
-                        android:onClick="restartactivity"
                         style="@style/submit_button" />
                 </LinearLayout>
             </LinearLayout>
