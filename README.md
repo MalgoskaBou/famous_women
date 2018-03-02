@@ -78,9 +78,9 @@ Updated **08.01.2018**
 -  Photos of work progress - thanks to **@Greta Gr, @Diana, @Melsara, @Ola, @slimsonik** 
 
 ![progress](https://user-images.githubusercontent.com/33101796/34525384-09eea50c-f09f-11e7-8d3b-2e8fdc88d31a.png)
-![gretagr3](https://user-images.githubusercontent.com/33101796/34525371-00b81568-f09f-11e7-91e1-b9fbb5b514e2.png)
-![dianasxml](https://user-images.githubusercontent.com/33101796/34525379-044e3b58-f09f-11e7-81d7-8c5251057703.png)
 
+<img src="https://user-images.githubusercontent.com/33101796/34525371-00b81568-f09f-11e7-91e1-b9fbb5b514e2.png" alt="work progress Greta" width="40%">
+<img src="https://user-images.githubusercontent.com/33101796/34525379-044e3b58-f09f-11e7-81d7-8c5251057703.png" alt="work progress Diana" width="40%">
 
 ___
 ___
