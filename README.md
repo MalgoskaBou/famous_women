@@ -27,7 +27,7 @@ New update of our application 😄 :
 
 **@SvCat** - designed and added a screen about the application 😄 the last missing part in our work.
 
-![image](https://user-images.githubusercontent.com/33101796/36207715-24bf7988-1197-11e8-8c12-bc89dc8d191a.png)
+<img src="https://user-images.githubusercontent.com/33101796/36207715-24bf7988-1197-11e8-8c12-bc89dc8d191a.png" alt="search engine" width="40%">
 *the ability to search in the list*
 ___
 
@@ -46,7 +46,8 @@ Everyone is constantly tracking the code and correcting mistakes.
 ![icon_gretagr](https://user-images.githubusercontent.com/33101796/34960772-a1237b04-fa3c-11e7-8dbe-c42730e47b3c.png)
 *Icon by @Greta Gr*
 
-![slimsonik](https://user-images.githubusercontent.com/33101796/34960773-a145fa94-fa3c-11e7-9eee-591f9e9413a4.png)
+<img src="https://user-images.githubusercontent.com/33101796/34960773-a145fa94-fa3c-11e7-9eee-591f9e9413a4.png" alt="slimsonik" width="40%">
+
 *@Slimsonik entry*
 
 <br />
@@ -55,9 +56,12 @@ Everyone is constantly tracking the code and correcting mistakes.
 **Questions in the quiz are random - each time you turn on the quiz, you'll get a set of 5 different questions 😊 Isn't that great?**<br />
 <br />
 
-![quizduringwork](https://user-images.githubusercontent.com/33101796/34960774-a1e7f0b0-fa3c-11e7-889b-41df101e3c4b.png)
-![quizready](https://user-images.githubusercontent.com/33101796/34960775-a227a0f2-fa3c-11e7-971c-73aacecedd78.png)
-![quizlands](https://user-images.githubusercontent.com/33101796/34960911-3134c0e0-fa3d-11e7-90cc-9bed79aedb64.png)
+<img src="https://user-images.githubusercontent.com/33101796/34960774-a1e7f0b0-fa3c-11e7-889b-41df101e3c4b.png" alt="quiz before" width="40%">
+
+<img src="https://user-images.githubusercontent.com/33101796/34960775-a227a0f2-fa3c-11e7-971c-73aacecedd78.png" alt="quiz ready" width="40%">
+
+<img src="https://user-images.githubusercontent.com/33101796/34960911-3134c0e0-fa3d-11e7-90cc-9bed79aedb64.png" alt="quiz land" width="60%">
+
 *progress of work with the quiz*
 
 ___
