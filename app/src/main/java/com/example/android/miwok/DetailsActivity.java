@@ -82,10 +82,10 @@ public class DetailsActivity extends AppCompatActivity {
         });
 
         //Display the information and images of the chosen woman
-        setTitle(chosenWoman.getNameId());
-        profession.setText(chosenWoman.getProfessionId());
+        setTitle(chosenWoman.getName());
+        profession.setText(chosenWoman.getProfession());
         portraitImageView.setImageResource(chosenWoman.getPortraitImageId());
-        descriptionTextView.setText(chosenWoman.getDescriptionId());
+        descriptionTextView.setText(chosenWoman.getDescription());
         flagImageView.setImageResource(chosenWoman.getFlagImageId());
 
         // TEMPORARY CODE - OPEN QUIZ
@@ -115,10 +115,12 @@ public class DetailsActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.about_application:
                 Intent intent1 = new Intent(this, AboutApplication.class);
+                finish();
                 this.startActivity(intent1);
                 return true;
             case R.id.quiz:
                 Intent intent2 = new Intent(this, QuizActivity.class);
+                finish();
                 this.startActivity(intent2);
                 return true;
             default:

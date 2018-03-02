@@ -1,44 +1,53 @@
 package com.example.android.miwok;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.os.Build;
+
+import java.text.Normalizer;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class WomenArrayList {
     private static ArrayList<Woman> women = new ArrayList<Woman>();
-
-    public static ArrayList<Woman> getWomen() {
+    public static ArrayList<Woman> getWomen(Context context) {
         if (women.size() == 0)
-            InitData();
+            InitData(context);
         return women;
     }
 
     // Create a list of women
-    private static void InitData() {
-        women.add(new Woman(R.string.maria, R.string.maria_profession, R.string.body_details_descriprion_maria_sklodowska,
-                R.drawable.maria_sklodowska_listimg, R.drawable.maria_poland_flag, R.drawable.maria_portrait));
-        women.add(new Woman(R.string.dalia, R.string.dalia_profession, R.string.body_details_description_dalia,
-                R.drawable.dalia_grybauskaite_listimg, R.drawable.dalia_lithuania_flag, R.drawable.dalia_portrait));
-        women.add(new Woman(R.string.elisabeta, R.string.elisabeta_proffesion, R.string.body_details_description_elisabeta,
-                R.drawable.elisabeta_rizea_listimg, R.drawable.elisabeta_rizea_flag, R.drawable.elisabeta_portrait));
-        women.add(new Woman(R.string.mother_theresa, R.string.mother_theresa_profession, R.string.body_details_description_mother_theresa,
-                R.drawable.mother_theresa_listimg, R.drawable.theresa_macedonia_flag, R.drawable.theresa_portrait));
-        women.add(new Woman(R.string.wanda, R.string.wanda_profession, R.string.body_details_description_wanda,
-                R.drawable.wanda_rutkiewicz_listimg, R.drawable.maria_poland_flag, R.drawable.wanda_rutkiewicz_portrait));
-        women.add(new Woman(R.string.ameenah, R.string.ameenah_profession, R.string.body_details_description_ameenah,
-                R.drawable.ameenah_listing, R.drawable.ameenah_mauritius_flag, R.drawable.ameenah_portrait));
-        women.add(new Woman(R.string.ellen_Sirleaf, R.string.sirleaf_profession, R.string.body_details_description_sirleaf,
-                R.drawable.sirleaf_listing, R.drawable.sirleaf_liberia_flag, R.drawable.sirleaf_portrait));
-        women.add(new Woman(R.string.maria_telkes, R.string.maria_telkes_profession, R.string.body_details_description_maria_telkes,
-                R.drawable.maria_telkes_listimg, R.drawable.maria_hungary_flag, R.drawable.maria_telkes_portrait));
-        women.add(new Woman(R.string.Merieme_Chadid, R.string.meriem_profession, R.string.body_details_description_meriem,
-                R.drawable.meriem_listimg, R.drawable.meriem_morocco_flag, R.drawable.meriem_portrait));
-        women.add(new Woman(R.string.irena, R.string.irena_profession, R.string.body_details_description_irena,
-                R.drawable.irena_sendler_listimg, R.drawable.maria_poland_flag, R.drawable.irena_portrait));
-        women.add(new Woman(R.string.ada, R.string.ada_profession, R.string.body_details_description_irena,
-                R.drawable.ada_yonath_listimg, R.drawable.israel_flag, R.drawable.ada_yonath_portrait));
-        women.add(new Woman(R.string.ilhan, R.string.ilhan_profession, R.string.body_details_description_ilhan,
-                R.drawable.ilhan_listing, R.drawable.ilhan_flag, R.drawable.ilhan_portrait));
-        women.add(new Woman(R.string.valentina, R.string.valentina_profession, R.string.body_details_description_valentina,
-                R.drawable.valentina_tereshkova_listimg, R.drawable.russia_flag, R.drawable.valentina_portrait));
+
+    private static void InitData(Context context) {
+        women.add(new Woman(context, R.array.AdaY , R.drawable.ada_yonath, R.drawable.ada_yonath_portrait, R.drawable.israel));
+        women.add(new Woman(context, R.array.AmeenahGF, R.drawable.ameenah_gurib_fakim, R.drawable.ameenah_gurib_fakim_portrait, R.drawable.mauritius));
+        women.add(new Woman(context, R.array.DaliaG, R.drawable.dalia_grybauskaite, R.drawable.dalia_grybauskaite_portrait, R.drawable.lithuania));
+        women.add(new Woman(context, R.array.ElisabetaR, R.drawable.elisabeta_rizea, R.drawable.elisabeta_rizea_portrait, R.drawable.romania));
+        women.add(new Woman(context, R.array.EllenS, R.drawable.ellen_sirleaf, R.drawable.ellen_sirleaf_portrait, R.drawable.liberia));
+        women.add(new Woman(context, R.array.IlhanO, R.drawable.ilhan_omar, R.drawable.ilhan_omar_portrait, R.drawable.united_states_of_america));
+        women.add(new Woman(context, R.array.IrenaS, R.drawable.irena_sendler, R.drawable.irena_sendler_portrait, R.drawable.poland));
+        women.add(new Woman(context, R.array.MariaC, R.drawable.maria_sklodowska, R.drawable.maria_sklodowska_portrait, R.drawable.poland));
+        women.add(new Woman(context, R.array.MariaT, R.drawable.maria_telkes, R.drawable.maria_telkes_portrait, R.drawable.hungary));
+        women.add(new Woman(context, R.array.MeriemeC, R.drawable.meriem_chadid, R.drawable.meriem_chadid_portrait, R.drawable.morocco));
+        women.add(new Woman(context, R.array.Theresa, R.drawable.mother_theresa, R.drawable.mother_theresa_portrait, R.drawable.macedonia));
+        women.add(new Woman(context, R.array.DoraA, R.drawable.dora_akunyili, R.drawable.dora_akunyili_portrait, R.drawable.nigeria));
+        women.add(new Woman(context, R.array.ValentinaT, R.drawable.valentina_tereshkova, R.drawable.valentina_tereshkova_portrait, R.drawable.russia));
+        women.add(new Woman(context, R.array.WandaR, R.drawable.wanda_rutkiewicz, R.drawable.wanda_rutkiewicz_portrait, R.drawable.poland));
+
+        // sort list by name
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            women.sort(new Comparator<Woman>() {
+                @Override
+                public int compare(Woman o1, Woman o2) {
+                    String name1 = Normalizer.normalize(o1.getName(), Normalizer.Form.NFD);
+                    name1 = name1.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+                    String name2 = Normalizer.normalize(o2.getName(), Normalizer.Form.NFD);
+                    name2 = name2.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+                    return name1.compareTo(name2);
+                }
+            });
+        }
     }
 }
 

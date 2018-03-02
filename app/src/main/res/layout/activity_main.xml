@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+   >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -19,7 +20,8 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        <include layout="@layout/word_list"/>
+
+        <include layout="@layout/women_list"/>
 
     </android.support.design.widget.AppBarLayout>
 
