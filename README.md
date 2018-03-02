@@ -25,10 +25,15 @@ New update of our application 😄 :
 
 **@Ami** - add an option to sort the list - now regardless of the order in the table - our entries are displayed in alphabetical order.
 
-**@SvCat** - designed and added a screen about the application 😄 the last missing part in our work.
+**@SvCat** - designed and added a screen about the application 😄 the last missing part in our work. After the **Greta's** amendments, looks wonderful
 
 <img src="https://user-images.githubusercontent.com/33101796/36207715-24bf7988-1197-11e8-8c12-bc89dc8d191a.png" alt="search engine" width="40%">
+
 *the ability to search in the list*
+
+<img src="https://user-images.githubusercontent.com/33101796/36910344-b7edf256-1e40-11e8-8e9d-7d18a10fa71a.png" alt="sbout app" width="40%">
+
+*About app screen*
 ___
 
 Updated **08.01.2018**
