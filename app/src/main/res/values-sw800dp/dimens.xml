@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_height">100dp</dimen>
+    <dimen name="quiz_height">60dp</dimen>
+    <dimen name="fontSize_body">18sp</dimen>
+    <dimen name="fontSize_subheading">20sp</dimen>
+    <dimen name="fontSize_heading">28sp</dimen>
+    <dimen name="fontSize_label">26sp</dimen>
+    <dimen name="margin_standard">24dp</dimen>
+    <dimen name="halfmargin_standard">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="flag_and_image_height">80dp</dimen>
+    <dimen name="flag_details_width">100dp</dimen>
+    <dimen name="flag_details_height">100dp</dimen>
+    <dimen name="detail_backdrop_height">600dp</dimen>
+    <dimen name="main_name_textSize">22sp</dimen>
+    <dimen name="main_profession_textSize">20sp</dimen>
+    <dimen name="padding_standard">24dp</dimen>
+    <dimen name="half_padding">16dp</dimen>
+    <dimen name="margin_list_item">16dp</dimen>
+</resources>

@@ -111,7 +111,7 @@
             of the whole Europe. I dedicate the Charlemagne Prize, awarded by the people of Aachen, to the Lithuanian people. It signifies the
             recognition of our united efforts as we fought for Lithuania's freedom and its place in Europe as well as to overcome the economic crisis.
             This award is also a commitment to assume responsibility for bringing all the nations together to shape the future of Europe,\ the President
-            emphasized at the award ceremony. \nDalia Grybauskaitė takes 68 place in Frobes The World\'s 100 Most Powerful Women list (2017 ranking).
+            emphasized at the award ceremony. \nDalia Grybauskaitė takes 68 place in Forbes The World\'s 100 Most Powerful Women list (2017 ranking).
             \nToday, Dalia is a modern leader and maintains a strong connection with the Lithuanian people through social media interaction,
             sharing her news, schedule and ideas."
                 android:textColor="@color/text_color_main"
@@ -129,20 +129,17 @@
 </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <com.makeramen.roundedimageview.RoundedImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/flag_of_country"
         android:layout_height="@dimen/flag_details_height"
         android:layout_width="@dimen/flag_details_width"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        app:riv_corner_radius="10dip"
-        app:riv_oval="true"
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="bottom|right|end"
         android:layout_marginRight="@dimen/margin_standard"
         android:layout_marginEnd="@dimen/margin_standard"
         android:src="@drawable/dalia_grybauskaite_portrait"
-        app:layout_behavior="@string/bottom_sheet_behavior">
-    </com.makeramen.roundedimageview.RoundedImageView>
+        app:layout_behavior="@string/bottom_sheet_behavior"/>
 </android.support.design.widget.CoordinatorLayout>

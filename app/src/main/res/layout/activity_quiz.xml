@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".QuizActivity"
+    tools:context=".QuizActivity">
+<android.support.v4.widget.DrawerLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
@@ -28,240 +29,145 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/grey_background"
                 android:orientation="vertical">
 
                 <RadioGroup
                     android:id="@+id/rg_question1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/margin_standard" >
+                    style="@style/radiogroup_style">
 
                     <TextView
                         android:id="@+id/tv_question1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer1_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading" />
+                        style="@style/radiobutton_style"
+                        android:checked="false" />
 
                     <RadioButton
                         android:id="@+id/rb_answer1_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer1_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                 </RadioGroup>
 
                 <Button
                     android:id="@+id/tv_submit_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/darker_gray"
-                    android:padding="@dimen/margin_standard"
-                    android:text="Submit answer"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/white" />
+                    android:text="@string/submit_answer"
+                    style="@style/submit_button" />
 
                 <RadioGroup
                     android:id="@+id/rg_question2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/margin_standard" >
+                    style="@style/radiogroup_style">
 
                     <TextView
                         android:id="@+id/tv_question2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer2_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer2_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer2_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                 </RadioGroup>
 
                 <Button
                     android:id="@+id/tv_submit_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/darker_gray"
-                    android:padding="@dimen/margin_standard"
-                    android:text="Submit answer"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/white" />
+                    android:text="@string/submit_answer"
+                    style="@style/submit_button" />
 
                 <RadioGroup
                     android:id="@+id/rg_question3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/margin_standard">
+                    style="@style/radiogroup_style">
 
                     <TextView
                         android:id="@+id/tv_question3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer3_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer3_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer3_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                 </RadioGroup>
 
                 <Button
                     android:id="@+id/tv_submit_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/darker_gray"
-                    android:padding="@dimen/margin_standard"
-                    android:text="Submit answer"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/white" />
+                    android:text="@string/submit_answer"
+                    style="@style/submit_button" />
 
                 <RadioGroup
                     android:id="@+id/rg_question4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/margin_standard" >
+                    style="@style/radiogroup_style">
 
                     <TextView
                         android:id="@+id/tv_question4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style"/>
 
                     <RadioButton
                         android:id="@+id/rb_answer4_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer4_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer4_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                 </RadioGroup>
 
                 <Button
                     android:id="@+id/tv_submit_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/darker_gray"
-                    android:padding="@dimen/margin_standard"
-                    android:text="Submit answer"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/white" />
+                    android:text="@string/submit_answer"
+                    style="@style/submit_button" />
 
                 <RadioGroup
                     android:id="@+id/rg_question5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/margin_standard" >
+                    style="@style/radiogroup_style">
 
                     <TextView
                         android:id="@+id/tv_question5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/quiz_question_style"/>
 
                     <RadioButton
                         android:id="@+id/rb_answer5_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer5_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                     <RadioButton
                         android:id="@+id/rb_answer5_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/margin_standard"
-                        android:textColor="@color/text_color_heading"/>
+                        style="@style/radiobutton_style" />
 
                 </RadioGroup>
 
                 <Button
                     android:id="@+id/tv_submit_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/darker_gray"
-                    android:padding="@dimen/margin_standard"
-                    android:text="Submit answer"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/white" />
+                    android:text="@string/submit_answer"
+                    style="@style/submit_button" />
 
                 <LinearLayout
                     android:id="@+id/layout_result"
@@ -280,6 +186,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_standard"
+                        android:layout_marginStart="@dimen/margin_standard"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -288,15 +195,18 @@
                             android:layout_height="28dp"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"/>
 
                         <TextView
                             android:id="@+id/tv_result"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontSize_body"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_standard"
-                            android:paddingLeft="@dimen/margin_small" />
+                            android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -311,6 +221,7 @@
                             android:layout_height="wrap_content"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"
                             android:src="@drawable/ic_check"/>
 
@@ -318,8 +229,10 @@
                             android:id="@+id/tv_correct"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontSize_body"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"/>
                     </LinearLayout>
 
@@ -335,6 +248,7 @@
                             android:layout_height="wrap_content"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"
                             android:src="@drawable/ic_cancel"/>
 
@@ -342,23 +256,17 @@
                             android:id="@+id/tv_wrong"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontSize_body"
                             android:paddingBottom="@dimen/margin_small"
                             android:paddingLeft="@dimen/margin_small"
+                            android:paddingStart="@dimen/margin_small"
                             android:paddingTop="@dimen/margin_small"/>
                     </LinearLayout>
 
                     <Button
                         android:id="@+id/restart"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/darker_gray"
-                        android:padding="@dimen/margin_standard"
-                        android:text="Restart"
-                        android:textAlignment="center"
-                        android:textAllCaps="true"
-                        android:textColor="@android:color/white"
-                        android:onClick="restartactivity"
-                        />
+                        android:text="@string/restart"
+                        style="@style/submit_button" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
@@ -366,3 +274,4 @@
 
 
 </android.support.v4.widget.DrawerLayout>
+</layout>
