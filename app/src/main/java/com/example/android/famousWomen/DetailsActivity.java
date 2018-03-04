@@ -21,6 +21,8 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -61,11 +63,11 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
         name = findViewById(R.id.collapsing_toolbar);
-        profession =  findViewById(R.id.profession_text);
-        portraitImageView= findViewById(R.id.portrait_image);
-        descriptionTextView=  findViewById(R.id.description_text);
-        flagImageView= findViewById(R.id.flag_of_country);
-        appBarLayout= findViewById(R.id.appbar);
+        profession = findViewById(R.id.profession_text);
+        portraitImageView = findViewById(R.id.portrait_image);
+        descriptionTextView = findViewById(R.id.description_text);
+        flagImageView = findViewById(R.id.flag_of_country);
+        appBarLayout = findViewById(R.id.appbar);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {

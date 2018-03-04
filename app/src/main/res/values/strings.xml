@@ -63,7 +63,12 @@
         This award is also a commitment to assume responsibility for bringing all the nations together to shape the future of Europe,\" the President
         emphasized at the award ceremony. \nDalia Grybauskaitė takes 68 place in Forbes The World\'s 100 Most Powerful Women list (2017 ranking).
         \nToday, Dalia is a modern leader and maintains a strong connection with the Lithuanian people through social media interaction,
-        sharing her news, schedule and ideas.</item>
+        sharing her news, schedule and ideas.
+        \nSources:
+        \n1. Wikipedia
+        \n(https://en.wikipedia.org/wiki/Dalia_Grybauskait%C4%97);
+        \n2. The official President of the Republic of Lithuania page
+        \n(https://www.lrp.lt/en/institution/president-dalia-grybauskaite/20797).</item>
     </string-array>
 
     <string-array name="ElisabetaR">
@@ -194,7 +199,7 @@
         if they need to. Certainly, this Moroccan astronomer has come a long way since she first studied the night skies in the country of her
         birth.</item>
     </string-array>
-    
+
     <string-array name="IrenaS">
         <item>Irena Sendler</item>
         <item>Social Worker</item>
@@ -275,17 +280,23 @@
         Their first child, a daughter named Elena, was a subject of medical interest because she was the first child born to parents who had both been exposed to space.
         Elena later went on to become a medical doctor. Tereshkova and Nikolayev divorced in 1980.</item>
     </string-array>
-    
+
     <string-array name="DoraA">
         <item>Dora Nkem Akunyili</item>
         <item>Pharmacist</item>
-        <item>Professor Dora Nkem Akunyili (14 July 1954 – 7 June 2014) was the Director General of National Agency for Food and Drug Administration and Control (NAFDAC)
-        \nof Nigeria and Nigerian Minister of Information and Communications from 2008 to 2010. She was a pharmacist and governmental administrator who gained international recognition and won several
-        \nawards for her work in pharmacology, public health and human rights. Following her appointment as the Director General of NAFDAC in April 2001, Akunyili established as a top priority the
-        \neradication of counterfeit drugs and unsafe food. Before her assumption of office in NAFDAC, fake and substandard foods and drugs were sold in Nigeria without any form of regulation.
-        \nShe was disheartened that so many of her countrymen and women were fighting killer diseases like malaria and tuberculosis with little more than sugar syrup and chalk tablets,
-        \ncynically packaged to look like the real drugs." Although Akunyili faced considerable risk to her personal safety in her fight to combat the issue of fake drugs, she was persistent and things turned around for the better.
-        \n(Sources: https://en.wikipedia.org/wiki/Dora_Akunyili; https://web.archive.org/web/20060507083714/http://www.kwenu.com/moesmemo/moe2004/dora_danger.htm)</item>
+        <item>Professor Dora Nkem Akunyili (14 July 1954 – 7 June 2014) was the Director General of National Agency for Food and Drug Administration and Control
+        (NAFDAC)of Nigeria and Nigerian Minister of Information and Communications from 2008 to 2010. She was a pharmacist and governmental administrator who
+        gained international recognition and won several awards for her work in pharmacology, public health and human rights. Following her appointment as the
+        Director General of NAFDAC in April 2001, Akunyili established as a top priority the eradication of counterfeit drugs and unsafe food.
+        \n Before her assumption of office in NAFDAC, fake and substandard foods and drugs were sold in Nigeria without any form of regulation. She was disheartened
+        that so many of her countrymen and women were fighting killer diseases like malaria and tuberculosis with little more than sugar syrup and chalk tablets,
+        cynically packaged to look like the real drugs. Although Akunyili faced considerable risk to her personal safety in her fight to combat the issue of fake drugs,
+        she was persistent and things turned around for the better.
+        \nSources:
+        \n1. Wikipedia
+        \n(https://en.wikipedia.org/wiki/Dora_Akunyili);
+        \n2. The Internet Archive
+        \n(https://web.archive.org/web/20060507083714/http://www.kwenu.com/moesmemo/moe2004/dora_danger.htm).</item>
     </string-array>
 
     <!--Details page subheader -->
@@ -321,8 +332,8 @@
         <item>@array/question14</item>
         <item>@array/question15</item>
         <item>@array/question16</item>
-		<item>@array/question17</item>
-		<item>@array/question18</item>
+        <item>@array/question17</item>
+        <item>@array/question18</item>
     </array>
 
     <string-array name="question1">
@@ -390,11 +401,11 @@
     </string-array>
 
     <string-array name="question9">
-    <item>In 1997, Ellen Johnson Sirleaf worked as an economist in which bank?</item>
-    <item>Global Bank Liberia.</item>
-    <item>International Bank (Liberia)</item>
-    <item>World Bank and Citibank in Africa</item>
-    <item>3</item>
+        <item>In 1997, Ellen Johnson Sirleaf worked as an economist in which bank?</item>
+        <item>Global Bank Liberia.</item>
+        <item>International Bank (Liberia)</item>
+        <item>World Bank and Citibank in Africa</item>
+        <item>3</item>
     </string-array>
 
     <string-array name="question10">
@@ -452,16 +463,16 @@
         <item>1960</item>
         <item>2</item>
     </string-array>
-	
-	 <string-array name="question17">
+
+    <string-array name="question17">
         <item>What nationality Maria Skłodowska-Curie was?</item>
         <item>French</item>
         <item>Polish</item>
         <item>American</item>
         <item>2</item>
     </string-array>
-	
-	<string-array name="question18">
+
+    <string-array name="question18">
         <item>Where did Wanda Rutkiewicz die?</item>
         <item>On Kangchenjunga mountain</item>
         <item>On Mount Everest mountain</item>
