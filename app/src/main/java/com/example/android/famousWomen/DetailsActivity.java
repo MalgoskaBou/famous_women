@@ -87,7 +87,8 @@ public class DetailsActivity extends AppCompatActivity {
         setTitle(chosenWoman.getName());
         profession.setText(chosenWoman.getProfession());
         portraitImageView.setImageResource(chosenWoman.getPortraitImageId());
-        descriptionTextView.setText(chosenWoman.getDescription());
+        descriptionTextView.setText(Html.fromHtml(chosenWoman.getDescription()));
+        descriptionTextView.setMovementMethod(LinkMovementMethod.getInstance());
         flagImageView.setImageResource(chosenWoman.getFlagImageId());
 
         // TEMPORARY CODE - OPEN QUIZ

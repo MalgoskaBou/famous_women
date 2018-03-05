@@ -116,7 +116,6 @@
                     sharing her news, schedule and ideas."
                         android:textColor="@color/text_color_main"
                         android:fontFamily="@font/roboto"
-                        android:autoLink="web"
                         android:textSize="@dimen/fontSize_body"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
