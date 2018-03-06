@@ -297,6 +297,21 @@
         <br/>2. <a href= "https://web.archive.org/web/20060507083714/http://www.kwenu.com/moesmemo/moe2004/dora_danger.htm">The Internet Archive</a>.]]></item>
     </string-array>
 
+    <string-array name="TurkanS">
+        <item>Türkan Saylan</item>
+        <item>Medical Professor</item>
+        <item><![CDATA[Türkan Saylan was born in 1935 in Istanbul, as the daughter of a Turkish entrepreneur and a Swiss mother.
+        <br/>While she was studying at the faculty of medicine, she got married, had two sons and suffered from spinal tuberculosis. But she achieved to graduate as a medical doctor in 1963.
+        During her studies at the faculty of medicine, she was deeply touched by the conditions and treatment of lepra patients. At the time, it was believed that lepra was contagious and even doctors were afraid to approach them. She began researching on the issue and saw that the disease is not contagious and it was treatable. She became a dermatologist in 1968.
+        <br/>Marriage didn’t work out as she hoped. Her husband was not happy with her heavy workload. He preferred her to stay at home and look after the kids. Finally she divorced.  In 1976, she founded the Turkish Leprosy Relief Association which is followed by Istanbul Leprosy Hospital in 1981. She travelled around the rural areas of Turkey with her team, trying to bring help to patients in need. She became a consultant to World Health Organization on leprosy and a founding member of International Leprosy Union. She received an International Gandhi Award in 1986 for her efforts fighting against leprosy.
+        <br/>In 80s, she began to concentrate more on advocating women rights and secularism. In 1989, she co-founded the Association to Support Contemporary Life(Çağdaş Yaşamı Destekleme Derneği-ÇYDD) together with Aysel Ekşi. This non-profit organization which is devoted to promote women rights, education and modernisation principles of Mustafa Kemal Atatürk, reached 20000 volunteers, 95 branches in a short time and have been building schools, donating resources to schools, giving scholarships to students and more. One of the most famous projects of the association called Kardelenler(Snowdrops) provided scholarships to more than 60000 girls, who would otherwise forced to leave the school and marry in a very early age. Turkan Saylan brought hope and changed the fate of these girls, thereafter called “snowdrops”, a flower that blossom in the snow.
+        <br/>Türkan Saylan was continuously under attack of fanatic religious groups but she never gave up. She was a fighter by nature.
+        <br/>Unfortunately, she had to fight with breast cancer for 19 years and she passed away in 2009. Tens of thousands of people participated to her funeral.
+        <br/>Sources:
+        <br/>1. <a href= "http://www.radikal.com.tr/radikalist/hayatini-turkiyeye-adamis-bir-kadin-turkan-saylan-1360358/">Radikal</a>;
+        <br/>2. <a href= "http://www.nytimes.com/2009/05/22/world/europe/22saylan-1.html">New York Times</a>.]]></item>
+    </string-array>
+
     <!--Details page subheader -->
     <string name="subheader_details_profession">Profession</string>
     <string name="body_details_description">Description</string>
@@ -332,6 +347,8 @@
         <item>@array/question16</item>
         <item>@array/question17</item>
         <item>@array/question18</item>
+        <item>@array/question19</item>
+        <item>@array/question20</item>
     </array>
 
     <string-array name="question1">
@@ -475,6 +492,22 @@
         <item>On Kangchenjunga mountain</item>
         <item>On Mount Everest mountain</item>
         <item>In hospital due to cancer</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="question19">
+        <item>The scholarship recipient girls of the project led by Türkan Saylan are called:</item>
+        <item>Roses</item>
+        <item>Daisies</item>
+        <item>Snowdrops</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="question20">
+        <item>Türkan Saylan received International Gandhi Award for:</item>
+        <item>Her efforts in fighting with leprosy</item>
+        <item>For promoting women’s rights</item>
+        <item>Contributing to world peace</item>
         <item>1</item>
     </string-array>
 
