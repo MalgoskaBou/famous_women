@@ -29,7 +29,7 @@ public class WomenArrayList {
         women.add(new Woman(context, R.array.MariaC, R.drawable.maria_sklodowska, R.drawable.maria_sklodowska_portrait, R.drawable.poland));
         women.add(new Woman(context, R.array.MariaT, R.drawable.maria_telkes, R.drawable.maria_telkes_portrait, R.drawable.hungary));
         women.add(new Woman(context, R.array.MeriemeC, R.drawable.meriem_chadid, R.drawable.meriem_chadid_portrait, R.drawable.morocco));
-        women.add(new Woman(context, R.array.Theresa, R.drawable.mother_theresa, R.drawable.mother_theresa_portrait, R.drawable.macedonia));
+        women.add(new Woman(context, R.array.Theresa, R.drawable.mother_theresa, R.drawable.mother_theresa_portrait, R.drawable.albania));
         women.add(new Woman(context, R.array.TurkanS, R.drawable.turkan_saylan, R.drawable.turkan_saylan_portrait, R.drawable.turkey));
         women.add(new Woman(context, R.array.ValentinaT, R.drawable.valentina_tereshkova, R.drawable.valentina_tereshkova_portrait, R.drawable.russia));
         women.add(new Woman(context, R.array.WandaR, R.drawable.wanda_rutkiewicz, R.drawable.wanda_rutkiewicz_portrait, R.drawable.poland));
