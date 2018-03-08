@@ -34,7 +34,7 @@
         android:layout_weight="1"
         android:layout_marginLeft="@dimen/margin_standard"
            android:layout_marginStart="@dimen/margin_standard"
-        android:src="@drawable/dalia_grybauskaite"/>
+        android:src="@drawable/ic_cloud"/>
 
     <RelativeLayout
         android:id="@+id/text_container"
@@ -73,7 +73,6 @@
     </RelativeLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/flag"
         android:layout_height="@dimen/flag_and_image_height"
         android:layout_gravity="center"
@@ -81,6 +80,6 @@
         android:layout_weight="1"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/lithuania"/>
+        android:src="@drawable/ic_cloud"/>
 
 </LinearLayout>

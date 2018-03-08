@@ -139,5 +139,5 @@
         app:layout_anchorGravity="bottom|right|end"
         android:layout_marginRight="@dimen/margin_standard"
         android:layout_marginEnd="@dimen/margin_standard"
-        android:src="@drawable/lithuania"/>
+        android:src="@drawable/ic_cloud"/>
 </android.support.design.widget.CoordinatorLayout>

@@ -86,10 +86,14 @@ public class DetailsActivity extends AppCompatActivity {
         //Display the information and images of the chosen woman
         setTitle(chosenWoman.getName());
         profession.setText(chosenWoman.getProfession());
-        portraitImageView.setImageResource(chosenWoman.getPortraitImageId());
+
+        ImageDownload.downloadImage(getApplicationContext(),chosenWoman.getPortraitImageId(),portraitImageView);
+        //portraitImageView.setImageResource(chosenWoman.getPortraitImageId());
         descriptionTextView.setText(Html.fromHtml(chosenWoman.getDescription()));
         descriptionTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        flagImageView.setImageResource(chosenWoman.getFlagImageId());
+
+        ImageDownload.downloadImage(getApplicationContext(),chosenWoman.getFlagImageId(),flagImageView);
+        //flagImageView.setImageResource(chosenWoman.getFlagImageId());
 
         // TEMPORARY CODE - OPEN QUIZ
         // Find View that opens Quiz

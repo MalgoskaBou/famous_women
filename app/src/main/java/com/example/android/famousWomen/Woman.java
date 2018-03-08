@@ -36,17 +36,17 @@ public class Woman implements Parcelable{
     private String mDescription;
 
     // Resource ID for the image used in list view
-    private int mListImageId;
+    private String mListImageId;
 
     // Resource ID for the flag image
-   private int mFlagImageId;
+   private String mFlagImageId;
 
     // Resource ID for the portait image used in details activity
-   private int mPortraitImageId;
+   private String mPortraitImageId;
 
 
 
-    public Woman(Context context, int womenArrayId, int listImageId, int portraitImageId, int flagImageId) {
+    public Woman(Context context, int womenArrayId, String listImageId, String portraitImageId, String flagImageId) {
         Resources resources = context.getResources();
         String[] womenInfo = resources.getStringArray(womenArrayId);
         mName = womenInfo[0];
@@ -73,15 +73,15 @@ public class Woman implements Parcelable{
     }
 
     //Return the image resource ID of the image used in list view
-    public int getListImageId() {
+    public String getListImageId() {
         return mListImageId;
     }
 
     //Return the image resource ID of the flag image
-    public int getFlagImageId() {return mFlagImageId; }
+    public String getFlagImageId() {return mFlagImageId; }
 
     //Return the image resource ID of the portrait image used in details activity
-    public int getPortraitImageId(){
+    public String getPortraitImageId(){
         return mPortraitImageId;
     }
 
@@ -99,9 +99,9 @@ public class Woman implements Parcelable{
         mName = in.readString();
         mProfession = in.readString();
         mDescription = in.readString();
-        mListImageId = in.readInt();
-        mFlagImageId = in.readInt();
-        mPortraitImageId = in.readInt();
+        mListImageId = in.readString();
+        mFlagImageId = in.readString();
+        mPortraitImageId = in.readString();
     }
 
     @Override
@@ -114,9 +114,9 @@ public class Woman implements Parcelable{
         dest.writeString(mName);
         dest.writeString(mProfession);
         dest.writeString(mDescription);
-        dest.writeInt(mListImageId);
-        dest.writeInt(mFlagImageId);
-        dest.writeInt(mPortraitImageId);
+        dest.writeString(mListImageId);
+        dest.writeString(mFlagImageId);
+        dest.writeString(mPortraitImageId);
     }
 
 
