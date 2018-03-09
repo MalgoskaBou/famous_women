@@ -1,5 +1,10 @@
 # famous_women
 
+
+<a href="https://www.youtube.com/watch?v=MsB5dNeHQ3c"><img src="https://user-images.githubusercontent.com/33101796/37150877-bcd709aa-22d3-11e8-9505-2d9be0849c84.JPG" alt="search engine" width="60%"></a>
+
+*A movie showing how the application works, recorded by Oya Canli*
+
 <h2>Instructions - how to add your own entry to the application :+1:</h2>
 
 - **Instructions prepared by @Ola**, with this guide you will learn how to add your questions to the quiz in the application - questions should apply to the previously added entry about the famous woman (instruction on how to add an entry - point below): <br/>
