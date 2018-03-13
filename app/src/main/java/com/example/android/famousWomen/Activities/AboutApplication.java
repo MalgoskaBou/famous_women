@@ -1,10 +1,12 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
+
+import com.example.android.famousWomen.R;
 
 public class AboutApplication extends AppCompatActivity{
 

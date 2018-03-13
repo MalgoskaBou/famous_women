@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.Activities;
 
 import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
@@ -29,6 +29,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.android.famousWomen.Glide.ImageDownload;
+import com.example.android.famousWomen.Modal.Woman;
+import com.example.android.famousWomen.R;
 
 public class DetailsActivity extends AppCompatActivity {
 

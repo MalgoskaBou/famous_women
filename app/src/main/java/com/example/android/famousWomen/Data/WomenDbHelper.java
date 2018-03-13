@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import com.example.android.famousWomen.Data.WomenContract.WomenEntry;
 import com.example.android.famousWomen.Data.WomenContract.QuizEntry;
-import com.example.android.famousWomen.QuizQuestion;
-import com.example.android.famousWomen.Woman;
+import com.example.android.famousWomen.Modal.QuizQuestion;
+import com.example.android.famousWomen.Modal.Woman;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class WomenDbHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
 
     //File path for the database
-    private static String DB_PATH = "/data/data/com.example.android.famousWomen/databases/";
+    private static String DB_PATH;
 
     private SQLiteDatabase db;
 
@@ -54,16 +54,11 @@ public class WomenDbHelper extends SQLiteOpenHelper {
 
     }
 
-    /**
-     * Creates a empty database on the system and rewrites it with your own database.
-     * */
+    //Create an empty database on the system and rewrite it with your own database.
     public void createDataBase() throws IOException {
-
+        //First check whether database already exists
         boolean dbExist = checkDataBase();
-
-        if(dbExist){
-            //do nothing - database already exist
-        } else {
+        if(!dbExist){
             //By calling this method and empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
             this.getReadableDatabase();
@@ -81,16 +76,17 @@ public class WomenDbHelper extends SQLiteOpenHelper {
      */
     private boolean checkDataBase(){
         SQLiteDatabase checkDB = null;
+        DB_PATH = mContext.getFilesDir().getPath();
         try{
             String myPath = DB_PATH + DB_NAME;
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
         }catch(SQLiteException e){
-            //database does't exist yet.
+            //database doesn't exist yet.
         }
         if(checkDB != null){
             checkDB.close();
         }
-        return checkDB != null ? true : false;
+        return checkDB != null;
     }
 
     /**
@@ -101,25 +97,20 @@ public class WomenDbHelper extends SQLiteOpenHelper {
     private void copyDataBase() throws IOException{
         //Open your local db as the input stream
         InputStream myInput = mContext.getAssets().open(DB_NAME);
-
         // Path to the just created empty db
         String outFileName = DB_PATH + DB_NAME;
-
         //Open the empty db as the output stream
         OutputStream myOutput = new FileOutputStream(outFileName);
-
         //transfer bytes from the inputfile to the outputfile
         byte[] buffer = new byte[1024];
         int length;
         while ((length = myInput.read(buffer))>0){
             myOutput.write(buffer, 0, length);
         }
-
         //Close the streams
         myOutput.flush();
         myOutput.close();
         myInput.close();
-
     }
 
     public void openDatabase() throws SQLException {
@@ -153,8 +144,7 @@ public class WomenDbHelper extends SQLiteOpenHelper {
     public ArrayList<QuizQuestion> getQuestions(){
         ArrayList<QuizQuestion> questionList = new ArrayList<>();
         openDatabase();
-        String SQL_CHOSE_FIVE_RANDOM_QUESTIONS = "SELECT * FROM Questions ORDER BY RANDOM() LIMIT 5;";
-        Cursor cursor = db.rawQuery(SQL_CHOSE_FIVE_RANDOM_QUESTIONS, null);
+        Cursor cursor = db.rawQuery("SELECT * FROM Questions ORDER BY RANDOM() LIMIT 5;", null);
         int questionColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_QUESTION);
         int option1ColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_OPTION1);
         int option2ColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_OPTION2);

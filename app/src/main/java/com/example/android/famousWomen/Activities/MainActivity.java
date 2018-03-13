@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.Activities;
 
 import android.app.SearchManager;
 import android.content.Intent;
@@ -30,6 +30,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.android.famousWomen.Data.WomenDbHelper;
+import com.example.android.famousWomen.R;
+import com.example.android.famousWomen.Modal.Woman;
+import com.example.android.famousWomen.RecyclerView.WomenAdapterRecycle;
 
 import java.io.IOException;
 import java.util.ArrayList;

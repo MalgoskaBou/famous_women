@@ -1,4 +1,4 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.Modal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -54,7 +54,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return question text.
      */
-    String getQuestion() {
+    public String getQuestion() {
         return mQuestion;
     }
 
@@ -63,7 +63,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 1 text.
      */
-    String getAnswer1() {
+    public String getAnswer1() {
         return mAnswer1;
     }
 
@@ -72,7 +72,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 2 text.
      */
-    String getAnswer2() {
+    public String getAnswer2() {
         return mAnswer2;
     }
 
@@ -81,7 +81,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 3 text.
      */
-    String getAnswer3() {
+    public String getAnswer3() {
         return mAnswer3;
     }
 
@@ -90,7 +90,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return correct answer number.
      */
-    int getCorrectAnswer() {
+    public int getCorrectAnswer() {
         return mCorrectAnswer;
     }
 
@@ -98,7 +98,7 @@ public class QuizQuestion implements Parcelable {
     * Implementation of Parcelable interface
     */
 
-    private QuizQuestion(Parcel in) {
+    public QuizQuestion(Parcel in) {
         mQuestion = in.readString();
         mAnswer1 = in.readString();
         mAnswer2 = in.readString();

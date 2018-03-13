@@ -1,8 +1,6 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.Activities;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.database.SQLException;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
@@ -17,11 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.famousWomen.Data.WomenDbHelper;
+import com.example.android.famousWomen.Modal.QuizQuestion;
+import com.example.android.famousWomen.R;
 import com.example.android.famousWomen.databinding.ActivityQuizBinding;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
 
