@@ -46,12 +46,11 @@ public class Woman implements Parcelable{
 
 
 
-    public Woman(Context context, int womenArrayId, String listImageId, String portraitImageId, String flagImageId) {
-        Resources resources = context.getResources();
-        String[] womenInfo = resources.getStringArray(womenArrayId);
-        mName = womenInfo[0];
-        mProfession = womenInfo[1];
-        mDescription = womenInfo[2];
+    public Woman(String name, String profession, String details, String listImageId, String portraitImageId, String flagImageId) {
+
+        mName = name;
+        mProfession = profession;
+        mDescription = details;
         mListImageId = listImageId;
         mPortraitImageId = portraitImageId;
         mFlagImageId = flagImageId;

@@ -41,12 +41,12 @@ public class QuizQuestion implements Parcelable {
     /**
      * Constructs a new QuizQuestion with initial values for texts.
      */
-    QuizQuestion(String[] question_array) {
-        mQuestion = question_array[0];
-        mAnswer1 = question_array[1];
-        mAnswer2 = question_array[2];
-        mAnswer3 = question_array[3];
-        mCorrectAnswer = Integer.valueOf(question_array[4]);
+    public QuizQuestion(String question, String option1, String option2, String option3, int correctOption) {
+        mQuestion = question;
+        mAnswer1 = option1;
+        mAnswer2 = option2;
+        mAnswer3 = option3;
+        mCorrectAnswer = correctOption;
     }
 
     /**

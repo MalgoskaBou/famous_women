@@ -17,6 +17,7 @@ package com.example.android.famousWomen;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -28,6 +29,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.android.famousWomen.Data.WomenDbHelper;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -39,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
     SearchView searchView;
     WomenAdapterRecycle adapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +53,19 @@ public class MainActivity extends AppCompatActivity {
 
         // ( ͡° ͜ʖ ͡°)
 
-        women = WomenArrayList.getWomen(this);
+        WomenDbHelper dbHelper = new WomenDbHelper(this);
+        try {
+            dbHelper.createDataBase();
+        } catch (IOException ioe) {
+            throw new Error("Unable to create database");
+        }
+        try {
+            dbHelper.openDatabase();
+        }catch(SQLException sqle) {
+            throw sqle;
+        }
+
+        women = dbHelper.getWomenList();
 
         // Find the {@link RecyclerView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link RecyclerView} with the view ID called list, which is declared in the
