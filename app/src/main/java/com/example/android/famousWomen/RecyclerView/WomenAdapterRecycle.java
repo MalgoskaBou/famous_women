@@ -1,4 +1,4 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,12 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 
+
+import com.example.android.famousWomen.Activities.DetailsActivity;
+import com.example.android.famousWomen.Activities.MainActivity;
+import com.example.android.famousWomen.Glide.ImageDownload;
+import com.example.android.famousWomen.Modal.Woman;
+import com.example.android.famousWomen.R;
 
 import java.util.ArrayList;
 

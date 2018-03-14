@@ -1,8 +1,7 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.Activities;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
+import android.database.SQLException;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,10 +14,13 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.famousWomen.Data.WomenDbHelper;
+import com.example.android.famousWomen.Modal.QuizQuestion;
+import com.example.android.famousWomen.R;
 import com.example.android.famousWomen.databinding.ActivityQuizBinding;
 
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -77,7 +79,18 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             //If the activity is opened for the first time, adds all the questions to the arrayList, shuffles them and then make a sublist with the first 5 questions.
             //The questions after the first one are made invisible.
             if (savedInstanceState == null) {
-                questions = extractQuestions();
+                WomenDbHelper dbHelper = new WomenDbHelper(this);
+                try {
+                    dbHelper.createDataBase();
+                } catch (IOException ioe) {
+                    throw new Error("Unable to create database");
+                }
+                try {
+                    dbHelper.openDatabase();
+                }catch(SQLException sqle) {
+                    throw sqle;
+                }
+                questions = dbHelper.getQuestions();
                 currentQuestion = 0;
                 score = 0;
                 isResultShown = false;
@@ -168,23 +181,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
             }
-        }
-
-        public ArrayList<QuizQuestion> extractQuestions(){
-            Resources resources = getResources();
-            TypedArray typedArray = resources.obtainTypedArray(R.array.quiz_questions);
-            int length = typedArray.length();
-            for (int i = 0; i < length; ++i) {
-                int id = typedArray.getResourceId(i, 0);
-                String[] question = resources.getStringArray(id);
-                questions.add(new QuizQuestion(question));
-            }
-            typedArray.recycle();
-
-            // Randomized questions
-            Collections.shuffle(questions);
-            questions = new ArrayList<>(questions.subList(0,5));
-            return questions;
         }
 
         //Common submit method for all questions

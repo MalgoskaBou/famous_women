@@ -1,4 +1,4 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.RecyclerView;
 
 import android.view.View;
 

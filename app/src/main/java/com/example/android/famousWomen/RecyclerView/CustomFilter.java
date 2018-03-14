@@ -1,4 +1,4 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.RecyclerView;
 
 /**
  * Created by narcy on 19.02.2018.
@@ -6,6 +6,8 @@ package com.example.android.famousWomen;
 
 //import android.graphics.Movie;
 import android.widget.Filter;
+
+import com.example.android.famousWomen.Modal.Woman;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ public class CustomFilter extends Filter {
 
     //FILTERING
     @Override
-    protected FilterResults performFiltering(CharSequence constraint) {
+    public FilterResults performFiltering(CharSequence constraint) {
         FilterResults results=new FilterResults();
 
         //CHECK CONSTRAINT VALIDITY
@@ -66,7 +68,7 @@ public class CustomFilter extends Filter {
     //PUBLISH RESULTS
 
     @Override
-    protected void publishResults(CharSequence constraint, FilterResults results) {
+    public void publishResults(CharSequence constraint, FilterResults results) {
 
         adapter.women= (ArrayList<Woman>) results.values;
 

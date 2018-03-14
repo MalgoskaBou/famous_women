@@ -1,4 +1,4 @@
-package com.example.android.famousWomen;
+package com.example.android.famousWomen.Modal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -41,12 +41,12 @@ public class QuizQuestion implements Parcelable {
     /**
      * Constructs a new QuizQuestion with initial values for texts.
      */
-    QuizQuestion(String[] question_array) {
-        mQuestion = question_array[0];
-        mAnswer1 = question_array[1];
-        mAnswer2 = question_array[2];
-        mAnswer3 = question_array[3];
-        mCorrectAnswer = Integer.valueOf(question_array[4]);
+    public QuizQuestion(String question, String option1, String option2, String option3, int correctOption) {
+        mQuestion = question;
+        mAnswer1 = option1;
+        mAnswer2 = option2;
+        mAnswer3 = option3;
+        mCorrectAnswer = correctOption;
     }
 
     /**
@@ -54,7 +54,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return question text.
      */
-    String getQuestion() {
+    public String getQuestion() {
         return mQuestion;
     }
 
@@ -63,7 +63,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 1 text.
      */
-    String getAnswer1() {
+    public String getAnswer1() {
         return mAnswer1;
     }
 
@@ -72,7 +72,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 2 text.
      */
-    String getAnswer2() {
+    public String getAnswer2() {
         return mAnswer2;
     }
 
@@ -81,7 +81,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return answer 3 text.
      */
-    String getAnswer3() {
+    public String getAnswer3() {
         return mAnswer3;
     }
 
@@ -90,7 +90,7 @@ public class QuizQuestion implements Parcelable {
      *
      * @return correct answer number.
      */
-    int getCorrectAnswer() {
+    public int getCorrectAnswer() {
         return mCorrectAnswer;
     }
 
@@ -98,7 +98,7 @@ public class QuizQuestion implements Parcelable {
     * Implementation of Parcelable interface
     */
 
-    private QuizQuestion(Parcel in) {
+    public QuizQuestion(Parcel in) {
         mQuestion = in.readString();
         mAnswer1 = in.readString();
         mAnswer2 = in.readString();
