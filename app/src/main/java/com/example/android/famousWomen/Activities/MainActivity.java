@@ -40,11 +40,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Woman> women = new ArrayList<>();
     public static final String CHOSEN_WOMAN = "chosen_woman";
     public static final String WOMEN_LIST = "women_list";
     SearchView searchView;
     WomenAdapterRecycle adapter;
+    private ArrayList<Woman> women = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         }
         try {
             dbHelper.openDatabase();
-        }catch(SQLException sqle) {
+        } catch (SQLException sqle) {
             throw sqle;
         }
 
@@ -140,4 +140,12 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    @Override
+    public void startActivity(Intent intent) {
+        //if it is a search intent
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            return;
+        }
+        super.startActivity(intent);
+    }
 }
