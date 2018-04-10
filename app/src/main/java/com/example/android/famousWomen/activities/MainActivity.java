@@ -17,7 +17,6 @@ package com.example.android.famousWomen.activities;
 
 import android.app.SearchManager;
 import android.content.Intent;
-import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -29,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.android.famousWomen.data.Constants;
 import com.example.android.famousWomen.data.WomenDbHelper;
 import com.example.android.famousWomen.R;
 import com.example.android.famousWomen.model.Woman;
@@ -40,7 +40,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String WOMEN_LIST = "women_list";
     private SearchView searchView;
     private WomenAdapterRecycle adapter;
     private ArrayList<Woman> women = new ArrayList<>();
@@ -130,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putSerializable(WOMEN_LIST, women);
+        outState.putSerializable(Constants.WOMEN_LIST, women);
         super.onSaveInstanceState(outState);
     }
 

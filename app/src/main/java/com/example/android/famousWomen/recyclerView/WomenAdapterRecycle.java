@@ -13,6 +13,7 @@ import android.widget.Filterable;
 
 import com.example.android.famousWomen.activities.DetailsActivity;
 import com.example.android.famousWomen.activities.MainActivity;
+import com.example.android.famousWomen.data.Constants;
 import com.example.android.famousWomen.glide.ImageDownload;
 import com.example.android.famousWomen.model.Woman;
 import com.example.android.famousWomen.R;
@@ -32,8 +33,6 @@ public class WomenAdapterRecycle extends RecyclerView.Adapter<WomenHolder> imple
     ArrayList<Woman> women;
     private ArrayList<Woman> filterList;
     private CustomFilter filter;
-    private static final String CHOSEN_WOMAN = "chosen_woman";
-
 
     public WomenAdapterRecycle(Context context, ArrayList<Woman> women){
         this.context = context;
@@ -69,7 +68,7 @@ public class WomenAdapterRecycle extends RecyclerView.Adapter<WomenHolder> imple
 
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(context, DetailsActivity.class);
-                myIntent.putExtra(CHOSEN_WOMAN, women.get(pos));
+                myIntent.putExtra(Constants.CHOSEN_WOMAN, women.get(pos));
                       // Start the new activity
                context.startActivity(myIntent);
 

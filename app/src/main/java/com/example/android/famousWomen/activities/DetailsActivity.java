@@ -30,6 +30,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.famousWomen.data.Constants;
 import com.example.android.famousWomen.glide.ImageDownload;
 import com.example.android.famousWomen.model.Woman;
 import com.example.android.famousWomen.R;
@@ -40,7 +41,6 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView profession, descriptionTextView;
     private CollapsingToolbarLayout name;
     private ImageView flagImageView;
-    private static final String CHOSEN_WOMAN = "chosen_woman";
     private AppBarLayout appBarLayout;
     // Array list contains IDs for: name, description on image
     private Woman chosenWoman;
@@ -59,7 +59,7 @@ public class DetailsActivity extends AppCompatActivity {
         //we collect the transferred data from the previous activity
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
-            chosenWoman = bundle.getParcelable(CHOSEN_WOMAN);
+            chosenWoman = bundle.getParcelable(Constants.CHOSEN_WOMAN);
         }
 
         name = findViewById(R.id.collapsing_toolbar);

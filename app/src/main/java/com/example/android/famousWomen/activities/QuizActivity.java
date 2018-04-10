@@ -22,17 +22,17 @@ import com.example.android.famousWomen.databinding.ActivityQuizBinding;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
+import static com.example.android.famousWomen.data.Constants.CORRECT_COUNT;
+import static com.example.android.famousWomen.data.Constants.CURRENT_QUESTION;
+import static com.example.android.famousWomen.data.Constants.IS_RESULT_SHOWN;
+import static com.example.android.famousWomen.data.Constants.QUESTIONS_ARRAY_KEY;
+import static com.example.android.famousWomen.data.Constants.SCORE;
+import static com.example.android.famousWomen.data.Constants.SCROLL_X;
+import static com.example.android.famousWomen.data.Constants.SCROLL_Y;
+import static com.example.android.famousWomen.data.Constants.WRONG_ANSWERS;
+import static com.example.android.famousWomen.data.Constants.WRONG_COUNT;
 
-        private final static String QUESTIONS_ARRAY_KEY = "questionsArrayKey";
-        private final static String CURRENT_QUESTION = "currentQuestion";
-        private final static String WRONG_ANSWERS = "wrongQuestions";
-        private final static String SCORE = "score";
-        private final static String IS_RESULT_SHOWN = "isResultShown";
-        private final static String SCROLL_X = "scrollX";
-        private final static String SCROLL_Y = "scrollY";
-        private final static String CORRECT_COUNT = "number of correct answers";
-        private final static String WRONG_COUNT = "number of wrong answers";
+public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
 
         private float score;
         private int currentQuestion, correctAnsNmb, incorrectAnsNmb, arrayLength;
