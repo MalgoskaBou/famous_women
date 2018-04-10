@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.famousWomen.Modal;
+package com.example.android.famousWomen.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -92,7 +92,7 @@ public class Woman implements Parcelable{
         }
     };
 
-    public Woman(Parcel in){
+    private Woman(Parcel in){
         mName = in.readString();
         mProfession = in.readString();
         mDescription = in.readString();

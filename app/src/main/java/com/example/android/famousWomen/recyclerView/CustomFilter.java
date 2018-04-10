@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.RecyclerView;
+package com.example.android.famousWomen.recyclerView;
 
 /**
  * Created by narcy on 19.02.2018.
@@ -7,7 +7,7 @@ package com.example.android.famousWomen.RecyclerView;
 //import android.graphics.Movie;
 import android.widget.Filter;
 
-import com.example.android.famousWomen.Modal.Woman;
+import com.example.android.famousWomen.model.Woman;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class CustomFilter extends Filter {
 
-    ArrayList<Woman> filterList;
-    WomenAdapterRecycle adapter;
+    private ArrayList<Woman> filterList;
+    private WomenAdapterRecycle adapter;
 
-    public CustomFilter(ArrayList<Woman> filterList, WomenAdapterRecycle adapter) {
+    CustomFilter(ArrayList<Woman> filterList, WomenAdapterRecycle adapter) {
         this.filterList = filterList;
         this.adapter = adapter;
     }

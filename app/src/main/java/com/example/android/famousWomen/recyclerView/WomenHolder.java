@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.RecyclerView;
+package com.example.android.famousWomen.recyclerView;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -17,10 +17,10 @@ public class WomenHolder extends RecyclerView.ViewHolder implements View.OnClick
     ImageView imageView, flagImage;
     TextView nameTextView,professionTextView;
 
-    ItemClickListener itemClickListener;
+    private ItemClickListener itemClickListener;
 
 
-    public WomenHolder(View itemView) {
+    WomenHolder(View itemView) {
         super(itemView);
 
         this.nameTextView = itemView.findViewById(R.id.name_text_view);

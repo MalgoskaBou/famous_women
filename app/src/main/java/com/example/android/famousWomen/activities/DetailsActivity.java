@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.famousWomen.Activities;
+package com.example.android.famousWomen.activities;
 
 import android.content.Intent;
 import android.support.design.widget.AppBarLayout;
@@ -30,19 +30,18 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.android.famousWomen.Glide.ImageDownload;
-import com.example.android.famousWomen.Modal.Woman;
+import com.example.android.famousWomen.glide.ImageDownload;
+import com.example.android.famousWomen.model.Woman;
 import com.example.android.famousWomen.R;
 
 public class DetailsActivity extends AppCompatActivity {
 
     private ImageView portraitImageView;
     private TextView profession, descriptionTextView;
-    CollapsingToolbarLayout name;
+    private CollapsingToolbarLayout name;
     private ImageView flagImageView;
-    public static final String CHOSEN_WOMAN = "chosen_woman";
-    AppBarLayout appBarLayout;
-
+    private static final String CHOSEN_WOMAN = "chosen_woman";
+    private AppBarLayout appBarLayout;
     // Array list contains IDs for: name, description on image
     private Woman chosenWoman;
 
@@ -51,14 +50,11 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_view);
 
-
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         //return our back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
         //we collect the transferred data from the previous activity
         Bundle bundle = getIntent().getExtras();

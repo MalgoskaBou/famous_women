@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.Activities;
+package com.example.android.famousWomen.activities;
 
 import android.content.Intent;
 import android.database.SQLException;
@@ -14,8 +14,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.famousWomen.Data.WomenDbHelper;
-import com.example.android.famousWomen.Modal.QuizQuestion;
+import com.example.android.famousWomen.data.WomenDbHelper;
+import com.example.android.famousWomen.model.QuizQuestion;
 import com.example.android.famousWomen.R;
 import com.example.android.famousWomen.databinding.ActivityQuizBinding;
 
@@ -34,15 +34,15 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         private final static String CORRECT_COUNT = "number of correct answers";
         private final static String WRONG_COUNT = "number of wrong answers";
 
-        float score;
-        int currentQuestion, correctAnsNmb, incorrectAnsNmb, arrayLength;
-        ArrayList<QuizQuestion> questions = new ArrayList<>();
-        ArrayList<Integer> wrongAnswers = new ArrayList<>();
-        SparseArray<RadioGroup> rgSparse;
-        SparseArray<TextView> questionSparse;
-        SparseArray<Button> submitSparse;
-        boolean isResultShown;
-        ActivityQuizBinding binding;
+        private float score;
+        private int currentQuestion, correctAnsNmb, incorrectAnsNmb, arrayLength;
+        private ArrayList<QuizQuestion> questions = new ArrayList<>();
+        private ArrayList<Integer> wrongAnswers = new ArrayList<>();
+        private SparseArray<RadioGroup> rgSparse;
+        private SparseArray<TextView> questionSparse;
+        private SparseArray<Button> submitSparse;
+        private boolean isResultShown;
+        private ActivityQuizBinding binding;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.Data;
+package com.example.android.famousWomen.data;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -6,10 +6,10 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
-import com.example.android.famousWomen.Data.WomenContract.WomenEntry;
-import com.example.android.famousWomen.Data.WomenContract.QuizEntry;
-import com.example.android.famousWomen.Modal.QuizQuestion;
-import com.example.android.famousWomen.Modal.Woman;
+import com.example.android.famousWomen.data.WomenContract.WomenEntry;
+import com.example.android.famousWomen.data.WomenContract.QuizEntry;
+import com.example.android.famousWomen.model.QuizQuestion;
+import com.example.android.famousWomen.model.Woman;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -121,7 +121,11 @@ public class WomenDbHelper extends SQLiteOpenHelper {
 
     public ArrayList<Woman> getWomenList(){
         ArrayList<Woman> womenList = new ArrayList<>();
-        openDatabase();
+        try {
+            openDatabase();
+        } catch (SQLException sqle) {
+            throw sqle;
+        }
         Cursor cursor = db.rawQuery("SELECT * FROM women ORDER BY Name ASC", null);
         // Find the columns of pet attributes that we're interested in
         int nameColumnIndex = cursor.getColumnIndex(WomenEntry.COLUMN_WOMAN_NAME);
@@ -143,7 +147,11 @@ public class WomenDbHelper extends SQLiteOpenHelper {
 
     public ArrayList<QuizQuestion> getQuestions(){
         ArrayList<QuizQuestion> questionList = new ArrayList<>();
-        openDatabase();
+        try {
+            openDatabase();
+        } catch (SQLException sqle) {
+            throw sqle;
+        }
         Cursor cursor = db.rawQuery("SELECT * FROM Questions ORDER BY RANDOM() LIMIT 5;", null);
         int questionColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_QUESTION);
         int option1ColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_OPTION1);

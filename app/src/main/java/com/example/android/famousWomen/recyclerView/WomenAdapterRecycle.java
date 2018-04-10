@@ -1,7 +1,8 @@
-package com.example.android.famousWomen.RecyclerView;
+package com.example.android.famousWomen.recyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +11,10 @@ import android.widget.Filter;
 import android.widget.Filterable;
 
 
-import com.example.android.famousWomen.Activities.DetailsActivity;
-import com.example.android.famousWomen.Activities.MainActivity;
-import com.example.android.famousWomen.Glide.ImageDownload;
-import com.example.android.famousWomen.Modal.Woman;
+import com.example.android.famousWomen.activities.DetailsActivity;
+import com.example.android.famousWomen.activities.MainActivity;
+import com.example.android.famousWomen.glide.ImageDownload;
+import com.example.android.famousWomen.model.Woman;
 import com.example.android.famousWomen.R;
 
 import java.util.ArrayList;
@@ -28,9 +29,10 @@ public class WomenAdapterRecycle extends RecyclerView.Adapter<WomenHolder> imple
     //we need to know the context to the intent
     //thanks to the change to RecyclerView we can opt out of the additional list (now is women -whole list and filterList)
     private final Context context;
-    ArrayList<Woman> women, filterList;
-    CustomFilter filter;
-
+    ArrayList<Woman> women;
+    private ArrayList<Woman> filterList;
+    private CustomFilter filter;
+    private static final String CHOSEN_WOMAN = "chosen_woman";
 
 
     public WomenAdapterRecycle(Context context, ArrayList<Woman> women){
@@ -41,16 +43,15 @@ public class WomenAdapterRecycle extends RecyclerView.Adapter<WomenHolder> imple
 
     //create ViewHolder - I implemented in an external class = WomenHolder
     @Override
-    public WomenHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public WomenHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
-        WomenHolder holder=new WomenHolder(view);
-        return holder;
+        return new WomenHolder(view);
     }
 
     //Bind data to holder and add clickListener
     @Override
-    public void onBindViewHolder(WomenHolder holder, int position) {
+    public void onBindViewHolder(@NonNull WomenHolder holder, int position) {
         Woman currentWoman = women.get(position);
 
         holder.nameTextView.setText(currentWoman.getName());
@@ -68,7 +69,7 @@ public class WomenAdapterRecycle extends RecyclerView.Adapter<WomenHolder> imple
 
                 //we use INTENT to turn on new ones activity
                 Intent myIntent = new Intent(context, DetailsActivity.class);
-                myIntent.putExtra(MainActivity.CHOSEN_WOMAN, women.get(pos));
+                myIntent.putExtra(CHOSEN_WOMAN, women.get(pos));
                       // Start the new activity
                context.startActivity(myIntent);
 

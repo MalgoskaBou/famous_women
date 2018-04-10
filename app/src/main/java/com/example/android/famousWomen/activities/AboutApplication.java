@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.Activities;
+package com.example.android.famousWomen.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
