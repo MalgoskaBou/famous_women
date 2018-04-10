@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.Data;
+package com.example.android.famousWomen.data;
 
 import android.provider.BaseColumns;
 

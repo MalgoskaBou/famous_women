@@ -13,11 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.famousWomen.Activities;
+package com.example.android.famousWomen.activities;
 
 import android.app.SearchManager;
 import android.content.Intent;
-import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -29,10 +28,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.example.android.famousWomen.Data.WomenDbHelper;
+import com.example.android.famousWomen.data.Constants;
+import com.example.android.famousWomen.data.WomenDbHelper;
 import com.example.android.famousWomen.R;
-import com.example.android.famousWomen.Modal.Woman;
-import com.example.android.famousWomen.RecyclerView.WomenAdapterRecycle;
+import com.example.android.famousWomen.model.Woman;
+import com.example.android.famousWomen.recyclerView.WomenAdapterRecycle;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,10 +40,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String CHOSEN_WOMAN = "chosen_woman";
-    public static final String WOMEN_LIST = "women_list";
-    SearchView searchView;
-    WomenAdapterRecycle adapter;
+    private SearchView searchView;
+    private WomenAdapterRecycle adapter;
     private ArrayList<Woman> women = new ArrayList<>();
 
     @Override
@@ -61,11 +59,6 @@ public class MainActivity extends AppCompatActivity {
             dbHelper.createDataBase();
         } catch (IOException ioe) {
             throw new Error("Unable to create database");
-        }
-        try {
-            dbHelper.openDatabase();
-        } catch (SQLException sqle) {
-            throw sqle;
         }
 
         women = dbHelper.getWomenList();
@@ -136,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putSerializable(WOMEN_LIST, women);
+        outState.putSerializable(Constants.WOMEN_LIST, women);
         super.onSaveInstanceState(outState);
     }
 

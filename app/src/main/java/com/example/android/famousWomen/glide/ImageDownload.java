@@ -1,10 +1,8 @@
-package com.example.android.famousWomen.Glide;
+package com.example.android.famousWomen.glide;
 
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.example.android.famousWomen.Glide.GlideApp;
 import com.example.android.famousWomen.R;
 //import com.squareup.picasso.Picasso;
 

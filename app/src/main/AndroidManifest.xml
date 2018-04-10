@@ -23,7 +23,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.android.famousWomen.Activities.MainActivity"
+        <activity android:name="com.example.android.famousWomen.activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,24 +35,24 @@
         </activity>
 
         <activity
-            android:name="com.example.android.famousWomen.Activities.DetailsActivity"
+            android:name="com.example.android.famousWomen.activities.DetailsActivity"
             android:label="@string/category_details"
-            android:parentActivityName="com.example.android.famousWomen.Activities.MainActivity">
+            android:parentActivityName="com.example.android.famousWomen.activities.MainActivity">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.famousWomen.Activities.MainActivity" />
+                android:value="com.example.android.famousWomen.activities.MainActivity" />
         </activity>
 
         <activity
-            android:name="com.example.android.famousWomen.Activities.QuizActivity"
+            android:name="com.example.android.famousWomen.activities.QuizActivity"
             android:label="@string/category_quiz"
-            android:parentActivityName="com.example.android.famousWomen.Activities.MainActivity"/>
+            android:parentActivityName="com.example.android.famousWomen.activities.MainActivity"/>
 
-        <activity android:name="com.example.android.famousWomen.Activities.AboutApplication"
+        <activity android:name="com.example.android.famousWomen.activities.AboutApplication"
             android:label= "About Application"
-            android:parentActivityName="com.example.android.famousWomen.Activities.MainActivity"/>
+            android:parentActivityName="com.example.android.famousWomen.activities.MainActivity"/>
 
     </application>
 

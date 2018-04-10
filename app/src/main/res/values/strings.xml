@@ -52,6 +52,8 @@
     <string name="submit_answer">Submit answer</string>
     <string name="restart">Restart</string>
     <string name="famous_women">Famous Women</string>
+    <string name="contentDescription_logo">Logo image</string>
+    <string name="contentDescription_portraitImage">portrait image of the woman</string>
 
 
 </resources>

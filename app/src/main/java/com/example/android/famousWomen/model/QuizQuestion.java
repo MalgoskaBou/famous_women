@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.Modal;
+package com.example.android.famousWomen.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -98,7 +98,7 @@ public class QuizQuestion implements Parcelable {
     * Implementation of Parcelable interface
     */
 
-    public QuizQuestion(Parcel in) {
+    private QuizQuestion(Parcel in) {
         mQuestion = in.readString();
         mAnswer1 = in.readString();
         mAnswer2 = in.readString();

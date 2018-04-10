@@ -23,9 +23,6 @@
     <!-- Background color for app -->
     <color name="grey_background">#F5F5F5</color>
 
-    <!-- Background color for the numbers category -->
-    <color name="category_numbers">#F5F5F5</color>
-
     <!-- Text color heading -->
     <color name="text_color_heading">#000000</color>
 
@@ -34,9 +31,6 @@
 
     <!-- Text color details and main text -->
     <color name="text_color_main">#898989</color>
-
-    <!-- Background color main text -->
-    <color name="background_color_main">#9E9E9E</color>
 
     <!-- Radio buttons colors -->
     <color name="colorRadioGray">@android:color/darker_gray</color>

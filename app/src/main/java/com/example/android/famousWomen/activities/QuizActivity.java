@@ -1,4 +1,4 @@
-package com.example.android.famousWomen.Activities;
+package com.example.android.famousWomen.activities;
 
 import android.content.Intent;
 import android.database.SQLException;
@@ -14,35 +14,35 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.famousWomen.Data.WomenDbHelper;
-import com.example.android.famousWomen.Modal.QuizQuestion;
+import com.example.android.famousWomen.data.WomenDbHelper;
+import com.example.android.famousWomen.model.QuizQuestion;
 import com.example.android.famousWomen.R;
 import com.example.android.famousWomen.databinding.ActivityQuizBinding;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static com.example.android.famousWomen.data.Constants.CORRECT_COUNT;
+import static com.example.android.famousWomen.data.Constants.CURRENT_QUESTION;
+import static com.example.android.famousWomen.data.Constants.IS_RESULT_SHOWN;
+import static com.example.android.famousWomen.data.Constants.QUESTIONS_ARRAY_KEY;
+import static com.example.android.famousWomen.data.Constants.SCORE;
+import static com.example.android.famousWomen.data.Constants.SCROLL_X;
+import static com.example.android.famousWomen.data.Constants.SCROLL_Y;
+import static com.example.android.famousWomen.data.Constants.WRONG_ANSWERS;
+import static com.example.android.famousWomen.data.Constants.WRONG_COUNT;
+
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
 
-        private final static String QUESTIONS_ARRAY_KEY = "questionsArrayKey";
-        private final static String CURRENT_QUESTION = "currentQuestion";
-        private final static String WRONG_ANSWERS = "wrongQuestions";
-        private final static String SCORE = "score";
-        private final static String IS_RESULT_SHOWN = "isResultShown";
-        private final static String SCROLL_X = "scrollX";
-        private final static String SCROLL_Y = "scrollY";
-        private final static String CORRECT_COUNT = "number of correct answers";
-        private final static String WRONG_COUNT = "number of wrong answers";
-
-        float score;
-        int currentQuestion, correctAnsNmb, incorrectAnsNmb, arrayLength;
-        ArrayList<QuizQuestion> questions = new ArrayList<>();
-        ArrayList<Integer> wrongAnswers = new ArrayList<>();
-        SparseArray<RadioGroup> rgSparse;
-        SparseArray<TextView> questionSparse;
-        SparseArray<Button> submitSparse;
-        boolean isResultShown;
-        ActivityQuizBinding binding;
+        private float score;
+        private int currentQuestion, correctAnsNmb, incorrectAnsNmb, arrayLength;
+        private ArrayList<QuizQuestion> questions = new ArrayList<>();
+        private ArrayList<Integer> wrongAnswers = new ArrayList<>();
+        private SparseArray<RadioGroup> rgSparse;
+        private SparseArray<TextView> questionSparse;
+        private SparseArray<Button> submitSparse;
+        private boolean isResultShown;
+        private ActivityQuizBinding binding;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
