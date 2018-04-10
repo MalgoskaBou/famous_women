@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is for making the title more visible. I learned this trick from the blog
+http://blog.iamsuleiman.com/toolbar-animation-with-android-design-support-library/ with the advice of my mentor -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="90"
+        android:endColor="@android:color/transparent"
+        android:startColor="#66000000"/>
+</shape>
