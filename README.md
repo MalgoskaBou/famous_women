@@ -1,5 +1,12 @@
 # famous_women
 
+**30.04.2018**
+
+New update and new manual for adding entries about famous women to the application, try to add something from yourself! 💪 :
+
+https://docs.google.com/document/d/1slMkGE678Jv95khG--8s_aUcQJ__00ni-GXmwb1lmK4/edit?usp=drivesdk
+
+---
 
 <a href="https://www.youtube.com/watch?v=MsB5dNeHQ3c"><img src="https://user-images.githubusercontent.com/33101796/37150877-bcd709aa-22d3-11e8-9505-2d9be0849c84.JPG" alt="search engine" width="60%"></a>
 
