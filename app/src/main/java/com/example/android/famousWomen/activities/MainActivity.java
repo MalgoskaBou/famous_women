@@ -28,9 +28,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.android.famousWomen.R;
 import com.example.android.famousWomen.data.Constants;
 import com.example.android.famousWomen.data.WomenDbHelper;
-import com.example.android.famousWomen.R;
 import com.example.android.famousWomen.model.Woman;
 import com.example.android.famousWomen.recyclerView.WomenAdapterRecycle;
 
