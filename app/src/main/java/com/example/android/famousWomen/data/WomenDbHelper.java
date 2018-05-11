@@ -126,7 +126,15 @@ public class WomenDbHelper extends SQLiteOpenHelper {
         } catch (SQLException sqle) {
             throw sqle;
         }
-        Cursor cursor = db.rawQuery("SELECT * FROM women ORDER BY Name ASC", null);
+        Cursor cursor = db.query(
+                WomenEntry.TABLE_NAME,   // The table to query
+                null,            // The columns to return
+                null,                  // The columns for the WHERE clause
+                null,                  // The values for the WHERE clause
+                null,                  // Don't group the rows
+                null,                  // Don't filter by row groups
+                WomenEntry.COLUMN_WOMAN_NAME);
+
         // Find the columns of pet attributes that we're interested in
         int nameColumnIndex = cursor.getColumnIndex(WomenEntry.COLUMN_WOMAN_NAME);
         int professionColumnIndex = cursor.getColumnIndex(WomenEntry.COLUMN_WOMAN_PROFESSION);
@@ -152,7 +160,16 @@ public class WomenDbHelper extends SQLiteOpenHelper {
         } catch (SQLException sqle) {
             throw sqle;
         }
-        Cursor cursor = db.rawQuery("SELECT * FROM Questions ORDER BY RANDOM() LIMIT 5;", null);
+        Cursor cursor = db.query(
+                QuizEntry.TABLE_NAME,   // The table to query
+                null,            // The columns to return
+                null,                  // The columns for the WHERE clause
+                null,                  // The values for the WHERE clause
+                null,                  // Don't group the rows
+                null,                  // Don't filter by row groups
+                "RANDOM()",
+                "5");
+
         int questionColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_QUESTION);
         int option1ColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_OPTION1);
         int option2ColumnIndex = cursor.getColumnIndex(QuizEntry.COLUMN_OPTION2);

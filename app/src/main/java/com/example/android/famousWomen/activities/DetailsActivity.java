@@ -16,6 +16,7 @@
 package com.example.android.famousWomen.activities;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -72,13 +74,19 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 
-                if (Math.abs(verticalOffset)-appBarLayout.getTotalScrollRange() == 0)
-                {flagImageView.setVisibility(View.INVISIBLE);
-                    //  Collapsed
+                if (Math.abs(verticalOffset)-appBarLayout.getTotalScrollRange() == 0) {
+                    flagImageView.setVisibility(View.INVISIBLE);
+                    if(Build.VERSION.SDK_INT >= 21){
+                        Window window = getWindow();
+                        window.setStatusBarColor(getResources().getColor(R.color.primary_dark_color));
+                    }
                 }
-                else
-                {flagImageView.setVisibility(View.VISIBLE);
-                    //Expanded
+                else {
+                    flagImageView.setVisibility(View.VISIBLE);
+                    if(Build.VERSION.SDK_INT >= 21){
+                        Window window = getWindow();
+                        window.setStatusBarColor(getResources().getColor(R.color.translucent));
+                    }
                 }
             }
         });

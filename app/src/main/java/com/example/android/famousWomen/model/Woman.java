@@ -115,8 +115,4 @@ public class Woman implements Parcelable{
         dest.writeString(mFlagImageId);
         dest.writeString(mPortraitImageId);
     }
-
-
-
-
 }
