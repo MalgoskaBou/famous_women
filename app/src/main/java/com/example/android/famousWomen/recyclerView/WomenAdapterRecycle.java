@@ -56,11 +56,9 @@ public class WomenAdapterRecycle extends RecyclerView.Adapter<WomenHolder> imple
         holder.nameTextView.setText(currentWoman.getName());
         holder.professionTextView.setText(currentWoman.getProfession());
 
-        ImageDownload.downloadImage(context,currentWoman.getListImageId(),holder.imageView);
-        //holder.imageView.setImageResource(currentWoman.getListImageId());
+        ImageDownload.downloadListImage(context,currentWoman.getListImageId(),holder.imageView);
 
-        ImageDownload.downloadImage(context,currentWoman.getFlagImageId(),holder.flagImage);
-        //holder.flagImage.setImageResource(currentWoman.getFlagImageId());
+        ImageDownload.downloadListImage(context,currentWoman.getFlagImageId(),holder.flagImage);
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override

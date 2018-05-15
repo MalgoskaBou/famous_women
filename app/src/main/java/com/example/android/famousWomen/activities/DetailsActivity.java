@@ -95,12 +95,11 @@ public class DetailsActivity extends AppCompatActivity {
         setTitle(chosenWoman.getName());
         profession.setText(chosenWoman.getProfession());
 
-        ImageDownload.downloadImage(getApplicationContext(),chosenWoman.getPortraitImageId(),portraitImageView);
-        //portraitImageView.setImageResource(chosenWoman.getPortraitImageId());
+        ImageDownload.downloadDetailsImage(getApplicationContext(),chosenWoman.getPortraitImageId(),portraitImageView);
         descriptionTextView.setText(Html.fromHtml(chosenWoman.getDescription()));
         descriptionTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
-        ImageDownload.downloadImage(getApplicationContext(),chosenWoman.getFlagImageId(),flagImageView);
+        ImageDownload.downloadListImage(getApplicationContext(),chosenWoman.getFlagImageId(),flagImageView);
         //flagImageView.setImageResource(chosenWoman.getFlagImageId());
 
         // TEMPORARY CODE - OPEN QUIZ
