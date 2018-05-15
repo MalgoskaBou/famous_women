@@ -137,7 +137,7 @@
 </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/flag_of_country"
         android:layout_height="@dimen/flag_details_height"
