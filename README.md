@@ -1,5 +1,11 @@
 # famous_women
 
+See the article about our application on the Udacity blog 😄: https://medium.com/udacity/women-who-learn-women-who-collaborate-women-who-code-d3d2fbb0dcf0 
+
+You will learn more about the authors of the project
+
+---
+
 **30.04.2018**
 
 New update and new manual for adding entries about famous women to the application, try to add something from yourself! 💪 :
